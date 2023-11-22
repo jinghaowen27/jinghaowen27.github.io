@@ -1,6 +1,6 @@
 # Develop override settings
 
-url: http://localhost:4000
+url: https://jinghaowen27.github.io
 
 analytics:
   provider: false
