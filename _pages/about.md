@@ -11,7 +11,7 @@ redirect_from:
 About Me
 ======
 My name is Jinghao Wen(Winston,文靖豪). I'm a fourth year undergraduate student majoring in computer science from [School of Computer Science](https://cs.ccnu.edu.cn/), [Central China Normal University](https://www.ccnu.edu.cn/). I am extrmly fortunate to be advised by Prof. Xi Peng of Smart Robot Lab from School of Computer Science, Central China University. <br/>
-You can find my CV here: [Jinghao Wen's Curriculum Vitae](../assets/Curriculum_Vitae.pdf). <br/>
+You can find my CV here: [Jinghao Wen's Curriculum Vitae](../assets/CV_Jinghao_Wen.pdf). <br/>
 [Email](jinghao.wen@outlook.com) / [Github](https://github.com/jinghaowen27) / [Wechat](../images/d3f807b0bebb9ecd229eb8df1f7561b.jpg)
 
 Research Interests
