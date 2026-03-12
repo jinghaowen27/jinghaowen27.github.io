@@ -1,0 +1,65 @@
+<!-- ── SIDEBAR PARTIAL ──
+     Edit this file to change:
+     - Your name, title, department, university
+     - Email, GitHub, Google Scholar, LinkedIn, WeChat, CV link
+     - Avatar: replace <div class='sb-avatar'>👤</div>
+               with <img class='sb-avatar' src='../images/avatar/photo.jpg' alt='Your Name'>
+──>
+
+<aside id="sidebar">
+  <div class="sb-profile">
+    <div class="sb-avatar">👤</div>
+    <div class="sb-name"><span class="en">Your Name</span><span class="zh" style="display:none">你的名字</span></div>
+    <div class="sb-title"><span class="en">PhD Candidate / Researcher</span><span class="zh" style="display:none">博士研究生 / 研究员</span></div>
+    <div class="sb-inst"><span class="en">Department of XYZ<br>University Name</span><span class="zh" style="display:none">某某系<br>大学名称</span></div>
+  </div>
+  <div class="sb-contact">
+    <a href="/cdn-cgi/l/email-protection#ec958399ac9982859a899e9f859895c2898899">
+      <em class="icon">✉</em>
+      <span class="sb-link-label"><span class="__cf_email__" data-cfemail="0871677d487d66617e6d7a7b617c71266d6c7d">[email&#160;protected]</span></span>
+    </a>
+    <a href="https://github.com/yourusername" target="_blank">
+      <em class="icon">⌥</em>
+      <span class="sb-link-label">GitHub</span>
+    </a>
+    <a href="https://scholar.google.com" target="_blank">
+      <em class="icon">◎</em>
+      <span class="sb-link-label en">Google Scholar</span><span class="sb-link-label zh" style="display:none">谷歌学术</span>
+    </a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">
+      <em class="icon">in</em>
+      <span class="sb-link-label">LinkedIn</span>
+    </a>
+    <a href="https://wa.me/yournumber" target="_blank" class="sb-contact-expandable" onclick="toggleContact(event,'wechat-detail')">
+      <em class="icon">💬</em>
+      <span class="sb-link-label">WeChat</span>
+      <span class="sb-expand-arrow" id="wechat-arrow">›</span>
+    </a>
+    <div class="sb-contact-detail" id="wechat-detail">your_wechat_id</div>
+    <a href="/cv.pdf" target="_blank">
+      <em class="icon">↓</em>
+      <span class="sb-link-label en">Curriculum Vitae</span><span class="sb-link-label zh" style="display:none">简历 CV</span>
+    </a>
+  </div>
+  <nav
+  <nav class="sb-nav">
+    <div class="sb-nav-section en">Academic</div>
+    <div class="sb-nav-section zh" style="display:none">学术</div>
+    <a href="#" onclick="show('home');return false;" id="nav-home" class="active"><em class="nav-icon">⌂</em><span class="en">Home</span><span class="zh" style="display:none">主页</span></a>
+    <a href="#" onclick="show('publications');return false;" id="nav-publications"><em class="nav-icon">📄</em><span class="en">Publications</span><span class="zh" style="display:none">论文</span></a>
+    <a href="#" onclick="show('competition');return false;" id="nav-competition"><em class="nav-icon">🏆</em><span class="en">Competition</span><span class="zh" style="display:none">竞赛</span></a>
+    <a href="#" onclick="show('projects');return false;" id="nav-projects"><em class="nav-icon">🚀</em><span class="en">Projects</span><span class="zh" style="display:none">项目</span></a>
+    <div class="sb-nav-section en" style="margin-top:.6rem">Life</div>
+    <div class="sb-nav-section zh" style="display:none;margin-top:.6rem">生活</div>
+    <a href="#" onclick="show('recipes');return false;" id="nav-recipes"><em class="nav-icon">🍳</em><span class="en">Recipes</span><span class="zh" style="display:none">菜谱</span></a>
+    <a href="#" onclick="show('cocktails');return false;" id="nav-cocktails"><em class="nav-icon">🍸</em><span class="en">Cocktail Recipes</span><span class="zh" style="display:none">鸡尾酒</span></a>
+    <a href="#" onclick="show('reading');return false;" id="nav-reading"><em class="nav-icon">📚</em><span class="en">Reading</span><span class="zh" style="display:none">读书</span></a>
+    <a href="#" onclick="show('photography');return false;" id="nav-photography"><em class="nav-icon">📷</em><span class="en">Photography</span><span class="zh" style="display:none">摄影</span></a>
+    <a href="#" onclick="show('tarot');return false;" id="nav-tarot"><em class="nav-icon">🔮</em><span class="en">Tarot</span><span class="zh" style="display:none">塔罗</span></a>
+    <a href="#" onclick="show('guitar');return false;" id="nav-guitar"><em class="nav-icon">🎸</em><span class="en">Guitar</span><span class="zh" style="display:none">吉他</span></a>
+  </nav>
+  <div class="sb-lang">
+    <button id="btn-en" class="on" onclick="setLang('en')">EN</button>
+    <button id="btn-zh" onclick="setLang('zh')">中文</button>
+  </div>
+</aside>
