@@ -1,0 +1,110 @@
+<!-- ── HOME SECTION ──
+     Edit this file to change the home page content.
+     Update your name, bio, research interests, and publications summary here.
+──>
+
+<section class="page active" id="home">
+  <div class="home-hero">
+    <h1 class="home-greeting">
+      <span class="en">Hi, I'm <em>Your Name</em> —<br>researcher, cook &amp; reader.</span>
+      <span class="zh" style="display:none">你好，我是<em>你的名字</em>——<br>研究员、厨师与读书人。</span>
+    </h1>
+    <p class="home-bio en">I am a PhD candidate at the Department of XYZ, University Name, advised by Prof. Someone. My research sits at the intersection of <strong>machine learning</strong> and <strong>computational biology</strong>.</p>
+    <p class="home-bio zh" style="display:none">我是某大学某某系博士研究生，导师为某某教授。研究方向位于<strong>机器学习</strong>与<strong>计算生物学</strong>的交叉地带。</p>
+    <div class="home-links">
+      <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#1861776d586d76716e7d6a6b716c61367d7c6d"><span class="en">Get in Touch</span><span class="zh" style="display:none">联系我</span></a>
+      <a class="btn btn-out" href="/cv.pdf" target="_blank"><span class="en">Download CV</span><span class="zh" style="display:none">下载简历</span></a>
+      <a class="btn btn-out" href="https://scholar.google.com" target="_blank"><span class="en">Google Scholar</span><span class="zh" style="display:none">谷歌学术</span></a>
+    </div>
+  </div>
+
+  <div class="home-block">
+    <h2 class="home-block-title"><span class="en">About Me</span><span class="zh" style="display:none">关于我</span></h2>
+    <p class="home-body en">I grew up in [City], China, and moved abroad for undergraduate studies at [University], completing my B.Sc. in Computer Science in 20XX. I then joined [Lab Name] at [University] for doctoral work.<br><br>Outside research, you'll find me at the farmers' market, experimenting with fermentation, mixing cocktails, hunting for natural wines, shooting film photography, or studying tarot symbolism.</p>
+    <p class="home-body zh" style="display:none">我在中国[城市]长大，本科赴[大学]就读，主修计算机科学，20XX年毕业。此后加入[大学][实验室]攻读博士。<br><br>科研之外，常在农贸市场、研究发酵、调制鸡尾酒、寻觅自然酒、拍摄胶片或研究塔罗牌。</p>
+  </div>
+
+  <div class="home-block">
+    <h2 class="home-block-title"><span class="en">Research Interests</span><span class="zh" style="display:none">研究方向</span></h2>
+    <p class="home-body en" style="margin-bottom:.9rem">My work develops machine learning methods that are efficient, interpretable, and applicable to real-world biological problems.</p>
+    <p class="home-body zh" style="display:none;margin-bottom:.9rem">开发高效、可解释、可应用于真实生物问题的机器学习方法。</p>
+    <div class="research-tags">
+      <span class="rtag en">Deep Learning</span><span class="rtag zh" style="display:none">深度学习</span>
+      <span class="rtag en">Natural Language Processing</span><span class="rtag zh" style="display:none">自然语言处理</span>
+      <span class="rtag en">Computational Biology</span><span class="rtag zh" style="display:none">计算生物学</span>
+      <span class="rtag en">Graph Neural Networks</span><span class="rtag zh" style="display:none">图神经网络</span>
+      <span class="rtag en">Protein Structure Prediction</span><span class="rtag zh" style="display:none">蛋白质结构预测</span>
+      <span class="rtag en">Generative Models</span><span class="rtag zh" style="display:none">生成模型</span>
+    </div>
+  </div>
+
+  <!-- Publications block on home — topic-based header -->
+  <div class="home-block">
+    <div class="pub-section-header">
+      <h2 class="pub-main-title en">Publications <span class="pub-view-toggles">( <a onclick="showPubView('home','selected')" class="pub-toggle-link active-toggle" id="home-sel">show selected</a> / <a onclick="showPubView('home','date')" class="pub-toggle-link" id="home-date">show all by date</a> / <a onclick="showPubView('home','topic')" class="pub-toggle-link" id="home-topic">show all by topic</a> )</span></h2>
+      <h2 class="pub-main-title zh" style="display:none">论文发表 <span class="pub-view-toggles">( <a onclick="showPubView('home','selected')" class="pub-toggle-link active-toggle" id="home-sel-zh">精选</a> / <a onclick="showPubView('home','date')" class="pub-toggle-link" id="home-date-zh">按时间</a> / <a onclick="showPubView('home','topic')" class="pub-toggle-link" id="home-topic-zh">按主题</a> )</span></h2>
+      <div class="pub-topics-line en"><strong>Topics:</strong> <a onclick="filterByTopic('home','concept')" class="topic-link">Concept Learning and Language Acquisition</a> / <a onclick="filterByTopic('home','reasoning')" class="topic-link">Reasoning and Planning</a> / <a onclick="filterByTopic('home','scene')" class="topic-link">Scene and Activity Understanding</a><br><strong>Past topics:</strong> <span class="past-topic">Object Detection</span> / <span class="past-topic">Structured NLP</span> &nbsp;<span class="contrib-note">(*/†: indicates equal contribution.)</span></div>
+      <div class="pub-topics-line zh" style="display:none"><strong>研究主题：</strong> <a onclick="filterByTopic('home','concept')" class="topic-link">概念学习与语言习得</a> / <a onclick="filterByTopic('home','reasoning')" class="topic-link">推理与规划</a> / <a onclick="filterByTopic('home','scene')" class="topic-link">场景与活动理解</a><br><strong>往期：</strong> <span class="past-topic">目标检测</span> / <span class="past-topic">结构化NLP</span> &nbsp;<span class="contrib-note">（*/†：同等贡献）</span></div>
+    </div>
+    <div id="home-view-selected" class="pub-view">
+      <div class="pub-item" data-topic="concept" data-selected="1">
+        <div class="pub-thumb">🧠</div>
+        <div class="pub-body">
+          <div class="pub-title en">Your Best Paper Title: A Study in Something Important</div>
+          <div class="pub-title zh" style="display:none">最重要论文标题：关于某重要问题的研究</div>
+          <div class="pub-authors en"><strong>Your Name</strong>, Co-Author A, Supervisor Name</div>
+          <div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者A，导师</div>
+          <div class="pub-venue">Nature Machine Intelligence, 2024</div>
+          <div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Code</a></div>
+        </div>
+      </div>
+      <div class="pub-item" data-topic="reasoning" data-selected="1">
+        <div class="pub-thumb">📐</div>
+        <div class="pub-body">
+          <div class="pub-title en">Second Paper: Another Breakthrough Result</div>
+          <div class="pub-title zh" style="display:none">第二篇论文：又一突破性成果</div>
+          <div class="pub-authors en"><strong>Your Name</strong>, Co-Author C</div>
+          <div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者C</div>
+          <div class="pub-venue">NeurIPS 2023</div>
+          <div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Slides</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="home-view-date" class="pub-view" style="display:none">
+      <div class="pub-year-group"><div class="pub-year-label">2024</div>
+        <div class="pub-item" data-topic="concept"><div class="pub-thumb">🧠</div><div class="pub-body"><div class="pub-title en">Your Best Paper Title</div><div class="pub-title zh" style="display:none">最重要论文标题</div><div class="pub-authors en"><strong>Your Name</strong>, Co-Author A</div><div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者A</div><div class="pub-venue">Nature Machine Intelligence, 2024</div><div class="pub-links"><a class="pub-link" href="#">Paper</a></div></div></div>
+      </div>
+      <div class="pub-year-group"><div class="pub-year-label">2023</div>
+        <div class="pub-item" data-topic="reasoning"><div class="pub-thumb">📐</div><div class="pub-body"><div class="pub-title en">Second Paper: Another Breakthrough Result</div><div class="pub-title zh" style="display:none">第二篇论文</div><div class="pub-authors en"><strong>Your Name</strong>, Co-Author C</div><div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者C</div><div class="pub-venue">NeurIPS 2023</div><div class="pub-links"><a class="pub-link" href="#">Paper</a></div></div></div>
+      </div>
+    </div>
+    <div id="home-view-topic" class="pub-view" style="display:none">
+      <div class="pub-topic-group" id="home-topic-concept"><div class="pub-topic-label en">Concept Learning and Language Acquisition</div><div class="pub-topic-label zh" style="display:none">概念学习与语言习得</div>
+        <div class="pub-item"><div class="pub-thumb">🧠</div><div class="pub-body"><div class="pub-title en">Your Best Paper Title</div><div class="pub-title zh" style="display:none">最重要论文标题</div><div class="pub-authors en"><strong>Your Name</strong>, Co-Author A</div><div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者A</div><div class="pub-venue">Nature Machine Intelligence, 2024</div><div class="pub-links"><a class="pub-link" href="#">Paper</a></div></div></div>
+      </div>
+      <div class="pub-topic-group" id="home-topic-reasoning"><div class="pub-topic-label en">Reasoning and Planning</div><div class="pub-topic-label zh" style="display:none">推理与规划</div>
+        <div class="pub-item"><div class="pub-thumb">📐</div><div class="pub-body"><div class="pub-title en">Second Paper</div><div class="pub-title zh" style="display:none">第二篇论文</div><div class="pub-authors en"><strong>Your Name</strong>, Co-Author C</div><div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者C</div><div class="pub-venue">NeurIPS 2023</div><div class="pub-links"><a class="pub-link" href="#">Paper</a></div></div></div>
+      </div>
+      <div class="pub-topic-group" id="home-topic-scene"><div class="pub-topic-label en">Scene and Activity Understanding</div><div class="pub-topic-label zh" style="display:none">场景与活动理解</div>
+        <div class="pub-item"><div class="pub-thumb">🖼</div><div class="pub-body"><div class="pub-title en">Scene Paper: Understanding Visual Context</div><div class="pub-title zh" style="display:none">场景论文</div><div class="pub-authors en"><strong>Your Name</strong>, Co-Author B</div><div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者B</div><div class="pub-venue">ICML 2024</div><div class="pub-links"><a class="pub-link" href="#">Paper</a></div></div></div>
+      </div>
+    </div>
+    <a onclick="show('publications')" style="cursor:pointer;font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.3rem;margin-top:.8rem;"><span class="en">View full publication list →</span><span class="zh" style="display:none">查看完整论文列表 →</span></a>
+  </div>
+
+  <div class="home-block">
+    <h2 class="home-block-title"><span class="en">Other Activities</span><span class="zh" style="display:none">其他活动</span></h2>
+    <div class="act-sub"><span class="en">Services</span><span class="zh" style="display:none">学术服务</span></div>
+    <ul class="act-list" style="margin-bottom:1.4rem;">
+      <li><span class="act-year">2024</span><span class="act-detail en"><strong>Reviewer</strong> — NeurIPS, ICML, ICLR, Nature Methods</span><span class="act-detail zh" style="display:none"><strong>审稿人</strong> — NeurIPS、ICML、ICLR、Nature Methods</span></li>
+      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Area Chair</strong> — Workshop on Computational Biology, ICML</span><span class="act-detail zh" style="display:none"><strong>领域主席</strong> — ICML计算生物学研讨会</span></li>
+      <li><span class="act-year">2022</span><span class="act-detail en"><strong>Workshop Co-organizer</strong> — ML for Structural Biology, NeurIPS</span><span class="act-detail zh" style="display:none"><strong>研讨会联合组织者</strong> — NeurIPS结构生物学ML研讨会</span></li>
+    </ul>
+    <div class="act-sub"><span class="en">Teaching</span><span class="zh" style="display:none">教学</span></div>
+    <ul class="act-list">
+      <li><span class="act-year">2024</span><span class="act-detail en"><strong>Teaching Assistant</strong> — CS 229: Machine Learning (Spring 2024)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — CS 229：机器学习（2024春季）</span></li>
+      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Guest Lecturer</strong> — CS 373: Computational Biology, Protein Folding</span><span class="act-detail zh" style="display:none"><strong>客座讲师</strong> — CS 373：蛋白质折叠</span></li>
+      <li><span class="act-year">2022</span><span class="act-detail en"><strong>Teaching Assistant</strong> — CS 224N: NLP with Deep Learning</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — CS 224N：深度学习NLP</span></li>
+    </ul>
+  </div>
+</section>
