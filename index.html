@@ -544,7 +544,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     <div class="act-sub"><span class="en">Services</span><span class="zh" style="display:none">学术服务</span></div>
     <ul class="act-list" style="margin-bottom:1.4rem;">
       <li><span class="act-year">2026</span><span class="act-detail en"><strong>Reviewer</strong> — AAAI, IJCNN, ICASSP, TCAD</span><span class="act-detail zh" style="display:none"><strong>审稿人</strong> — AAAI, IJCNN, ICASSP, TCAD</span></li>
-      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Volutter</strong> — China Robot Competition and robocup China Open</span><span class="act-detail zh" style="display:none"><strong>志愿者</strong> — 中国机器人大赛暨robocup机器人世界杯中国赛</span></li>
+      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Volunteer</strong> — China Robot Competition and robocup China Open</span><span class="act-detail zh" style="display:none"><strong>志愿者</strong> — 中国机器人大赛暨robocup机器人世界杯中国赛</span></li>
     </ul>
     <div class="act-sub"><span class="en">Teaching</span><span class="zh" style="display:none">教学</span></div>
     <ul class="act-list">
@@ -559,20 +559,47 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
   <!-- PUBLICATIONS → sections/publications.html -->
   <section class="page" id="publications">
   <div class="pub-section-header">
-    <h1 class="pub-main-title en" style="font-size:1.9rem;margin-bottom:.5rem;">Publications <span class="pub-view-toggles">( <a onclick="showPubView('full','selected')" class="pub-toggle-link active-toggle" id="full-sel">show selected</a> / <a onclick="showPubView('full','date')" class="pub-toggle-link" id="full-date">show all by date</a> / <a onclick="showPubView('full','topic')" class="pub-toggle-link" id="full-topic">show all by topic</a> )</span></h1>
-    <h1 class="pub-main-title zh" style="display:none;font-size:1.9rem;margin-bottom:.5rem;">论文发表 <span class="pub-view-toggles">( <a onclick="showPubView('full','selected')" class="pub-toggle-link active-toggle" id="full-sel-zh">精选</a> / <a onclick="showPubView('full','date')" class="pub-toggle-link" id="full-date-zh">按时间</a> / <a onclick="showPubView('full','topic')" class="pub-toggle-link" id="full-topic-zh">按主题</a> )</span></h1>
-    <div class="pub-topics-line en"><strong>Topics:</strong> <a onclick="filterByTopic('full','concept')" class="topic-link">Concept Learning and Language Acquisition</a> / <a onclick="filterByTopic('full','reasoning')" class="topic-link">Reasoning and Planning</a> / <a onclick="filterByTopic('full','scene')" class="topic-link">Scene and Activity Understanding</a><br><strong>Past topics:</strong> <span class="past-topic">Object Detection</span> / <span class="past-topic">Structured NLP</span> &nbsp;<span class="contrib-note">(*/†: indicates equal contribution.)</span></div>
-    <div class="pub-topics-line zh" style="display:none"><strong>研究主题：</strong> <a onclick="filterByTopic('full','concept')" class="topic-link">概念学习与语言习得</a> / <a onclick="filterByTopic('full','reasoning')" class="topic-link">推理与规划</a> / <a onclick="filterByTopic('full','scene')" class="topic-link">场景与活动理解</a><br><strong>往期：</strong> <span class="past-topic">目标检测</span> / <span class="past-topic">结构化NLP</span> &nbsp;<span class="contrib-note">（*/†：同等贡献）</span></div>
+    <h2 class="pub-main-title en">Publications <span class="pub-view-toggles">( <a onclick="showPubView('home','selected')" class="pub-toggle-link active-toggle" id="home-sel">show selected</a> / <a onclick="showPubView('home','date')" class="pub-toggle-link" id="home-date">show all by date</a> / <a onclick="showPubView('home','topic')" class="pub-toggle-link" id="home-topic">show all by topic</a> )</span></h2>
+    <h2 class="pub-main-title zh" style="display:none">论文发表 <span class="pub-view-toggles">( <a onclick="showPubView('home','selected')" class="pub-toggle-link active-toggle" id="home-sel-zh">精选</a> / <a onclick="showPubView('home','date')" class="pub-toggle-link" id="home-date-zh">按时间</a> / <a onclick="showPubView('home','topic')" class="pub-toggle-link" id="home-topic-zh">按主题</a> )</span></h2>
+    <div class="pub-topics-line en"><strong>Topics:</strong> <a onclick="filterByTopic('home','robust')" class="topic-link">Robust AI</a> / <a onclick="filterByTopic('home','efficient')" class="topic-link">Efficient AI</a> / <a onclick="filterByTopic('home','hdc')" class="topic-link">Bio-inspired Computing</a> / <a onclick="filterByTopic('home','medical')" class="topic-link">Medical AI</a><span class="contrib-note">;(*/†: indicates equal contribution.)</span></div>
+    <div class="pub-topics-line zh" style="display:none"><strong>研究主题：</strong> <a onclick="filterByTopic('home','robust')" class="topic-link">鲁棒人工智能</a> / <a onclick="filterByTopic('home','efficient')" class="topic-link">高效人工智能</a> / <a onclick="filterByTopic('home','hdc')" class="topic-link">生物启发计算</a> click="filterByTopic('home','medical')" class="topic-link">医学人工智能</a>;<span class="contrib-note">（*/†：同等贡献）</span></div>
   </div>
   <div class="sec-rule" style="margin-top:1.2rem;"></div>
 
   <div id="full-view-selected" class="pub-view">
-    <div class="pub-year-group"><div class="pub-year-label">2024</div>
-      <div class="pub-item" data-topic="concept" data-selected="1"><div class="pub-thumb">🧠</div><div class="pub-body"><div class="pub-title en">Your Best Paper Title: A Study in Something Important and Novel</div><div class="pub-title zh" style="display:none">最重要论文标题：关于某重要问题的深入研究</div><div class="pub-authors en"><strong>Your Name</strong>, Co-Author A, Supervisor Name</div><div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者A，导师</div><div class="pub-venue en">Nature Machine Intelligence, 2024</div><div class="pub-venue zh" style="display:none">《自然·机器智能》，2024</div><div class="pub-tags"><span class="pub-tag en">Journal</span><span class="pub-tag zh" style="display:none">期刊</span><span class="pub-tag">★ Best Paper</span></div><div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Code</a><a class="pub-link" href="#">Poster</a></div></div></div>
-    </div>
-    <div class="pub-year-group"><div class="pub-year-label">2023</div>
-      <div class="pub-item" data-topic="reasoning" data-selected="1"><div class="pub-thumb">📐</div><div class="pub-body"><div class="pub-title en">Second Important Paper: Another Breakthrough Result</div><div class="pub-title zh" style="display:none">第二篇重要论文：又一突破性成果</div><div class="pub-authors en"><strong>Your Name</strong>, Co-Author C</div><div class="pub-authors zh" style="display:none"><strong>你的名字</strong>，合作作者C</div><div class="pub-venue">NeurIPS 2023</div><div class="pub-tags"><span class="pub-tag en">Conference</span><span class="pub-tag zh" style="display:none">会议</span></div><div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Slides</a></div></div></div>
-    </div>
+      <div class="pub-item" data-topic="medical" data-selected="1">
+        <div class="pub-thumb">🧠</div>
+        <div class="pub-body">
+          <div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
+          <div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
+          <div class="pub-authors en">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div>
+          <div class="pub-authors zh" style="display:none">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div>
+          <div class="pub-venue">The European Chapter of the ACL (EACL), 2026</div>
+          <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div>
+        </div>
+      </div>
+      <div class="pub-item" data-topic="efficient" data-selected="1">
+        <div class="pub-thumb">📐</div>
+        <div class="pub-body">
+          <div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
+          <div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
+          <div class="pub-authors en"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div>
+          <div class="pub-authors zh" style="display:none"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div>
+          <div class="pub-venue">IEEE International Symposium on Circuits and Systems (ISCAS), 2026</div>
+          <div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Slides</a></div>
+        </div>
+      </div>
+      <div class="pub-item" data-topic="robust" data-selected="1">
+        <div class="pub-thumb">🧠</div>
+        <div class="pub-body">
+          <div class="pub-title en">Beyond Sampling:Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
+          <div class="pub-title zh" style="display:none">Beyond Sampling:Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
+          <div class="pub-authors en">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div>
+          <div class="pub-authors zh" style="display:none">Xulei Zhang, <strong>Jinghao Wen</strong>, Xun Jiao</div>
+          <div class="pub-venue">IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026</div>
+          <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div>
+        </div>
+      </div>
   </div>
 
   <div id="full-view-date" class="pub-view" style="display:none">
