@@ -379,7 +379,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     <div class="pub-section-header">
       <h2 class="pub-main-title en">Publications <span class="pub-view-toggles">( <a onclick="showPubView('home','selected')" class="pub-toggle-link active-toggle" id="home-sel">show selected</a> / <a onclick="showPubView('home','date')" class="pub-toggle-link" id="home-date">show all by date</a> / <a onclick="showPubView('home','topic')" class="pub-toggle-link" id="home-topic">show all by topic</a> )</span></h2>
       <h2 class="pub-main-title zh" style="display:none">论文发表 <span class="pub-view-toggles">( <a onclick="showPubView('home','selected')" class="pub-toggle-link active-toggle" id="home-sel-zh">精选</a> / <a onclick="showPubView('home','date')" class="pub-toggle-link" id="home-date-zh">按时间</a> / <a onclick="showPubView('home','topic')" class="pub-toggle-link" id="home-topic-zh">按主题</a> )</span></h2>
-      <div class="pub-topics-line en"><strong>Topics:</strong> <a onclick="filterByTopic('home','concept')" class="topic-link">Robust AI</a> / <a onclick="filterByTopic('home','reasoning')" class="topic-link">Efficient AI</a> / <a onclick="filterByTopic('home','scene')" class="topic-link">Bio-inspired Computing</a> / <a onclick="filterByTopic('home','scene')" class="topic-link">Medical AI</a><span class="contrib-note">;(*/†: indicates equal contribution.)</span></div>
+      <div class="pub-topics-line en"><strong>Topics:</strong> <a onclick="filterByTopic('home','robust')" class="topic-link">Robust AI</a> / <a onclick="filterByTopic('home','efficient')" class="topic-link">Efficient AI</a> / <a onclick="filterByTopic('home','hdc')" class="topic-link">Bio-inspired Computing</a> / <a onclick="filterByTopic('home','medical')" class="topic-link">Medical AI</a><span class="contrib-note">;(*/†: indicates equal contribution.)</span></div>
       <div class="pub-topics-line zh" style="display:none"><strong>研究主题：</strong> <a onclick="filterByTopic('home','robust')" class="topic-link">鲁棒人工智能</a> / <a onclick="filterByTopic('home','efficient')" class="topic-link">高效人工智能</a> / <a onclick="filterByTopic('home','hdc')" class="topic-link">生物启发计算</a> click="filterByTopic('home','medical')" class="topic-link">医学人工智能</a>;<span class="contrib-note">（*/†：同等贡献）</span></div>
     </div>
     <div id="home-view-selected" class="pub-view">
@@ -470,6 +470,8 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         </div>
       </div>
     </div>
+
+    
     <div id="home-view-topic" class="pub-view" style="display:none">
       <div class="pub-topic-group" id="home-topic-robust"><div class="pub-topic-label en">Robust AI</div><div class="pub-topic-label zh" style="display:none">鲁棒人工智能</div>
 
@@ -502,7 +504,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         </div>
         
       </div>
-      <div class="pub-topic-group" id="home-topic-scene"><div class="pub-topic-label en">Bio-inspired Computing</div><div class="pub-topic-label zh" style="display:none">生物启发计算</div>
+      <div class="pub-topic-group" id="home-topic-hdc"><div class="pub-topic-label en">Bio-inspired Computing</div><div class="pub-topic-label zh" style="display:none">生物启发计算</div>
 
         <div class="pub-item" data-topic="hdc" data-selected="1">
           <div class="pub-thumb">📐</div>
@@ -518,9 +520,10 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         
       </div>
 
-      <div class="pub-topic-group" id="home-topic-scene"><div class="pub-topic-label en">Medical AI</div><div class="pub-topic-label zh" style="display:none">医学人工智能</div>
-
-        <div class="pub-thumb">🧠</div>
+      <div class="pub-topic-group" id="home-topic-medical"><div class="pub-topic-label en">Medical AI</div><div class="pub-topic-label zh" style="display:none">医学人工智能</div>
+  
+        <div class="pub-item" data-topic="medical" data-selected="1">
+          <div class="pub-thumb">🧠</div>
           <div class="pub-body">
             <div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
             <div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
@@ -529,7 +532,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
             <div class="pub-venue">The European Chapter of the ACL (EACL), 2026</div>
             <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div>
           </div>
-        </div> 
+        </div>
         
       </div>
     </div>
