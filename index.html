@@ -301,6 +301,37 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
 .work-preview-desc{font-size:.82rem;color:var(--muted);line-height:1.6;}
 .work-preview-period{font-family:var(--mono);font-size:.72rem;color:var(--faint);white-space:nowrap;flex-shrink:0;padding-top:.25rem;}
 
+
+/* ── TAROT ── */
+.tarot-intro{color:var(--muted);font-size:.91rem;font-weight:500;line-height:1.85;max-width:580px;margin-bottom:2rem;}
+.tarot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1rem;}
+.tarot-card-wrap{cursor:pointer;}
+.tarot-card{width:100%;aspect-ratio:2/3.5;border-radius:8px;background:linear-gradient(135deg,#1c1c1e,#0f2035);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:2.2rem;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;}
+.tarot-card:hover{transform:translateY(-4px) rotate(-1deg);box-shadow:0 12px 32px rgba(0,0,0,.18);}
+.tarot-card .tc-number{position:absolute;top:.5rem;left:.6rem;font-family:var(--mono);font-size:.62rem;color:rgba(255,255,255,.35);}
+.tarot-card .tc-symbol{font-size:2.4rem;margin-bottom:.3rem;}
+.tarot-card .tc-name{font-family:var(--serif);font-size:.7rem;color:rgba(255,255,255,.7);text-align:center;padding:0 .4rem;line-height:1.3;}
+.tarot-card-label{font-family:var(--serif);font-size:.8rem;color:var(--muted);text-align:center;margin-top:.4rem;line-height:1.3;}
+
+/* ── GUITAR ── */
+.guitar-filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.6rem;}
+.guitar-list{display:flex;flex-direction:column;gap:0;}
+.guitar-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border);transition:background .15s;}
+.guitar-item:hover{background:rgba(30,58,95,.04);}
+.guitar-item:last-child{border-bottom:none;}
+.guitar-item-left{flex:1;min-width:0;}
+.guitar-item-right{display:flex;align-items:center;gap:1rem;flex-shrink:0;}
+.guitar-genre-tag{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.18rem;}
+.guitar-title{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--ink);line-height:1.3;margin-bottom:.12rem;}
+.guitar-artist{font-size:.8rem;color:var(--muted);}
+.guitar-diff{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .6rem;border-radius:20px;white-space:nowrap;}
+.guitar-diff-easy{background:#e8f4ee;color:#2a6b3f;}
+.guitar-diff-med{background:#fdf3e3;color:#8b5e1a;}
+.guitar-diff-hard{background:#fae8e8;color:#8b1a1a;}
+.guitar-links{display:flex;gap:.5rem;}
+.guitar-link{font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);border:1px solid var(--border);padding:.2rem .55rem;border-radius:3px;white-space:nowrap;transition:all .15s;}
+.guitar-link:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+
 </style>
 </head>
 <body>
@@ -569,6 +600,21 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
   </div>
 
   <div class="home-block">
+    <h2 class="home-block-title"><span class="en">Other Activities</span><span class="zh" style="display:none">其他活动</span></h2>
+    <div class="act-sub"><span class="en">Services</span><span class="zh" style="display:none">学术服务</span></div>
+    <ul class="act-list" style="margin-bottom:1.4rem;">
+      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Reviewer</strong> — AAAI, IJCNN, ICASSP, TCAD</span><span class="act-detail zh" style="display:none"><strong>审稿人</strong> — AAAI, IJCNN, ICASSP, TCAD</span></li>
+      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Volunteer</strong> — China Robot Competition and RoboCup China Open</span><span class="act-detail zh" style="display:none"><strong>志愿者</strong> — 中国机器人大赛暨RoboCup机器人世界杯中国赛</span></li>
+    </ul>
+    <div class="act-sub"><span class="en">Teaching</span><span class="zh" style="display:none">教学</span></div>
+    <ul class="act-list">
+      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Teaching Assistant</strong> — ECE 1261: Engineering Programming &amp; Applications Lab (Spring 2026)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — ECE 1261：工程编程与应用实验课（2026春季）</span></li>
+      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Advanced Language Programming Experimental Course (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 高级语言程序设计实验课（华中师范大学）</span></li>
+      <li><span class="act-year">2022</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Data Structure (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 数据结构（华中师范大学）</span></li>
+    </ul>
+  </div>
+
+  <div class="home-block">
     <h2 class="home-block-title"><span class="en">Work Experience</span><span class="zh" style="display:none">工作经历</span></h2>
     <div class="work-preview-item">
       <div class="work-preview-left">
@@ -590,23 +636,6 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     </div>
     <a onclick="show('work')" style="cursor:pointer;font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;"><span class="en">View full work experience →</span><span class="zh" style="display:none">查看完整工作经历 →</span></a>
   </div>
-
-  <div class="home-block">
-    <h2 class="home-block-title"><span class="en">Other Activities</span><span class="zh" style="display:none">其他活动</span></h2>
-    <div class="act-sub"><span class="en">Services</span><span class="zh" style="display:none">学术服务</span></div>
-    <ul class="act-list" style="margin-bottom:1.4rem;">
-      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Reviewer</strong> — AAAI, IJCNN, ICASSP, TCAD</span><span class="act-detail zh" style="display:none"><strong>审稿人</strong> — AAAI, IJCNN, ICASSP, TCAD</span></li>
-      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Volunteer</strong> — China Robot Competition and RoboCup China Open</span><span class="act-detail zh" style="display:none"><strong>志愿者</strong> — 中国机器人大赛暨RoboCup机器人世界杯中国赛</span></li>
-    </ul>
-    <div class="act-sub"><span class="en">Teaching</span><span class="zh" style="display:none">教学</span></div>
-    <ul class="act-list">
-      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Teaching Assistant</strong> — ECE 1261: Engineering Programming &amp; Applications Lab (Spring 2026)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — ECE 1261：工程编程与应用实验课（2026春季）</span></li>
-      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Advanced Language Programming Experimental Course (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 高级语言程序设计实验课（华中师范大学）</span></li>
-      <li><span class="act-year">2022</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Data Structure (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 数据结构（华中师范大学）</span></li>
-    </ul>
-  </div>
-
-  
 </section>
 
   <!-- PUBLICATIONS → sections/publications.html -->
