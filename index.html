@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none;}
 #sidebar::-webkit-scrollbar{width:3px;}
 #sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:2px;}
 .sb-profile{padding:2.2rem 1.6rem 1.4rem;border-bottom:1px solid rgba(255,255,255,.08);text-align:center;}
-.sb-avatar{width:170px;height:170px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.18);margin:0 auto .9rem;display:block;background:linear-gradient(135deg,#0f2035,#1e3a5f);font-size:2.8rem;line-height:96px;text-align:center;overflow:hidden;}
+.sb-avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.18);margin:0 auto .9rem;display:block;background:linear-gradient(135deg,#0f2035,#1e3a5f);font-size:2.8rem;line-height:96px;text-align:center;overflow:hidden;}
 .sb-name{color:#f0ede8;font-family:var(--serif);font-size:1.05rem;font-weight:500;margin-bottom:.25rem;}
 .sb-title{color:rgba(255,255,255,.45);font-size:.71rem;letter-spacing:.09em;text-transform:uppercase;line-height:1.5;}
 .sb-inst{color:rgba(255,255,255,.32);font-size:.74rem;margin-top:.3rem;line-height:1.5;}
@@ -119,6 +119,7 @@ a{color:inherit;text-decoration:none;}
 
 /* ── PUB ITEM — with thumbnail ── */
 .pub-item{display:flex;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+
 .pub-thumb{width:190px;min-width:190px;height:auto;border-radius:4px;object-fit:cover;background:var(--tag);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
 .pub-thumb img{width:100%;height:auto;display:block;border-radius:4px;}
 .pub-body{}
@@ -254,8 +255,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
   .tarot-meanings{grid-template-columns:1fr;}
   .guitar-item{flex-direction:column;align-items:flex-start;gap:.5rem;}
   .guitar-item-right{width:100%;justify-content:space-between;}
-  .pub-item{grid-template-columns:60px 1fr;}
-  .pub-thumb{width:60px;height:50px;}
+  .pub-thumb{width:100px;min-width:100px;}
 }
 
 /* ── Small mobile (480px and below) ── */
@@ -356,9 +356,13 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     <div class="sb-inst"><span class="en">Department of Electrical and Computer Engineering<br>Villanova University</span><span class="zh" style="display:none">电子与计算机工程系<br>维拉诺瓦大学</span></div>
   </div>
   <div class="sb-contact">
-    <a href="jinghao.wen@outlook.com">
+    <a href="/cdn-cgi/l/email-protection#284241464f404947065f4d4668475d5c44474743064b4745">
       <em class="icon">✉</em>
-      <span class="sb-link-label">jinghao.wen@outlook.com</span>
+      <span class="sb-link-label"><span class="__cf_email__" data-cfemail="573d3e39303f363879203239173822233b38383c7934383a">[email&#160;protected]</span></span>
+    </a>
+    <a href="https://github.com/jinghaowen27" target="_blank">
+      <em class="icon">⌥</em>
+      <span class="sb-link-label">GitHub</span>
     </a>
     <a href="https://scholar.google.com/citations?user=HQxVjZEAAAAJ&hl=zh-CN" target="_blank">
       <em class="icon">◎</em>
@@ -389,8 +393,8 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     <div class="sb-nav-section en" style="margin-top:.6rem">Life</div>
     <div class="sb-nav-section zh" style="display:none;margin-top:.6rem">生活</div>
     <a href="#" onclick="show('recipes');return false;" id="nav-recipes"><em class="nav-icon">🍳</em><span class="en">Recipes</span><span class="zh" style="display:none">菜谱</span></a>
-    <a href="#" onclick="show('cocktails');return false;" id="nav-cocktails"><em class="nav-icon">🍸</em><span class="en">Bartending</span><span class="zh" style="display:none">调酒</span></a>
-    <a href="#" onclick="show('reading');return false;" id="nav-reading"><em class="nav-icon">📚</em><span class="en">Reading</span><span class="zh" style="display:none">阅读</span></a>
+    <a href="#" onclick="show('cocktails');return false;" id="nav-cocktails"><em class="nav-icon">🍸</em><span class="en">Bartending</span><span class="zh" style="display:none">鸡尾酒</span></a>
+    <a href="#" onclick="show('reading');return false;" id="nav-reading"><em class="nav-icon">📚</em><span class="en">Reading</span><span class="zh" style="display:none">读书</span></a>
     <a href="#" onclick="show('photography');return false;" id="nav-photography"><em class="nav-icon">📷</em><span class="en">Photography</span><span class="zh" style="display:none">摄影</span></a>
     <a href="#" onclick="show('tarot');return false;" id="nav-tarot"><em class="nav-icon">🔮</em><span class="en">Tarot</span><span class="zh" style="display:none">塔罗</span></a>
     <a href="#" onclick="show('guitar');return false;" id="nav-guitar"><em class="nav-icon">🎸</em><span class="en">Guitar</span><span class="zh" style="display:none">吉他</span></a>
@@ -415,10 +419,10 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
       <span class="en">Hi, I'm <em>Jinghao Wen</em> —<br>PhD student, reader &amp; bartender.</span>
       <span class="zh" style="display:none">你好，我是<em>文靖豪</em>——<br>博士研究生、读者与调酒师。</span>
     </h1>
-    <p class="home-bio en">I am a PhD student in the Department of Electrical and Computer Engineering, Villanova University, advised by Prof.<a href="https://vu-detail.github.io/people/jiao.html" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;"> Xun Jiao</a>. My current research interests lie in <strong>Machine Learning System</strong>, <strong>Robust AI</strong>, <strong>Efficient AI</strong> and <strong>Bio-inspired Computing</strong>.</p>
-    <p class="home-bio zh" style="display:none">我是维拉诺瓦大学电子与计算机工程系博士研究生，导师为<a href="https://vu-detail.github.io/people/jiao.html" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">焦珣</a>教授。我目前的研究兴趣是<strong>机器学习系统</strong>，<strong>鲁棒人工智能</strong>，<strong>高效人工智能</strong>和<strong>生物启发计算</strong>。</p>
+    <p class="home-bio en">I am a PhD student in the Department of Electrical and Computer Engineering, Villanova University, advised by <a href="https://www.xuniiao.com" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">Prof. Xun Jiao</a>. My current research interests lie in <strong>Machine Learning System</strong>, <strong>Robust AI</strong>, <strong>Efficient AI</strong> and <strong>Bio-inspired Computing</strong>.</p>
+    <p class="home-bio zh" style="display:none">我是维拉诺瓦大学电子与计算机工程系博士研究生，导师为<a href="https://www.xuniiao.com" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">焦珣教授</a>。我目前的研究兴趣是<strong>机器学习系统</strong>，<strong>鲁棒人工智能</strong>，<strong>高效人工智能</strong>和<strong>生物启发计算</strong>。</p>
     <div class="home-links">
-      <a class="btn btn-solid" href="mailto:jinghao.wen@outlook.com"><span class="en">Get in Touch</span><span class="zh" style="display:none">联系我</span></a>
+      <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#d7bdbeb9b0bfb6b8f9a0b2b997b8a2a3bbb8b8bcf9b4b8ba"><span class="en">Get in Touch</span><span class="zh" style="display:none">联系我</span></a>
       <a class="btn btn-out" href="/cv.pdf" target="_blank"><span class="en">Download CV</span><span class="zh" style="display:none">下载简历</span></a>
       <a class="btn btn-out" href="https://scholar.google.com/citations?user=HQxVjZEAAAAJ&hl=zh-CN" target="_blank"><span class="en">Google Scholar</span><span class="zh" style="display:none">谷歌学术</span></a>
     </div>
@@ -426,13 +430,15 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
 
   <div class="home-block">
     <h2 class="home-block-title"><span class="en">About Me</span><span class="zh" style="display:none">关于我</span></h2>
-    <p class="home-body en">I am a PhD student in the Department of Electrical and Computer Engineering, Villanova University, advised by Prof. <a href="https://vu-detail.github.io/people/jiao.html" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">Xun Jiao</a>. My current research interests lie in <strong>Machine Learning System</strong>, <strong>Robust AI</strong>, <strong>Efficient AI</strong> and <strong>Bio-inspired Computing</strong>. Overall research focuses on developing high-performant, energy-efficient, and robust-and-reliable AI/ML systems, using a cross-layer full-stack approach spanning hardware, software, and algorithm. I got my bachelor's degree from the School of Computer Science at Central China Normal University. During my undergraduate studies, I joined the Intelligent Robot Laboratory and, under the guidance of Prof. <a href="https://cs.ccnu.edu.cn/info/1111/1877.htm" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">Xi Peng</a>, engaged in projects and research related to embodied intelligence, human-computer interaction, and computer vision. In addition, I joined the SmartSystems Laboratory at the University of Florida. Under the guidance of Prof. <a href="https://www.ece.ufl.edu/people/faculty/christophe-bobda/" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">Christophe Bobda</a>, I conducted research on intelligent embedded systems, intelligent sensing, and robotics technology. The focus was on runtime optimization, researching the design and runtime operation of high-performance adaptive architectures, and applying it to fields such as image processing, embedded optimization, security and control.
-      <br><br>I think scientific research and life are largely inseparable. So I also tried different life experiences, tasted various kinds of delicious food (visited nearly 50 restaurants in New York) and recorded the recipes, obtained the New York Bartender certificate, read books on different topics, and recorded with my camera while traveling. Picking up the guitar that had been forgotten for many years again and delusively trying to explore the unknown with the power of tarot cards (which still seems absurd now)...</p>
-    <p class="home-body zh" style="display:none">我是维拉诺瓦大学电子与计算机工程系博士研究生，导师为<a href="https://vu-detail.github.io/people/jiao.html" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">焦珣</a>焦珣教授。我目前的研究兴趣是<strong>机器学习系统</strong>，<strong>鲁棒人工智能</strong>，<strong>高效人工智能</strong>和<strong>生物启发计算</strong>，总体研究重点是开发高性能、节能、稳健可靠的人工智能/机器学习系统，采用跨层全栈方法，涵盖硬件、软件和算法。我本科毕业于华中师范大学计算机学院，本科学习期间我加入智能机器人实验室，在<a href="https://cs.ccnu.edu.cn/info/1111/1877.htm" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">彭熙</a>教授的指导下从事具身智能、人机交互、计算机视觉相关的项目和研究。此外我还曾加入佛罗里达大学的智能系统实验室，在<a href="https://www.ece.ufl.edu/people/faculty/christophe-bobda/" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">Christophe Bobda</a>教授的指导下，从事智能嵌入式系统、智能传感和机器人技术的研究，重点在于运行时优化，研究高性能自适应架构的设计和运行时运行，并将其应用于图像处理、嵌入式优化、安全和控制等领域。<br><br>我想科研与生活大抵是分不开的，所以我还尝试不同的生活体验，品尝各种美食（打卡纽约近50家餐厅）并记录菜谱，获得了纽约调酒师证书，阅读不同题材的书籍，在旅游的同时用相机记录，重新捡起遗忘多年的吉他以及妄想借助塔罗牌的力量去探索未知（现在看来仍荒谬无比）...</p>
+    <p class="home-body en">I am a PhD student in the Department of Electrical and Computer Engineering, Villanova University, advised by <a href="https://www.xuniiao.com" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">Prof. Xun Jiao</a>. My current research interests lie in <strong>Machine Learning System</strong>, <strong>Robust AI</strong>, <strong>Efficient AI</strong> and <strong>Bio-inspired Computing</strong>. Overall research focuses on developing high-performant, energy-efficient, and robust-and-reliable AI/ML systems, using a cross-layer full-stack approach spanning hardware, software, and algorithm. I got my bachelor's degree from the School of Computer Science at Central China Normal University. During my undergraduate studies, I joined the Intelligent Robot Laboratory and, under the guidance of Professor Peng Xi, engaged in projects and research related to embodied intelligence, human-computer interaction, and computer vision. In addition, I joined the SmartSystems Laboratory at the University of Florida. Under the guidance of Prof. Christophe Bobda, I conducted research on intelligent embedded systems, intelligent sensing, and robotics technology. The focus was on runtime optimization, researching the design and runtime operation of high-performance adaptive architectures, and applying it to fields such as image processing, embedded optimization, security and control.
+      <br><br>Outside research, you'll find me at the farmers' market, experimenting with fermentation, mixing cocktails, hunting for natural wines, shooting film photography, or studying tarot symbolism.</p>
+    <p class="home-body zh" style="display:none">我是维拉诺瓦大学电子与计算机工程系博士研究生，导师为<a href="https://www.xuniiao.com" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">焦珣教授</a>。我目前的研究兴趣是<strong>机器学习系统</strong>，<strong>鲁棒人工智能</strong>，<strong>高效人工智能</strong>和<strong>生物启发计算</strong>，总体研究重点是开发高性能、节能、稳健可靠的人工智能/机器学习系统，采用跨层全栈方法，涵盖硬件、软件和算法。我本科毕业于华中师范大学计算机学院，本科学习期间我加入智能机器人实验室，在彭熙教授的指导下从事具身智能、人机交互、计算机视觉相关的项目和研究。此外我还曾加入佛罗里达大学的智能系统实验室，在Christophe Bobda教授的指导下，从事智能嵌入式系统、智能传感和机器人技术的研究，重点在于运行时优化，研究高性能自适应架构的设计和运行时运行，并将其应用于图像处理、嵌入式优化、安全和控制等领域。<br><br>科研之外，常在农贸市场、研究发酵、调制鸡尾酒、寻觅自然酒、拍摄胶片或研究塔罗牌。</p>
   </div>
 
   <div class="home-block">
     <h2 class="home-block-title"><span class="en">Research Interests</span><span class="zh" style="display:none">研究方向</span></h2>
+    <p class="home-body en" style="margin-bottom:.9rem">My work develops machine learning methods that are efficient, interpretable, and applicable to real-world biological problems.</p>
+    <p class="home-body zh" style="display:none;margin-bottom:.9rem">开发高效、可解释、可应用于真实生物问题的机器学习方法。</p>
     <div class="research-tags">
       <span class="rtag en">Machine Learning System</span><span class="rtag zh" style="display:none">机器学习系统</span>
       <span class="rtag en">Robust AI</span><span class="rtag zh" style="display:none">鲁棒人工智能</span>
@@ -452,7 +458,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     </div>
     <div id="home-view-selected" class="pub-view">
       <div class="pub-item" data-topic="medical" data-selected="1">
-        <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Paper Title">
+        <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Martingale paper">
         <div class="pub-body">
           <div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
           <div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
@@ -463,7 +469,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         </div>
       </div>
       <div class="pub-item" data-topic="efficient" data-selected="1">
-        <img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="Paper Title">
+        <img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="MILEAM paper">
         <div class="pub-body">
           <div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
           <div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
@@ -474,7 +480,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         </div>
       </div>
       <div class="pub-item" data-topic="robust" data-selected="1">
-        <img class="pub-thumb" src="images/thumbnails/train_distribution.jpg" alt="Paper Title">
+        <img class="pub-thumb" src="images/thumbnails/train_distribution.jpg" alt="Beyond Sampling paper">
         <div class="pub-body">
           <div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
           <div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
@@ -488,7 +494,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     <div id="home-view-date" class="pub-view" style="display:none">
       <div class="pub-year-group"><div class="pub-year-label">2026</div>
         <div class="pub-item" data-topic="medical" data-selected="1">
-          <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Paper Title">
+          <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Martingale paper">
           <div class="pub-body">
             <div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
             <div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
@@ -499,7 +505,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
           </div>
         </div>
         <div class="pub-item" data-topic="efficient" data-selected="1">
-          <img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="Paper Title">
+          <img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="MILEAM paper">
           <div class="pub-body">
             <div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
             <div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
@@ -510,7 +516,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
           </div>
         </div>
         <div class="pub-item" data-topic="robust" data-selected="1">
-          <div class="pub-thumb">🧠</div>
+          <img class="pub-thumb" src="images/thumbnails/train_distribution.jpg" alt="Beyond Sampling paper">
           <div class="pub-body">
             <div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
             <div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
@@ -522,14 +528,14 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         </div>
       </div>
       <div class="pub-year-group"><div class="pub-year-label">2025</div>
-
+        
          <div class="pub-item" data-topic="medical" data-selected="1">
-          <img class="pub-thumb" src="images/thumbnails/EHR_Data.jpg" alt="Paper Title">
+          <img class="pub-thumb" src="images/thumbnails/EHR_Data.jpg" alt="EHR paper">
           <div class="pub-body">
             <div class="pub-title en">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div>
             <div class="pub-title zh" style="display:none">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div>
-            <div class="pub-authors en"><strong>Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
-            <div class="pub-authors zh" style="display:none"><strong>Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
+            <div class="pub-authors en">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
+            <div class="pub-authors zh" style="display:none">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
             <div class="pub-venue">Electronics, 2025</div>
             <div class="pub-links"><a class="pub-link" href="https://www.mdpi.com/2079-9292/14/20/4033">Paper</a></div>
           </div>
@@ -550,7 +556,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     <div id="home-view-topic" class="pub-view" style="display:none">
       <div class="pub-topic-group" id="home-topic-robust"><div class="pub-topic-label en">Robust AI</div><div class="pub-topic-label zh" style="display:none">鲁棒人工智能</div>
         <div class="pub-item" data-topic="robust" data-selected="1">
-          <div class="pub-thumb">🧠</div>
+          <img class="pub-thumb" src="images/thumbnails/train_distribution.jpg" alt="Beyond Sampling paper">
           <div class="pub-body">
             <div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
             <div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
@@ -563,7 +569,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
       </div>
       <div class="pub-topic-group" id="home-topic-efficient"><div class="pub-topic-label en">Efficient AI</div><div class="pub-topic-label zh" style="display:none">高效人工智能</div>
         <div class="pub-item" data-topic="efficient" data-selected="1">
-          <div class="pub-thumb">📐</div>
+          <img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="MILEAM paper">
           <div class="pub-body">
             <div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
             <div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
@@ -588,9 +594,8 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         </div>
       </div>
       <div class="pub-topic-group" id="home-topic-medical"><div class="pub-topic-label en">Medical AI</div><div class="pub-topic-label zh" style="display:none">医学人工智能</div>
-        
         <div class="pub-item" data-topic="medical" data-selected="1">
-          <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Paper Title">
+          <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Martingale paper">
           <div class="pub-body">
             <div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
             <div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
@@ -600,22 +605,35 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
             <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div>
           </div>
         </div>
-        
+      </div>
         <div class="pub-item" data-topic="medical" data-selected="1">
-          <div class="pub-thumb">📐</div>
+          <img class="pub-thumb" src="images/thumbnails/EHR_Data.jpg" alt="EHR paper">
           <div class="pub-body">
             <div class="pub-title en">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div>
             <div class="pub-title zh" style="display:none">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div>
-            <div class="pub-authors en"><strong>Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
-            <div class="pub-authors zh" style="display:none"><strong>Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
+            <div class="pub-authors en">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
+            <div class="pub-authors zh" style="display:none">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
             <div class="pub-venue">Electronics, 2025</div>
             <div class="pub-links"><a class="pub-link" href="https://www.mdpi.com/2079-9292/14/20/4033">Paper</a></div>
           </div>
         </div>
-        
-      </div>
     </div>
     <a onclick="show('publications')" style="cursor:pointer;font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.3rem;margin-top:.8rem;"><span class="en">View full publication list →</span><span class="zh" style="display:none">查看完整论文列表 →</span></a>
+  </div>
+
+  <div class="home-block">
+    <h2 class="home-block-title"><span class="en">Other Activities</span><span class="zh" style="display:none">其他活动</span></h2>
+    <div class="act-sub"><span class="en">Services</span><span class="zh" style="display:none">学术服务</span></div>
+    <ul class="act-list" style="margin-bottom:1.4rem;">
+      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Reviewer</strong> — AAAI, IJCNN, ICASSP, TCAD</span><span class="act-detail zh" style="display:none"><strong>审稿人</strong> — AAAI, IJCNN, ICASSP, TCAD</span></li>
+      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Volunteer</strong> — China Robot Competition and RoboCup China Open</span><span class="act-detail zh" style="display:none"><strong>志愿者</strong> — 中国机器人大赛暨RoboCup机器人世界杯中国赛</span></li>
+    </ul>
+    <div class="act-sub"><span class="en">Teaching</span><span class="zh" style="display:none">教学</span></div>
+    <ul class="act-list">
+      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Teaching Assistant</strong> — ECE 1261: Engineering Programming &amp; Applications Lab (Spring 2026)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — ECE 1261：工程编程与应用实验课（2026春季）</span></li>
+      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Advanced Language Programming Experimental Course (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 高级语言程序设计实验课（华中师范大学）</span></li>
+      <li><span class="act-year">2022</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Data Structure (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 数据结构（华中师范大学）</span></li>
+    </ul>
   </div>
 
   <div class="home-block">
@@ -640,22 +658,6 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     </div>
     <a onclick="show('work')" style="cursor:pointer;font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;"><span class="en">View full work experience →</span><span class="zh" style="display:none">查看完整工作经历 →</span></a>
   </div>
-
-  <div class="home-block">
-    <h2 class="home-block-title"><span class="en">Other Activities</span><span class="zh" style="display:none">其他活动</span></h2>
-    <div class="act-sub"><span class="en">Services</span><span class="zh" style="display:none">学术服务</span></div>
-    <ul class="act-list" style="margin-bottom:1.4rem;">
-      <li><span class="act-year">2024-2026</span><span class="act-detail en"><strong>Reviewer</strong> — AAAI, IJCNN, ICASSP, TCAD</span><span class="act-detail zh" style="display:none"><strong>审稿人</strong> — AAAI, IJCNN, ICASSP, TCAD</span></li>
-      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Volunteer</strong> — China Robot Competition and RoboCup China Open</span><span class="act-detail zh" style="display:none"><strong>志愿者</strong> — 中国机器人大赛暨RoboCup机器人世界杯中国赛</span></li>
-    </ul>
-    <div class="act-sub"><span class="en">Teaching</span><span class="zh" style="display:none">教学</span></div>
-    <ul class="act-list">
-      <li><span class="act-year">2026</span><span class="act-detail en"><strong>Teaching Assistant</strong> — ECE 1261: Engineering Programming &amp; Applications Lab (Spring 2026)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — ECE 1261：工程编程与应用实验课（2026春季）</span></li>
-      <li><span class="act-year">2023</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Advanced Language Programming Experimental Course (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 高级语言程序设计实验课（华中师范大学）</span></li>
-      <li><span class="act-year">2022</span><span class="act-detail en"><strong>Teaching Assistant</strong> — Data Structure (Central China Normal University)</span><span class="act-detail zh" style="display:none"><strong>助教</strong> — 数据结构（华中师范大学）</span></li>
-    </ul>
-  </div>
-    
 </section>
 
   <!-- PUBLICATIONS → sections/publications.html -->
@@ -670,7 +672,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
 
   <div id="full-view-selected" class="pub-view">
     <div class="pub-item" data-topic="medical" data-selected="1">
-      <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Paper Title">
+      <img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Martingale paper">
       <div class="pub-body">
         <div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
         <div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div>
@@ -681,7 +683,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
       </div>
     </div>
     <div class="pub-item" data-topic="efficient" data-selected="1">
-      <div class="pub-thumb">📐</div>
+      <img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="MILEAM paper">
       <div class="pub-body">
         <div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
         <div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div>
@@ -692,7 +694,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
       </div>
     </div>
     <div class="pub-item" data-topic="robust" data-selected="1">
-      <div class="pub-thumb">🧠</div>
+      <img class="pub-thumb" src="images/thumbnails/train_distribution.jpg" alt="Beyond Sampling paper">
       <div class="pub-body">
         <div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
         <div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div>
@@ -713,51 +715,65 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
         <div class="pub-links"><a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11327514">Paper</a></div>
       </div>
     </div>
+    <div class="pub-item" data-topic="medical" data-selected="1">
+      <img class="pub-thumb" src="images/thumbnails/EHR_Data.jpg" alt="EHR paper">
+      <div class="pub-body">
+        <div class="pub-title en">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div>
+        <div class="pub-title zh" style="display:none">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div>
+        <div class="pub-authors en">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
+        <div class="pub-authors zh" style="display:none">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div>
+        <div class="pub-venue">Electronics, 2025</div>
+        <div class="pub-links"><a class="pub-link" href="https://www.mdpi.com/2079-9292/14/20/4033">Paper</a></div>
+      </div>
+    </div>
   </div>
 
   <div id="full-view-date" class="pub-view" style="display:none">
     <div class="pub-year-group">
       <div class="pub-year-label">2026</div>
-      <div class="pub-item" data-topic="medical"><img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Paper Title"><div class="pub-body"><div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-authors en">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-authors zh" style="display:none">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-venue">The European Chapter of the ACL (EACL), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
-      <div class="pub-item" data-topic="efficient"><div class="pub-thumb">📐</div><div class="pub-body"><div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-authors en"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-authors zh" style="display:none"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-venue">IEEE International Symposium on Circuits and Systems (ISCAS), 2026</div><div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Slides</a></div></div></div>
-      <div class="pub-item" data-topic="robust"><div class="pub-thumb">🧠</div><div class="pub-body"><div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-authors en">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-authors zh" style="display:none">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-venue">IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
+      <div class="pub-item" data-topic="medical"><img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Martingale paper"><div class="pub-body"><div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-authors en">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-authors zh" style="display:none">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-venue">The European Chapter of the ACL (EACL), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
+      <div class="pub-item" data-topic="efficient"><img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="MILEAM paper"><div class="pub-body"><div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-authors en"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-authors zh" style="display:none"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-venue">IEEE International Symposium on Circuits and Systems (ISCAS), 2026</div><div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Slides</a></div></div></div>
+      <div class="pub-item" data-topic="robust"><img class="pub-thumb" src="images/thumbnails/train_distribution.jpg" alt="Beyond Sampling paper"><div class="pub-body"><div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-authors en">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-authors zh" style="display:none">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-venue">IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
     </div>
     <div class="pub-year-group">
       <div class="pub-year-label">2025</div>
+      <div class="pub-item" data-topic="medical"><img class="pub-thumb" src="images/thumbnails/EHR_Data.jpg" alt="EHR paper"><div class="pub-body"><div class="pub-title en">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div><div class="pub-title zh" style="display:none">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div><div class="pub-authors en">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div><div class="pub-authors zh" style="display:none">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div><div class="pub-venue">Electronics, 2025</div><div class="pub-links"><a class="pub-link" href="https://www.mdpi.com/2079-9292/14/20/4033">Paper</a></div></div></div>
       <div class="pub-item" data-topic="hdc"><div class="pub-thumb">📐</div><div class="pub-body"><div class="pub-title en">Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing</div><div class="pub-title zh" style="display:none">Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing</div><div class="pub-authors en"><strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao</div><div class="pub-authors zh" style="display:none"><strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao</div><div class="pub-venue">IEEE Biomedical Circuits and Systems Conference (BioCAS), 2025</div><div class="pub-links"><a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11327514">Paper</a></div></div></div>
     </div>
   </div>
 
   <div id="full-view-topic" class="pub-view" style="display:none">
     <div class="pub-topic-group" id="full-topic-robust"><div class="pub-topic-label en">Robust AI</div><div class="pub-topic-label zh" style="display:none">鲁棒人工智能</div>
-      <div class="pub-item" data-topic="robust"><div class="pub-thumb">🧠</div><div class="pub-body"><div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-authors en">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-authors zh" style="display:none">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-venue">IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
+      <div class="pub-item" data-topic="robust"><img class="pub-thumb" src="images/thumbnails/train_distribution.jpg" alt="Beyond Sampling paper"><div class="pub-body"><div class="pub-title en">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-title zh" style="display:none">Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems</div><div class="pub-authors en">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-authors zh" style="display:none">Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao</div><div class="pub-venue">IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
     </div>
     <div class="pub-topic-group" id="full-topic-efficient"><div class="pub-topic-label en">Efficient AI</div><div class="pub-topic-label zh" style="display:none">高效人工智能</div>
-      <div class="pub-item" data-topic="efficient"><div class="pub-thumb">📐</div><div class="pub-body"><div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-authors en"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-authors zh" style="display:none"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-venue">IEEE International Symposium on Circuits and Systems (ISCAS), 2026</div><div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Slides</a></div></div></div>
+      <div class="pub-item" data-topic="efficient"><img class="pub-thumb" src="images/thumbnails/MILEAM.jpg" alt="MILEAM paper"><div class="pub-body"><div class="pub-title en">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-title zh" style="display:none">MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning</div><div class="pub-authors en"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-authors zh" style="display:none"><strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao</div><div class="pub-venue">IEEE International Symposium on Circuits and Systems (ISCAS), 2026</div><div class="pub-links"><a class="pub-link" href="#">Paper</a><a class="pub-link" href="#">Slides</a></div></div></div>
     </div>
     <div class="pub-topic-group" id="full-topic-hdc"><div class="pub-topic-label en">Bio-inspired Computing</div><div class="pub-topic-label zh" style="display:none">生物启发计算</div>
       <div class="pub-item" data-topic="hdc"><div class="pub-thumb">📐</div><div class="pub-body"><div class="pub-title en">Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing</div><div class="pub-title zh" style="display:none">Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing</div><div class="pub-authors en"><strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao</div><div class="pub-authors zh" style="display:none"><strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao</div><div class="pub-venue">IEEE Biomedical Circuits and Systems Conference (BioCAS), 2025</div><div class="pub-links"><a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11327514">Paper</a></div></div></div>
     </div>
     <div class="pub-topic-group" id="full-topic-medical"><div class="pub-topic-label en">Medical AI</div><div class="pub-topic-label zh" style="display:none">医学人工智能</div>
-      <div class="pub-item" data-topic="medical"><img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Paper Title"><div class="pub-body"><div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-authors en">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-authors zh" style="display:none">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-venue">The European Chapter of the ACL (EACL), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
+      <div class="pub-item" data-topic="medical"><img class="pub-thumb" src="images/thumbnails/Main-Graph.jpg" alt="Martingale paper"><div class="pub-body"><div class="pub-title en">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-title zh" style="display:none">Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding</div><div class="pub-authors en">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-authors zh" style="display:none">Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li</div><div class="pub-venue">The European Chapter of the ACL (EACL), 2026</div><div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2601.15482">Paper</a><a class="pub-link" href="https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling">Code</a></div></div></div>
+      <div class="pub-item" data-topic="medical"><img class="pub-thumb" src="images/thumbnails/EHR_Data.jpg" alt="EHR paper"><div class="pub-body"><div class="pub-title en">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div><div class="pub-title zh" style="display:none">A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment</div><div class="pub-authors en">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div><div class="pub-authors zh" style="display:none">Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li</div><div class="pub-venue">Electronics, 2025</div><div class="pub-links"><a class="pub-link" href="https://www.mdpi.com/2079-9292/14/20/4033">Paper</a></div></div></div>
     </div>
   </div>
 </section>
 
   <!-- COMPETITION → sections/competition.html -->
   <section class="page" id="competition">
+  <div class="sec-eye en">Awards, Contests &amp; Projects</div><div class="sec-eye zh" style="display:none">竞赛与项目</div>
   <h1 class="sec-h1 en">Awards &amp; Projects</h1><h1 class="sec-h1 zh" style="display:none">奖项 &amp; 项目</h1>
   <div class="sec-rule"></div>
 
   <div class="home-block">
-    <h2 class="home-block-title"><span class="en">Competition Awards</span><span class="zh" style="display:none">奖项</span></h2>
+    <h2 class="home-block-title"><span class="en">Competition Awards</span><span class="zh" style="display:none">竞赛奖项</span></h2>
     <ul class="act-list" style="max-width:760px;">
-      <li><span class="act-year">2023</span><span class="act-detail en"><strong>🏆 Scholarship</strong> — Google Cloude Research Credits Program · Google</span><span class="act-detail zh" style="display:none"><strong>🏆 奖学金</strong> — 谷歌云研究额度项目 · 谷歌</span></li>
+      <li><span class="act-year">2023</span><span class="act-detail en"><strong>🏆 Scholarship</strong> — Google Cloud Research Credits Program · Google</span><span class="act-detail zh" style="display:none"><strong>🏆 奖学金</strong> — 谷歌云研究额度项目 · 谷歌</span></li>
       <li><span class="act-year">2024</span><span class="act-detail en"><strong>🏆 Fellowship</strong> — Yongping'89 and Fei Lin'89 Gu Endowed Graduate Engineering Fellowship · Villanova University</span><span class="act-detail zh" style="display:none"><strong>🏆 奖学金</strong> — Yongping'89 and Fei Lin'89 Gu 捐赠研究生工程奖学金 · 维拉诺瓦大学</span></li>
       <li><span class="act-year">2023</span><span class="act-detail en"><strong>🥈 Silver Medal</strong> — Multi-Objective Recommender System Competition, Kaggle · top4%, 2587 teams</span><span class="act-detail zh" style="display:none"><strong>🥈 银牌</strong> — 多目标推荐系统竞赛，Kaggle · top4%, 2587 teams</span></li>
-      <li><span class="act-year">2023</span><span class="act-detail en"><strong>🥈 2nd Prize</strong> —  16th China College Students Computer Design Competition  · national level</span><span class="act-detail zh" style="display:none"><strong>🥈 二等奖</strong> — 第十六届中国大学生计算机设计大赛 · 国家级</span></li>
-      <li><span class="act-year">2022</span><span class="act-detail en"><strong>🥇 1st Prize</strong> — 2022 China Robot Competition & RoboCup China Open (dance robot) · national level</span><span class="act-detail zh" style="display:none"><strong>🥇 一等奖</strong> — 2022中国机器人大赛暨机器人世界杯中国公开赛（舞蹈机器人） · 国家级</span></li>
-      <li><span class="act-year">2022</span><span class="act-detail en"><strong>🥈 2nd Prize</strong> — 2022 China Robot Competition & RoboCup China Open (creative robot) · national level</span><span class="act-detail zh" style="display:none"><strong>🥈 二等奖</strong> — 2022中国机器人大赛暨机器人世界杯中国公开赛（创新机器人） · 国家级</span></li>
+      <li><span class="act-year">2023</span><span class="act-detail en"><strong>🥈 2nd Prize</strong> — 16th China College Students Computer Design Competition · national level</span><span class="act-detail zh" style="display:none"><strong>🥈 二等奖</strong> — 第十六届中国大学生计算机设计大赛 · 国家级</span></li>
+      <li><span class="act-year">2022</span><span class="act-detail en"><strong>🥇 1st Prize</strong> — 2022 China Robot Competition &amp; RoboCup China Open (dance robot) · national level</span><span class="act-detail zh" style="display:none"><strong>🥇 一等奖</strong> — 2022中国机器人大赛暨机器人世界杯中国公开赛（舞蹈机器人） · 国家级</span></li>
+      <li><span class="act-year">2022</span><span class="act-detail en"><strong>🥈 2nd Prize</strong> — 2022 China Robot Competition &amp; RoboCup China Open (creative robot) · national level</span><span class="act-detail zh" style="display:none"><strong>🥈 二等奖</strong> — 2022中国机器人大赛暨机器人世界杯中国公开赛（创新机器人） · 国家级</span></li>
     </ul>
   </div>
 
@@ -803,6 +819,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
 
   <!-- RECIPES → sections/recipes.html -->
   <section class="page" id="work">
+  <div class="sec-eye en">Industry &amp; Entrepreneurship</div><div class="sec-eye zh" style="display:none">行业与创业</div>
   <h1 class="sec-h1 en">Work Experience</h1><h1 class="sec-h1 zh" style="display:none">工作经历</h1>
   <div class="sec-rule"></div>
 
@@ -838,14 +855,14 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     </div>
     <div class="work-tags">
       <span class="work-tag intern en">Internship</span><span class="work-tag intern zh" style="display:none">实习</span>
-      <span class="work-tag">Python</span>
-      <span class="work-tag en">Machine Learning</span><span class="work-tag zh" style="display:none">机器学习</span>
+      <span class="work-tag en">Autonomous Driving</span><span class="work-tag zh" style="display:none">自动驾驶</span>
+      <span class="work-tag en">Product Management</span><span class="work-tag zh" style="display:none">产品管理</span>
     </div>
     <ul class="work-bullets">
-      <li class="en">Supported end-to-end project management for autonomous driving R&D projects, tracking milestones, timelines, and cross-functional resources across algorithm, software, and testing teams. </li><li class="zh" style="display:none">支持自动驾驶研发项目的端到端项目管理，跟踪里程碑、时间表和跨算法、软件和测试团队的跨职能资源</li>
-      <li class="en">Participated in real-world autonomous driving road tests on elevated highways in Shanghai, accumulating 3,000+ miles of on-road testing under real traffic conditions. </li><li class="zh" style="display:none">参与上海高架公路的实际自动驾驶道路测试，累计在真实路况下的道路测试里程超过3000英里。</li>
+      <li class="en">Supported end-to-end project management for autonomous driving R&D projects, tracking milestones, timelines, and cross-functional resources across algorithm, software, and testing teams.</li><li class="zh" style="display:none">支持自动驾驶研发项目的端到端项目管理，跟踪里程碑、时间表和跨算法、软件和测试团队的跨职能资源。</li>
+      <li class="en">Participated in real-world autonomous driving road tests on elevated highways in Shanghai, accumulating 3,000+ miles of on-road testing under real traffic conditions.</li><li class="zh" style="display:none">参与上海高架公路的实际自动驾驶道路测试，累计在真实路况下的道路测试里程超过3000英里。</li>
       <li class="en">Assisted in product requirement definition, issue analysis from testing, and technical documentation to facilitate efficient development and delivery.</li><li class="zh" style="display:none">协助产品需求定义、测试问题分析和技术文档，以促进有效的开发和交付。</li>
-      <li class="en">Collaborated with product and engineering teams to translate business and customer needs into actionable technical and product requirements. Acted as a liaison between algorithm teams and external clients, aligning technical details, clarifying requirements, and supporting solution delivery. </li><li class="zh" style="display:none">与产品和工程团队合作，将业务和客户需求转化为可操作的技术和产品需求。作为算法团队和外部客户之间的联络人，协调技术细节，澄清需求，支持解决方案交付。</li>
+      <li class="en">Collaborated with product and engineering teams to translate business and customer needs into actionable technical and product requirements. Acted as a liaison between algorithm teams and external clients, aligning technical details, clarifying requirements, and supporting solution delivery.</li><li class="zh" style="display:none">与产品和工程团队合作，将业务和客户需求转化为可操作的技术和产品需求。作为算法团队和外部客户之间的联络人，协调技术细节，澄清需求，支持解决方案交付。</li>
     </ul>
   </div>
 </section>
@@ -1324,7 +1341,7 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
      js/modal.js   — modal open/close
      data/modals-data.js — ALL popup content (recipes, books, etc.)
 ════════════════════════════════════════════════════════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const MODALS = {
   // RECIPES
   'recipe-charsiu':{
@@ -1637,18 +1654,4 @@ function openModal(id) {
 }
 
 function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function closeModalIfBg(e) {
-  if (e.target === document.getElementById('modal-overlay')) closeModal();
-}
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeModal();
-});
-
-</script>
-</body>
-</html>
+  document.getElementById('modal-overlay
