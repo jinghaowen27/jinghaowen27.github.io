@@ -1668,6 +1668,7 @@ function openModal(id) {
   const isTarot = id.startsWith('tarot-');
   const isBook  = id.startsWith('book');
   const isCocktail = id.startsWith('cocktail');
+  const isProj = id.startsWith('proj');
 
   document.getElementById('modal-hero').innerHTML =
     '<span style="font-size:5rem">' + d.emoji + '</span>' +
@@ -1694,6 +1695,7 @@ function openModal(id) {
     const lbl = isBook    ? (isZh ? '笔记'   : 'Notes')
               : isTarot   ? (isZh ? '象征意义' : 'Symbolism')
               : isCocktail? (isZh ? '调制步骤' : 'Method')
+              : isProj? (isZh ? '工作' : 'Work')
               :              (isZh ? '烹饪步骤' : 'Method');
     let stepsHtml = '';
     steps.forEach(function(s, i) {
