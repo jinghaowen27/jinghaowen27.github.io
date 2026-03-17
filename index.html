@@ -136,8 +136,19 @@ a{color:inherit;text-decoration:none;}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem;}
 .card-item{background:var(--card);border:1px solid var(--border);border-radius:7px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;}
 .card-item:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.09);}
-.card-thumb{width:100%;height:140px;background:var(--tag);display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden;}
-.card-thumb img{width:100%;height:100%;object-fit:cover;}
+.card-thumb{width:100%;
+  background:var(--tag);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3rem;
+  position:relative;
+  overflow:hidden;
+  min-height:140px;}
+.card-thumb img{width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;}
 .card-thumb .card-thumb-emoji{font-size:3rem;}
 .card-body{padding:1rem 1.2rem 1.1rem;}
 .card-meta{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem;}
