@@ -1076,6 +1076,17 @@ We are currently deploying the system with two international testing organizatio
       </div>
     </div>
 
+    <div class="card-item" onclick="openModal('cocktail-coconutbaileys')">
+      <div class="card-thumb"><img src="images/photos/cocktails/coconut_baileys.jpg" alt="Coconut Baileys"></div>
+      <div class="card-body">
+        <div class="card-meta en">Original · Shaken</div><div class="card-meta zh" style="display:none">原创 · 摇制</div>
+        <div class="card-title en">Coconut Baileys</div><div class="card-title zh" style="display:none">椰子百利甜</div>
+        <p class="card-desc en">Baileys, coconut rum, coconut cream, milk. Rich, creamy, dangerously drinkable.</p>
+        <p class="card-desc zh" style="display:none">百利甜、椰子朗姆、椰浆、牛奶。浓郁丝滑，危险地好喝。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3min</strong></span><span class="card-stat en">Creamy</span><span class="card-stat zh" style="display:none">奶香</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
     <div class="card-item" onclick="openModal('cocktail-pinacolada')">
       <div class="card-thumb"><img src="images/photos/cocktails/Pina Colada.jpg" alt="Pina Colada"></div>
       <div class="card-body">
@@ -1127,6 +1138,17 @@ We are currently deploying the system with two international testing organizatio
         <p class="card-desc en">2 oz bourbon · demerara sugar · Angostura · orange bitters. Express orange peel.</p>
         <p class="card-desc zh" style="display:none">波本2oz · 德梅拉拉糖 · 安格斯图拉苦精 · 橙皮苦精。</p>
         <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>4min</strong></span><span class="card-stat en">Warming</span><span class="card-stat zh" style="display:none">暖</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-mojito')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Mojito.jpg" alt="Mojito"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Built</div><div class="card-meta zh" style="display:none">经典 · 直调</div>
+        <div class="card-title en">Mojito</div><div class="card-title zh" style="display:none">莫吉托</div>
+        <p class="card-desc en">White rum, fresh lime, mint, sugar, soda. Cuba's most exported cocktail.</p>
+        <p class="card-desc zh" style="display:none">白朗姆、新鲜青柠、薄荷、糖、苏打水。古巴出口最广的鸡尾酒。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Refreshing</span><span class="card-stat zh" style="display:none">清爽</span></div><span class="card-rating">★★★★★</span></div>
       </div>
     </div>
     
@@ -1712,7 +1734,7 @@ const MODALS = {
     notesEn:"Created in 1978 at the Kuala Lumpur Hilton. The Jungle Bird was largely forgotten until it was rediscovered around 2010 by cocktail writers. It is the only classic tiki drink that uses Campari, which creates a fascinating tension between tropical sweetness and Italian bitterness. The blackstrap rum is essential — its molasses depth cuts through everything.", notesZh:'1978年创制于吉隆坡希尔顿酒店。丛林鸟在很大程度上被遗忘，直到2010年前后被鸡尾酒作家重新发现。它是唯一使用金巴利的经典提基饮品，在热带甜美与意式苦涩之间制造了迷人的张力。黑糖朗姆酒不可替代——它的糖蜜深度能穿透一切。'
   },
   'cocktail-pinacolada':{
-    img:'images/photos/cocktails/pina_colada.jpg',
+    img:'images/photos/cocktails/Pina Colada.jpg',
     eyebrowEn:'Classic · Blended / Shaken · ABV ~13%', eyebrowZh:'经典 · 搅拌/摇制 · 酒精度约13%',
     titleEn:'Piña Colada', titleZh:'椰林飘香',
     metaEn:[['Method','Blended or shaken'],['Glass','Hurricane or coupe'],['Ice','Blended with ice or shaken'],['Garnish','Pineapple wedge + cherry']],
@@ -1722,6 +1744,30 @@ const MODALS = {
     stepsEn:['Combine rum, coconut cream, pineapple juice, and ice in a blender.','Blend until completely smooth — about 30 seconds. No chunks.','Pour into a chilled hurricane glass or coupe.','Garnish with a pineapple wedge and a cherry. A paper umbrella is not optional — it is mandatory.','Alternatively: shake all ingredients hard with ice for 15 seconds and double-strain for a lighter, less frozen version.'],
     stepsZh:['将朗姆酒、椰浆、菠萝汁和冰块放入搅拌机。','搅拌至完全顺滑，约30秒，不能有冰块颗粒。','倒入冰镇飓风杯或碟形杯。','用菠萝角和樱桃装饰。小纸伞不是可选的——是必须的。','备选：所有材料加冰大力摇15秒，双重过滤，口感更轻盈不那么冰冻。'],
     notesEn:"Invented in 1954 at the Caribe Hilton in San Juan, Puerto Rico, by bartender Ramón \"Monchito\" Marrero. It took him three months to perfect the recipe. Puerto Rico declared it the national drink in 1978. The blended version is the classic; the shaken version is what you make when you don't own a blender and have no regrets about it.", notesZh:'1954年由调酒师拉蒙·"蒙奇托"·马雷罗在波多黎各圣胡安的加勒比希尔顿发明，历时三个月打磨配方。1978年被波多黎各定为国饮。搅拌机版本是经典做法；摇制版本是当你没有搅拌机时的选择，同样毫无遗憾。'
+  },
+  'cocktail-mojito':{
+    img:'images/photos/cocktails/Mojito.jpg',
+    eyebrowEn:'Classic · Built · ABV ~12%', eyebrowZh:'经典 · 直调 · 酒精度约12%',
+    titleEn:'Mojito', titleZh:'莫吉托',
+    metaEn:[['Method','Built / muddled'],['Glass','Collins or highball'],['Ice','Crushed or cubed'],['Garnish','Fresh mint sprig + lime wheel']],
+    metaZh:[['手法','直调/研磨'],['酒杯','柯林斯杯或海波杯'],['冰块','碎冰或冰块'],['装饰','新鲜薄荷枝+青柠片']],
+    ingrEn:['<strong>2 oz (60ml)</strong> White rum (Havana Club 3yr recommended)','<strong>¾ oz (22ml)</strong> Fresh lime juice','<strong>¾ oz (22ml)</strong> Simple syrup (or 2 tsp sugar)','<strong>8–10</strong> Fresh mint leaves','<strong>2 oz (60ml)</strong> Chilled soda water'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 白朗姆酒（推荐哈瓦那俱乐部3年）','<strong>¾ oz (22ml)</strong> 新鲜青柠汁','<strong>¾ oz (22ml)</strong> 简单糖浆（或2茶匙糖）','<strong>8-10片</strong> 新鲜薄荷叶','<strong>2 oz (60ml)</strong> 冷藏苏打水'],
+    stepsEn:['Add mint leaves and simple syrup to the glass. Gently clap the mint between your palms first to release the oils — do not muddle hard or it turns bitter.','Add lime juice and rum.','Fill the glass with crushed ice.','Top with soda water. Stir gently once from the bottom.','Garnish with a generous mint sprig. Slap it against your palm before placing — the aroma is part of the drink.'],
+    stepsZh:['将薄荷叶和糖浆放入杯中。先把薄荷叶放在掌心轻拍以释放精油——不要用力研磨，否则会变苦。','加入青柠汁和朗姆酒。','装满碎冰。','加入苏打水，从底部轻轻搅拌一次。','用一大枝薄荷装饰。放入前先用手掌拍打——香气是这杯酒体验的一部分。'],
+    notesEn:"The mojito is deceptively simple and deceptively easy to ruin. The two most common mistakes: muddling the mint too aggressively (releases chlorophyll, tastes grassy and bitter) and using too little lime. The mint should be fragrant, not macerated. Use crushed ice if you have it — it dilutes at the right rate and keeps the drink cold longer.", notesZh:'莫吉托看似简单，却很容易毁掉。最常见的两个错误：过度研磨薄荷（释放叶绿素，味道发苦发草）以及青柠汁放太少。薄荷应该香气四溢，而不是被碾碎。有碎冰用碎冰——稀释速度恰到好处，保冷时间也更长。'
+  },
+'cocktail-coconutbaileys':{
+    img:'images/photos/cocktails/Coconut_baileys.jpg',
+    eyebrowEn:'Original · Shaken · ABV ~11%', eyebrowZh:'原创 · 摇制 · 酒精度约11%',
+    titleEn:'Coconut Baileys', titleZh:'椰子百利甜',
+    metaEn:[['Method','Shaken'],['Glass','Rocks glass or coupe'],['Ice','Shake with ice, serve over ice or up'],['Garnish','Toasted coconut flakes']],
+    metaZh:[['手法','摇制'],['酒杯','岩石杯或碟形杯'],['冰块','加冰摇制，加冰或滤冰上桌'],['装饰','烤椰丝']],
+    ingrEn:['<strong>1.5 oz (45ml)</strong> Baileys Irish Cream','<strong>1 oz (30ml)</strong> Coconut rum (Malibu or similar)','<strong>1 oz (30ml)</strong> Coconut cream','<strong>1 oz (30ml)</strong> Whole milk or oat milk','<strong>Pinch</strong> of sea salt'],
+    ingrZh:['<strong>1.5 oz (45ml)</strong> 百利甜酒','<strong>1 oz (30ml)</strong> 椰子朗姆酒（马利宝或同类）','<strong>1 oz (30ml)</strong> 椰浆','<strong>1 oz (30ml)</strong> 全脂牛奶或燕麦奶','<strong>一撮</strong> 海盐'],
+    stepsEn:['Combine all ingredients in a shaker with plenty of ice.','Shake hard for 12 seconds — the coconut cream needs good agitation to integrate fully.','Strain over fresh ice in a rocks glass, or double-strain into a chilled coupe.','Toast a small handful of coconut flakes in a dry pan until golden. Sprinkle over the top.','The salt is subtle but essential — it cuts through the sweetness and rounds out the coconut.'],
+    stepsZh:['将所有材料加入装有大量冰块的摇壶。','用力摇12秒——椰浆需要充分摇晃才能完全融合。','过滤至放有新冰块的岩石杯，或双重过滤至冰镇碟形杯。','干锅小火将椰丝烤至金黄，撒在表面。','盐的用量极少但不可缺——它能化解甜腻，让椰子风味更圆润。'],
+    notesEn:"This one was born out of a late-night experiment — I had Baileys, I had coconut rum, and I had no intention of drinking either straight. The sea salt is the move that makes it. Without it, it tastes like dessert; with it, it tastes like a cocktail. The toasted coconut garnish adds a nutty, slightly smoky contrast that I find impossible to skip.", notesZh:'这款酒诞生于一个深夜的实验——手边有百利甜，有椰子朗姆，但两样都不想直接喝。海盐是点睛之笔。没有它，喝起来像甜品；加了它，才像一杯鸡尾酒。烤椰丝的装饰带来坚果香和轻微烟熏感的对比，让我每次都无法省略。'
   },
 
   // BOOKS
