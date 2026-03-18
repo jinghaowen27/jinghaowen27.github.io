@@ -1021,14 +1021,20 @@ We are currently deploying the system with two international testing organizatio
   <div class="sec-eye en">Behind the Bar</div><div class="sec-eye zh" style="display:none">我的吧台</div>
   <h1 class="sec-h1 en">Cocktail Recipes</h1><h1 class="sec-h1 zh" style="display:none">鸡尾酒配方</h1>
   <div class="sec-rule"></div>
-  <div style="margin-bottom:2rem;">
-  <img src="images/photos/cocktails/intro.jpg" alt="Behind the Bar"
-    style="float:right;width:260px;margin:0 0 1rem 2rem;border-radius:8px;object-fit:cover;">
-  <p class="tarot-intro en" style="margin-bottom:0;">Alcohol, in its own way, offers a brief refuge—softening the edges of worry and easing moments of quiet unrest, even if only temporarily. Yet spirits on their own can be harsh and uninviting, which first led me to explore the craft of bartending on my own. What began as curiosity soon became commitment: I enrolled in the New York Bartending School, where I trained under Bryan Evans and earned my certification. Along the way, I developed an appreciation for a wide spectrum of spirits—from whiskey and tequila to brandy and rum—as well as wines, including red, white, and champagne. More importantly, I learned the structure and balance behind classic and modern cocktails, experimenting, refining, and ultimately creating drinks that transform intensity into harmony.</p>
-  <p class="tarot-intro zh" style="display:none;margin-bottom:0;">酒精在某种意义上，提供了一种短暂的避风港——它能让人从烦恼与痛苦中稍作抽离，哪怕只是片刻。然而，烈酒本身往往辛辣难以下咽，这也促使我最初开始自学调酒。从最初的好奇，到逐渐投入其中，我随后报名了纽约调酒师学校，跟随 Bryan Evans 老师系统学习，并顺利取得了纽约调酒师证。在这个过程中，我逐渐建立起对各类酒的理解与品鉴能力——从威士忌、龙舌兰，到白兰地与朗姆，再到红葡萄酒、白葡萄酒与香槟。更重要的是，我学习了不同经典与现代鸡尾酒的结构与平衡，在不断尝试与调试中，让原本浓烈的风味转化为和谐与层次。</p>
-  <div style="clear:both;"></div>
-</div>
+  <p class="tarot-intro en">Alcohol, in its own way, offers a brief refuge—softening the edges of worry and easing moments of quiet unrest, even if only temporarily. Yet spirits on their own can be harsh and uninviting, which first led me to explore the craft of bartending on my own. What began as curiosity soon became commitment: I enrolled in the New York Bartending School, where I trained under Bryan Evans and earned my certification. Along the way, I developed an appreciation for a wide spectrum of spirits—from whiskey and tequila to brandy and rum—as well as wines, including red, white, and champagne. More importantly, I learned the structure and balance behind classic and modern cocktails, experimenting, refining, and ultimately creating drinks that transform intensity into harmony.</p>
+  <p class="tarot-intro zh" style="display:none">酒精在某种意义上，提供了一种短暂的避风港——它能让人从烦恼与痛苦中稍作抽离，哪怕只是片刻。然而，烈酒本身往往辛辣难以下咽，这也促使我最初开始自学调酒。从最初的好奇，到逐渐投入其中，我随后报名了纽约调酒师学校，跟随 Bryan Evans 老师系统学习，并顺利取得了纽约调酒师证。在这个过程中，我逐渐建立起对各类酒的理解与品鉴能力——从威士忌、龙舌兰，到白兰地与朗姆，再到红葡萄酒、白葡萄酒与香槟。更重要的是，我学习了不同经典与现代鸡尾酒的结构与平衡，在不断尝试与调试中，让原本浓烈的风味转化为和谐与层次。</p>
   <div class="card-grid">
+
+    <div class="card-item" onclick="openModal('bar-bryan')">
+      <div class="card-thumb"><img src="images/photos/cocktails/intro.jpg" alt="Bryan Evans"></div>
+      <div class="card-body">
+        <div class="card-meta en">New York Bartending School · 2025</div><div class="card-meta zh" style="display:none">纽约调酒师学校 · 2025</div>
+        <div class="card-title en">Bryan Evans &amp; Me</div><div class="card-title zh" style="display:none">Bryan 与我</div>
+        <p class="card-desc en">The funniest British old man I've ever met. My instructor, my inspiration behind the bar.</p>
+        <p class="card-desc zh" style="display:none">我见过的最幽默的英国小老头。我在吧台后的老师。</p>
+        <div class="card-footer"><span class="card-arrow en">Read more →</span><span class="card-arrow zh" style="display:none">查看更多 →</span></div>
+      </div>
+    </div>
     
     <div class="card-item" onclick="openModal('cocktail-junglebird')">
       <div class="card-thumb"><img src="images/photos/cocktails/Jungle Bird.jpg" alt="Paperplane"></div>
@@ -1853,6 +1859,17 @@ const MODALS = {
     stepsEn:['Combine all ingredients in a shaker with ice.','Shake for 12 seconds.','Double-strain into a chilled coupe.','Express an orange peel over the surface — hold it above the glass and snap it firmly to release the oils. Run it around the rim, then rest it on the edge.'],
     stepsZh:['将所有材料加入装有冰块的摇壶。','摇12秒。','双重过滤至冰镇碟形杯。','在杯面上方扭转橙皮取油——用力折压，让油脂喷洒在酒液表面。擦一圈杯口，搭在杯沿。'],
     notesEn:"This is the drink I make at the end of a long night behind the bar — for myself or for whoever is still there. The aged rum gives it warmth and depth, the Amaro Nonino adds a bittersweet complexity, and the honey softens everything without losing the edges. The name came naturally: it is the kind of drink that feels like a quiet goodbye. Not dramatic. Just — see you tomorrow.", notesZh:'这是我在吧台后漫长一夜结束时调的那杯酒——为自己，或者为还留在那里的人。陈年朗姆带来温度和深度，诺尼诺阿马罗增添苦甜的层次，蜂蜜将一切柔和而不失棱角。名字自然而然地来了：这杯酒有一种安静告别的感觉。不戏剧化。只是——明日再见。'
+  },
+  'bar-bryan':{
+    img:'images/photos/cocktails/intro.jpg',
+    eyebrowEn:'New York Bartending School · 2024', eyebrowZh:'纽约调酒师学校 · 2024',
+    titleEn:'Bryan Evans & Me', titleZh:'Bryan 与我',
+    metaEn:[['Location','New York'],['School','New York Bartending School'],['Instructor','Bryan Evans']],
+    metaZh:[['地点','纽约'],['学校','纽约调酒师学校'],['讲师','Bryan Evans']],
+    ingrEn:[], ingrZh:[],
+    stepsEn:[], stepsZh:[],
+    notesEn:"Bryan Evans is the funniest British old man I have ever met behind a bar. He has the kind of beard that belongs in a folk song and the kind of laugh that fills a room before the joke is even finished.\n\nI earned my New York bartending certification under his instruction. The certificate is somewhere in a drawer. The things he taught me are not.",
+notesZh:'Bryan Evans 是我在吧台后见过的最幽默的英国小老头。他留着一把属于民谣歌曲的胡子，笑声在笑话还没说完之前就已经把整个房间填满了。\n\n我在他的指导下取得了纽约调酒师证书。证书放在抽屉的某个角落。他教给我的东西，不在那里。'
   },
   
 
