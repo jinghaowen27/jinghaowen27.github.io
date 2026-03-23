@@ -162,7 +162,12 @@ a{color:inherit;text-decoration:none;}
 .card-arrow{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2);}
 
 /* ── BOOK GRID ── */
-.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem;}
+.book-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1.1rem;
+  align-items:start;
+}
 .book-item{background:var(--card);border:1px solid var(--border);border-radius:7px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;}
 .book-item:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.09);}
 .book-cover{width:100%;height:120px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative;}
