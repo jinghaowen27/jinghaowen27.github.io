@@ -1,0 +1,232 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Your Name — Personal Site">
+<section class="page active" id="cocktails">
+  <div class="sec-eye en">Behind the Bar</div><div class="sec-eye zh" style="display:none">我的吧台</div>
+  <h1 class="sec-h1 en">Cocktail Recipes</h1><h1 class="sec-h1 zh" style="display:none">鸡尾酒配方</h1>
+  <div class="sec-rule"></div>
+  <p class="tarot-intro en">Alcohol, in its own way, offers a brief refuge—softening the edges of worry and easing moments of quiet unrest, even if only temporarily. Yet spirits on their own can be harsh and uninviting, which first led me to explore the craft of bartending on my own. What began as curiosity soon became commitment: I enrolled in the New York Bartending School, where I trained under Bryan Evans and earned my certification. Along the way, I developed an appreciation for a wide spectrum of spirits—from whiskey and tequila to brandy and rum—as well as wines, including red, white, and champagne. More importantly, I learned the structure and balance behind classic and modern cocktails, experimenting, refining, and ultimately creating drinks that transform intensity into harmony.</p>
+  <p class="tarot-intro zh" style="display:none">酒精在某种意义上，提供了一种短暂的避风港——它能让人从烦恼与痛苦中稍作抽离，哪怕只是片刻。然而，烈酒本身往往辛辣难以下咽，这也促使我最初开始自学调酒。从最初的好奇，到逐渐投入其中，我随后报名了纽约调酒师学校，跟随 Bryan Evans 老师系统学习，并顺利取得了纽约调酒师证。在这个过程中，我逐渐建立起对各类酒的理解与品鉴能力——从威士忌、龙舌兰，到白兰地与朗姆，再到红葡萄酒、白葡萄酒与香槟。更重要的是，我学习了不同经典与现代鸡尾酒的结构与平衡，在不断尝试与调试中，让原本浓烈的风味转化为和谐与层次。</p>
+  <div class="card-grid">
+
+    <div class="card-item" onclick="openModal('bar-bryan')">
+      <div class="card-thumb"><img src="images/photos/cocktails/intro.jpg" alt="Bryan Evans"></div>
+      <div class="card-body">
+        <div class="card-meta en">New York Bartending School · 2026</div><div class="card-meta zh" style="display:none">纽约调酒师学校 · 2025</div>
+        <div class="card-title en">Bryan Evans &amp; Me</div><div class="card-title zh" style="display:none">Bryan 与我</div>
+        <p class="card-desc en">The funniest British old man I've ever met. My instructor, my inspiration behind the bar.</p>
+        <p class="card-desc zh" style="display:none">我见过的最幽默的英国小老头。我在吧台后的老师。</p>
+        <div class="card-footer"><span class="card-arrow en">Read more →</span><span class="card-arrow zh" style="display:none">查看更多 →</span></div>
+      </div>
+    </div>
+    
+    <div class="card-item" onclick="openModal('cocktail-junglebird')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Jungle Bird.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Tiki · Shaken</div><div class="card-meta zh" style="display:none">提基 · 摇制</div>
+        <div class="card-title en">Jungle Bird</div><div class="card-title zh" style="display:none">丛林鸟</div>
+        <p class="card-desc en">Blackstrap rum, Campari, pineapple, lime, simple syrup. Bitter tropical paradise.</p>
+        <p class="card-desc zh" style="display:none">黑糖朗姆、金巴利、菠萝、青柠、糖浆。苦涩的热带天堂。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Tropical</span><span class="card-stat zh" style="display:none">热带风情</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-ramos')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Ramos Gin Fizz.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">New Orleans Classic · Shaken</div><div class="card-meta zh" style="display:none">新奥尔良经典 · 摇制</div>
+        <div class="card-title en">Ramos Gin Fizz</div><div class="card-title zh" style="display:none">拉莫斯金菲仕</div>
+        <p class="card-desc en">Gin, citrus, cream, egg white, orange blossom water. The 12-minute shake cocktail.</p>
+        <p class="card-desc zh" style="display:none">金酒、柑橘、奶油、蛋白、橙花水。需要摇12分钟的鸡尾酒。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>15min</strong></span><span class="card-stat en">Creamy</span><span class="card-stat zh" style="display:none">奶香</span></div><span class="card-rating">★★★☆☆</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-paperplane')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Paper Plane.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Modern Classic · Shaken</div><div class="card-meta zh" style="display:none">现代经典 · 摇制</div>
+        <div class="card-title en">Paper Plane</div><div class="card-title zh" style="display:none">纸飞机</div>
+        <p class="card-desc en">Equal parts bourbon, Aperol, Amaro Nonino, lemon. Perfect symmetry in a glass.</p>
+        <p class="card-desc zh" style="display:none">波本、艾普罗、诺尼诺阿马罗、柠檬各等份。杯中的完美对称。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>4min</strong></span><span class="card-stat en">Bittersweet</span><span class="card-stat zh" style="display:none">苦甜</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-hottoddy')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Tom Toddy process.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Built · Hot</div><div class="card-meta zh" style="display:none">经典 · 直调 · 热饮</div>
+        <div class="card-title en">Hot Toddy</div><div class="card-title zh" style="display:none">热托蒂</div>
+        <p class="card-desc en">Whisky, honey, lemon, hot water. The only cocktail that works as medicine.</p>
+        <p class="card-desc zh" style="display:none">威士忌、蜂蜜、柠檬、热水。唯一能当药喝的鸡尾酒。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3min</strong></span><span class="card-stat en">Warming</span><span class="card-stat zh" style="display:none">暖身</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+    
+    <div class="card-item" onclick="openModal('cocktail-negroni')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Negroni.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Stirred</div><div class="card-meta zh" style="display:none">经典 · 搅拌</div>
+        <div class="card-title en">Negroni</div><div class="card-title zh" style="display:none">内格罗尼</div>
+        <p class="card-desc en">1 oz gin · 1 oz Campari · 1 oz sweet vermouth. Orange twist. Perfect every time.</p>
+        <p class="card-desc zh" style="display:none">金酒1oz · 金巴利1oz · 甜苦艾酒1oz。橙皮装饰。次次完美。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3min</strong></span><span class="card-stat en">Bitter</span><span class="card-stat zh" style="display:none">苦</span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-coconutbaileys')">
+      <div class="card-thumb"><img src="images/photos/cocktails/coconut_baileys.jpg" alt="Coconut Baileys"></div>
+      <div class="card-body">
+        <div class="card-meta en">Original · Shaken</div><div class="card-meta zh" style="display:none">原创 · 摇制</div>
+        <div class="card-title en">Coconut Baileys</div><div class="card-title zh" style="display:none">椰子百利甜</div>
+        <p class="card-desc en">Baileys, coconut rum, coconut cream, milk. Rich, creamy, dangerously drinkable.</p>
+        <p class="card-desc zh" style="display:none">百利甜、椰子朗姆、椰浆、牛奶。浓郁丝滑，危险地好喝。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3min</strong></span><span class="card-stat en">Creamy</span><span class="card-stat zh" style="display:none">奶香</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-pinacolada')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Pina Colada.jpg" alt="Pina Colada"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Blended / Shaken</div><div class="card-meta zh" style="display:none">经典 · 搅拌/摇制</div>
+        <div class="card-title en">Piña Colada</div><div class="card-title zh" style="display:none">椰林飘香</div>
+        <p class="card-desc en">White rum, coconut cream, pineapple juice. Puerto Rico's national drink. Sunshine in a glass.</p>
+        <p class="card-desc zh" style="display:none">白朗姆、椰浆、菠萝汁。波多黎各的国民饮品。一杯阳光。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Tropical</span><span class="card-stat zh" style="display:none">热带风情</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-oldfashioned')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Old Fashioned.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Stirred</div><div class="card-meta zh" style="display:none">经典 · 搅拌</div>
+        <div class="card-title en">Old Fashioned</div><div class="card-title zh" style="display:none">古典鸡尾酒</div>
+        <p class="card-desc en">2 oz bourbon · demerara sugar · Angostura · orange bitters. Express orange peel.</p>
+        <p class="card-desc zh" style="display:none">波本2oz · 德梅拉拉糖 · 安格斯图拉苦精 · 橙皮苦精。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>4min</strong></span><span class="card-stat en">Warming</span><span class="card-stat zh" style="display:none">暖</span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-margarita')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Margarita.jpg" alt="Margarita"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Shaken</div><div class="card-meta zh" style="display:none">经典 · 摇制</div>
+        <div class="card-title en">Margarita</div><div class="card-title zh" style="display:none">玛格丽特</div>
+        <p class="card-desc en">Tequila, triple sec, fresh lime. Salt rim essential. The world's most ordered cocktail.</p>
+        <p class="card-desc zh" style="display:none">龙舌兰、橙皮力娇酒、新鲜青柠。盐边必不可少。全球点单最多的鸡尾酒。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>4min</strong></span><span class="card-stat en">Citrusy</span><span class="card-stat zh" style="display:none">柑橘香</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+    
+    
+    <div class="card-item" onclick="openModal('cocktail-nycsour')">
+      <div class="card-thumb"><img src="images/photos/cocktails/New York Sour.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Modern Classic · Shaken</div><div class="card-meta zh" style="display:none">现代经典 · 摇制</div>
+        <div class="card-title en">New York Sour</div><div class="card-title zh" style="display:none">纽约酸酒</div>
+        <p class="card-desc en">Whisky sour topped with a red wine float. The visual alone is worth it.</p>
+        <p class="card-desc zh" style="display:none">威士忌酸酒上漂浮一层红葡萄酒。光是视觉就值回票价。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>6min</strong></span><span class="card-stat en">Fruity</span><span class="card-stat zh" style="display:none">果香</span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+    
+    <div class="card-item" onclick="openModal('cocktail-espressomartini')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Espresso Martini.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Modern Classic · Shaken</div><div class="card-meta zh" style="display:none">现代经典 · 摇制</div>
+        <div class="card-title en">Espresso Martini</div><div class="card-title zh" style="display:none">意式浓缩马丁尼</div>
+        <p class="card-desc en">Vodka, fresh espresso, coffee liqueur. Three coffee beans on top. The crowd-pleaser.</p>
+        <p class="card-desc zh" style="display:none">伏特加、新鲜浓缩咖啡、咖啡利口酒。顶部三颗咖啡豆。人见人爱。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Bold</span><span class="card-stat zh" style="display:none">浓烈</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-mojito')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Mojito.jpg" alt="Mojito"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Built</div><div class="card-meta zh" style="display:none">经典 · 直调</div>
+        <div class="card-title en">Mojito</div><div class="card-title zh" style="display:none">莫吉托</div>
+        <p class="card-desc en">White rum, fresh lime, mint, sugar, soda. Cuba's most exported cocktail.</p>
+        <p class="card-desc zh" style="display:none">白朗姆、新鲜青柠、薄荷、糖、苏打水。古巴出口最广的鸡尾酒。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Refreshing</span><span class="card-stat zh" style="display:none">清爽</span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-daiquiri')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Daiquiri.jpg" alt="Daiquiri"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Shaken</div><div class="card-meta zh" style="display:none">经典 · 摇制</div>
+        <div class="card-title en">Daiquiri</div><div class="card-title zh" style="display:none">得其利</div>
+        <p class="card-desc en">2 oz white rum · ¾ oz lime · ¾ oz simple syrup. The holy trinity.</p>
+        <p class="card-desc zh" style="display:none">白朗姆2oz · 青柠汁¾oz · 糖浆¾oz。三位一体。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3min</strong></span><span class="card-stat en">Sour</span><span class="card-stat zh" style="display:none">酸</span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-whiskysour')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Whiskey Sour.jpg" alt="Paperplane"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Shaken</div><div class="card-meta zh" style="display:none">经典 · 摇制</div>
+        <div class="card-title en">Whisky Sour</div><div class="card-title zh" style="display:none">威士忌酸酒</div>
+        <p class="card-desc en">Bourbon, lemon juice, simple syrup, egg white. Silky, frothy, perfectly balanced.</p>
+        <p class="card-desc zh" style="display:none">波本、柠檬汁、糖浆、蛋白。丝滑、起沫、完美平衡。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Sour</span><span class="card-stat zh" style="display:none">酸</span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-piscosour')">
+      <div class="card-thumb"><img src="images/photos/cocktails/Pisco Sour.jpg" alt="Pisco Sour"></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Shaken</div><div class="card-meta zh" style="display:none">经典 · 摇制</div>
+        <div class="card-title en">Pisco Sour</div><div class="card-title zh" style="display:none">皮斯科酸酒</div>
+        <p class="card-desc en">Pisco, fresh lime, simple syrup, egg white, Angostura. Peru's national cocktail.</p>
+        <p class="card-desc zh" style="display:none">皮斯科、青柠、糖浆、蛋白、安格斯图拉苦精。秘鲁国民鸡尾酒。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Sour</span><span class="card-stat zh" style="display:none">酸</span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+    
+    <div class="card-item" onclick="openModal('cocktail-martini')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#e8f0f822,#1e3a5f22);"><div class="card-thumb-emoji">🍸</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Classic · Stirred</div><div class="card-meta zh" style="display:none">经典 · 搅拌</div>
+        <div class="card-title en">Martini</div><div class="card-title zh" style="display:none">马丁尼</div>
+        <p class="card-desc en">Gin and dry vermouth, stirred cold and served colder. A civilized drink.</p>
+        <p class="card-desc zh" style="display:none">金酒与干苦艾酒，冰镇搅拌，更冷上桌。文明人的饮品。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3min</strong></span><span class="card-stat en">Dry</span><span class="card-stat zh" style="display:none">干</span></div><span class="card-rating">★★★☆☆</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('cocktail-lastword')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#2a5f3f22,#1e3a5f22);"><div class="card-thumb-emoji">🍸</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Prohibition Era · Shaken</div><div class="card-meta zh" style="display:none">禁酒令时代 · 摇制</div>
+        <div class="card-title en">Last Word</div><div class="card-title zh" style="display:none">最后一语</div>
+        <p class="card-desc en">Equal parts gin, green Chartreuse, maraschino, lime. A forgotten classic, perfectly balanced.</p>
+        <p class="card-desc zh" style="display:none">金酒、绿色查特酒、黑樱桃利口酒、青柠各等份。被遗忘的经典，完美平衡。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>4min</strong></span><span class="card-stat en">Herbal</span><span class="card-stat zh" style="display:none">草本</span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+    
+    <div class="card-item" onclick="openModal('cocktail-seeyoutomorrow')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#3d2a1a22,#8b3a1a22);"><div class="card-thumb-emoji">🌙</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Original · Shaken</div><div class="card-meta zh" style="display:none">原创 · 摇制</div>
+        <div class="card-title en">See You Tomorrow</div><div class="card-title zh" style="display:none">明日再见</div>
+        <p class="card-desc en">My signature farewell drink. Made for the last round of the night.</p>
+        <p class="card-desc zh" style="display:none">我的招牌告别之饮，为今晚最后一杯而生。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>5min</strong></span><span class="card-stat en">Bittersweet</span><span class="card-stat zh" style="display:none">苦甜</span></div><span class="card-rating">★★★☆☆</span></div>
+      </div>
+    </div>
+    
+    
+    
+
+    
+    
+  </div>
+</section>
+
+</BaseLayout>
