@@ -5,7 +5,7 @@ const isActive = (path) => currentPath === path ? "active" : "";
 
 <aside id="sidebar">
   <div class="sb-profile">
-    <img class="sb-avatar" src="/images/avatar/DC.jpg" alt="Jinghao Wen">
+    <img class="sb-avatar" src="images/avatar/DC.jpg" alt="Jinghao Wen">
     <div class="sb-name"><span class="en">Jinghao Wen</span><span class="zh" style="display:none">文靖豪</span></div>
     <div class="sb-title"><span class="en">PhD Student</span><span class="zh" style="display:none">博士研究生</span></div>
     <div class="sb-inst"><span class="en">Department of Electrical and Computer Engineering<br>Villanova University</span><span class="zh" style="display:none">电子与计算机工程系<br>维拉诺瓦大学</span></div>
@@ -40,6 +40,7 @@ const isActive = (path) => currentPath === path ? "active" : "";
     <a href="/" class={isActive('/')}><em class="nav-icon">⌂</em><span class="en">Home</span><span class="zh" style="display:none">主页</span></a>
     <a href="/publications" class={isActive('/publications')}><em class="nav-icon">📄</em><span class="en">Publications</span><span class="zh" style="display:none">论文</span></a>
     <a href="/work" class={isActive('/work')}><em class="nav-icon">💼</em><span class="en">Work Experience</span><span class="zh" style="display:none">工作经历</span></a>
+    <a href="/competition" class={isActive('/competition')}><em class="nav-icon">🏆</em><span class="en">Awards &amp; Projects</span><span class="zh" style="display:none">奖项 &amp; 项目</span></a>
     <div class="sb-nav-section en" style="margin-top:.6rem">Life</div>
     <div class="sb-nav-section zh" style="display:none;margin-top:.6rem">生活</div>
     <a href="/cocktails" class={isActive('/cocktails')}><em class="nav-icon">🍸</em><span class="en">Bartending</span><span class="zh" style="display:none">调酒</span></a>
