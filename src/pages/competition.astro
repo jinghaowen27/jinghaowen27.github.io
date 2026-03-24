@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Awards & Projects — Jinghao Wen">
+<section class="page active" id="competition">
+  <div class="sec-eye en">Recognition</div><div class="sec-eye zh" style="display:none">荣誉</div>
+  <h1 class="sec-h1 en">Awards &amp; Projects</h1><h1 class="sec-h1 zh" style="display:none">奖项 &amp; 项目</h1>
+  <div class="sec-rule"></div>
+
+  <div class="home-block">
+    <h2 class="home-block-title"><span class="en">Competition Awards</span><span class="zh" style="display:none">奖项</span></h2>
+    <ul class="act-list" style="max-width:760px;">
+      <li>
+        <span class="act-year">2026</span>
+        <span class="act-detail en"><strong>🏆 Scholarship</strong> — Google Cloud Research Credits Program · Google</span>
+        <span class="act-detail zh" style="display:none"><strong>🏆 奖学金</strong> — 谷歌云研究额度项目 · 谷歌</span>
+      </li>
+      <li>
+        <span class="act-year">2024</span>
+        <span class="act-detail en"><strong>🏆 Fellowship</strong> — Yongping'89 and Fei Lin'89 Gu Endowed Graduate Engineering Fellowship · Villanova University</span>
+        <span class="act-detail zh" style="display:none"><strong>🏆 奖学金</strong> — Yongping'89 and Fei Lin'89 Gu 捐赠研究生工程奖学金 · 维拉诺瓦大学</span>
+      </li>
+      <li>
+        <span class="act-year">2023</span>
+        <span class="act-detail en"><strong>🥈 Silver Medal</strong> — Multi-Objective Recommender System Competition, Kaggle · top 4%, 2587 teams</span>
+        <span class="act-detail zh" style="display:none"><strong>🥈 银牌</strong> — 多目标推荐系统竞赛，Kaggle · top4%, 2587 teams</span>
+      </li>
+      <li>
+        <span class="act-year">2023</span>
+        <span class="act-detail en"><strong>🥈 2nd Prize</strong> — 16th China College Students Computer Design Competition · national level</span>
+        <span class="act-detail zh" style="display:none"><strong>🥈 二等奖</strong> — 第十六届中国大学生计算机设计大赛 · 国家级</span>
+      </li>
+      <li>
+        <span class="act-year">2022</span>
+        <span class="act-detail en"><strong>🥇 1st Prize</strong> — 2022 China Robot Competition &amp; RoboCup China Open (dance robot) · national level</span>
+        <span class="act-detail zh" style="display:none"><strong>🥇 一等奖</strong> — 2022中国机器人大赛暨机器人世界杯中国公开赛（舞蹈机器人） · 国家级</span>
+      </li>
+      <li>
+        <span class="act-year">2022</span>
+        <span class="act-detail en"><strong>🥈 2nd Prize</strong> — 2022 China Robot Competition &amp; RoboCup China Open (creative robot) · national level</span>
+        <span class="act-detail zh" style="display:none"><strong>🥈 二等奖</strong> — 2022中国机器人大赛暨机器人世界杯中国公开赛（创新机器人） · 国家级</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="home-block">
+    <h2 class="home-block-title"><span class="en">Projects</span><span class="zh" style="display:none">项目</span></h2>
+    <div class="card-grid">
+
+      <div class="card-item" onclick="openModal('proj1')">
+        <div class="card-thumb"><div class="card-thumb-emoji">📊</div></div>
+        <div class="card-body">
+          <div class="card-meta en">Agriculture AI · 2024</div>
+          <div class="card-meta zh" style="display:none">农业人工智能 · 2024</div>
+          <div class="card-title en">Optimal Decision-Making in Water, Land and Food Nexus based on Machine Learning</div>
+          <div class="card-title zh" style="display:none">基于机器学习的水、土地和食物关系的最优决策</div>
+          <div class="card-footer">
+            <div class="card-stats"><span class="card-stat">Python · Machine Learning</span></div>
+            <span class="card-arrow en">Details →</span><span class="card-arrow zh" style="display:none">详情 →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" onclick="openModal('proj2')">
+        <div class="card-thumb"><div class="card-thumb-emoji">🤖</div></div>
+        <div class="card-body">
+          <div class="card-meta en">National Innovation &amp; Entrepreneurship Program · 2023</div>
+          <div class="card-meta zh" style="display:none">国家大学生创新创业训练计划 · 2023</div>
+          <div class="card-title en">Intelligent Biped Humanoid Robot Based on Jetson Nano</div>
+          <div class="card-title zh" style="display:none">基于Jetson Nano的智能双足人型机器人</div>
+          <div class="card-footer">
+            <div class="card-stats"><span class="card-stat">C++ · Python · Computer Vision · Jetson Nano</span></div>
+            <span class="card-arrow en">Details →</span><span class="card-arrow zh" style="display:none">详情 →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" onclick="openModal('proj3')">
+        <div class="card-thumb"><div class="card-thumb-emoji">🤖</div></div>
+        <div class="card-body">
+          <div class="card-meta en">National Innovation &amp; Entrepreneurship Program · 2023</div>
+          <div class="card-meta zh" style="display:none">国家大学生创新创业训练计划 · 2023</div>
+          <div class="card-title en">Intelligent Quadruped Robot Based on SLAM Map Planning and Ultra-Wide Band Technique</div>
+          <div class="card-title zh" style="display:none">基于SLAM地图规划和超宽带技术的智能四足机器人</div>
+          <div class="card-footer">
+            <div class="card-stats"><span class="card-stat">Python · Raspberry Pi · SolidWorks</span></div>
+            <span class="card-arrow en">Details →</span><span class="card-arrow zh" style="display:none">详情 →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-item" onclick="openModal('proj4')">
+        <div class="card-thumb"><div class="card-thumb-emoji">🛠</div></div>
+        <div class="card-body">
+          <div class="card-meta en">Intelligent Transportation · 2022</div>
+          <div class="card-meta zh" style="display:none">智慧交通 · 2022</div>
+          <div class="card-title en">Human Phone Usage Recognition based on OpenPose</div>
+          <div class="card-title zh" style="display:none">基于OpenPose的行人手机使用识别</div>
+          <div class="card-footer">
+            <div class="card-stats"><span class="card-stat">Python · Computer Vision</span></div>
+            <span class="card-arrow en">Details →</span><span class="card-arrow zh" style="display:none">详情 →</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</BaseLayout>
