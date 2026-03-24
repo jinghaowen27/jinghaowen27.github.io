@@ -1,0 +1,43 @@
+---
+import "../styles/site.css";
+import SiteChrome from "../components/SiteChrome.astro";
+import HomeSection from "../components/sections/HomeSection.astro";
+import PublicationsSection from "../components/sections/PublicationsSection.astro";
+import CompetitionSection from "../components/sections/CompetitionSection.astro";
+import WorkSection from "../components/sections/WorkSection.astro";
+import RecipesSection from "../components/sections/RecipesSection.astro";
+import CocktailsSection from "../components/sections/CocktailsSection.astro";
+import ReadingSection from "../components/sections/ReadingSection.astro";
+import PhotographySection from "../components/sections/PhotographySection.astro";
+import TarotSection from "../components/sections/TarotSection.astro";
+import GuitarSection from "../components/sections/GuitarSection.astro";
+import SiteFooterModal from "../components/SiteFooterModal.astro";
+import SiteScripts from "../components/SiteScripts.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name — Personal Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <SiteChrome />
+    <main id="main">
+      <HomeSection />
+      <PublicationsSection />
+      <CompetitionSection />
+      <WorkSection />
+      <RecipesSection />
+      <CocktailsSection />
+      <ReadingSection />
+      <PhotographySection />
+      <TarotSection />
+      <GuitarSection />
+      <SiteFooterModal />
+    </main>
+    <SiteScripts />
+  </body>
+</html>
