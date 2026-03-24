@@ -1,0 +1,492 @@
+<footer>
+  <span class="en">© 2025 Jinghao Wen · Last updated March 2026</span>
+  <span class="zh" style="display:none">© 2025 文靖豪 · 最后更新 2026年3月</span>
+</footer>
+
+<div id="modal-overlay" onclick="closeModalIfBg(event)">
+  <div class="modal-box">
+    <div class="modal-hero" id="modal-hero"></div>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+</div>
+
+<script is:inline>
+const MODALS = {
+  // RECIPES
+  'recipe-charsiu':{
+    emoji:'🥩', eyebrowEn:'Cantonese · Main · 4 servings', eyebrowZh:'粤式 · 主菜 · 4人份',
+    titleEn:'Char Siu (BBQ Pork)', titleZh:'叉烧肉',
+    metaEn:[['Time','2h active + overnight'],['Difficulty','Medium'],['Rating','★★★★☆']],
+    metaZh:[['时间','操作2小时 + 隔夜'],['难度','中等'],['评分','★★★★☆']],
+    ingrEn:['<strong>600g</strong> pork shoulder','<strong>3 tbsp</strong> hoisin sauce','<strong>2 tbsp</strong> soy sauce','<strong>2 tbsp</strong> honey','<strong>1 tbsp</strong> Shaoxing wine','<strong>1 tsp</strong> five-spice powder','<strong>1 tsp</strong> sesame oil','<strong>2 cloves</strong> garlic, grated','<strong>1 tbsp</strong> red fermented tofu'],
+    ingrZh:['<strong>600g</strong> 猪梅花肉','<strong>3汤匙</strong> 海鲜酱','<strong>2汤匙</strong> 生抽','<strong>2汤匙</strong> 蜂蜜','<strong>1汤匙</strong> 绍兴酒','<strong>1茶匙</strong> 五香粉','<strong>1茶匙</strong> 麻油','<strong>2瓣</strong> 大蒜，磨碎','<strong>1汤匙</strong> 南乳'],
+    stepsEn:['Mix all marinade ingredients in a bowl. Taste — it should be sweet, savory, and fragrant.','Score the pork shoulder in a crosshatch pattern (5mm deep) to help marinade penetrate.','Coat pork thoroughly in marinade. Refrigerate overnight, or at minimum 6 hours.','Remove from fridge 30 min before cooking. Preheat oven to 200°C.','Place pork on a rack over a foil-lined tray. Roast 25 min, flip, roast another 25 min.','Mix remaining marinade with 1 tbsp honey. Brush on pork. Broil 3–5 min until caramelized and slightly charred.','Rest 10 min before slicing. Serve over rice or in steamed buns.'],
+    stepsZh:['将所有腌料混合均匀，尝一口——应该甜咸鲜香兼具。','在猪肉上划十字花刀（深约5mm），帮助腌料渗透。','充分涂抹腌料，冷藏隔夜或至少6小时。','烹饪前30分钟从冰箱取出。预热烤箱至200°C。','猪肉放烤架上，下铺锡纸托盘。烤25分钟，翻面，再烤25分钟。','剩余腌料加1汤匙蜂蜜调匀，刷在猪肉上。用上烧模式烤3-5分钟至焦糖化。','静置10分钟后切片，配米饭或包入蒸包。'],
+    notesEn:'The red fermented tofu (南乳) is the secret ingredient — it gives authentic color and a subtle funk. Find it at any Chinese grocery.', notesZh:'南乳是秘密武器——它赋予正宗的色泽和独特的发酵香气。中国超市均可购得。'
+  },
+  'recipe-dandanmian':{
+    emoji:'🍜', eyebrowEn:'Sichuan · Noodles · 2 servings', eyebrowZh:'川味 · 面食 · 2人份',
+    titleEn:'Dan Dan Noodles', titleZh:'担担面',
+    metaEn:[['Time','30 min'],['Difficulty','Easy–Medium'],['Rating','★★★★★']],
+    metaZh:[['时间','30分钟'],['难度','简单-中等'],['评分','★★★★★']],
+    ingrEn:['<strong>200g</strong> thin wheat noodles','<strong>150g</strong> ground pork','<strong>3 tbsp</strong> homemade chili oil','<strong>2 tbsp</strong> ya cai (preserved mustard)','<strong>2 tbsp</strong> sesame paste','<strong>1 tbsp</strong> soy sauce','<strong>1 tsp</strong> Sichuan peppercorn oil','<strong>1 tsp</strong> black vinegar','<strong>1 tsp</strong> sugar','<strong>2</strong> spring onions, sliced'],
+    ingrZh:['<strong>200g</strong> 细面条','<strong>150g</strong> 猪肉末','<strong>3汤匙</strong> 自制辣椒油','<strong>2汤匙</strong> 宜宾芽菜','<strong>2汤匙</strong> 芝麻酱','<strong>1汤匙</strong> 生抽','<strong>1茶匙</strong> 花椒油','<strong>1茶匙</strong> 镇江醋','<strong>1茶匙</strong> 糖','<strong>2根</strong> 葱，切碎'],
+    stepsEn:['Mix sesame paste, soy sauce, Sichuan pepper oil, black vinegar, and sugar in a bowl to make the sauce. Add a little hot noodle water to thin it slightly.','Stir-fry pork in a dry wok over high heat until browned and crispy. Add ya cai and stir-fry 1 more minute. Set aside.','Cook noodles according to packet instructions. Reserve ½ cup cooking water.','Divide sauce between bowls. Add noodles, top with pork-ya cai mixture, chili oil, and spring onions.','Mix everything thoroughly at the table before eating.'],
+    stepsZh:['将芝麻酱、生抽、花椒油、醋和糖混合成酱，加少量热面汤稀释至合适浓度。','干锅大火煸炒肉末至焦香，加入芽菜再炒1分钟，盛出备用。','按包装说明煮好面条，留半杯面汤。','酱汁分入碗底，盛入面条，顶上肉末芽菜、辣椒油和葱花。','上桌后充分搅拌均匀再食用。'],
+    notesEn:'The chili oil makes or breaks this dish. I make mine by pouring hot oil over dried chilies, Sichuan pepper, star anise, and cinnamon. The ya cai adds essential crunch and tang.', notesZh:'辣椒油是这道菜的灵魂。我的做法是用热油淋在干辣椒、花椒、八角和桂皮上。芽菜提供不可或缺的脆感和酸香。'
+  },
+  'recipe-redbraise':{
+    emoji:'🍲', eyebrowEn:'Chinese · Braised · 4 servings', eyebrowZh:'中式 · 红烧 · 4人份',
+    titleEn:'Red-Braised Pork Belly', titleZh:'红烧肉',
+    metaEn:[['Time','3h total'],['Difficulty','Easy (time-intensive)'],['Rating','★★★★★']],
+    metaZh:[['时间','共3小时'],['难度','简单（耗时）'],['评分','★★★★★']],
+    ingrEn:['<strong>800g</strong> pork belly, skin-on','<strong>3 tbsp</strong> rock sugar','<strong>3 tbsp</strong> soy sauce','<strong>2 tbsp</strong> dark soy sauce','<strong>2 tbsp</strong> Shaoxing wine','<strong>3 cups</strong> water','<strong>3</strong> star anise','<strong>1</strong> cinnamon stick','<strong>3</strong> slices fresh ginger','<strong>2</strong> spring onions'],
+    ingrZh:['<strong>800g</strong> 带皮五花肉','<strong>3汤匙</strong> 冰糖','<strong>3汤匙</strong> 生抽','<strong>2汤匙</strong> 老抽','<strong>2汤匙</strong> 绍兴酒','<strong>3杯</strong> 水','<strong>3颗</strong> 八角','<strong>1根</strong> 肉桂','<strong>3片</strong> 生姜','<strong>2根</strong> 大葱'],
+    stepsEn:['Blanch pork belly in boiling water for 5 min. Drain and cut into 4×4cm cubes.','Heat a wok over medium heat. Add rock sugar — let it melt to an amber caramel without stirring.','Add pork and toss to coat. The caramel will seize; keep stirring.','Add Shaoxing wine, both soy sauces, spices, ginger, and spring onion.','Pour in water to barely cover the pork. Bring to a boil, then reduce to the lowest simmer. Cover.','Braise for 2.5 hours, checking occasionally. The pork should be very tender and the sauce reduced to a glossy glaze.','Remove spices. Increase heat to reduce sauce further if needed. Serve over white rice.'],
+    stepsZh:['五花肉冷水下锅，焯水5分钟，捞出切成4×4cm块。','炒锅中火放入冰糖，不要搅拌，待其融化成琥珀色焦糖。','放入五花肉翻拌上色，焦糖会凝固，继续翻炒。','加入绍兴酒、两种酱油、香料、生姜和葱。','加水至刚好没过猪肉，大火烧开，转最小火，盖上锅盖。','焖煮2.5小时，偶尔查看，猪肉应极度软烂，汤汁浓缩为晶亮的酱汁。','取出香料，如需要可大火再次收汁。搭配白米饭食用。'],
+    notesEn:"Don't rush the caramel. Don't rush the braise. This is a dish that rewards patience. The fat should be so soft it trembles on the chopstick.", notesZh:'不要急着做焦糖，不要急着焖。这道菜奖励耐心的人。肥肉应该软到在筷子上颤抖。'
+  },
+  'recipe-solemeu':{
+    emoji:'🐟', eyebrowEn:'French · Main · 2 servings', eyebrowZh:'法式 · 主菜 · 2人份',
+    titleEn:'Sole Meunière', titleZh:'黄油煎鳎鱼',
+    metaEn:[['Time','20 min'],['Difficulty','Easy'],['Rating','★★★★☆']],
+    metaZh:[['时间','20分钟'],['难度','简单'],['评分','★★★★☆']],
+    ingrEn:['<strong>2</strong> whole sole fillets (or flounder)','<strong>4 tbsp</strong> unsalted butter','<strong>¼ cup</strong> all-purpose flour','<strong>2 tbsp</strong> capers (optional)','<strong>1</strong> lemon, juiced','<strong>2 tbsp</strong> flat-leaf parsley, chopped','Salt and white pepper'],
+    ingrZh:['<strong>2片</strong> 鳎鱼柳（或比目鱼）','<strong>4汤匙</strong> 无盐黄油','<strong>¼杯</strong> 面粉','<strong>2汤匙</strong> 刺山柑（可选）','<strong>1颗</strong> 柠檬，取汁','<strong>2汤匙</strong> 意大利香芹，切碎','盐和白胡椒'],
+    stepsEn:['Pat fish fillets completely dry with paper towels. Season with salt and white pepper.','Dredge fish lightly in flour, shaking off excess.','Heat 2 tbsp butter in a large pan over medium-high heat until foaming. Cook fish 2–3 min per side until golden. Remove and keep warm.','In same pan, add remaining butter. Cook over medium heat, swirling, until it turns nut-brown and smells nutty (beurre noisette).','Add lemon juice — it will foam dramatically. Add capers and parsley.','Pour sauce immediately over fish. Serve at once — this waits for no one.'],
+    stepsZh:['用厨房纸将鱼柳完全拍干，两面撒盐和白胡椒调味。','轻薄地裹上面粉，抖掉多余的。','大平底锅中火融化2汤匙黄油至起泡，放入鱼柳每面煎2-3分钟至金黄。取出保温。','同一口锅加入剩余黄油，中火不停晃锅，至黄油变成坚果棕色（榛子黄油）。','加入柠檬汁——会剧烈冒泡。加入刺山柑和香芹。','立即将酱汁淋在鱼上。马上上桌——这道菜不等人。'],
+    notesEn:"The secret is the beurre noisette — brown the butter until it smells of hazelnuts, then stop immediately. Serve the instant you pour the sauce.", notesZh:'秘诀在于榛子黄油——将黄油焦化至散发榛子香气，立刻停止。淋上酱汁后即刻上桌。'
+  },
+  'recipe-matchacheese':{
+    emoji:'🍰', eyebrowEn:'Fusion · Dessert · 8 slices', eyebrowZh:'创意 · 甜点 · 8片',
+    titleEn:'Matcha Basque Cheesecake', titleZh:'抹茶巴斯克芝士蛋糕',
+    metaEn:[['Time','1h total'],['Difficulty','Easy'],['Rating','★★★★★']],
+    metaZh:[['时间','共1小时'],['难度','简单'],['评分','★★★★★']],
+    ingrEn:['<strong>600g</strong> cream cheese, room temp','<strong>200g</strong> caster sugar','<strong>4</strong> large eggs','<strong>250ml</strong> heavy cream','<strong>3 tbsp</strong> high-quality matcha powder','<strong>2 tbsp</strong> all-purpose flour','<strong>1 tsp</strong> vanilla extract','Pinch of salt'],
+    ingrZh:['<strong>600g</strong> 奶油奶酪，室温','<strong>200g</strong> 细砂糖','<strong>4颗</strong> 大鸡蛋','<strong>250ml</strong> 淡奶油','<strong>3汤匙</strong> 优质抹茶粉','<strong>2汤匙</strong> 面粉','<strong>1茶匙</strong> 香草精','一撮盐'],
+    stepsEn:['Preheat oven to 220°C (fan). Line a 20cm springform tin with parchment paper — let it hang over the sides.','Beat cream cheese and sugar until smooth. Add eggs one at a time.','Whisk matcha with a little cream until smooth paste, then add remaining cream. Pour into batter.','Add flour, vanilla, and salt. Mix until just combined — do not overwork.','Pour into tin. Bake 25–28 min. The center should still wobble significantly.','Cool to room temperature, then refrigerate at least 4 hours. The burnt top is the signature.'],
+    stepsZh:['烤箱预热至220°C（风扇模式）。20cm活底蛋糕模铺烘焙纸，让纸超出模具边缘。','奶油奶酪和砂糖打至顺滑，逐个加入鸡蛋搅匀。','将抹茶粉与少量淡奶油调成顺滑的抹茶糊，再倒入剩余淡奶油，混入面糊中。','加入面粉、香草精和盐，混合至刚好融合，不要过度搅拌。','倒入模具，烘烤25-28分钟，中心应仍有明显的晃动感。','冷却至室温后冷藏至少4小时。烤焦的表面是这款蛋糕的标志。'],
+    notesEn:"Use ceremonial-grade matcha if possible — it makes a visible difference in color and flavor. The wobbly center will set in the fridge to a perfect custardy texture.", notesZh:'尽量使用仪式级抹茶粉——颜色和味道会有明显提升。晃动的中心在冷藏后会凝固成完美的布丁质感。'
+  },
+  'recipe-ramen':{
+    emoji:'🫕', eyebrowEn:'Japanese · Soup · 4 servings', eyebrowZh:'日式 · 汤品 · 4人份',
+    titleEn:'Tonkotsu Ramen (from scratch)', titleZh:'豚骨拉面（从零开始）',
+    metaEn:[['Time','14h total'],['Difficulty','Advanced'],['Rating','★★★★★']],
+    metaZh:[['时间','共14小时'],['难度','高级'],['评分','★★★★★']],
+    ingrEn:['<strong>2kg</strong> pork trotters + neck bones','<strong>500g</strong> pork belly (for chashu)','<strong>4</strong> soft-boiled eggs (marinated)','<strong>200ml</strong> soy sauce (for tare)','<strong>100ml</strong> mirin','<strong>4 portions</strong> fresh ramen noodles','Nori, bamboo shoots, spring onion'],
+    ingrZh:['<strong>2kg</strong> 猪蹄 + 颈骨','<strong>500g</strong> 五花肉（做叉烧）','<strong>4颗</strong> 溏心腌蛋','<strong>200ml</strong> 酱油（做酱汁）','<strong>100ml</strong> 味醂','<strong>4份</strong> 新鲜拉面','海苔、笋干、葱花'],
+    stepsEn:['Blanch bones in boiling water 10 min. Drain and rinse thoroughly to remove impurities.','In a large pot, cover bones with cold water. Bring to a vigorous boil and keep at full boil for 3 hours — this emulsifies the collagen into a white, creamy broth. Top up water as needed.','Reduce to simmer for another 8–10 hours. Strain through a fine mesh.','Chashu: tie pork belly into a roll. Sear. Braise in soy sauce, mirin, sake, and sugar for 2 hours. Slice when cool.','Tare: reduce soy sauce and mirin to a thick concentrate.','Marinated eggs: soft boil 6.5 min, peel, marinate in tare + water overnight.','Assemble: tare in bowl, ladle hot broth, add noodles, chashu, egg, and toppings.'],
+    stepsZh:['猪骨冷水下锅，大火焯10分钟，捞出冲洗干净，去除杂质。','大锅中猪骨加冷水，大火烧开并保持剧烈沸腾3小时——这能让胶原蛋白乳化成乳白浓汤，随时补充蒸发的水分。','转小火继续煮8-10小时，过滤备用。','叉烧：五花肉卷成卷，煎至上色，加酱油、味醂、清酒和糖红焖2小时，冷却后切片。','酱汁：酱油和味醂浓缩至稠汁。','腌蛋：煮6.5分钟，剥壳，泡在酱汁兑水的溶液中隔夜。','组装：碗底倒酱汁，舀入热汤，加面条、叉烧、腌蛋和配料。'],
+    notesEn:"A 14-hour weekend project that will make you never want to order ramen at a restaurant again. The key to the milky-white broth is a vigorous boil, not a simmer.", notesZh:'一个14小时的周末项目，做完后你可能再也不想去餐厅点拉面了。乳白色汤底的关键是剧烈沸腾，而非小火慢炖。'
+  },
+
+  // COCKTAILS
+  'cocktail-negroni':{
+    img:'images/photos/cocktails/Negroni.jpg', eyebrowEn:'Classic · Stirred · ABV ~24%', eyebrowZh:'经典 · 搅拌 · 酒精度约24%',
+    titleEn:'Negroni', titleZh:'内格罗尼',
+    metaEn:[['Method','Stirred'],['Glass','Rocks / Coupe'],['Ice','Large cube or sphere'],['Garnish','Orange twist']],
+    metaZh:[['手法','搅拌'],['酒杯','平底岩石杯/碟形杯'],['冰块','大冰块/冰球'],['装饰','橙皮卷']],
+    ingrEn:['<strong>1 oz (30ml)</strong> London Dry Gin','<strong>1 oz (30ml)</strong> Campari','<strong>1 oz (30ml)</strong> Sweet Vermouth (Carpano Antica recommended)'],
+    ingrZh:['<strong>1 oz (30ml)</strong> 伦敦干金酒','<strong>1 oz (30ml)</strong> 金巴利','<strong>1 oz (30ml)</strong> 甜苦艾酒（推荐Carpano Antica）'],
+    stepsEn:['Add all ingredients to a mixing glass filled with large ice.','Stir for 30 seconds until well-chilled and properly diluted.','Strain into a rocks glass over a single large ice cube.','Express an orange twist over the surface — hold the peel an inch above the glass and snap it.','Rub the peel around the rim and drop it in, or balance it on the rim.'],
+    stepsZh:['将所有材料倒入装有大冰块的调酒杯。','搅拌30秒，使其充分冷却并适度稀释。','用隔冰匙滤入放有大冰块的岩石杯。','将橙皮扭转表达油脂——离杯面约3厘米处用力折压橙皮。','橙皮擦杯口后放入杯中，或搭在杯沿。'],
+    notesEn:"The equal-parts ratio is sacrosanct. Don't shake — stirring gives the Negroni its silky, clarified texture. I prefer Carpano Antica for vermouth; it adds a vanilla richness.", notesZh:'三等份的比例是神圣的。不要摇——搅拌赋予内格罗尼丝滑清澈的质感。我偏好Carpano Antica苦艾酒，它带来香草般的丰润感。'
+  },
+  'cocktail-daiquiri':{
+    img:'images/photos/cocktails/Daiquiri.jpg', eyebrowEn:'Classic · Shaken · ABV ~20%', eyebrowZh:'经典 · 摇制 · 酒精度约20%',
+    titleEn:'Daiquiri', titleZh:'得其利',
+    metaEn:[['Method','Shaken'],['Glass','Chilled coupe'],['Ice','Shake with ice, serve up'],['Garnish','None, or lime wheel']],
+    metaZh:[['手法','摇制'],['酒杯','冰镇碟形杯'],['冰块','加冰摇制，滤冰上桌'],['装饰','无，或青柠片']],
+    ingrEn:['<strong>2 oz (60ml)</strong> White rum (Havana Club 3yr recommended)','<strong>¾ oz (22ml)</strong> Fresh lime juice','<strong>¾ oz (22ml)</strong> Simple syrup (1:1 sugar:water)'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 白朗姆酒（推荐哈瓦那俱乐部3年）','<strong>¾ oz (22ml)</strong> 新鲜青柠汁','<strong>¾ oz (22ml)</strong> 简单糖浆（糖:水=1:1）'],
+    stepsEn:['Chill your coupe glass in the freezer, or with ice water.','Combine all ingredients in a cocktail shaker with plenty of ice.','Shake hard for 12–15 seconds — you want the shaker to be frost-covered.','Double-strain through a Hawthorne strainer and fine mesh into the chilled coupe.','No garnish needed. The drink speaks for itself.'],
+    stepsZh:['将碟形杯放入冰箱预冷，或用冰水冰杯。','所有材料加入波士顿摇酒壶，放入大量冰块。','用力摇制12-15秒，至摇酒壶外壁结霜。','用霍桑隔冰器和细网过滤器双重过滤至冰镇的碟形杯中。','无需装饰，酒本身就是答案。'],
+    notesEn:"A Daiquiri is a technical benchmark — if you can make a great Daiquiri, you understand balance. Fresh lime juice only; bottled juice is not acceptable.", notesZh:'得其利是调酒技术的标杆——会做好一杯得其利，就懂得了平衡。只用新鲜青柠汁，瓶装果汁不可接受。'
+  },
+  'cocktail-oldfashioned':{
+    img:'images/photos/cocktails/Old Fashioned.jpg', eyebrowEn:'Classic · Stirred · ABV ~35%', eyebrowZh:'经典 · 搅拌 · 酒精度约35%',
+    titleEn:'Old Fashioned', titleZh:'古典鸡尾酒',
+    metaEn:[['Method','Build in glass'],['Glass','Heavy rocks glass'],['Ice','Large single cube'],['Garnish','Orange peel + cherry']],
+    metaZh:[['手法','杯中直调'],['酒杯','厚底岩石杯'],['冰块','大单冰块'],['装饰','橙皮 + 樱桃']],
+    ingrEn:['<strong>2 oz (60ml)</strong> Bourbon or Rye whiskey','<strong>1 tsp</strong> Demerara sugar syrup (or 1 sugar cube)','<strong>2 dashes</strong> Angostura bitters','<strong>1 dash</strong> Orange bitters'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 波本或黑麦威士忌','<strong>1茶匙</strong> 德梅拉拉糖浆（或1块方糖）','<strong>2滴</strong> 安格斯图拉苦精','<strong>1滴</strong> 橙皮苦精'],
+    stepsEn:['In a rocks glass, add the sugar syrup and both bitters. Stir briefly.','Add a large ice cube.','Pour whiskey over the ice.','Stir gently 15–20 seconds to chill and dilute slightly.','Express an orange peel over the glass, rub around the rim, and drop in. Add a cherry if desired.'],
+    stepsZh:['在岩石杯中加入糖浆和两种苦精，简单搅匀。','放入大冰块。','将威士忌倒在冰块上。','轻轻搅拌15-20秒，使其冷却并适度稀释。','在杯口上方扭转橙皮取油，擦杯口，放入杯中。喜欢的话可以加颗樱桃。'],
+    notesEn:"The Old Fashioned is a spirit-forward drink. Don't muddle the orange and cherry — that's a common mistake. Let the spirit shine.", notesZh:'古典鸡尾酒是以酒为主角的饮品。不要研磨橙片和樱桃——那是常见错误。让威士忌本身发光。'
+  },
+  'cocktail-whiskysour':{
+    img:'images/photos/cocktails/Whiskey Sour.jpg', eyebrowEn:'Classic · Shaken · ABV ~18%', eyebrowZh:'经典 · 摇制 · 酒精度约18%',
+    titleEn:'Whisky Sour', titleZh:'威士忌酸酒',
+    metaEn:[['Method','Shaken (dry + wet shake)'],['Glass','Rocks glass or coupe'],['Ice','Rocks or up'],['Garnish','Orange slice + cherry']],
+    metaZh:[['手法','干摇+湿摇'],['酒杯','岩石杯或碟形杯'],['冰块','加冰或滤冰'],['装饰','橙片+樱桃']],
+    ingrEn:['<strong>2 oz (60ml)</strong> Bourbon whiskey','<strong>¾ oz (22ml)</strong> Fresh lemon juice','<strong>½ oz (15ml)</strong> Simple syrup','<strong>1</strong> egg white (optional but recommended)','<strong>2 dashes</strong> Angostura bitters (on foam)'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 波本威士忌','<strong>¾ oz (22ml)</strong> 新鲜柠檬汁','<strong>½ oz (15ml)</strong> 简单糖浆','<strong>1个</strong> 蛋白（可选但推荐）','<strong>2滴</strong> 安格斯图拉苦精（用于泡沫）'],
+    stepsEn:['Dry shake: combine whiskey, lemon juice, syrup and egg white in a shaker without ice. Shake hard for 15 seconds.','Add ice and wet shake for another 12–15 seconds until well chilled.','Double-strain into a rocks glass over ice, or into a chilled coupe.','Drop 2 dashes of Angostura on the foam and drag a toothpick through to create a pattern.','Garnish with an orange half-wheel and a cherry.'],
+    stepsZh:['干摇：将威士忌、柠檬汁、糖浆和蛋白放入摇壶，不加冰用力摇15秒。','加入冰块继续摇12-15秒，至充分冷却。','双重过滤倒入放有冰块的岩石杯，或冰镇碟形杯中。','在泡沫上滴2滴安格斯图拉苦精，用牙签划出图案。','用橙片和樱桃装饰。'],
+    notesEn:"The egg white is what separates a whisky sour from a good whisky sour. It adds texture, body, and a canvas for the bitters art. Don't skip it. I use a 2:¾:½ ratio, which I find more balanced than the traditional equal-parts approach.", notesZh:'蛋白是威士忌酸酒和好的威士忌酸酒之间的区别。它增添了质感、厚度，也是苦精图案的画布。不要省略。我用2:¾:½的比例，比传统等份更为平衡。'
+  },
+  'cocktail-nycsour':{
+    img:'images/photos/cocktails/New York Sour.jpg', eyebrowEn:'Modern Classic · Shaken · ABV ~18%', eyebrowZh:'现代经典 · 摇制 · 酒精度约18%',
+    titleEn:'New York Sour', titleZh:'纽约酸酒',
+    metaEn:[['Method','Shaken + float'],['Glass','Rocks glass'],['Ice','Large cube'],['Garnish','Lemon wheel']],
+    metaZh:[['手法','摇制+漂浮'],['酒杯','岩石杯'],['冰块','大冰块'],['装饰','柠檬片']],
+    ingrEn:['<strong>2 oz (60ml)</strong> Rye or Bourbon whiskey','<strong>¾ oz (22ml)</strong> Fresh lemon juice','<strong>¾ oz (22ml)</strong> Simple syrup','<strong>1</strong> egg white','<strong>½ oz (15ml)</strong> Full-bodied red wine (Malbec or Shiraz)'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 黑麦或波本威士忌','<strong>¾ oz (22ml)</strong> 新鲜柠檬汁','<strong>¾ oz (22ml)</strong> 简单糖浆','<strong>1个</strong> 蛋白','<strong>½ oz (15ml)</strong> 浓郁红葡萄酒（马尔贝克或西拉）'],
+    stepsEn:['Dry shake whiskey, lemon, syrup and egg white without ice for 15 seconds.','Add ice and shake hard for 12 seconds.','Double-strain into a rocks glass over a large ice cube.','Float the red wine: pour it slowly over the back of a bar spoon held just above the surface of the drink. It should sit in a distinct layer on top.','Garnish with a lemon wheel. The visual contrast is the whole point.'],
+    stepsZh:['将威士忌、柠檬汁、糖浆和蛋白干摇15秒，不加冰。','加入冰块大力摇12秒。','双重过滤至放有大冰块的岩石杯中。','漂浮红酒：将吧勺背面贴近酒液表面，缓缓将红酒沿勺背倒入，使其形成清晰的分层。','用柠檬片装饰。视觉对比才是这杯酒的灵魂。'],
+    notesEn:"The New York Sour is a Whisky Sour with a red wine float — simple in concept, stunning in execution. Use a full-bodied red with some fruit character (Malbec works beautifully). The float must be poured slowly or it sinks and muddies everything.", notesZh:'纽约酸酒是加了红酒漂浮层的威士忌酸酒——概念简单，呈现惊艳。使用浓郁果香的红酒（马尔贝克效果极佳）。漂浮层必须缓慢倒入，否则会沉下去，混浊一片。'
+  },
+  'cocktail-ramos':{
+    img:'images/photos/cocktails/Ramos Gin Fizz.jpg', eyebrowEn:'New Orleans Classic · Shaken · ABV ~14%', eyebrowZh:'新奥尔良经典 · 摇制 · 酒精度约14%',
+    titleEn:'Ramos Gin Fizz', titleZh:'拉莫斯金菲仕',
+    metaEn:[['Method','Long shake + soda'],['Glass','Collins glass'],['Ice','Shake with ice, serve no ice'],['Garnish','None — let the foam speak']],
+    metaZh:[['手法','长时摇制+苏打水'],['酒杯','柯林斯杯'],['冰块','加冰摇制，无冰上桌'],['装饰','无——让泡沫说话']],
+    ingrEn:['<strong>1.5 oz (45ml)</strong> London Dry Gin','<strong>½ oz (15ml)</strong> Fresh lemon juice','<strong>½ oz (15ml)</strong> Fresh lime juice','<strong>¾ oz (22ml)</strong> Simple syrup','<strong>1 oz (30ml)</strong> Heavy cream','<strong>1</strong> egg white','<strong>3 drops</strong> Orange blossom water','<strong>2 oz (60ml)</strong> Chilled soda water'],
+    ingrZh:['<strong>1.5 oz (45ml)</strong> 伦敦干金酒','<strong>½ oz (15ml)</strong> 新鲜柠檬汁','<strong>½ oz (15ml)</strong> 新鲜青柠汁','<strong>¾ oz (22ml)</strong> 简单糖浆','<strong>1 oz (30ml)</strong> 淡奶油','<strong>1个</strong> 蛋白','<strong>3滴</strong> 橙花水','<strong>2 oz (60ml)</strong> 冷藏苏打水'],
+    stepsEn:['Combine all ingredients except soda in a shaker without ice. Dry shake for at least 2 minutes — traditionally 12. The longer, the better the foam.','Add ice and shake another 5 minutes if you can manage it. Your arms will ache. This is the point.','Strain into a chilled Collins glass with no ice.','Slowly pour soda water down the side of the glass. The foam will rise dramatically above the rim.','Serve immediately. Do not garnish. The foam pillow above the glass rim is the presentation.'],
+    stepsZh:['将所有材料（除苏打水）放入摇壶，不加冰，干摇至少2分钟——传统要求12分钟。摇得越久，泡沫越好。','如果能坚持，加入冰块再摇5分钟。手臂会酸痛，这是意义所在。','滤入无冰的冷藏柯林斯杯中。','将苏打水缓缓沿杯壁倒入，泡沫会壮观地升出杯口。','立即上桌，无需装饰。高出杯口的泡沫枕头就是最好的呈现。'],
+    notesEn:"Henry Ramos invented this in 1888 in New Orleans. During Mardi Gras, he employed 35 shaker boys working in relay to keep up with demand. The absurd shaking time is not theatre — it is chemistry. The cream and egg white need mechanical force to emulsify into that impossibly light foam.", notesZh:'亨利·拉莫斯于1888年在新奥尔良发明了这款鸡尾酒。狂欢节期间，他雇了35名摇酒男孩轮流接力才能满足需求。荒谬的摇制时长不是表演——而是化学反应。奶油和蛋白需要机械力才能乳化成那层难以置信的轻盈泡沫。'
+  },
+  'cocktail-martini':{
+    emoji:'🍸', eyebrowEn:'Classic · Stirred · ABV ~28%', eyebrowZh:'经典 · 搅拌 · 酒精度约28%',
+    titleEn:'Martini', titleZh:'马丁尼',
+    metaEn:[['Method','Stirred'],['Glass','Chilled martini coupe'],['Ice','Stir with ice, serve up'],['Garnish','Lemon twist or olive']],
+    metaZh:[['手法','搅拌'],['酒杯','冰镇马丁尼杯'],['冰块','加冰搅拌，滤冰上桌'],['装饰','柠檬皮卷或橄榄']],
+    ingrEn:['<strong>2.5 oz (75ml)</strong> London Dry Gin (or vodka for a Vodka Martini)','<strong>½ oz (15ml)</strong> Dry vermouth','<strong>1 dash</strong> Orange bitters (optional but recommended)'],
+    ingrZh:['<strong>2.5 oz (75ml)</strong> 伦敦干金酒（或伏特加做成伏特加马丁尼）','<strong>½ oz (15ml)</strong> 干苦艾酒','<strong>1滴</strong> 橙皮苦精（可选但推荐）'],
+    stepsEn:['Chill your martini glass in the freezer for at least 15 minutes, or fill with ice water while you prepare.','Combine gin, vermouth, and bitters in a mixing glass filled with large ice.','Stir for 40–50 seconds — longer than you think. You want maximum dilution and chill.','Strain into the chilled glass.','For a lemon twist: express the oil over the surface, rub around the rim, drop in or balance on the rim. For an olive: skewer 1–3 on a pick and drop in.'],
+    stepsZh:['将马丁尼杯放入冰箱至少冰镇15分钟，或在准备时用冰水装满杯子。','将金酒、苦艾酒和苦精倒入装有大冰块的调酒杯。','搅拌40-50秒——比你以为的要长。要最大程度冷却和稀释。','过滤入冰镇好的杯中。','柠檬皮卷：在杯面上方扭取油脂，擦杯口，放入或搭在杯沿。橄榄：用签串1-3颗放入杯中。'],
+    notesEn:"The Martini is a canvas for your preferences. Wetter (more vermouth) is not worse — it's more nuanced. I prefer a 5:1 ratio and always use vermouth that has been stored in the fridge (it oxidizes). Never shake unless you want a cloudy, bruised drink. The Bond instruction was wrong.", notesZh:'马丁尼是展现个人偏好的画布。更湿（更多苦艾酒）并非更差——而是更有层次。我偏好5:1的比例，并且始终使用冷藏保存的苦艾酒（它会氧化变质）。除非想要混浊的酒，否则永远不要摇制。邦德的吩咐是错误的。'
+  },
+  'cocktail-espressomartini':{
+    img:'images/photos/cocktails/Espresso Martini.jpg', eyebrowEn:'Modern Classic · Shaken · ABV ~20%', eyebrowZh:'现代经典 · 摇制 · 酒精度约20%',
+    titleEn:'Espresso Martini', titleZh:'意式浓缩马丁尼',
+    metaEn:[['Method','Shaken'],['Glass','Chilled coupe'],['Ice','Shake with ice, serve up'],['Garnish','3 coffee beans']],
+    metaZh:[['手法','摇制'],['酒杯','冰镇碟形杯'],['冰块','加冰摇制，滤冰上桌'],['装饰','3颗咖啡豆']],
+    ingrEn:['<strong>1.5 oz (45ml)</strong> Vodka','<strong>1 oz (30ml)</strong> Fresh espresso (hot or room temp)','<strong>½ oz (15ml)</strong> Coffee liqueur (Kahlúa or Mr. Black)','<strong>¼ oz (7ml)</strong> Simple syrup (adjust to taste)'],
+    ingrZh:['<strong>1.5 oz (45ml)</strong> 伏特加','<strong>1 oz (30ml)</strong> 新鲜意式浓缩咖啡（热或室温）','<strong>½ oz (15ml)</strong> 咖啡利口酒（卡鲁哇或Mr. Black）','<strong>¼ oz (7ml)</strong> 简单糖浆（按口味调整）'],
+    stepsEn:['Pull a fresh espresso shot and let it cool slightly — do not refrigerate, as this kills the crema.','Combine vodka, espresso, coffee liqueur, and syrup in a shaker with plenty of ice.','Shake very hard for 15 seconds. The vigorous shaking is what creates the foam.','Double-strain into a chilled coupe to catch all the ice chips.','The foam should be thick and mahogany-colored. Place 3 coffee beans on top — tradition says they represent health, wealth, and happiness.'],
+    stepsZh:['拉一杯新鲜的意式浓缩，稍微放凉——不要冷藏，那会破坏咖啡脂。','将伏特加、浓缩咖啡、咖啡利口酒和糖浆加入装有大量冰块的摇壶。','用力摇15秒，大力摇制才能产生泡沫。','双重过滤入冰镇碟形杯，滤掉所有细小冰渣。','泡沫应该厚实且呈深棕色。顶部放3颗咖啡豆——传统寓意健康、财富和幸福。'],
+    notesEn:"Invented by Dick Bradsell in London in the 1980s, allegedly for a model who asked for something to wake her up. The key is fresh espresso — pre-made cold brew or instant will not produce the same foam. I prefer Mr. Black over Kahlúa for its drier, more intense coffee character.", notesZh:'由迪克·布拉德塞尔于1980年代在伦敦发明，据说是应一位模特要求调制的提神饮料。关键在于新鲜浓缩咖啡——预制冷萃或速溶咖啡无法产生同样的泡沫。比起卡鲁哇，我更偏好Mr. Black，因为它的咖啡风味更干、更浓郁。'
+  },
+  'cocktail-paperplane':{
+    img:'images/photos/cocktails/Paper Plane.jpg', eyebrowEn:'Modern Classic · Shaken · ABV ~22%', eyebrowZh:'现代经典 · 摇制 · 酒精度约22%',
+    titleEn:'Paper Plane', titleZh:'纸飞机',
+    metaEn:[['Method','Shaken'],['Glass','Chilled coupe'],['Ice','Shake with ice, serve up'],['Garnish','None']],
+    metaZh:[['手法','摇制'],['酒杯','冰镇碟形杯'],['冰块','加冰摇制，滤冰上桌'],['装饰','无']],
+    ingrEn:['<strong>¾ oz (22ml)</strong> Bourbon whiskey','<strong>¾ oz (22ml)</strong> Aperol','<strong>¾ oz (22ml)</strong> Amaro Nonino','<strong>¾ oz (22ml)</strong> Fresh lemon juice'],
+    ingrZh:['<strong>¾ oz (22ml)</strong> 波本威士忌','<strong>¾ oz (22ml)</strong> 艾普罗','<strong>¾ oz (22ml)</strong> 诺尼诺阿马罗','<strong>¾ oz (22ml)</strong> 新鲜柠檬汁'],
+    stepsEn:['Combine all four ingredients in equal measure in a cocktail shaker with ice. There is no flexibility in the ratio — that is the point of the drink.','Shake hard for 12 seconds.','Double-strain into a chilled coupe.','No garnish. The simplicity of presentation mirrors the purity of the recipe.'],
+    stepsZh:['将四种材料等量倒入装有冰块的摇壶。比例没有任何弹性——这正是这款酒的精髓所在。','用力摇12秒。','双重过滤至冰镇碟形杯。','无需装饰。呈现的简洁映照着配方的纯粹。'],
+    notesEn:"Created by Sam Ross (who also invented the Penicillin) in 2007, named after the M.I.A. song. The equal-parts format is elegantly democratic — no single ingredient dominates. The Amaro Nonino is non-negotiable; other amaros change the drink entirely. It is the rare modern cocktail that deserves to be called a classic.", notesZh:'由萨姆·罗斯（同时也是青霉素鸡尾酒的发明者）于2007年创作，以M.I.A.的同名歌曲命名。等份配方优雅而民主——没有任何一种材料主导全局。诺尼诺阿马罗是不可替代的；换成其他阿马罗会彻底改变这款酒。它是极少数值得被称为经典的现代鸡尾酒。'
+  },
+  'cocktail-margarita':{
+    img:'images/photos/cocktails/Margarita.jpg', eyebrowEn:'Classic · Shaken · ABV ~20%', eyebrowZh:'经典 · 摇制 · 酒精度约20%',
+    titleEn:'Margarita', titleZh:'玛格丽特',
+    metaEn:[['Method','Shaken'],['Glass','Rocks glass or coupe'],['Ice','On the rocks or up'],['Garnish','Salt rim + lime wheel']],
+    metaZh:[['手法','摇制'],['酒杯','岩石杯或碟形杯'],['冰块','加冰或滤冰'],['装饰','盐边+青柠片']],
+    ingrEn:['<strong>2 oz (60ml)</strong> 100% agave Blanco tequila','<strong>¾ oz (22ml)</strong> Fresh lime juice','<strong>½ oz (15ml)</strong> Triple sec or Cointreau','<strong>¼ oz (7ml)</strong> Agave syrup','Salt for the rim (optional but traditional)'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 100%龙舌兰白色龙舌兰酒','<strong>¾ oz (22ml)</strong> 新鲜青柠汁','<strong>½ oz (15ml)</strong> 橙皮力娇酒或君度','<strong>¼ oz (7ml)</strong> 龙舌兰糖浆','盐（用于杯口，可选但是传统做法）'],
+    stepsEn:['Prepare the salt rim: run a lime wedge around half the rim (not the full rim, so guests can choose), then dip in coarse salt.','Combine tequila, lime juice, triple sec and agave syrup in a shaker with ice.','Shake hard for 12 seconds.','Strain over fresh ice in the rocks glass, or up into a coupe.','Garnish with a lime wheel on the rim.'],
+    stepsZh:['准备盐边：用青柠角沿半边杯口擦一圈（不要整圈，让客人自行选择），然后蘸上粗盐。','将龙舌兰、青柠汁、橙皮力娇酒和龙舌兰糖浆放入加了冰的摇壶。','用力摇12秒。','滤入放了新冰块的岩石杯，或滤入碟形杯。','用青柠片搭在杯口装饰。'],
+    notesEn:"Use 100% agave tequila — the mixto stuff (less than 100% agave) makes headaches, not margaritas. Fresh lime juice only. I use agave syrup instead of simple syrup to keep the agave thread running through the drink. Half-salted rim is the civilized approach.", notesZh:'使用100%龙舌兰蒸馏酒——混合酒（低于100%龙舌兰）只会带来头痛，不是玛格丽特。只用新鲜青柠汁。我用龙舌兰糖浆代替简单糖浆，让龙舌兰的风格贯穿整杯酒。半边盐口才是文明人的选择。'
+  },
+  'cocktail-hottoddy':{
+    img:'images/photos/cocktails/Tom Toddy.jpg', eyebrowEn:'Classic · Built · Hot · ABV ~14%', eyebrowZh:'经典 · 直调 · 热饮 · 酒精度约14%',
+    titleEn:'Hot Toddy', titleZh:'热托蒂',
+    metaEn:[['Method','Built (hot)'],['Glass','Heat-proof mug or glass'],['Ice','None — it is a hot drink'],['Garnish','Lemon wheel + cinnamon stick']],
+    metaZh:[['手法','直调（热饮）'],['酒杯','耐热马克杯或玻璃杯'],['冰块','无——这是热饮'],['装饰','柠檬片+肉桂棒']],
+    ingrEn:['<strong>1.5 oz (45ml)</strong> Whisky (Scotch, Irish, or Bourbon — all work)','<strong>1 tbsp</strong> Honey (raw, if possible)','<strong>½ oz (15ml)</strong> Fresh lemon juice','<strong>4–5 oz</strong> Hot water (just off the boil)','<strong>1</strong> cinnamon stick','<strong>2</strong> whole cloves (optional)'],
+    ingrZh:['<strong>1.5 oz (45ml)</strong> 威士忌（苏格兰、爱尔兰或波本均可）','<strong>1汤匙</strong> 蜂蜜（尽量用原蜜）','<strong>½ oz (15ml)</strong> 新鲜柠檬汁','<strong>4-5 oz</strong> 热水（刚煮沸后稍凉）','<strong>1根</strong> 肉桂棒','<strong>2颗</strong> 丁香（可选）'],
+    stepsEn:['Warm your mug first by filling it with hot water for a minute, then discard the water.','Add honey to the warm mug and pour a small amount of hot water over it to dissolve.','Add whisky and lemon juice.','Top with hot water. Stir gently.','Add cinnamon stick and cloves. Garnish with a lemon wheel studded with cloves.','Let it steep for 1 minute before drinking — the cinnamon opens up.'],
+    stepsZh:['先用热水温杯一分钟，倒掉热水。','将蜂蜜放入温热的杯中，倒入少量热水溶解。','加入威士忌和柠檬汁。','注入热水，轻轻搅拌。','放入肉桂棒和丁香，用插了丁香的柠檬片装饰。','饮用前静置1分钟——肉桂香气会充分散发。'],
+    notesEn:"Genuinely medicinal — the warmth opens blood vessels, honey soothes, lemon has vitamin C, and whisky makes you not care about the cold. My go-to for winter evenings or the first sign of illness. Irish whiskey is traditional; I prefer a smoky Scotch for more depth.", notesZh:'货真价实的药用效果——温热扩张血管，蜂蜜润喉，柠檬含维C，而威士忌让你不再在乎寒冷。我在冬夜或初显病兆时的首选。爱尔兰威士忌是传统选择；我更偏好烟熏苏格兰威士忌，层次更深。'
+  },
+  'cocktail-junglebird':{
+    img:'images/photos/cocktails/Jungle Bird.jpg', eyebrowEn:'Tiki · Shaken · ABV ~16%', eyebrowZh:'提基 · 摇制 · 酒精度约16%',
+    titleEn:'Jungle Bird', titleZh:'丛林鸟',
+    metaEn:[['Method','Shaken'],['Glass','Rocks glass or tiki mug'],['Ice','Crushed or cubed'],['Garnish','Pineapple frond + cherry']],
+    metaZh:[['手法','摇制'],['酒杯','岩石杯或提基杯'],['冰块','碎冰或冰块'],['装饰','菠萝叶+樱桃']],
+    ingrEn:['<strong>1.5 oz (45ml)</strong> Blackstrap rum (Goslings or Hamilton 151)','<strong>¾ oz (22ml)</strong> Campari','<strong>1.5 oz (45ml)</strong> Fresh pineapple juice','<strong>½ oz (15ml)</strong> Fresh lime juice','<strong>½ oz (15ml)</strong> Simple syrup'],
+    ingrZh:['<strong>1.5 oz (45ml)</strong> 黑糖朗姆酒（Goslings或Hamilton 151）','<strong>¾ oz (22ml)</strong> 金巴利','<strong>1.5 oz (45ml)</strong> 新鲜菠萝汁','<strong>½ oz (15ml)</strong> 新鲜青柠汁','<strong>½ oz (15ml)</strong> 简单糖浆'],
+    stepsEn:['Combine all ingredients in a shaker with ice.','Shake hard for 12 seconds.','Strain over crushed ice in a rocks glass or tiki mug.','Garnish with a pineapple frond and a cherry. If you have them, add a paper umbrella without apology.','The drink should be a deep ruby-orange color from the Campari and pineapple.'],
+    stepsZh:['将所有材料加入装有冰块的摇壶。','用力摇12秒。','过滤至装有碎冰的岩石杯或提基杯。','用菠萝叶和樱桃装饰。如果有小纸伞，坦然插上。','这杯酒应呈现深宝石橙红色，来自金巴利和菠萝汁的融合。'],
+    notesEn:"Created in 1978 at the Kuala Lumpur Hilton. The Jungle Bird was largely forgotten until it was rediscovered around 2010 by cocktail writers. It is the only classic tiki drink that uses Campari, which creates a fascinating tension between tropical sweetness and Italian bitterness. The blackstrap rum is essential — its molasses depth cuts through everything.", notesZh:'1978年创制于吉隆坡希尔顿酒店。丛林鸟在很大程度上被遗忘，直到2010年前后被鸡尾酒作家重新发现。它是唯一使用金巴利的经典提基饮品，在热带甜美与意式苦涩之间制造了迷人的张力。黑糖朗姆酒不可替代——它的糖蜜深度能穿透一切。'
+  },
+  'cocktail-pinacolada':{
+    img:'images/photos/cocktails/Pina Colada.jpg',
+    eyebrowEn:'Classic · Blended / Shaken · ABV ~13%', eyebrowZh:'经典 · 搅拌/摇制 · 酒精度约13%',
+    titleEn:'Piña Colada', titleZh:'椰林飘香',
+    metaEn:[['Method','Blended or shaken'],['Glass','Hurricane or coupe'],['Ice','Blended with ice or shaken'],['Garnish','Pineapple wedge + cherry']],
+    metaZh:[['手法','搅拌机或摇制'],['酒杯','飓风杯或碟形杯'],['冰块','与冰同打或摇制'],['装饰','菠萝角+樱桃']],
+    ingrEn:['<strong>2 oz (60ml)</strong> White rum','<strong>1.5 oz (45ml)</strong> Coconut cream (Coco López recommended)','<strong>2 oz (60ml)</strong> Fresh pineapple juice','<strong>1 cup</strong> Ice (for blending)'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 白朗姆酒','<strong>1.5 oz (45ml)</strong> 椰浆（推荐Coco López）','<strong>2 oz (60ml)</strong> 新鲜菠萝汁','<strong>1杯</strong> 冰块（用于搅拌）'],
+    stepsEn:['Combine rum, coconut cream, pineapple juice, and ice in a blender.','Blend until completely smooth — about 30 seconds. No chunks.','Pour into a chilled hurricane glass or coupe.','Garnish with a pineapple wedge and a cherry. A paper umbrella is not optional — it is mandatory.','Alternatively: shake all ingredients hard with ice for 15 seconds and double-strain for a lighter, less frozen version.'],
+    stepsZh:['将朗姆酒、椰浆、菠萝汁和冰块放入搅拌机。','搅拌至完全顺滑，约30秒，不能有冰块颗粒。','倒入冰镇飓风杯或碟形杯。','用菠萝角和樱桃装饰。小纸伞不是可选的——是必须的。','备选：所有材料加冰大力摇15秒，双重过滤，口感更轻盈不那么冰冻。'],
+    notesEn:"Invented in 1954 at the Caribe Hilton in San Juan, Puerto Rico, by bartender Ramón \"Monchito\" Marrero. It took him three months to perfect the recipe. Puerto Rico declared it the national drink in 1978. The blended version is the classic; the shaken version is what you make when you don't own a blender and have no regrets about it.", notesZh:'1954年由调酒师拉蒙·"蒙奇托"·马雷罗在波多黎各圣胡安的加勒比希尔顿发明，历时三个月打磨配方。1978年被波多黎各定为国饮。搅拌机版本是经典做法；摇制版本是当你没有搅拌机时的选择，同样毫无遗憾。'
+  },
+  'cocktail-mojito':{
+    img:'images/photos/cocktails/Mojito.jpg',
+    eyebrowEn:'Classic · Built · ABV ~12%', eyebrowZh:'经典 · 直调 · 酒精度约12%',
+    titleEn:'Mojito', titleZh:'莫吉托',
+    metaEn:[['Method','Built / muddled'],['Glass','Collins or highball'],['Ice','Crushed or cubed'],['Garnish','Fresh mint sprig + lime wheel']],
+    metaZh:[['手法','直调/研磨'],['酒杯','柯林斯杯或海波杯'],['冰块','碎冰或冰块'],['装饰','新鲜薄荷枝+青柠片']],
+    ingrEn:['<strong>2 oz (60ml)</strong> White rum (Havana Club 3yr recommended)','<strong>¾ oz (22ml)</strong> Fresh lime juice','<strong>¾ oz (22ml)</strong> Simple syrup (or 2 tsp sugar)','<strong>8–10</strong> Fresh mint leaves','<strong>2 oz (60ml)</strong> Chilled soda water'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 白朗姆酒（推荐哈瓦那俱乐部3年）','<strong>¾ oz (22ml)</strong> 新鲜青柠汁','<strong>¾ oz (22ml)</strong> 简单糖浆（或2茶匙糖）','<strong>8-10片</strong> 新鲜薄荷叶','<strong>2 oz (60ml)</strong> 冷藏苏打水'],
+    stepsEn:['Add mint leaves and simple syrup to the glass. Gently clap the mint between your palms first to release the oils — do not muddle hard or it turns bitter.','Add lime juice and rum.','Fill the glass with crushed ice.','Top with soda water. Stir gently once from the bottom.','Garnish with a generous mint sprig. Slap it against your palm before placing — the aroma is part of the drink.'],
+    stepsZh:['将薄荷叶和糖浆放入杯中。先把薄荷叶放在掌心轻拍以释放精油——不要用力研磨，否则会变苦。','加入青柠汁和朗姆酒。','装满碎冰。','加入苏打水，从底部轻轻搅拌一次。','用一大枝薄荷装饰。放入前先用手掌拍打——香气是这杯酒体验的一部分。'],
+    notesEn:"The mojito is deceptively simple and deceptively easy to ruin. The two most common mistakes: muddling the mint too aggressively (releases chlorophyll, tastes grassy and bitter) and using too little lime. The mint should be fragrant, not macerated. Use crushed ice if you have it — it dilutes at the right rate and keeps the drink cold longer.", notesZh:'莫吉托看似简单，却很容易毁掉。最常见的两个错误：过度研磨薄荷（释放叶绿素，味道发苦发草）以及青柠汁放太少。薄荷应该香气四溢，而不是被碾碎。有碎冰用碎冰——稀释速度恰到好处，保冷时间也更长。'
+  },
+'cocktail-coconutbaileys':{
+    img:'images/photos/cocktails/Coconut.jpg',
+    eyebrowEn:'Original · Shaken · ABV ~11%', eyebrowZh:'原创 · 摇制 · 酒精度约11%',
+    titleEn:'Coconut Baileys', titleZh:'椰子百利甜',
+    metaEn:[['Method','Shaken'],['Glass','Rocks glass or coupe'],['Ice','Shake with ice, serve over ice or up'],['Garnish','Toasted coconut flakes']],
+    metaZh:[['手法','摇制'],['酒杯','岩石杯或碟形杯'],['冰块','加冰摇制，加冰或滤冰上桌'],['装饰','烤椰丝']],
+    ingrEn:['<strong>1.5 oz (45ml)</strong> Baileys Irish Cream','<strong>1 oz (30ml)</strong> Coconut rum (Malibu or similar)','<strong>1 oz (30ml)</strong> Coconut cream','<strong>1 oz (30ml)</strong> Whole milk or oat milk','<strong>Pinch</strong> of sea salt'],
+    ingrZh:['<strong>1.5 oz (45ml)</strong> 百利甜酒','<strong>1 oz (30ml)</strong> 椰子朗姆酒（马利宝或同类）','<strong>1 oz (30ml)</strong> 椰浆','<strong>1 oz (30ml)</strong> 全脂牛奶或燕麦奶','<strong>一撮</strong> 海盐'],
+    stepsEn:['Combine all ingredients in a shaker with plenty of ice.','Shake hard for 12 seconds — the coconut cream needs good agitation to integrate fully.','Strain over fresh ice in a rocks glass, or double-strain into a chilled coupe.','Toast a small handful of coconut flakes in a dry pan until golden. Sprinkle over the top.','The salt is subtle but essential — it cuts through the sweetness and rounds out the coconut.'],
+    stepsZh:['将所有材料加入装有大量冰块的摇壶。','用力摇12秒——椰浆需要充分摇晃才能完全融合。','过滤至放有新冰块的岩石杯，或双重过滤至冰镇碟形杯。','干锅小火将椰丝烤至金黄，撒在表面。','盐的用量极少但不可缺——它能化解甜腻，让椰子风味更圆润。'],
+    notesEn:"This one was born out of a late-night experiment — I had Baileys, I had coconut rum, and I had no intention of drinking either straight. The sea salt is the move that makes it. Without it, it tastes like dessert; with it, it tastes like a cocktail. The toasted coconut garnish adds a nutty, slightly smoky contrast that I find impossible to skip.", notesZh:'这款酒诞生于一个深夜的实验——手边有百利甜，有椰子朗姆，但两样都不想直接喝。海盐是点睛之笔。没有它，喝起来像甜品；加了它，才像一杯鸡尾酒。烤椰丝的装饰带来坚果香和轻微烟熏感的对比，让我每次都无法省略。'
+  },
+  'cocktail-piscosour':{
+    img:'images/photos/cocktails/Pisco Sour.jpg',
+    eyebrowEn:'Classic · Shaken · ABV ~16%', eyebrowZh:'经典 · 摇制 · 酒精度约16%',
+    titleEn:'Pisco Sour', titleZh:'皮斯科酸酒',
+    metaEn:[['Method','Shaken (dry + wet shake)'],['Glass','Chilled coupe'],['Ice','Shake with ice, serve up'],['Garnish','3 drops Angostura on foam']],
+    metaZh:[['手法','干摇+湿摇'],['酒杯','冰镇碟形杯'],['冰块','加冰摇制，滤冰上桌'],['装饰','泡沫上滴3滴安格斯图拉苦精']],
+    ingrEn:['<strong>2 oz (60ml)</strong> Pisco (Quebranta variety recommended)','<strong>¾ oz (22ml)</strong> Fresh lime juice','<strong>¾ oz (22ml)</strong> Simple syrup','<strong>1</strong> egg white','<strong>3 drops</strong> Angostura bitters (on foam)'],
+    ingrZh:['<strong>2 oz (60ml)</strong> 皮斯科（推荐Quebranta品种）','<strong>¾ oz (22ml)</strong> 新鲜青柠汁','<strong>¾ oz (22ml)</strong> 简单糖浆','<strong>1个</strong> 蛋白','<strong>3滴</strong> 安格斯图拉苦精（用于泡沫）'],
+    stepsEn:['Dry shake: combine pisco, lime juice, syrup and egg white in a shaker without ice. Shake hard for 15 seconds to emulsify the egg white.','Add ice and wet shake for another 12 seconds until well chilled.','Double-strain into a chilled coupe.','Drop exactly 3 drops of Angostura bitters onto the foam. Do not stir — the pattern is part of the presentation.','Serve immediately.'],
+    stepsZh:['干摇：将皮斯科、青柠汁、糖浆和蛋白放入摇壶，不加冰用力摇15秒使蛋白乳化。','加入冰块继续摇12秒，至充分冷却。','双重过滤至冰镇碟形杯。','在泡沫上精确滴3滴安格斯图拉苦精，不要搅动——图案是呈现的一部分。','立即上桌。'],
+    notesEn:"The Pisco Sour is to Peru what the Negroni is to Italy — a point of national pride and endless debate. Peruvians will insist on Quebranta pisco and lime (not lemon); Chileans make their version with lemon and without egg white. I side with Peru. The three drops of Angostura on the foam are non-negotiable — they add a faint spice that ties everything together and make the drink instantly recognizable.", notesZh:'皮斯科酸酒之于秘鲁，正如内格罗尼之于意大利——是民族自豪感与无休止争论的交汇点。秘鲁人坚持用Quebranta皮斯科和青柠；智利人则用柠檬且不加蛋白。我站秘鲁这边。泡沫上的三滴安格斯图拉是不可妥协的——它们带来一丝若有若无的香料气息，将整杯酒串联在一起，也让这杯酒一眼可辨。'
+  },
+  'cocktail-lastword':{
+    emoji:'🍸',
+    eyebrowEn:'Prohibition Era · Shaken · ABV ~24%', eyebrowZh:'禁酒令时代 · 摇制 · 酒精度约24%',
+    titleEn:'Last Word', titleZh:'最后一语',
+    metaEn:[['Method','Shaken'],['Glass','Chilled coupe'],['Ice','Shake with ice, serve up'],['Garnish','Lime wheel or maraschino cherry']],
+    metaZh:[['手法','摇制'],['酒杯','冰镇碟形杯'],['冰块','加冰摇制，滤冰上桌'],['装饰','青柠片或黑樱桃']],
+    ingrEn:['<strong>¾ oz (22ml)</strong> London Dry Gin','<strong>¾ oz (22ml)</strong> Green Chartreuse','<strong>¾ oz (22ml)</strong> Maraschino liqueur (Luxardo recommended)','<strong>¾ oz (22ml)</strong> Fresh lime juice'],
+    ingrZh:['<strong>¾ oz (22ml)</strong> 伦敦干金酒','<strong>¾ oz (22ml)</strong> 绿色查特酒','<strong>¾ oz (22ml)</strong> 黑樱桃利口酒（推荐Luxardo）','<strong>¾ oz (22ml)</strong> 新鲜青柠汁'],
+    stepsEn:['Combine all four ingredients in equal measure in a shaker with ice.','Shake hard for 12 seconds.','Double-strain into a chilled coupe.','Garnish with a lime wheel or a single maraschino cherry.'],
+    stepsZh:['将四种材料等量放入加有冰块的摇壶。','用力摇12秒。','双重过滤至冰镇碟形杯。','用青柠片或一颗黑樱桃装饰。'],
+    notesEn:"Invented at the Detroit Athletic Club around 1916, the Last Word disappeared during Prohibition and was largely forgotten until bartender Murray Stenson rediscovered it at Zig Zag Café in Seattle around 2004. The equal-parts format is the same elegant logic as the Paper Plane — every ingredient holds its ground. Green Chartreuse is the soul of the drink; there is no substitute. The combination of herbal, sweet, tart and spirit-forward is unlike anything else in the canon.", notesZh:'约于1916年发明于底特律运动俱乐部，禁酒令期间销声匿迹，直到2004年前后被西雅图Zig Zag Café的调酒师穆雷·斯滕森重新发现。等份配方与纸飞机一样优雅——每种材料都不退让。绿色查特酒是这杯酒的灵魂，无可替代。草本、甜润、酸爽与烈酒感的组合，是整个调酒经典中独一无二的存在。'
+  },
+'cocktail-seeyoutomorrow':{
+    emoji:'🌙',
+    eyebrowEn:'Original · Shaken · ABV ~18%', eyebrowZh:'原创 · 摇制 · 酒精度约18%',
+    titleEn:'See You Tomorrow', titleZh:'明日再见',
+    metaEn:[['Method','Shaken'],['Glass','Chilled coupe'],['Ice','Shake with ice, serve up'],['Garnish','Expressed orange peel']],
+    metaZh:[['手法','摇制'],['酒杯','冰镇碟形杯'],['冰块','加冰摇制，滤冰上桌'],['装饰','橙皮卷']],
+    ingrEn:['<strong>1.5 oz (45ml)</strong> Aged rum (Ron Zacapa or similar)','<strong>½ oz (15ml)</strong> Amaro Nonino','<strong>½ oz (15ml)</strong> Fresh lemon juice','<strong>¼ oz (7ml)</strong> Honey syrup (2:1 honey to water)','<strong>2 dashes</strong> Peychaud\'s bitters'],
+    ingrZh:['<strong>1.5 oz (45ml)</strong> 陈年朗姆酒（推荐Ron Zacapa或同类）','<strong>½ oz (15ml)</strong> 诺尼诺阿马罗','<strong>½ oz (15ml)</strong> 新鲜柠檬汁','<strong>¼ oz (7ml)</strong> 蜂蜜糖浆（蜂蜜:水=2:1）','<strong>2滴</strong> 佩乔苦精'],
+    stepsEn:['Combine all ingredients in a shaker with ice.','Shake for 12 seconds.','Double-strain into a chilled coupe.','Express an orange peel over the surface — hold it above the glass and snap it firmly to release the oils. Run it around the rim, then rest it on the edge.'],
+    stepsZh:['将所有材料加入装有冰块的摇壶。','摇12秒。','双重过滤至冰镇碟形杯。','在杯面上方扭转橙皮取油——用力折压，让油脂喷洒在酒液表面。擦一圈杯口，搭在杯沿。'],
+    notesEn:"This is the drink I make at the end of a long night behind the bar — for myself or for whoever is still there. The aged rum gives it warmth and depth, the Amaro Nonino adds a bittersweet complexity, and the honey softens everything without losing the edges. The name came naturally: it is the kind of drink that feels like a quiet goodbye. Not dramatic. Just — see you tomorrow.", notesZh:'这是我在吧台后漫长一夜结束时调的那杯酒——为自己，或者为还留在那里的人。陈年朗姆带来温度和深度，诺尼诺阿马罗增添苦甜的层次，蜂蜜将一切柔和而不失棱角。名字自然而然地来了：这杯酒有一种安静告别的感觉。不戏剧化。只是——明日再见。'
+  },
+  'bar-bryan':{
+    img:'images/photos/cocktails/intro.jpg',
+    eyebrowEn:'New York Bartending School · 2026', eyebrowZh:'纽约调酒师学校 · 2026',
+    titleEn:'Bryan Evans & Me', titleZh:'Bryan 与我',
+    metaEn:[['Location','New York'],['School','New York Bartending School'],['Instructor','Bryan Evans']],
+    metaZh:[['地点','纽约'],['学校','纽约调酒师学校'],['讲师','Bryan Evans']],
+    ingrEn:[], ingrZh:[],
+    stepsEn:[], stepsZh:[],
+    notesEn:"Bryan Evans is the funniest British old man I have ever met behind a bar. He has the kind of beard that belongs in a folk song and the kind of laugh that fills a room before the joke is even finished.\n\nI earned my New York bartending certification under his instruction. The certificate is somewhere in a drawer. The things he taught me are not.",
+notesZh:'Bryan Evans 是我在吧台后见过的最幽默的英国小老头。他留着一把属于民谣歌曲的胡子，笑声在笑话还没说完之前就已经把整个房间填满了。\n\n我在他的指导下取得了纽约调酒师证书。证书放在抽屉的某个角落。他教给我的东西，不在那里。'
+  },
+  
+
+  // BOOKS
+  'book1':{
+    emoji:'📖', eyebrowEn:'Fiction · Read 2024', eyebrowZh:'小说 · 2024年阅读',
+    titleEn:'The Book Title — Author Name', titleZh:'《书名》— 作者',
+    metaEn:[['Rating','★★★★★'],['Publisher','Publisher Name, Year'],['Pages','350']],
+    metaZh:[['评分','★★★★★'],['出版','出版社，年份'],['页数','350']],
+    ingrEn:[], ingrZh:[],
+    stepsEn:[], stepsZh:[],
+    notesEn:"Your detailed reading notes go here. What was the central thesis or narrative? What were the most memorable passages? How did this book change you?\n\nKey insight: Write the single most important thing you took away from this book.\n\nQuotations or paraphrases that resonated with you. How does this connect to your research or your life?", notesZh:'你的详细阅读笔记写在这里。中心论点或叙事是什么？哪些段落最令人难忘？这本书如何改变了你？\n\n关键洞见：写下你从这本书中得到的最重要的一件事。\n\n打动你的引文或意译。这与你的研究或生活有何联系？'
+  },
+  'book2':{emoji:'📗',eyebrowEn:'Non-Fiction · Read 2024',eyebrowZh:'非虚构 · 2024年阅读',titleEn:'Another Great Book — Author Name',titleZh:'《另一本好书》— 作者',metaEn:[['Rating','★★★★☆'],['Publisher','Publisher Name, Year'],['Pages','280']],metaZh:[['评分','★★★★☆'],['出版','出版社，年份'],['页数','280']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"Key arguments and themes. Did you agree? Where did the author's reasoning hold up, and where did it fall short?\n\nApplications to your own work: how might this change your approach to your research?\n\nRecommend to: people who are interested in [topic].",notesZh:'核心论点和主题。你是否认同？作者的推理哪里站得住脚，哪里有所不足？\n\n与自身研究的关联：这如何改变你的研究方式？\n\n推荐给：对[主题]感兴趣的人。'},
+  'book3':{emoji:'📘',eyebrowEn:'Science · Read 2023',eyebrowZh:'科学 · 2023年阅读',titleEn:'Essential Science Reading — Author',titleZh:'《必读科学著作》— 作者',metaEn:[['Rating','★★★★★'],['Publisher','Publisher Name, Year'],['Pages','420']],metaZh:[['评分','★★★★★'],['出版','出版社，年份'],['页数','420']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"Dense and rewarding. Changed how I approach my own research. The central argument is that [thesis].\n\nChapter on X was particularly illuminating — I've returned to it multiple times and keep finding new things.\n\nMandatory reading for anyone working in this area.",notesZh:'厚重而值得。改变了我做研究的方式。核心论点是[论点]。\n\n关于X的章节尤为深刻——我已多次重读，每次都有新发现。\n\n从事这一领域的人必读。'},
+  'book4':{emoji:'📕',eyebrowEn:'History · Read 2023',eyebrowZh:'历史 · 2023年阅读',titleEn:'A Sweeping History — Author',titleZh:'《一部宏大历史》— 作者',metaEn:[['Rating','★★★★☆'],['Publisher','Publisher Name, Year'],['Pages','560']],metaZh:[['评分','★★★★☆'],['出版','出版社，年份'],['页数','560']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"Meticulously researched and compellingly written. The main thesis challenges our assumptions about [historical period/topic].\n\nA reminder that the present is always stranger than we think, and that the past is never as settled as textbooks suggest.\n\nSome sections dragged, but the core argument is worth the effort.",notesZh:'严谨翔实，叙述引人入胜。主要论点挑战了我们对[历史时期/话题]的既有认知。\n\n提醒我们现在总比我们以为的更奇异，过去也从未像教科书那样已成定局。\n\n部分章节稍显拖沓，但核心论点值得付出时间。'},
+  'book5':{emoji:'📙',eyebrowEn:'Philosophy · Read 2023',eyebrowZh:'哲学 · 2023年阅读',titleEn:'A Philosophy Classic — Author',titleZh:'《哲学经典》— 作者',metaEn:[['Rating','★★★★★'],['Publisher','Publisher Name, Year'],['Pages','240']],metaZh:[['评分','★★★★★'],['出版','出版社，年份'],['页数','240']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"Read slowly, on weekends, over three months. Some books aren't meant to be consumed — they're meant to be lived alongside.\n\nThe central question of the work is [question]. The author's answer is [answer], and I find myself returning to it constantly.\n\nThis book makes me feel less alone in my confusion about [topic].",notesZh:'利用三个月的周末慢慢读。有些书不是用来读完的，而是用来相伴的。\n\n这部作品的核心问题是[问题]，作者的回答是[回答]，我发现自己不断回到这个答案。\n\n这本书让我在关于[话题]的困惑中感到不那么孤独。'},
+  'book6':{emoji:'📒',eyebrowEn:'Food Writing · Read 2022',eyebrowZh:'美食写作 · 2022年阅读',titleEn:'A Food Memoir — Author',titleZh:'《美食回忆录》— 作者',metaEn:[['Rating','★★★★★'],['Publisher','Publisher Name, Year'],['Pages','310']],metaZh:[['评分','★★★★★'],['出版','出版社，年份'],['页数','310']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"The best food writing is really writing about memory, identity, and love. This book made me call my mother immediately after finishing it.\n\nThe author's voice is so precise and honest that every sentence feels like it was written specifically for you.\n\nKey passage: [write your favorite passage or paraphrase here].",notesZh:'最好的美食写作，写的其实是记忆、身份与爱。读完后我立刻打电话给了妈妈。\n\n作者的文字如此精准诚实，每一句话都像是专门为你写的。\n\n关键段落：[在此写下你最喜欢的段落或意译]。'},
+
+  // TAROT
+  'tarot-fool':{emoji:'🤸',eyebrowEn:'Major Arcana · 0',eyebrowZh:'大阿卡纳 · 0',titleEn:'The Fool',titleZh:'愚者',metaEn:[['Element','Air'],['Planet','Uranus'],['Number','0 — infinite potential']],metaZh:[['元素','风'],['行星','天王星'],['数字','0 — 无限潜能']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"The Fool stands at the edge of a cliff, about to step off. He is not stupid — he is innocent. He hasn't yet learned to be afraid. This is the card of beginnings, of pure potential, of the courage to start without knowing what comes next.\n\nUpright: new beginnings, spontaneity, a leap of faith, unlimited potential.\nReversed: recklessness, naivety, poor judgment, risk-taking without preparation.",notesZh:'愚者站在悬崖边缘，即将踏步而出。他并非愚蠢——他是纯真的。他还没有学会恐惧。这是关于开始、纯粹潜能、以及在未知中勇敢出发的牌。\n\n正位：新开始、自发性、信念的飞跃、无限潜能。\n逆位：鲁莽、幼稚、判断失误、未经准备的冒险。'},
+  'tarot-magician':{emoji:'🪄',eyebrowEn:'Major Arcana · I',eyebrowZh:'大阿卡纳 · I',titleEn:'The Magician',titleZh:'魔术师',metaEn:[['Element','Air / Mercury'],['Planet','Mercury'],['Number','1 — unity, will']],metaZh:[['元素','风/水星'],['行星','水星'],['数字','1 — 统一，意志']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"One hand points to the sky, one to the earth: 'As above, so below.' The Magician has all four suits of the tarot on his table — he has every tool he needs. The question is whether he will use them.\n\nUpright: willpower, skill, manifestation, resourcefulness. You have everything you need.\nReversed: manipulation, trickery, wasted talent, illusion.",notesZh:'一手指天，一手指地："如其在上，如其在下。"魔术师桌上摆着塔罗的四个花色——他拥有所需的一切工具。问题在于他是否会使用它们。\n\n正位：意志力、技能、显化、足智多谋。你拥有一切所需。\n逆位：操纵、欺骗、浪费才华、幻觉。'},
+  'tarot-tower':{emoji:'⚡',eyebrowEn:'Major Arcana · XVI',eyebrowZh:'大阿卡纳 · XVI',titleEn:'The Tower',titleZh:'塔',metaEn:[['Element','Fire'],['Planet','Mars'],['Number','16 — sudden change']],metaZh:[['元素','火'],['行星','火星'],['数字','16 — 突变']],ingrEn:[],ingrZh:[],stepsEn:[],stepsZh:[],notesEn:"People fall from a tower struck by lightning. It is terrifying and necessary. The Tower represents the sudden destruction of something built on false foundations. It is uncomfortable, but it is honest.\n\nUpright: sudden change, upheaval, chaos, revelation, awakening.\nReversed: avoidance of catastrophe, delay, resisting necessary change.\n\nPersonal note: I find this card appears at moments of breakthrough in my research — when an experiment fails spectacularly, it often points toward the real answer.",notesZh:'人们从被闪电击中的塔上坠落。这令人恐惧，也是必要的。塔牌代表建立在虚假基础上的事物突然崩塌。它令人不适，但它是诚实的。\n\n正位：突如其来的变化、动荡、混乱、启示、觉醒。\n逆位：避免灾难、延迟、抵制必要的改变。\n\n个人笔记：我发现这张牌出现在研究突破的时刻——当实验壮观地失败时，它往往指向真正的答案。'},
+
+  // PROJECTS (simplified)
+  'proj1':{emoji:'📊',eyebrowEn:'Agriculture AI · 2024',eyebrowZh:'农业人工智能 · 2024',titleEn:'Optimal Decision-Making in Water, Land and Food Nexus based on Machine Learning',titleZh:'基于机器学习的水、土地和食物关系的最优决策',metaEn:[['Stack','Pytorch, Python'],['Paper','https://iwaponline.com/ws/article/23/10/4166/96854']],metaZh:[['技术栈','Pytorch, Python'],['论文','https://iwaponline.com/ws/article/23/10/4166/96854']],ingrEn:[],ingrZh:[],stepsEn:['Developed a machine learning model with the objective of maximizing wheat production while considering technical parameters of agriculture production, climatic stress on water resources, and land limits. ','Utilized an extreme learning machine approach and incorporated root-mean-square error as an error criterion and Pearson\'s coefficient as a correlation index of variables.','Evaluated the impact of the sustainable model based on criteria such as the harvest index, length of the growth period, cultivation costs, and irrigation water. Proposed a method that can serve as a virtual cropping model by adjusting the area under cultivation, leading to increased yield production.'],stepsZh:['在考虑农业生产技术参数、水资源气候压力和土地限制的情况下，开发了一个以最大化小麦产量为目标的机器学习模型。','采用极限学习机方法，采用均方根误差作为误差判据，Pearson系数作为变量的相关指标。','根据收获指数、生长期长度、种植成本和灌溉水量等标准评估可持续模式的影响。提出了一种通过调整种植面积作为虚拟种植模型，实现增产的方法。']},
+  'proj2':{emoji:'🤖',eyebrowEn:'National Innovation and Entrepreneurship Training Program for College Students · 2023',eyebrowZh:'国家大学生创新创业训练计划 · 2023',titleEn:'Intelligent Biped Humanoid Robot Based on Jetson Nano',titleZh:'基于Jetson Nano的智能双足人型机器人',metaEn:[['Stack','C++, Python, Computer Vision, Jetson Nano'],['Patent','https://patents.google.com/patent/CN219790352U/zh'],['Paper','https://oversea.cnki.net/kcms2/article/abstract?v=jpN_MAf5WI55vCMBNYXTPj7bdoN1nACfaaaZ1JrlzaEuAEpbzvuUuJ28yg7GfYlY-R2JtMC-kvBkg_igxxZkizbY8DH9_9zkv6kOufv7IFgFzPtrETMSUiJtJUemOzEKMKNRx11K6jULd1N_Tj1DQ7BdxcuQekMM0fSLpE7Mysi87qi5MR-zGA==&uniplatform=OVERSEA&language=EN']],metaZh:[['技术栈','C++, Python, Computer Vision, Jetson Nano'],['专利','https://patents.google.com/patent/CN219790352U/zh'],['论文','https://oversea.cnki.net/kcms2/article/abstract?v=jpN_MAf5WI55vCMBNYXTPj7bdoN1nACfaaaZ1JrlzaEuAEpbzvuUuJ28yg7GfYlY-R2JtMC-kvBkg_igxxZkizbY8DH9_9zkv6kOufv7IFgFzPtrETMSUiJtJUemOzEKMKNRx11K6jULd1N_Tj1DQ7BdxcuQekMM0fSLpE7Mysi87qi5MR-zGA==&uniplatform=OVERSEA&language=EN']],ingrEn:[],ingrZh:[],stepsEn:['Finished the 3D modeling of the robot by using 3ds Max, SolidWorks, and assembled robot with steering engines.','Developed Jetson Nano, and deployed ROS on it. Built a URDF model of the robot, and carried out the robot\'s gait planning, path planning and other environmental simulation and experimentation in Rviz and Gazebo.','UsedtheOpenPose algorithm to realize the human body posture recognition function, and converted the distance information and the angle information between the joint skeletons into the angle signal of the steering gear to control the posture and movement of the robot.'],stepsZh:['利用3ds Max、SolidWorks完成机器人的三维建模，并装配了机器人和舵机。','开发Jetson Nano，并在其上部署ROS。建立了机器人的URDF模型，在Rviz和Gazebo中进行了机器人的步态规划、路径规划等环境仿真与实验。','利用openpose算法实现人体姿态识别功能，将关节骨架之间的距离信息和角度信息转换为舵机的角度信号，控制机器人的姿态和运动。']},
+  'proj3':{emoji:'🤖',eyebrowEn:'National Innovation and Entrepreneurship Training Program for College Students · 2023',eyebrowZh:'国家大学生创新创业训练计划 · 2023',titleEn:'Intelligent Quadruped Robot Based on SLAM Map Planning and Ultra-Wide Band Technique',titleZh:'基于SLAM地图规划和超宽带技术的智能四足机器人',metaEn:[['Stack','Python, Raspberry Pi, SolidWorks']],metaZh:[['技术栈','Python, Raspberry Pi, SolidWorks']],ingrEn:[],ingrZh:[],stepsEn:['Learnedand developed Raspberry Pi, learned ROS and deployed it on Raspberry Pi for simulation experiments.','Built aZigbee communication module to realize the mutual communication between robots. Successfully enabled the robot’s movement, obstacle avoidance and communication by implementing programs with python to integrate the data of voice recognition, infrared laser, gyroscope and other sensors.','Trained theYoloV5 model in virtue of the products’image data autonomously collected by the camera and deployed the program to the Raspberry Pi to implement the robot’s real object recognition.'],stepsZh:['学习并开发树莓派，学习ROS并部署在树莓派上进行仿真实验。','搭建Zigbee通信模块，实现机器人之间的相互通信。通过python编程，整合语音识别、红外激光、陀螺仪等传感器数据，成功实现了机器人的运动、避障、通讯功能。','搭建aZigbee通信模块，实现机器人之间的相互通信。通过python编程，整合语音识别、红外激光、陀螺仪等传感器数据，成功实现了机器人的运动、避障、通讯功能。']},
+  'proj4':{emoji:'🛠',eyebrowEn:'Intelligent Transportation · 2022',eyebrowZh:'智能交通 · 2022',titleEn:'Human phone usage recognition based on OpenPose',titleZh:'基于OpenPose的行人手机使用识别',metaEn:[['Stack','Python, Computer Vision']],metaZh:[['技术栈','Python, Computer Vision']],ingrEn:[],ingrZh:[],stepsEn:['Proposed the design ideas and the implementation approaches for the whole project based on extensive reading of literature on human body posture recognition and relevant algorithms.','Selected 9 joint points of the upper body based upon the posture features when pedestrians are using mobile phones and conducted feature extraction of the distances between knots and angles connecting joint skeletons.','Trained OpenPose model on a collected human posture data set, put forward solutions to mobile phones’usage detection and alerting based on live cameras, and verified their validity in complex traffic environment.'],stepsZh:['在广泛阅读人体姿势识别及相关算法文献的基础上，提出了整个项目的设计思路和实现方法。','根据行人使用手机时的姿势特征，选取上半身的9个关节点，对关节骨架之间的结点和角度距离进行特征提取。','在采集到的人体姿势数据集上训练OpenPose模型，提出了基于实时摄像头的手机使用检测预警解决方案，并验证了其在复杂交通环境下的有效性。']},
+};
+
+// ── Navigation ──────────────────────────────────────────────────────────────
+function show(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.sb-nav a').forEach(a => a.classList.remove('active'));
+  const page = document.getElementById(id);
+  if (page) page.classList.add('active');
+  const nav = document.getElementById('nav-' + id);
+  if (nav) nav.classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  closeSidebar();
+}
+
+// ── Language toggle ──────────────────────────────────────────────────────────
+function setLang(lang) {
+  const other = lang === 'en' ? 'zh' : 'en';
+  document.querySelectorAll('.' + lang).forEach(el => el.style.display = '');
+  document.querySelectorAll('.' + other).forEach(el => el.style.display = 'none');
+  document.getElementById('btn-en').classList.toggle('on', lang === 'en');
+  document.getElementById('btn-zh').classList.toggle('on', lang === 'zh');
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+}
+
+// ── Publications view toggle ─────────────────────────────────────────────────
+function showPubView(ctx, view) {
+  ['selected', 'date', 'topic'].forEach(v => {
+    const el = document.getElementById(ctx + '-view-' + v);
+    if (el) el.style.display = v === view ? '' : 'none';
+  });
+  const keyMap = {sel: 'selected', date: 'date', topic: 'topic'};
+  Object.entries(keyMap).forEach(([k, v]) => {
+    const el = document.getElementById(ctx + '-' + k);
+    const elZh = document.getElementById(ctx + '-' + k + '-zh');
+    if (el) el.classList.toggle('active-toggle', v === view);
+    if (elZh) elZh.classList.toggle('active-toggle', v === view);
+  });
+  document.querySelectorAll('[id^="' + ctx + '-topic-"]').forEach(g => g.style.opacity = '1');
+}
+
+function filterByTopic(ctx, topic) {
+  showPubView(ctx, 'topic');
+  document.querySelectorAll('[id^="' + ctx + '-topic-"]').forEach(g => {
+    g.style.opacity = (g.id === ctx + '-topic-' + topic) ? '1' : '0.35';
+  });
+}
+
+// ── Photography filter ───────────────────────────────────────────────────────
+function filterPhoto(btn, topic) {
+  document.querySelectorAll('.photo-topic-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.photo-cell').forEach(cell => {
+    cell.style.display = (topic === 'all' || cell.dataset.topic === topic) ? '' : 'none';
+  });
+}
+
+// ── Guitar filter ────────────────────────────────────────────────────────────
+function filterGuitar(btn, genre) {
+  document.querySelectorAll('.guitar-filters .photo-topic-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.guitar-item').forEach(item => {
+    item.style.display = (genre === 'all' || item.dataset.genre === genre) ? '' : 'none';
+  });
+}
+
+// ── WeChat expand ────────────────────────────────────────────────────────────
+function toggleContact(e, id) {
+  e.preventDefault();
+  const detail = document.getElementById(id);
+  const arrow = document.getElementById(id.replace('-detail', '-arrow'));
+  if (detail) detail.classList.toggle('open');
+  if (arrow) arrow.classList.toggle('open');
+}
+
+// ── Mobile sidebar ───────────────────────────────────────────────────────────
+function openSidebar() {
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('overlay').classList.add('show');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+}
+
+// ── Modal ────────────────────────────────────────────────────────────────────
+function openModal(id) {
+  const d = MODALS[id];
+  if (!d) return;
+  const isZh = document.documentElement.lang === 'zh-CN';
+  const title   = isZh ? d.titleZh   : d.titleEn;
+  const eyebrow = isZh ? d.eyebrowZh : d.eyebrowEn;
+  const meta    = isZh ? d.metaZh    : d.metaEn;
+  const ingr    = isZh ? d.ingrZh    : d.ingrEn;
+  const steps   = isZh ? d.stepsZh   : d.stepsEn;
+  const notes   = isZh ? d.notesZh   : d.notesEn;
+
+  const isTarot = id.startsWith('tarot-');
+  const isBook  = id.startsWith('book');
+  const isCocktail = id.startsWith('cocktail');
+  const isProj = id.startsWith('proj');
+
+  document.getElementById('modal-hero').innerHTML =
+    (d.img ? '<img src="' + d.img + '" alt="' + title + '" style="width:100%;height:100%;object-fit:cover;">'
+           : '<span style="font-size:5rem">' + d.emoji + '</span>') +
+    '<button class="modal-close" onclick="closeModal()">✕</button>';
+
+  let metaHtml = '';
+  meta.forEach(function(pair) {
+    metaHtml += '<div class="modal-meta"><strong>' + pair[0] + ':</strong> ' + pair[1] + '</div>';
+  });
+
+  let html = '<div class="modal-eyebrow">' + eyebrow + '</div>' +
+    '<h2 class="modal-title">' + title + '</h2>' +
+    '<div class="modal-meta-row">' + metaHtml + '</div>';
+
+  if (ingr && ingr.length > 0) {
+    let ingrHtml = '';
+    ingr.forEach(function(i) { ingrHtml += '<li>' + i + '</li>'; });
+    html += '<div class="modal-section"><h3 class="modal-section-title">' +
+      (isZh ? '食材' : 'Ingredients') +
+      '</h3><ul class="ingr-list">' + ingrHtml + '</ul></div>';
+  }
+
+  if (steps && steps.length > 0) {
+    const lbl = isBook    ? (isZh ? '笔记'   : 'Notes')
+              : isTarot   ? (isZh ? '象征意义' : 'Symbolism')
+              : isCocktail? (isZh ? '调制步骤' : 'Method')
+              : isProj? (isZh ? '工作' : 'Work')
+              :              (isZh ? '烹饪步骤' : 'Method');
+    let stepsHtml = '';
+    steps.forEach(function(s, i) {
+      stepsHtml += '<li><span class="step-num">' + String(i + 1).padStart(2, '0') + '</span><span>' + s + '</span></li>';
+    });
+    html += '<div class="modal-section"><h3 class="modal-section-title">' + lbl +
+      '</h3><ol class="step-list">' + stepsHtml + '</ol></div>';
+  }
+
+  if (notes) {
+    const lbl2 = isBook  ? (isZh ? '完整笔记' : 'Full Notes')
+               : isTarot ? (isZh ? '我的笔记'  : 'My Notes')
+               :            (isZh ? '笔记'     : 'Notes');
+    let notesHtml = '';
+    notes.split('\n\n').forEach(function(p) { notesHtml += '<p>' + p + '</p>'; });
+    html += '<div class="modal-section"><h3 class="modal-section-title">' + lbl2 +
+      '</h3><div class="modal-body">' + notesHtml + '</div></div>';
+  }
+
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalIfBg(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+</script>
