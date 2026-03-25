@@ -80,6 +80,7 @@ a{color:inherit;text-decoration:none;}
    TOPBAR — hidden on desktop, shown on mobile
 ══════════════════════════════════════════════════ */
 #ham-btn{display:none;}
+#mobile-nav{display:none;}
 #topbar{
   display:none;
   position:sticky;
@@ -334,73 +335,139 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
 
 /* ══════════════════════════════════════════════════
    MOBILE (768px and below)
-   - Sidebar slides in from left (hidden by default)
-   - Topbar shown with hamburger menu
+   Layout:
+   - Sidebar completely hidden
+   - Fixed topbar at top (name + lang toggle)
+   - Scrollable horizontal nav bar below topbar
+   - Content fills remaining space
+   - Extra bottom padding so content clears nav bar
 ══════════════════════════════════════════════════ */
 @media(max-width:768px){
-  /* Body: stack topbar + content vertically */
+
   body{flex-direction:column;}
 
-  /* Sidebar: hidden off-screen, slides in on .open */
-  #sidebar{
-    transform:translateX(-100%);
-    z-index:300;
-    width:85vw;
-    max-width:320px;
-  }
-  #sidebar.open{
-    transform:translateX(0);
-    box-shadow:4px 0 32px rgba(0,0,0,.4);
-  }
+  /* ── Hide desktop sidebar entirely ── */
+  #sidebar{display:none !important;}
+  .overlay{display:none !important;}
+  #ham-btn{display:none !important;}
 
-  /* Avatar slightly smaller on mobile */
-  .sb-avatar{width:90px;height:90px;}
-
-  /* Main: no left margin, full width */
+  /* ── Main: full width, starts below topbar ── */
   #main{
     margin-left:0;
     width:100%;
-    min-height:calc(100vh - var(--topbar-h));
+    padding-bottom:0;
   }
 
-  /* Topbar: show on mobile */
-  #topbar{display:flex;width:100%;}
+  /* ── Topbar: name on left, lang toggle on right ── */
+  #topbar{
+    display:flex;
+    width:100%;
+    height:var(--topbar-h);
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--sidebar-bg);
+    padding:0 1.2rem;
+    align-items:center;
+    justify-content:space-between;
+    flex-shrink:0;
+  }
+  #topbar .tb-name{
+    color:#f0ede8;
+    font-family:var(--serif);
+    font-size:.95rem;
+  }
+  /* Lang toggle inside topbar */
+  #topbar .tb-lang{
+    display:flex;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:4px;
+    overflow:hidden;
+  }
+  #topbar .tb-lang button{
+    background:transparent;
+    border:none;
+    color:rgba(255,255,255,.45);
+    font-family:var(--sans);
+    font-size:.68rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:.3rem .6rem;
+    cursor:pointer;
+    transition:all .2s;
+  }
+  #topbar .tb-lang button.on{
+    background:var(--accent);
+    color:#fff;
+  }
 
-  /* Page padding */
-  .page{padding:1.4rem 1rem 3rem;max-width:100%;}
+  /* ── Mobile nav bar: horizontal scrollable strip ── */
+  #mobile-nav{
+    display:flex;
+    overflow-x:auto;
+    overflow-y:hidden;
+    background:var(--sidebar-bg);
+    border-bottom:1px solid rgba(255,255,255,.07);
+    padding:0 .4rem;
+    gap:.1rem;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    flex-shrink:0;
+  }
+  #mobile-nav::-webkit-scrollbar{display:none;}
+  #mobile-nav a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.18rem;
+    padding:.55rem .7rem;
+    color:rgba(255,255,255,.5);
+    font-size:.6rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    white-space:nowrap;
+    border-bottom:2px solid transparent;
+    transition:color .15s, border-color .15s;
+    text-decoration:none;
+    flex-shrink:0;
+  }
+  #mobile-nav a .mn-icon{font-size:1.1rem;line-height:1;}
+  #mobile-nav a:hover{color:rgba(255,255,255,.85);}
+  #mobile-nav a.active{
+    color:#fff;
+    border-bottom-color:var(--accent);
+  }
 
-  /* Publications: stack thumb above text */
+  /* ── Page content ── */
+  .page{padding:1.4rem 1rem 2.5rem;max-width:100%;}
+
+  /* ── Publications: stack thumb above text on mobile ── */
   .pub-item{flex-direction:column;gap:.6rem;}
-  .pub-thumb{width:100%;min-width:unset;height:160px;object-fit:cover;}
-  .pub-thumb img{height:160px;object-fit:cover;}
+  .pub-thumb{width:100%;min-width:unset;height:160px;}
+  .pub-thumb img{width:100%;height:160px;object-fit:cover;}
 
-  /* Cards: 1 column on small screens */
+  /* ── Cards ── */
   .card-grid,.book-grid{grid-template-columns:1fr 1fr;}
 
-  /* Photo grid */
+  /* ── Photo ── */
   .photo-grid{columns:2;}
 
-  /* Guitar: stack */
+  /* ── Guitar ── */
   .guitar-item{flex-direction:column;align-items:flex-start;gap:.5rem;}
   .guitar-item-right{width:100%;justify-content:space-between;}
 
-  /* Modal */
+  /* ── Modal ── */
   .modal-content{padding:1.2rem 1.2rem 1.8rem;}
   .ingr-list{grid-template-columns:1fr;}
   .tarot-meanings{grid-template-columns:1fr;}
 
-  /* Footer */
+  /* ── Footer ── */
   footer{padding:1.2rem 1rem;}
 
-  /* Work header: stack period below */
+  /* ── Misc ── */
   .work-period{white-space:normal;}
-
-  /* Act list: narrower year column */
-  .act-list li{grid-template-columns:56px 1fr;}
-
-  @media(max-width:600px){
-    .bar-intro-wrap img{float:none !important;width:100% !important;margin:0 0 1rem 0 !important;}
-  }
+  .act-list li{grid-template-columns:52px 1fr;}
+  .bar-intro-wrap img{float:none !important;width:100% !important;margin:0 0 1rem 0 !important;}
 }
 
 /* ── Small mobile ── */
