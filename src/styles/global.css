@@ -45,6 +45,7 @@ a{color:inherit;text-decoration:none;}
 /* ── MAIN ── */
 #main{margin-left:var(--sidebar-w);flex:1;min-width:0;min-height:100vh;display:flex;flex-direction:column;}
 #topbar{display:none;position:sticky;top:0;z-index:150;background:var(--sidebar-bg);padding:.7rem 1.2rem;align-items:center;justify-content:space-between;}
+#ham-btn{display:none;}
 #topbar .tb-name{color:#f0ede8;font-family:var(--serif);font-size:.95rem;}
 #menu-btn{background:none;border:none;cursor:pointer;color:#fff;display:flex;flex-direction:column;gap:4px;}
 #menu-btn span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;}
@@ -252,8 +253,8 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
   .tarot-meanings{grid-template-columns:1fr;}
   .guitar-item{flex-direction:column;align-items:flex-start;gap:.5rem;}
   .guitar-item-right{width:100%;justify-content:space-between;}
-  .pub-item{grid-template-columns:60px 1fr;}
-  .pub-thumb{width:60px;height:50px;}
+  .pub-item{flex-wrap:wrap;}
+  .pub-thumb{width:60px;min-width:60px;height:50px;}
 }
 
 /* ── Small mobile (480px and below) ── */
