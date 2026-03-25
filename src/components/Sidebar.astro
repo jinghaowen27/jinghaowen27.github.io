@@ -1,0 +1,59 @@
+---
+const { currentPath = "/" } = Astro.props;
+const isActive = (path) => currentPath === path ? "active" : "";
+---
+
+<aside id="sidebar">
+  <div class="sb-profile">
+    <img class="sb-avatar" src="images/avatar/DC.jpg" alt="Jinghao Wen">
+    <div class="sb-name"><span class="en">Jinghao Wen</span><span class="zh" style="display:none">文靖豪</span></div>
+    <div class="sb-title"><span class="en">PhD Student</span><span class="zh" style="display:none">博士研究生</span></div>
+    <div class="sb-inst"><span class="en">Department of Electrical and Computer Engineering<br>Villanova University</span><span class="zh" style="display:none">电子与计算机工程系<br>维拉诺瓦大学</span></div>
+  </div>
+  <div class="sb-contact">
+    <a href="mailto:jinghao.wen@outlook.com">
+      <em class="icon">✉</em>
+      <span class="sb-link-label">jinghao.wen@outlook.com</span>
+    </a>
+    <a href="https://scholar.google.com/citations?user=HQxVjZEAAAAJ&hl=zh-CN" target="_blank">
+      <em class="icon">◎</em>
+      <span class="sb-link-label en">Google Scholar</span><span class="sb-link-label zh" style="display:none">谷歌学术</span>
+    </a>
+    <a href="https://www.linkedin.com/in/jinghao-wen-780b11361/" target="_blank">
+      <em class="icon">in</em>
+      <span class="sb-link-label en">LinkedIn</span><span class="sb-link-label zh" style="display:none">领英</span>
+    </a>
+    <a href="#" onclick="toggleContact(event,'wechat-detail');return false;" class="sb-contact-expandable">
+      <em class="icon">💬</em>
+      <span class="sb-link-label en">WeChat</span><span class="sb-link-label zh" style="display:none">微信</span>
+      <span class="sb-expand-arrow" id="wechat-arrow">›</span>
+    </a>
+    <div class="sb-contact-detail" id="wechat-detail">w07275100</div>
+    <a href="/cv.pdf" target="_blank">
+      <em class="icon">↓</em>
+      <span class="sb-link-label en">Curriculum Vitae</span><span class="sb-link-label zh" style="display:none">简历</span>
+    </a>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-nav-section en">Academic</div>
+    <div class="sb-nav-section zh" style="display:none">学术</div>
+    <a href="/" class={isActive('/')}><em class="nav-icon">⌂</em><span class="en">Home</span><span class="zh" style="display:none">主页</span></a>
+    <a href="/publications" class={isActive('/publications')}><em class="nav-icon">📄</em><span class="en">Publications</span><span class="zh" style="display:none">论文</span></a>
+    <a href="/work" class={isActive('/work')}><em class="nav-icon">💼</em><span class="en">Work Experience</span><span class="zh" style="display:none">工作经历</span></a>
+    <a href="/competition" class={isActive('/competition')}><em class="nav-icon">🏆</em><span class="en">Awards &amp; Projects</span><span class="zh" style="display:none">奖项 &amp; 项目</span></a>
+    <div class="sb-nav-section en" style="margin-top:.6rem">Life</div>
+    <div class="sb-nav-section zh" style="display:none;margin-top:.6rem">生活</div>
+    <a href="/cocktails" class={isActive('/cocktails')}><em class="nav-icon">🍸</em><span class="en">Bartending</span><span class="zh" style="display:none">调酒</span></a>
+    <a href="/reading" class={isActive('/reading')}><em class="nav-icon">📚</em><span class="en">Reading</span><span class="zh" style="display:none">阅读</span></a>
+    <a href="/photography" class={isActive('/photography')}><em class="nav-icon">📷</em><span class="en">Photography</span><span class="zh" style="display:none">摄影</span></a>
+    <a href="/guitar" class={isActive('/guitar')}><em class="nav-icon">🎸</em><span class="en">Guitar</span><span class="zh" style="display:none">吉他</span></a>
+    <a href="/recipes" class={isActive('/recipes')}><em class="nav-icon">🍳</em><span class="en">Recipes</span><span class="zh" style="display:none">菜谱</span></a>
+    <a href="/tarot" class={isActive('/tarot')}><em class="nav-icon">🔮</em><span class="en">Tarot</span><span class="zh" style="display:none">塔罗</span></a>
+  </nav>
+  <div class="sb-lang">
+    <div class="sb-lang-inner">
+      <button id="btn-en" class="on" onclick="setLang('en')">EN</button>
+      <button id="btn-zh" onclick="setLang('zh')">中文</button>
+    </div>
+  </div>
+</aside>

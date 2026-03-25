@@ -1,8 +1,84 @@
-<button id="ham-btn" onclick="openSidebar()" aria-label="menu">☰</button>
+---
+const currentPath = Astro.url?.pathname.replace(/\/$/, "") || "/";
+const isActive = (path: string) => currentPath === path ? "active" : "";
+---
 
+<!-- Desktop: hidden. Mobile: sticky topbar with name + lang toggle -->
 <div id="topbar">
   <span class="tb-name">Jinghao Wen</span>
-  <button id="menu-btn" onclick="openSidebar()" aria-label="menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="tb-lang">
+    <button id="btn-en-top" class="on" onclick="setLang('en')">EN</button>
+    <button id="btn-zh-top" onclick="setLang('zh')">中文</button>
+  </div>
 </div>
+
+<!-- Mobile: horizontal scrollable nav bar (hidden on desktop) -->
+<nav id="mobile-nav">
+  <a href="/" class={isActive('/')}>
+    <span class="mn-icon">⌂</span>
+    <span class="en">Home</span><span class="zh" style="display:none">主页</span>
+  </a>
+  <a href="/publications" class={isActive('/publications')}>
+    <span class="mn-icon">📄</span>
+    <span class="en">Papers</span><span class="zh" style="display:none">论文</span>
+  </a>
+  <a href="/work" class={isActive('/work')}>
+    <span class="mn-icon">💼</span>
+    <span class="en">Work</span><span class="zh" style="display:none">工作</span>
+  </a>
+  <a href="/competition" class={isActive('/competition')}>
+    <span class="mn-icon">🏆</span>
+    <span class="en">Awards</span><span class="zh" style="display:none">奖项</span>
+  </a>
+  <a href="/cocktails" class={isActive('/cocktails')}>
+    <span class="mn-icon">🍸</span>
+    <span class="en">Bar</span><span class="zh" style="display:none">调酒</span>
+  </a>
+  <a href="/reading" class={isActive('/reading')}>
+    <span class="mn-icon">📚</span>
+    <span class="en">Reading</span><span class="zh" style="display:none">阅读</span>
+  </a>
+  <a href="/photography" class={isActive('/photography')}>
+    <span class="mn-icon">📷</span>
+    <span class="en">Photos</span><span class="zh" style="display:none">摄影</span>
+  </a>
+  <a href="/guitar" class={isActive('/guitar')}>
+    <span class="mn-icon">🎸</span>
+    <span class="en">Guitar</span><span class="zh" style="display:none">吉他</span>
+  </a>
+  <a href="/recipes" class={isActive('/recipes')}>
+    <span class="mn-icon">🍳</span>
+    <span class="en">Recipes</span><span class="zh" style="display:none">菜谱</span>
+  </a>
+  <a href="/tarot" class={isActive('/tarot')}>
+    <span class="mn-icon">🔮</span>
+    <span class="en">Tarot</span><span class="zh" style="display:none">塔罗</span>
+  </a>
+</nav>
+
+<script is:inline>
+// Keep topbar lang buttons in sync with sidebar lang buttons
+(function() {
+  const enTop = document.getElementById('btn-en-top');
+  const zhTop = document.getElementById('btn-zh-top');
+  if (!enTop || !zhTop) return;
+
+  // Sync state on page load
+  const isZh = document.documentElement.lang === 'zh-CN';
+  enTop.classList.toggle('on', !isZh);
+  zhTop.classList.toggle('on', isZh);
+
+  // Override setLang to also sync topbar buttons
+  const _origSetLang = window.setLang;
+  window.setLang = function(lang) {
+    if (_origSetLang) _origSetLang(lang);
+    enTop.classList.toggle('on', lang === 'en');
+    zhTop.classList.toggle('on', lang === 'zh');
+    // Also sync sidebar buttons if present
+    const enSb = document.getElementById('btn-en');
+    const zhSb = document.getElementById('btn-zh');
+    if (enSb) enSb.classList.toggle('on', lang === 'en');
+    if (zhSb) zhSb.classList.toggle('on', lang === 'zh');
+  };
+})();
+</script>
