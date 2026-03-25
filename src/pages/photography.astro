@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-
+ 
 <BaseLayout title="Photography — Jinghao Wen">
 <section class="page active" id="photography">
   <div class="sec-eye en">Visual Notes</div><div class="sec-eye zh" style="display:none">视觉笔记</div>
@@ -9,7 +9,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="sec-rule"></div>
   <p class="tarot-intro en">Moments collected along the way — bars, streets, food, and light. A camera is just another way of paying attention.</p>
   <p class="tarot-intro zh" style="display:none">旅途中收集的片刻——酒吧、街道、食物与光线。相机不过是另一种专注的方式。</p>
-
+ 
   <div class="photo-topics">
     <button class="photo-topic-btn on" onclick="filterPhoto(this,'all')"><span class="en">All</span><span class="zh" style="display:none">全部</span></button>
     <button class="photo-topic-btn" onclick="filterPhoto(this,'street')"><span class="en">Street</span><span class="zh" style="display:none">街拍</span></button>
@@ -135,4 +135,185 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   </div>
 </section>
+
+<!-- ── LIGHTBOX ── -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button id="lightbox-prev" onclick="lightboxNav(event,-1)">‹</button>
+  <button id="lightbox-next" onclick="lightboxNav(event,1)">›</button>
+  <div id="lightbox-inner">
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+</div>
+ 
+<style>
+/* ── Lightbox overlay ── */
+#lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:600;
+  background:rgba(0,0,0,.92);
+  align-items:center;
+  justify-content:center;
+  cursor:zoom-out;
+}
+#lightbox.open{display:flex;}
+ 
+#lightbox-inner{
+  position:relative;
+  max-width:90vw;
+  max-height:90vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.8rem;
+  cursor:default;
+}
+#lightbox-img{
+  max-width:90vw;
+  max-height:82vh;
+  object-fit:contain;
+  border-radius:4px;
+  box-shadow:0 8px 48px rgba(0,0,0,.6);
+  display:block;
+}
+#lightbox-caption{
+  color:rgba(255,255,255,.6);
+  font-size:.78rem;
+  letter-spacing:.04em;
+  text-align:center;
+}
+ 
+/* Close button */
+#lightbox-close{
+  position:fixed;
+  top:1.2rem;
+  right:1.4rem;
+  background:rgba(255,255,255,.12);
+  border:none;
+  color:#fff;
+  font-size:1.2rem;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .2s;
+  z-index:601;
+}
+#lightbox-close:hover{background:rgba(255,255,255,.25);}
+ 
+/* Prev / Next buttons */
+#lightbox-prev,
+#lightbox-next{
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(255,255,255,.1);
+  border:none;
+  color:#fff;
+  font-size:2rem;
+  width:44px;
+  height:64px;
+  border-radius:4px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .2s;
+  z-index:601;
+}
+#lightbox-prev{left:1rem;}
+#lightbox-next{right:1rem;}
+#lightbox-prev:hover,
+#lightbox-next:hover{background:rgba(255,255,255,.22);}
+ 
+/* Hover effect on photo cells */
+.photo-cell{cursor:zoom-in;}
+.photo-cell img{transition:opacity .2s;}
+.photo-cell:hover img{opacity:.88;}
+ 
+@media(max-width:768px){
+  #lightbox-prev{left:.3rem;}
+  #lightbox-next{right:.3rem;}
+  #lightbox-img{max-width:96vw;max-height:78vh;}
+}
+</style>
+ 
+<script is:inline>
+(function(){
+  // Collect all visible photo cells with real images
+  var _cells = [];
+  var _current = 0;
+ 
+  function getCaption(cell){
+    var isZh = document.documentElement.lang === 'zh-CN';
+    var caps = cell.querySelectorAll('.photo-caption');
+    for(var i=0;i<caps.length;i++){
+      var el = caps[i];
+      if(isZh && el.classList.contains('zh')) return el.textContent;
+      if(!isZh && el.classList.contains('en')) return el.textContent;
+    }
+    return '';
+  }
+ 
+  function showLightbox(index){
+    var cell = _cells[index];
+    if(!cell) return;
+    var img = cell.querySelector('img');
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    var lbCap = document.getElementById('lightbox-caption');
+ 
+    if(img){
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || '';
+      lbImg.style.display = 'block';
+    } else {
+      lbImg.src = '';
+      lbImg.style.display = 'none';
+    }
+    lbCap.textContent = getCaption(cell);
+    _current = index;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+ 
+  window.openLightbox = function(cell){
+    // Only open if cell has a real image
+    if(!cell.querySelector('img')) return;
+    // Build list of currently visible cells that have images
+    _cells = Array.from(document.querySelectorAll('.photo-cell'))
+      .filter(function(c){ return c.style.display !== 'none' && c.querySelector('img'); });
+    var idx = _cells.indexOf(cell);
+    if(idx === -1) idx = 0;
+    showLightbox(idx);
+  };
+ 
+  window.closeLightbox = function(){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+ 
+  window.lightboxNav = function(e, dir){
+    e.stopPropagation();
+    var next = (_current + dir + _cells.length) % _cells.length;
+    showLightbox(next);
+  };
+ 
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e){
+    var lb = document.getElementById('lightbox');
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowRight') lightboxNav(e, 1);
+    if(e.key === 'ArrowLeft')  lightboxNav(e, -1);
+  });
+})();
+</script>
+
 </BaseLayout>
