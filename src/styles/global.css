@@ -212,7 +212,7 @@ a{color:inherit;text-decoration:none;}
 .tarot-meaning-body{font-size:.83rem;color:var(--muted);line-height:1.6;}
 
 footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem;color:var(--faint);letter-spacing:.05em;margin-top:auto;}
-.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:190;}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:290;}
 .overlay.show{display:block;}
 
 
@@ -240,7 +240,8 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
 /* ── Tablet + Mobile (768px and below) ── */
 @media(max-width:768px){
   :root{--sidebar-w:280px;}
-  #sidebar{transform:translateX(-100%);height:100vh;z-index:300;}
+  #sidebar{transform:translateX(-100%);height:100vh;z-index:300;padding-bottom:0;}
+  .sb-lang{position:sticky;bottom:0;margin:0;padding:.8rem 1.6rem;background:var(--sidebar-bg);}
   #sidebar.open{transform:translateX(0);box-shadow:4px 0 24px rgba(0,0,0,.35);}
   #main{margin-left:0;}
   #topbar{display:flex;}
