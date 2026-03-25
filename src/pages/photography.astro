@@ -233,9 +233,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 #lightbox-next:hover{background:rgba(255,255,255,.22);}
  
 /* Hover effect on photo cells */
-.photo-cell{cursor:zoom-in;}
-.photo-cell img{transition:opacity .2s;}
-.photo-cell:hover img{opacity:.88;}
+.photo-cell{
+  cursor:pointer;
+  transition:transform .2s, box-shadow .2s;
+}
+.photo-cell:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 28px rgba(0,0,0,.12);
+}
+.photo-cell img{
+  transition:opacity .2s;
+}
+.photo-cell:hover img{
+  opacity:.92;
+}
  
 @media(max-width:768px){
   #lightbox-prev{left:.3rem;}
