@@ -2,13 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Your Name — Personal Site">
+<BaseLayout title="Photography — Jinghao Wen">
 <section class="page active" id="photography">
   <div class="sec-eye en">Visual Notes</div><div class="sec-eye zh" style="display:none">视觉笔记</div>
   <h1 class="sec-h1 en">Photography</h1><h1 class="sec-h1 zh" style="display:none">摄影</h1>
   <div class="sec-rule"></div>
-  <p class="tarot-intro en">I study tarot as a symbolic system — a deck of 78 archetypal images that map human experience. Click any card to read my notes on its symbolism and meaning.</p>
-  <p class="tarot-intro zh" style="display:none">我将塔罗作为象征体系来研究——78张原型图像，映射人类经验。点击任意一张牌，查看我对其象征意义的笔记。</p>
+  <p class="tarot-intro en">Moments collected along the way — bars, streets, food, and light. A camera is just another way of paying attention.</p>
+  <p class="tarot-intro zh" style="display:none">旅途中收集的片刻——酒吧、街道、食物与光线。相机不过是另一种专注的方式。</p>
+
   <div class="photo-topics">
     <button class="photo-topic-btn on" onclick="filterPhoto(this,'all')"><span class="en">All</span><span class="zh" style="display:none">全部</span></button>
     <button class="photo-topic-btn" onclick="filterPhoto(this,'street')"><span class="en">Street</span><span class="zh" style="display:none">街拍</span></button>
@@ -17,23 +18,93 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <button class="photo-topic-btn" onclick="filterPhoto(this,'travel')"><span class="en">Travel</span><span class="zh" style="display:none">旅行</span></button>
     <button class="photo-topic-btn" onclick="filterPhoto(this,'portrait')"><span class="en">Portrait</span><span class="zh" style="display:none">人像</span></button>
   </div>
+
   <div class="photo-grid" id="photo-grid">
-    <!-- Replace photo-placeholder with <img src="your-photo.jpg"> -->
-    <div class="photo-cell" data-topic="street"><img src="/images/photos/2026/New York Bartending School/1.jpg"></div><div class="photo-caption en">Bartending School, New York · 2026</div><div class="photo-caption zh" style="display:none">调酒师学校，纽约 · 2026</div></div>
-    <div class="photo-cell" data-topic="street"><img src="/images/photos/2026/New York Bartending School/2.jpg"></div><div class="photo-caption en">Bartending School, New York · 2026</div><div class="photo-caption zh" style="display:none">调酒师学校，纽约 · 2026</div></div>
-    <div class="photo-cell" data-topic="street"><img src="your-photo.jpg">🏙</div><div class="photo-caption en">Street scene, Tokyo · 2024</div><div class="photo-caption zh" style="display:none">街景，东京 · 2024</div></div>
-    <div class="photo-cell" data-topic="food"><div class="photo-placeholder" style="min-height:180px;">🍜</div><div class="photo-caption en">Dan dan noodles prep · 2024</div><div class="photo-caption zh" style="display:none">担担面备料 · 2024</div></div>
-    <div class="photo-cell" data-topic="nature"><div class="photo-placeholder">🌿</div><div class="photo-caption en">Morning light, Kyoto · 2023</div><div class="photo-caption zh" style="display:none">晨光，京都 · 2023</div></div>
-    <div class="photo-cell" data-topic="travel"><div class="photo-placeholder" style="min-height:200px;">✈️</div><div class="photo-caption en">Arriving in Lisbon · 2023</div><div class="photo-caption zh" style="display:none">抵达里斯本 · 2023</div></div>
-    <div class="photo-cell" data-topic="street"><div class="photo-placeholder" style="min-height:160px;">🚶</div><div class="photo-caption en">Alley at dusk, Shanghai · 2023</div><div class="photo-caption zh" style="display:none">黄昏巷弄，上海 · 2023</div></div>
-    <div class="photo-cell" data-topic="food"><div class="photo-placeholder">☕</div><div class="photo-caption en">Pour-over ritual · 2024</div><div class="photo-caption zh" style="display:none">手冲仪式 · 2024</div></div>
-    <div class="photo-cell" data-topic="nature"><div class="photo-placeholder" style="min-height:190px;">🌸</div><div class="photo-caption en">Cherry blossoms, early morning · 2024</div><div class="photo-caption zh" style="display:none">樱花，清晨 · 2024</div></div>
-    <div class="photo-cell" data-topic="portrait"><div class="photo-placeholder">👥</div><div class="photo-caption en">Friend portrait · 2023</div><div class="photo-caption zh" style="display:none">友人像 · 2023</div></div>
-    <div class="photo-cell" data-topic="travel"><div class="photo-placeholder" style="min-height:150px;">🏛</div><div class="photo-caption en">Roman ruins · 2023</div><div class="photo-caption zh" style="display:none">罗马遗迹 · 2023</div></div>
-    <div class="photo-cell" data-topic="food"><div class="photo-placeholder" style="min-height:170px;">🍷</div><div class="photo-caption en">Natural wine, evening light · 2024</div><div class="photo-caption zh" style="display:none">自然酒，暮光 · 2024</div></div>
-    <div class="photo-cell" data-topic="street"><div class="photo-placeholder">🚲</div><div class="photo-caption en">Bike lane at dusk · 2022</div><div class="photo-caption zh" style="display:none">黄昏自行车道 · 2022</div></div>
-    <div class="photo-cell" data-topic="portrait"><div class="photo-placeholder" style="min-height:185px;">🎭</div><div class="photo-caption en">Theater backstage · 2022</div><div class="photo-caption zh" style="display:none">剧场后台 · 2022</div></div>
+
+    <div class="photo-cell" data-topic="street">
+      <img src="/images/photos/2026/New York Bartending School/1.jpg" alt="Bartending School, New York">
+      <p class="photo-caption en">Bartending School, New York · 2026</p>
+      <p class="photo-caption zh" style="display:none">调酒师学校，纽约 · 2026</p>
+    </div>
+
+    <div class="photo-cell" data-topic="street">
+      <img src="/images/photos/2026/New York Bartending School/2.jpg" alt="Bartending School, New York">
+      <p class="photo-caption en">Bartending School, New York · 2026</p>
+      <p class="photo-caption zh" style="display:none">调酒师学校，纽约 · 2026</p>
+    </div>
+
+    <div class="photo-cell" data-topic="street">
+      <div class="photo-placeholder" style="min-height:160px;">🏙</div>
+      <p class="photo-caption en">Street scene, Tokyo · 2024</p>
+      <p class="photo-caption zh" style="display:none">街景，东京 · 2024</p>
+    </div>
+
+    <div class="photo-cell" data-topic="food">
+      <div class="photo-placeholder" style="min-height:180px;">🍜</div>
+      <p class="photo-caption en">Dan dan noodles prep · 2024</p>
+      <p class="photo-caption zh" style="display:none">担担面备料 · 2024</p>
+    </div>
+
+    <div class="photo-cell" data-topic="nature">
+      <div class="photo-placeholder" style="min-height:140px;">🌿</div>
+      <p class="photo-caption en">Morning light, Kyoto · 2023</p>
+      <p class="photo-caption zh" style="display:none">晨光，京都 · 2023</p>
+    </div>
+
+    <div class="photo-cell" data-topic="travel">
+      <div class="photo-placeholder" style="min-height:200px;">✈️</div>
+      <p class="photo-caption en">Arriving in Lisbon · 2023</p>
+      <p class="photo-caption zh" style="display:none">抵达里斯本 · 2023</p>
+    </div>
+
+    <div class="photo-cell" data-topic="street">
+      <div class="photo-placeholder" style="min-height:160px;">🚶</div>
+      <p class="photo-caption en">Alley at dusk, Shanghai · 2023</p>
+      <p class="photo-caption zh" style="display:none">黄昏巷弄，上海 · 2023</p>
+    </div>
+
+    <div class="photo-cell" data-topic="food">
+      <div class="photo-placeholder" style="min-height:140px;">☕</div>
+      <p class="photo-caption en">Pour-over ritual · 2024</p>
+      <p class="photo-caption zh" style="display:none">手冲仪式 · 2024</p>
+    </div>
+
+    <div class="photo-cell" data-topic="nature">
+      <div class="photo-placeholder" style="min-height:190px;">🌸</div>
+      <p class="photo-caption en">Cherry blossoms, early morning · 2024</p>
+      <p class="photo-caption zh" style="display:none">樱花，清晨 · 2024</p>
+    </div>
+
+    <div class="photo-cell" data-topic="portrait">
+      <div class="photo-placeholder" style="min-height:140px;">👥</div>
+      <p class="photo-caption en">Friend portrait · 2023</p>
+      <p class="photo-caption zh" style="display:none">友人像 · 2023</p>
+    </div>
+
+    <div class="photo-cell" data-topic="travel">
+      <div class="photo-placeholder" style="min-height:150px;">🏛</div>
+      <p class="photo-caption en">Roman ruins · 2023</p>
+      <p class="photo-caption zh" style="display:none">罗马遗迹 · 2023</p>
+    </div>
+
+    <div class="photo-cell" data-topic="food">
+      <div class="photo-placeholder" style="min-height:170px;">🍷</div>
+      <p class="photo-caption en">Natural wine, evening light · 2024</p>
+      <p class="photo-caption zh" style="display:none">自然酒，暮光 · 2024</p>
+    </div>
+
+    <div class="photo-cell" data-topic="street">
+      <div class="photo-placeholder" style="min-height:140px;">🚲</div>
+      <p class="photo-caption en">Bike lane at dusk · 2022</p>
+      <p class="photo-caption zh" style="display:none">黄昏自行车道 · 2022</p>
+    </div>
+
+    <div class="photo-cell" data-topic="portrait">
+      <div class="photo-placeholder" style="min-height:185px;">🎭</div>
+      <p class="photo-caption en">Theater backstage · 2022</p>
+      <p class="photo-caption zh" style="display:none">剧场后台 · 2022</p>
+    </div>
+
   </div>
 </section>
-
 </BaseLayout>
