@@ -25,79 +25,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="bk-more en">Read full notes →</div><div class="bk-more zh" style="display:none">查看完整笔记 →</div>
       </div>
     </div>
+
+  <div class="book-item" onclick="openModal('book-gayscience')">
+    <div class="book-cover" style="background:linear-gradient(135deg,#1e3c72,#2a5298);">
+      <span style="font-size:2.5rem;">📘</span>
+    </div>
+    <div class="book-body">
+      <div class="bk-meta en">Philosophy · 2025</div>
+      <div class="bk-meta zh" style="display:none">哲学 · 2025</div>
+  
+      <div class="bk-title en">The Gay Science — Friedrich Nietzsche</div>
+      <div class="bk-title zh" style="display:none">《快乐的科学》— 尼采</div>
+  
+      <div class="bk-author en">Friedrich Nietzsche, 1882</div>
+      <div class="bk-author zh" style="display:none">尼采，1882</div>
+  
+      <div class="bk-rating">★★★★★</div>
+  
+      <p class="bk-notes en">
+        Nietzsche’s words feel less like arguments and more like detonations. “God is dead” is not a celebration, but a diagnosis — and what follows is a silence we are still learning how to endure. In that silence, the question is no longer what is true, but whether we can still create meaning.
+      </p>
+  
+      <p class="bk-notes zh" style="display:none">
+        尼采的文字更像是引爆，而不是论证。“上帝已死”并非宣告胜利，而是一种诊断——随之而来的，是人必须独自承受的空白。在这片空白之中，问题不再是“什么是真的”，而是“我们是否还能创造意义”。
+      </p>
+  
+      <div class="bk-more en">Read full notes →</div>
+      <div class="bk-more zh" style="display:none">查看完整笔记 →</div>
+    </div>
+  </div>
     
-    <div class="book-item" onclick="openModal('book1')">
-      <div class="book-cover" style="background:linear-gradient(135deg,#8b3a1a,#c0652a);"><span style="font-size:2.5rem;">📖</span></div>
-      <div class="book-body">
-        <div class="bk-meta en">Fiction · 2024</div><div class="bk-meta zh" style="display:none">小说 · 2024</div>
-        <div class="bk-title en">The Book Title — Author Name</div><div class="bk-title zh" style="display:none">《书名》— 作者</div>
-        <div class="bk-author en">Publisher, Year</div><div class="bk-author zh" style="display:none">出版社，年份</div>
-        <div class="bk-rating">★★★★★</div>
-        <p class="bk-notes en">What moved you? A key insight that changed how you see the world...</p>
-        <p class="bk-notes zh" style="display:none">什么打动了你？改变世界观的关键洞见...</p>
-        <div class="bk-more en">Read full notes →</div><div class="bk-more zh" style="display:none">查看完整笔记 →</div>
-      </div>
-    </div>
-    <div class="book-item" onclick="openModal('book2')">
-      <div class="book-cover" style="background:linear-gradient(135deg,#2a5f3f,#3a8a5a);"><span style="font-size:2.5rem;">📗</span></div>
-      <div class="book-body">
-        <div class="bk-meta en">Non-Fiction · 2024</div><div class="bk-meta zh" style="display:none">非虚构 · 2024</div>
-        <div class="bk-title en">Another Great Book — Author Name</div><div class="bk-title zh" style="display:none">《另一本好书》— 作者</div>
-        <div class="bk-author en">Publisher, Year</div><div class="bk-author zh" style="display:none">出版社，年份</div>
-        <div class="bk-rating">★★★★☆</div>
-        <p class="bk-notes en">Key arguments and whether you agreed. How it applies to your own work...</p>
-        <p class="bk-notes zh" style="display:none">核心论点与个人观点，与自身研究的关联...</p>
-        <div class="bk-more en">Read full notes →</div><div class="bk-more zh" style="display:none">查看完整笔记 →</div>
-      </div>
-    </div>
-    <div class="book-item" onclick="openModal('book3')">
-      <div class="book-cover" style="background:linear-gradient(135deg,#1a3a6b,#2a5a9b);"><span style="font-size:2.5rem;">📘</span></div>
-      <div class="book-body">
-        <div class="bk-meta en">Science · 2023</div><div class="bk-meta zh" style="display:none">科学 · 2023</div>
-        <div class="bk-title en">Essential Science Reading — Author</div><div class="bk-title zh" style="display:none">《必读科学著作》— 作者</div>
-        <div class="bk-author en">Publisher, Year</div><div class="bk-author zh" style="display:none">出版社，年份</div>
-        <div class="bk-rating">★★★★★</div>
-        <p class="bk-notes en">Changed how I approach research. The chapter on X was illuminating...</p>
-        <p class="bk-notes zh" style="display:none">改变了我做研究的方式，关于X的章节尤为深刻...</p>
-        <div class="bk-more en">Read full notes →</div><div class="bk-more zh" style="display:none">查看完整笔记 →</div>
-      </div>
-    </div>
-    <div class="book-item" onclick="openModal('book4')">
-      <div class="book-cover" style="background:linear-gradient(135deg,#4a2a6b,#7a4a9b);"><span style="font-size:2.5rem;">📕</span></div>
-      <div class="book-body">
-        <div class="bk-meta en">History · 2023</div><div class="bk-meta zh" style="display:none">历史 · 2023</div>
-        <div class="bk-title en">A Sweeping History — Author</div><div class="bk-title zh" style="display:none">《一部宏大历史》— 作者</div>
-        <div class="bk-author en">Publisher, Year</div><div class="bk-author zh" style="display:none">出版社，年份</div>
-        <div class="bk-rating">★★★★☆</div>
-        <p class="bk-notes en">Meticulously researched. The present is always stranger than we think...</p>
-        <p class="bk-notes zh" style="display:none">严谨翔实，现在总比我们以为的更奇异...</p>
-        <div class="bk-more en">Read full notes →</div><div class="bk-more zh" style="display:none">查看完整笔记 →</div>
-      </div>
-    </div>
-    <div class="book-item" onclick="openModal('book5')">
-      <div class="book-cover" style="background:linear-gradient(135deg,#3d6b7c,#5d9bac);"><span style="font-size:2.5rem;">📙</span></div>
-      <div class="book-body">
-        <div class="bk-meta en">Philosophy · 2023</div><div class="bk-meta zh" style="display:none">哲学 · 2023</div>
-        <div class="bk-title en">A Philosophy Classic — Author</div><div class="bk-title zh" style="display:none">《哲学经典》— 作者</div>
-        <div class="bk-author en">Publisher, Year</div><div class="bk-author zh" style="display:none">出版社，年份</div>
-        <div class="bk-rating">★★★★★</div>
-        <p class="bk-notes en">Some books aren't meant to be consumed — they're meant to be lived alongside...</p>
-        <p class="bk-notes zh" style="display:none">有些书不是用来读完的，而是用来相伴的...</p>
-        <div class="bk-more en">Read full notes →</div><div class="bk-more zh" style="display:none">查看完整笔记 →</div>
-      </div>
-    </div>
-    <div class="book-item" onclick="openModal('book6')">
-      <div class="book-cover" style="background:linear-gradient(135deg,#6b3f1a,#9b6f4a);"><span style="font-size:2.5rem;">📒</span></div>
-      <div class="book-body">
-        <div class="bk-meta en">Food Writing · 2022</div><div class="bk-meta zh" style="display:none">美食写作 · 2022</div>
-        <div class="bk-title en">A Food Memoir — Author</div><div class="bk-title zh" style="display:none">《美食回忆录》— 作者</div>
-        <div class="bk-author en">Publisher, Year</div><div class="bk-author zh" style="display:none">出版社，年份</div>
-        <div class="bk-rating">★★★★★</div>
-        <p class="bk-notes en">The best food writing is about memory, identity, and love. Called my mother immediately after...</p>
-        <p class="bk-notes zh" style="display:none">最好的美食写作写的是记忆、身份与爱。读完立刻打电话给了妈妈...</p>
-        <div class="bk-more en">Read full notes →</div><div class="bk-more zh" style="display:none">查看完整笔记 →</div>
-      </div>
-    </div>
+
+
+
   </div>
 </section>
 
