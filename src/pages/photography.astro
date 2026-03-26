@@ -699,6 +699,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     if(e.key === 'ArrowRight') lightboxNav(e, 1);
     if(e.key === 'ArrowLeft')  lightboxNav(e, -1);
   });
+
+ // ── Photo filter ──
+  window.filterPhoto = function(btn, topic) {
+    // Update active button state
+    var btns = document.querySelectorAll('.photo-topic-btn');
+    btns.forEach(function(b) { b.classList.remove('on'); });
+    btn.classList.add('on');
+
+    // Show/hide cells
+    var cells = document.querySelectorAll('.photo-cell');
+    cells.forEach(function(cell) {
+      if (topic === 'all' || cell.dataset.topic === topic) {
+        cell.style.display = '';
+      } else {
+        cell.style.display = 'none';
+      }
+    });
+  };
+
 })();
 </script>
 
