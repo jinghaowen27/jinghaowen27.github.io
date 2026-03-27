@@ -7,8 +7,8 @@ const isActive = (path: string) => currentPath === path ? "active" : "";
 <div id="topbar">
   <span class="tb-name">Jinghao Wen</span>
   <div class="tb-lang">
-    <button id="btn-en-top" class="on" onclick="setLang('en')">EN</button>
-    <button id="btn-zh-top" onclick="setLang('zh')">中文</button>
+    <button id="btn-en-top" class="on" onclick="setLang('en');this.classList.add('on');document.getElementById('btn-zh-top').classList.remove('on');">EN</button>
+    <button id="btn-zh-top" onclick="setLang('zh');this.classList.add('on');document.getElementById('btn-en-top').classList.remove('on');">中文</button>
   </div>
 </div>
 
@@ -55,43 +55,3 @@ const isActive = (path: string) => currentPath === path ? "active" : "";
     <span class="en">Tarot</span><span class="zh" style="display:none">塔罗</span>
   </a>
 </nav>
-
-
-<!-- Desktop: hidden. Mobile: sticky topbar with name + lang toggle -->
-<div id="topbar">
-  <span class="tb-name">Jinghao Wen</span>
-  <div class="tb-lang">
-    <button id="btn-en-top" class="on" onclick="setLang('en')">EN</button>
-    <button id="btn-zh-top" onclick="setLang('zh')">中文</button>
-  </div>
-</div>
-
-
-<!--
-<script is:inline>
-// Keep topbar lang buttons in sync with sidebar lang buttons
-(function() {
-  const enTop = document.getElementById('btn-en-top');
-  const zhTop = document.getElementById('btn-zh-top');
-  if (!enTop || !zhTop) return;
-
-  // Sync state on page load
-  const isZh = document.documentElement.lang === 'zh-CN';
-  enTop.classList.toggle('on', !isZh);
-  zhTop.classList.toggle('on', isZh);
-
-  // Override setLang to also sync topbar buttons
-  const _origSetLang = window.setLang;
-  window.setLang = function(lang) {
-    if (_origSetLang) _origSetLang(lang);
-    enTop.classList.toggle('on', lang === 'en');
-    zhTop.classList.toggle('on', lang === 'zh');
-    // Also sync sidebar buttons if present
-    const enSb = document.getElementById('btn-en');
-    const zhSb = document.getElementById('btn-zh');
-    if (enSb) enSb.classList.toggle('on', lang === 'en');
-    if (zhSb) zhSb.classList.toggle('on', lang === 'zh');
-  };
-})();
-</script>
--->
