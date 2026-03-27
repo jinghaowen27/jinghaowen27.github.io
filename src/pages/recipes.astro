@@ -2,75 +2,125 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Your Name — Personal Site">
+<BaseLayout title="Recipes — Jinghao Wen">
 <section class="page active" id="recipes">
   <div class="sec-eye en">From My Kitchen</div><div class="sec-eye zh" style="display:none">来自我的厨房</div>
   <h1 class="sec-h1 en">Recipes</h1><h1 class="sec-h1 zh" style="display:none">菜谱</h1>
   <div class="sec-rule"></div>
-  <p class="tarot-intro en">I study tarot as a symbolic system — a deck of 78 archetypal images that map human experience. Click any card to read my notes on its symbolism and meaning.</p>
-  <p class="tarot-intro zh" style="display:none">我将塔罗作为象征体系来研究——78张原型图像，映射人类经验。点击任意一张牌，查看我对其象征意义的笔记。</p>
+  <p class="tarot-intro en">Cooking is another form of attention — to ingredients, to heat, to time. These are dishes I return to.</p>
+  <p class="tarot-intro zh" style="display:none">烹饪是另一种专注的方式——专注于食材、火候与时间。这些是我反复去做的菜。</p>
   <div class="card-grid">
-    <div class="card-item" onclick="openModal('recipe-charsiu')">
-      <div class="card-thumb" style="background:linear-gradient(135deg,#8b3a1a22,#7c3d2811);"><div class="card-thumb-emoji">🥩</div></div>
+
+    <div class="card-item" onclick="openModal('recipe-steamedfish')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#1e3a5f22,#3d6b7c11);"><div class="card-thumb-emoji">🐟</div></div>
       <div class="card-body">
         <div class="card-meta en">Cantonese · Main</div><div class="card-meta zh" style="display:none">粤式 · 主菜</div>
-        <div class="card-title en">Char Siu (BBQ Pork)</div><div class="card-title zh" style="display:none">叉烧肉</div>
-        <p class="card-desc en">Grandmother's marinade, refined over years. Overnight fermentation and high-heat caramelization.</p>
-        <p class="card-desc zh" style="display:none">外婆秘方，经年改良。隔夜腌制与高温焦糖化是关键。</p>
-        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>2h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★☆</span></div>
+        <div class="card-title en">Steamed Sea Bass</div><div class="card-title zh" style="display:none">清蒸鲈鱼</div>
+        <p class="card-desc en">Eight minutes, soy sauce, ginger, and hot oil. The simplest things done perfectly.</p>
+        <p class="card-desc zh" style="display:none">八分钟、酱油、姜丝、滚油。最简单的事情做到极致。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>20min</strong></span><span class="card-stat"><strong>2</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
       </div>
     </div>
-    <div class="card-item" onclick="openModal('recipe-dandanmian')">
-      <div class="card-thumb" style="background:linear-gradient(135deg,#7c3d2822,#3d6b7c11);"><div class="card-thumb-emoji">🍜</div></div>
+
+    <div class="card-item" onclick="openModal('recipe-pilaf')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#8b5e1a22,#6b3f1a11);"><div class="card-thumb-emoji">🍚</div></div>
       <div class="card-body">
-        <div class="card-meta en">Sichuan · Noodles</div><div class="card-meta zh" style="display:none">川味 · 面食</div>
-        <div class="card-title en">Dan Dan Noodles</div><div class="card-title zh" style="display:none">担担面</div>
-        <p class="card-desc en">Homemade chili oil, ya cai, ground pork. Mouth-numbingly authentic.</p>
-        <p class="card-desc zh" style="display:none">自制辣椒油、芽菜、猪肉末。正宗麻辣，欲罢不能。</p>
+        <div class="card-meta en">Uyghur · Main</div><div class="card-meta zh" style="display:none">维吾尔 · 主菜</div>
+        <div class="card-title en">Lamb Hand-Pulled Rice (Plov)</div><div class="card-title zh" style="display:none">羊肉手抓饭</div>
+        <p class="card-desc en">Lamb, carrot, onion and rice cooked together in one pot. Central Asian comfort food.</p>
+        <p class="card-desc zh" style="display:none">羊肉、胡萝卜、洋葱与米饭同锅焖制。中亚的抚慰之食。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>1.5h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('recipe-roastduck')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#8b1a1a22,#6b1a0a11);"><div class="card-thumb-emoji">🦆</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Beijing · Main</div><div class="card-meta zh" style="display:none">京式 · 主菜</div>
+        <div class="card-title en">Roast Duck</div><div class="card-title zh" style="display:none">烤鸭</div>
+        <p class="card-desc en">Air-dried overnight, honey-glazed, oven-roasted. Crispy skin is the whole point.</p>
+        <p class="card-desc zh" style="display:none">隔夜风干、蜂蜜上色、烤箱烘制。脆皮是一切的意义所在。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>overnight + 2h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('recipe-lambchops')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#3d1a0a22,#6b2a0a11);"><div class="card-thumb-emoji">🍖</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Xinjiang · Main</div><div class="card-meta zh" style="display:none">新疆 · 主菜</div>
+        <div class="card-title en">Grilled Lamb Chops</div><div class="card-title zh" style="display:none">烤羊排</div>
+        <p class="card-desc en">Cumin, chili flakes, salt. Nothing more is needed.</p>
+        <p class="card-desc zh" style="display:none">孜然、辣椒碎、盐。不需要更多了。</p>
         <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>30min</strong></span><span class="card-stat"><strong>2</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
       </div>
     </div>
-    <div class="card-item" onclick="openModal('recipe-redbraise')">
-      <div class="card-thumb" style="background:linear-gradient(135deg,#8b1a1a22,#7c1a1a11);"><div class="card-thumb-emoji">🍲</div></div>
+
+    <div class="card-item" onclick="openModal('recipe-handlamb')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#5a3a1a22,#8b5a2a11);"><div class="card-thumb-emoji">🥩</div></div>
       <div class="card-body">
-        <div class="card-meta en">Chinese · Braised</div><div class="card-meta zh" style="display:none">中式 · 红烧</div>
-        <div class="card-title en">Red-Braised Pork Belly</div><div class="card-title zh" style="display:none">红烧肉</div>
-        <p class="card-desc en">Three hours of slow simmering. Chairman Mao's alleged favorite.</p>
-        <p class="card-desc zh" style="display:none">慢火细炖三小时，人间至味。</p>
+        <div class="card-meta en">Mongolian · Main</div><div class="card-meta zh" style="display:none">蒙古 · 主菜</div>
+        <div class="card-title en">Hand-Pulled Lamb</div><div class="card-title zh" style="display:none">手抓羊肉</div>
+        <p class="card-desc en">Boiled whole, pulled by hand, dipped in garlic and vinegar. Nomadic and primal.</p>
+        <p class="card-desc zh" style="display:none">整块水煮，徒手撕扯，蘸蒜醋而食。游牧本味。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>2h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★☆</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('recipe-mouthwater')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#7c3d2822,#8b1a1a11);"><div class="card-thumb-emoji">🍗</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Sichuan · Cold Dish</div><div class="card-meta zh" style="display:none">川味 · 凉菜</div>
+        <div class="card-title en">Mouthwatering Chicken</div><div class="card-title zh" style="display:none">口水鸡</div>
+        <p class="card-desc en">Poached chicken, Sichuan chili oil, numbing peppercorns, sesame paste. Cold and alive.</p>
+        <p class="card-desc zh" style="display:none">白斩鸡、四川辣椒油、花椒、芝麻酱。凉而鲜活。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>45min</strong></span><span class="card-stat"><strong>3</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('recipe-steak')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#3a1a0a22,#5a2a0a11);"><div class="card-thumb-emoji">🥩</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Western · Main</div><div class="card-meta zh" style="display:none">西式 · 主菜</div>
+        <div class="card-title en">Pan-Seared Steak</div><div class="card-title zh" style="display:none">干煎牛排</div>
+        <p class="card-desc en">Cast iron, high heat, butter basting. Medium-rare or nothing.</p>
+        <p class="card-desc zh" style="display:none">铸铁锅、大火、黄油淋制。五分熟，别无他选。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>20min</strong></span><span class="card-stat"><strong>1</strong> <span class="en">serving</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('recipe-hunanbelly')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#8b3a1a22,#6b1a0a11);"><div class="card-thumb-emoji">🍲</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Hunan · Braised</div><div class="card-meta zh" style="display:none">湘式 · 红烧</div>
+        <div class="card-title en">Hunan Red-Braised Pork</div><div class="card-title zh" style="display:none">湘式红烧肉</div>
+        <p class="card-desc en">Doubanjiang, dried chilies, and dark soy. Spicier and more aggressive than Shanghainese.</p>
+        <p class="card-desc zh" style="display:none">豆瓣酱、干辣椒、老抽。比上海红烧肉更辣、更烈。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>2.5h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
+      </div>
+    </div>
+
+    <div class="card-item" onclick="openModal('recipe-dongpo')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#8b1a1a22,#7c1a1a11);"><div class="card-thumb-emoji">🍖</div></div>
+      <div class="card-body">
+        <div class="card-meta en">Hangzhou · Braised</div><div class="card-meta zh" style="display:none">杭帮 · 红烧</div>
+        <div class="card-title en">Dongpo Pork</div><div class="card-title zh" style="display:none">东坡肉</div>
+        <p class="card-desc en">Su Dongpo's recipe, unchanged for a thousand years. Three hours, Shaoxing wine, patience.</p>
+        <p class="card-desc zh" style="display:none">苏东坡的方子，千年未变。三小时、绍兴酒、耐心。</p>
         <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
       </div>
     </div>
-    <div class="card-item" onclick="openModal('recipe-solemeu')">
-      <div class="card-thumb" style="background:linear-gradient(135deg,#3d6b7c22,#2a5f3f11);"><div class="card-thumb-emoji">🐟</div></div>
+
+    <div class="card-item" onclick="openModal('recipe-brisket')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#3d6b7c22,#1e3a5f11);"><div class="card-thumb-emoji">🫕</div></div>
       <div class="card-body">
-        <div class="card-meta en">French · Main</div><div class="card-meta zh" style="display:none">法式 · 主菜</div>
-        <div class="card-title en">Sole Meunière</div><div class="card-title zh" style="display:none">黄油煎鳎鱼</div>
-        <p class="card-desc en">Simple, elegant. The dish that made Julia Child fall in love with French cooking.</p>
-        <p class="card-desc zh" style="display:none">简单、优雅，让朱莉娅爱上法餐的料理。</p>
-        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>20min</strong></span><span class="card-stat"><strong>2</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★☆</span></div>
+        <div class="card-meta en">Cantonese · Braised</div><div class="card-meta zh" style="display:none">粤式 · 焖制</div>
+        <div class="card-title en">HK-Style Beef Brisket Pot</div><div class="card-title zh" style="display:none">港式牛腩煲</div>
+        <p class="card-desc en">Daikon, beef brisket, spiced broth. Hong Kong winter in a clay pot.</p>
+        <p class="card-desc zh" style="display:none">萝卜、牛腩、香料高汤。砂锅里的香港冬天。</p>
+        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>3h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
       </div>
     </div>
-    <div class="card-item" onclick="openModal('recipe-matchacheese')">
-      <div class="card-thumb" style="background:linear-gradient(135deg,#2a5f3f22,#3d6b3f11);"><div class="card-thumb-emoji">🍰</div></div>
-      <div class="card-body">
-        <div class="card-meta en">Fusion · Dessert</div><div class="card-meta zh" style="display:none">创意 · 甜点</div>
-        <div class="card-title en">Matcha Basque Cheesecake</div><div class="card-title zh" style="display:none">抹茶巴斯克芝士蛋糕</div>
-        <p class="card-desc en">Bitter matcha cuts through rich cream cheese. The burnt top is the point.</p>
-        <p class="card-desc zh" style="display:none">抹茶苦涩平衡芝士浓郁，烤焦表面是精髓。</p>
-        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>1h</strong></span><span class="card-stat"><strong>8</strong> <span class="en">slices</span><span class="zh" style="display:none">片</span></span></div><span class="card-rating">★★★★★</span></div>
-      </div>
-    </div>
-    <div class="card-item" onclick="openModal('recipe-ramen')">
-      <div class="card-thumb" style="background:linear-gradient(135deg,#6b3f1a22,#8b3a1a11);"><div class="card-thumb-emoji">🫕</div></div>
-      <div class="card-body">
-        <div class="card-meta en">Japanese · Soup</div><div class="card-meta zh" style="display:none">日式 · 汤品</div>
-        <div class="card-title en">Tonkotsu Ramen (from scratch)</div><div class="card-title zh" style="display:none">豚骨拉面（从零开始）</div>
-        <p class="card-desc en">12-hour bone broth, chashu, marinated eggs, homemade tare. Worth every minute.</p>
-        <p class="card-desc zh" style="display:none">12小时骨汤、叉烧、溏心蛋、自制酱汁。</p>
-        <div class="card-footer"><div class="card-stats"><span class="card-stat"><strong>14h</strong></span><span class="card-stat"><strong>4</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span></div><span class="card-rating">★★★★★</span></div>
-      </div>
-    </div>
+
   </div>
 </section>
-
 </BaseLayout>
