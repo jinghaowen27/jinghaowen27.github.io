@@ -56,6 +56,18 @@ const isActive = (path: string) => currentPath === path ? "active" : "";
   </a>
 </nav>
 
+
+<!-- Desktop: hidden. Mobile: sticky topbar with name + lang toggle -->
+<div id="topbar">
+  <span class="tb-name">Jinghao Wen</span>
+  <div class="tb-lang">
+    <button id="btn-en-top" class="on" onclick="setLang('en')">EN</button>
+    <button id="btn-zh-top" onclick="setLang('zh')">中文</button>
+  </div>
+</div>
+
+
+<!--
 <script is:inline>
 // Keep topbar lang buttons in sync with sidebar lang buttons
 (function() {
@@ -82,3 +94,4 @@ const isActive = (path: string) => currentPath === path ? "active" : "";
   };
 })();
 </script>
+-->
