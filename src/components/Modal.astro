@@ -13,72 +13,127 @@
 <script is:inline>
 const MODALS = {
   // RECIPES
-  'recipe-charsiu':{
-    emoji:'🥩', eyebrowEn:'Cantonese · Main · 4 servings', eyebrowZh:'粤式 · 主菜 · 4人份',
-    titleEn:'Char Siu (BBQ Pork)', titleZh:'叉烧肉',
-    metaEn:[['Time','2h active + overnight'],['Difficulty','Medium'],['Rating','★★★★☆']],
-    metaZh:[['时间','操作2小时 + 隔夜'],['难度','中等'],['评分','★★★★☆']],
-    ingrEn:['<strong>600g</strong> pork shoulder','<strong>3 tbsp</strong> hoisin sauce','<strong>2 tbsp</strong> soy sauce','<strong>2 tbsp</strong> honey','<strong>1 tbsp</strong> Shaoxing wine','<strong>1 tsp</strong> five-spice powder','<strong>1 tsp</strong> sesame oil','<strong>2 cloves</strong> garlic, grated','<strong>1 tbsp</strong> red fermented tofu'],
-    ingrZh:['<strong>600g</strong> 猪梅花肉','<strong>3汤匙</strong> 海鲜酱','<strong>2汤匙</strong> 生抽','<strong>2汤匙</strong> 蜂蜜','<strong>1汤匙</strong> 绍兴酒','<strong>1茶匙</strong> 五香粉','<strong>1茶匙</strong> 麻油','<strong>2瓣</strong> 大蒜，磨碎','<strong>1汤匙</strong> 南乳'],
-    stepsEn:['Mix all marinade ingredients in a bowl. Taste — it should be sweet, savory, and fragrant.','Score the pork shoulder in a crosshatch pattern (5mm deep) to help marinade penetrate.','Coat pork thoroughly in marinade. Refrigerate overnight, or at minimum 6 hours.','Remove from fridge 30 min before cooking. Preheat oven to 200°C.','Place pork on a rack over a foil-lined tray. Roast 25 min, flip, roast another 25 min.','Mix remaining marinade with 1 tbsp honey. Brush on pork. Broil 3–5 min until caramelized and slightly charred.','Rest 10 min before slicing. Serve over rice or in steamed buns.'],
-    stepsZh:['将所有腌料混合均匀，尝一口——应该甜咸鲜香兼具。','在猪肉上划十字花刀（深约5mm），帮助腌料渗透。','充分涂抹腌料，冷藏隔夜或至少6小时。','烹饪前30分钟从冰箱取出。预热烤箱至200°C。','猪肉放烤架上，下铺锡纸托盘。烤25分钟，翻面，再烤25分钟。','剩余腌料加1汤匙蜂蜜调匀，刷在猪肉上。用上烧模式烤3-5分钟至焦糖化。','静置10分钟后切片，配米饭或包入蒸包。'],
-    notesEn:'The red fermented tofu (南乳) is the secret ingredient — it gives authentic color and a subtle funk. Find it at any Chinese grocery.', notesZh:'南乳是秘密武器——它赋予正宗的色泽和独特的发酵香气。中国超市均可购得。'
+  'recipe-steamedfish':{
+    emoji:'🐟', eyebrowEn:'Cantonese · Main · 2 servings', eyebrowZh:'粤式 · 主菜 · 2人份',
+    titleEn:'Steamed Sea Bass', titleZh:'清蒸鲈鱼',
+    metaEn:[['Time','20 min'],['Difficulty','Easy'],['Rating','★★★★★']],
+    metaZh:[['时间','20分钟'],['难度','简单'],['评分','★★★★★']],
+    ingrEn:['<strong>1</strong> whole sea bass (600–700g), cleaned','<strong>3 tbsp</strong> light soy sauce','<strong>1 tbsp</strong> Shaoxing wine','<strong>1 tsp</strong> sugar','<strong>4 slices</strong> fresh ginger','<strong>2</strong> spring onions, julienned','<strong>3 tbsp</strong> neutral oil','<strong>1 tsp</strong> sesame oil'],
+    ingrZh:['<strong>1条</strong> 鲈鱼（600–700g），处理干净','<strong>3汤匙</strong> 生抽','<strong>1汤匙</strong> 绍兴酒','<strong>1茶匙</strong> 糖','<strong>4片</strong> 新鲜生姜','<strong>2根</strong> 葱，切丝','<strong>3汤匙</strong> 中性油','<strong>1茶匙</strong> 麻油'],
+    stepsEn:['Score the fish 3 times on each side. Rub with Shaoxing wine and a pinch of salt. Place ginger slices inside the cavity and under the fish.','Steam over high heat for exactly 8 minutes (for a 600g fish). Do not lift the lid.','While fish steams, mix soy sauce, sugar and 2 tbsp water in a small pan. Heat until sugar dissolves.','Remove fish. Discard any liquid that has collected. Pour the warm soy mixture over the fish.','Scatter spring onion shreds on top. Heat oil until smoking, then pour directly over the onions — they will sizzle dramatically. Drizzle sesame oil. Serve immediately.'],
+    stepsZh:['鱼身两面各划3刀，用绍兴酒和少许盐抹匀，姜片放入鱼腹和鱼身下方。','大火蒸恰好8分钟（600g的鱼），中途不要揭盖。','蒸鱼时，生抽、糖和2汤匙水入小锅，加热至糖溶化。','取出鱼，倒掉盘中蒸出的水，将热好的酱汁均匀浇在鱼上。','撒上葱丝。将油烧至冒烟，直接泼在葱丝上——会剧烈冒泡。淋麻油，立即上桌。'],
+    notesEn:"The smoking-oil pour is the soul of the dish. It wilts the onion, releases the aroma, and cooks the surface of the fish one final time. Time the steaming precisely — one minute over and the flesh loses its silk.",
+    notesZh:'滚油泼葱是这道菜的灵魂。它软化葱丝，激发香气，也为鱼做最后一次加热。蒸的时间要精确——多一分钟，鱼肉就失去了那种丝滑的质感。'
   },
-  'recipe-dandanmian':{
-    emoji:'🍜', eyebrowEn:'Sichuan · Noodles · 2 servings', eyebrowZh:'川味 · 面食 · 2人份',
-    titleEn:'Dan Dan Noodles', titleZh:'担担面',
-    metaEn:[['Time','30 min'],['Difficulty','Easy–Medium'],['Rating','★★★★★']],
-    metaZh:[['时间','30分钟'],['难度','简单-中等'],['评分','★★★★★']],
-    ingrEn:['<strong>200g</strong> thin wheat noodles','<strong>150g</strong> ground pork','<strong>3 tbsp</strong> homemade chili oil','<strong>2 tbsp</strong> ya cai (preserved mustard)','<strong>2 tbsp</strong> sesame paste','<strong>1 tbsp</strong> soy sauce','<strong>1 tsp</strong> Sichuan peppercorn oil','<strong>1 tsp</strong> black vinegar','<strong>1 tsp</strong> sugar','<strong>2</strong> spring onions, sliced'],
-    ingrZh:['<strong>200g</strong> 细面条','<strong>150g</strong> 猪肉末','<strong>3汤匙</strong> 自制辣椒油','<strong>2汤匙</strong> 宜宾芽菜','<strong>2汤匙</strong> 芝麻酱','<strong>1汤匙</strong> 生抽','<strong>1茶匙</strong> 花椒油','<strong>1茶匙</strong> 镇江醋','<strong>1茶匙</strong> 糖','<strong>2根</strong> 葱，切碎'],
-    stepsEn:['Mix sesame paste, soy sauce, Sichuan pepper oil, black vinegar, and sugar in a bowl to make the sauce. Add a little hot noodle water to thin it slightly.','Stir-fry pork in a dry wok over high heat until browned and crispy. Add ya cai and stir-fry 1 more minute. Set aside.','Cook noodles according to packet instructions. Reserve ½ cup cooking water.','Divide sauce between bowls. Add noodles, top with pork-ya cai mixture, chili oil, and spring onions.','Mix everything thoroughly at the table before eating.'],
-    stepsZh:['将芝麻酱、生抽、花椒油、醋和糖混合成酱，加少量热面汤稀释至合适浓度。','干锅大火煸炒肉末至焦香，加入芽菜再炒1分钟，盛出备用。','按包装说明煮好面条，留半杯面汤。','酱汁分入碗底，盛入面条，顶上肉末芽菜、辣椒油和葱花。','上桌后充分搅拌均匀再食用。'],
-    notesEn:'The chili oil makes or breaks this dish. I make mine by pouring hot oil over dried chilies, Sichuan pepper, star anise, and cinnamon. The ya cai adds essential crunch and tang.', notesZh:'辣椒油是这道菜的灵魂。我的做法是用热油淋在干辣椒、花椒、八角和桂皮上。芽菜提供不可或缺的脆感和酸香。'
+  'recipe-pilaf':{
+    emoji:'🍚', eyebrowEn:'Uyghur · Main · 4 servings', eyebrowZh:'维吾尔 · 主菜 · 4人份',
+    titleEn:'Lamb Hand-Pulled Rice (Plov)', titleZh:'羊肉手抓饭',
+    metaEn:[['Time','1.5h total'],['Difficulty','Medium'],['Rating','★★★★★']],
+    metaZh:[['时间','共1.5小时'],['难度','中等'],['评分','★★★★★']],
+    ingrEn:['<strong>500g</strong> bone-in lamb (shoulder or rib)','<strong>2 cups</strong> long-grain rice, soaked 30 min','<strong>3</strong> large carrots, julienned','<strong>2</strong> onions, sliced','<strong>1 head</strong> garlic, whole','<strong>1 tsp</strong> cumin seeds','<strong>1 tsp</strong> coriander seeds','<strong>3 tbsp</strong> neutral oil','Salt to taste'],
+    ingrZh:['<strong>500g</strong> 带骨羊肉（肩部或肋排）','<strong>2杯</strong> 长粒米，提前浸泡30分钟','<strong>3根</strong> 大胡萝卜，切粗丝','<strong>2个</strong> 洋葱，切片','<strong>1头</strong> 大蒜，整头','<strong>1茶匙</strong> 孜然籽','<strong>1茶匙</strong> 香菜籽','<strong>3汤匙</strong> 中性油','盐适量'],
+    stepsEn:['Heat oil in a heavy pot (ideally a kazan) over high heat. Brown lamb pieces until deep golden. Remove.','In the same pot, fry onions until caramelized. Add carrots and cook until softened.','Return lamb. Add cumin, coriander, salt and enough boiling water to just cover. Simmer 40 min.','Drain rice and spread evenly over the meat and vegetables. Do not stir. Press the whole garlic head into the center.','Add boiling water to cover rice by 1cm. Cover tightly. Cook on low heat 25–30 min until rice has absorbed all liquid.','Remove garlic. Stir from the bottom to mix. Eat with your hands — that is the correct way.'],
+    stepsZh:['大火热油（最好用卡赞锅），将羊肉煎至深金黄色，取出备用。','同一口锅炒洋葱至焦糖化，加入胡萝卜翻炒至软。','放回羊肉，加孜然籽、香菜籽、盐和足量沸水刚好没过食材，小火焖煮40分钟。','沥干米，均匀铺在肉和蔬菜上方，不要翻搅，将整头大蒜插入中央。','加沸水至高出米面约1厘米，盖紧锅盖，小火焖25-30分钟至米饭吸干水分。','取出大蒜，从锅底翻拌均匀，用手抓着吃——这才是正确的方式。'],
+    notesEn:"The layering is the technique — meat and vegetables on the bottom, rice on top, steam doing the work. The garlic becomes impossibly sweet and mild after steaming. The correct vessel is a kazan, but a Dutch oven works.",
+    notesZh:'分层是关键技术——肉和蔬菜在下，米饭在上，靠蒸汽完成一切。大蒜经过蒸制后变得极度甘甜温和。正确的容器是卡赞锅，但铸铁锅也可以。'
   },
-  'recipe-redbraise':{
-    emoji:'🍲', eyebrowEn:'Chinese · Braised · 4 servings', eyebrowZh:'中式 · 红烧 · 4人份',
-    titleEn:'Red-Braised Pork Belly', titleZh:'红烧肉',
+  'recipe-roastduck':{
+    emoji:'🦆', eyebrowEn:'Beijing · Main · 4 servings', eyebrowZh:'京式 · 主菜 · 4人份',
+    titleEn:'Roast Duck', titleZh:'烤鸭',
+    metaEn:[['Time','Overnight + 2h'],['Difficulty','Advanced'],['Rating','★★★★★']],
+    metaZh:[['时间','隔夜 + 2小时'],['难度','高级'],['评分','★★★★★']],
+    ingrEn:['<strong>1</strong> whole duck (2–2.5kg)','<strong>3 tbsp</strong> honey','<strong>2 tbsp</strong> soy sauce','<strong>1 tbsp</strong> Shaoxing wine','<strong>1 tsp</strong> five-spice powder','<strong>1 tbsp</strong> maltose (or extra honey)','<strong>2 tbsp</strong> rice vinegar','Hoisin sauce, spring onion, cucumber, thin pancakes — for serving'],
+    ingrZh:['<strong>1只</strong> 整鸭（2–2.5kg）','<strong>3汤匙</strong> 蜂蜜','<strong>2汤匙</strong> 生抽','<strong>1汤匙</strong> 绍兴酒','<strong>1茶匙</strong> 五香粉','<strong>1汤匙</strong> 麦芽糖（或额外蜂蜜）','<strong>2汤匙</strong> 米醋','甜面酱、葱丝、黄瓜条、薄饼——配餐用'],
+    stepsEn:['Blanch the whole duck in boiling water 2 min. Pat completely dry. Mix honey, maltose, rice vinegar — brush all over the duck. Air-dry uncovered in the fridge overnight (minimum 12h). The skin must be completely dry.','Remove from fridge 1 hour before cooking. Preheat oven to 200°C.','Mix soy sauce, Shaoxing wine and five-spice. Brush inside the cavity. Truss the duck with the cavity sealed.','Place breast-side up on a rack over a roasting tray. Roast 30 min, then reduce to 180°C and roast another 60–75 min, basting with honey every 20 min.','Rest 15 min. Carve in thin slices — skin and meat together. Serve with pancakes, hoisin, spring onion and cucumber.'],
+    stepsZh:['整鸭放入沸水焯2分钟，完全拍干。将蜂蜜、麦芽糖、米醋混合，刷遍全鸭，不加盖放入冰箱风干隔夜（至少12小时），鸭皮必须完全干燥。','烹制前1小时从冰箱取出，预热烤箱至200°C。','生抽、绍兴酒、五香粉混合，刷在鸭腹内，将鸭腹开口封住并绑好。','鸭胸朝上放烤架，下垫烤盘，烤30分钟后降至180°C再烤60-75分钟，每20分钟刷一次蜂蜜。','静置15分钟，片成薄片——皮肉一起，配薄饼、甜面酱、葱丝和黄瓜条食用。'],
+    notesEn:"The overnight air-dry is non-negotiable. Moisture is the enemy of crispy skin. The basting creates the lacquered finish. If you have a bicycle pump, inflate the skin from the neck before air-drying — it separates skin from fat and is worth the effort.",
+    notesZh:'隔夜风干不可省略，水分是脆皮的敌人。反复刷蜜制造漆亮表皮。如果有打气筒，风干前从颈部给鸭皮充气——这能将皮与脂肪分离，值得那点麻烦。'
+  },
+  'recipe-lambchops':{
+    emoji:'🍖', eyebrowEn:'Xinjiang · Main · 2 servings', eyebrowZh:'新疆 · 主菜 · 2人份',
+    titleEn:'Grilled Lamb Chops', titleZh:'烤羊排',
+    metaEn:[['Time','30 min + marinate'],['Difficulty','Easy'],['Rating','★★★★★']],
+    metaZh:[['时间','30分钟 + 腌制'],['难度','简单'],['评分','★★★★★']],
+    ingrEn:['<strong>8</strong> lamb rib chops','<strong>2 tbsp</strong> ground cumin','<strong>1 tbsp</strong> chili flakes','<strong>1 tsp</strong> Sichuan peppercorn, ground','<strong>1 tsp</strong> coarse salt','<strong>1 tbsp</strong> neutral oil'],
+    ingrZh:['<strong>8根</strong> 羊肋排','<strong>2汤匙</strong> 孜然粉','<strong>1汤匙</strong> 辣椒碎','<strong>1茶匙</strong> 花椒粉','<strong>1茶匙</strong> 粗盐','<strong>1汤匙</strong> 中性油'],
+    stepsEn:['Pat lamb chops dry. Mix cumin, chili flakes, Sichuan pepper and salt. Rub generously all over the chops. Marinate at room temperature 30 min minimum.','Heat a cast-iron grill pan or outdoor grill until smoking hot.','Brush chops lightly with oil. Grill 3–4 min per side for medium (adjust for thickness). Do not move them once placed — let the crust form.','Rest 5 min. Finish with a final dusting of cumin and chili before serving.'],
+    stepsZh:['羊排拍干，将孜然、辣椒碎、花椒和盐混合，大量涂抹在羊排上，室温腌制至少30分钟。','铸铁烤盘或户外烤架烧至冒烟热。','羊排刷少量油，每面烤3-4分钟至五分熟（根据厚度调整），放上后不要移动——等待焦壳形成。','静置5分钟，上桌前再撒一层孜然和辣椒碎。'],
+    notesEn:"The simplicity is the point. Xinjiang lamb needs nothing but heat, cumin and chili. Any further intervention is a mistake. The smoke is essential — do not attempt this on a low flame.",
+    notesZh:'简单本身就是意义。新疆羊肉只需要高温、孜然和辣椒。任何多余的干预都是错误。烟熏气不可缺少——不要在小火上做这道菜。'
+  },
+  'recipe-handlamb':{
+    emoji:'🥩', eyebrowEn:'Mongolian · Main · 4 servings', eyebrowZh:'蒙古 · 主菜 · 4人份',
+    titleEn:'Hand-Pulled Lamb', titleZh:'手抓羊肉',
+    metaEn:[['Time','2h total'],['Difficulty','Easy'],['Rating','★★★★☆']],
+    metaZh:[['时间','共2小时'],['难度','简单'],['评分','★★★★☆']],
+    ingrEn:['<strong>1.5kg</strong> bone-in lamb (shoulder or leg)','<strong>1</strong> onion, halved','<strong>4 slices</strong> ginger','<strong>2</strong> star anise','<strong>1 tsp</strong> whole Sichuan peppercorns','<strong>2 tbsp</strong> Shaoxing wine','Salt to taste','For dipping: minced garlic, black vinegar, chili oil, fresh coriander'],
+    ingrZh:['<strong>1.5kg</strong> 带骨羊肉（肩部或腿部）','<strong>1个</strong> 洋葱，对半切','<strong>4片</strong> 生姜','<strong>2颗</strong> 八角','<strong>1茶匙</strong> 整粒花椒','<strong>2汤匙</strong> 绍兴酒','盐适量','蘸料：蒜末、黑醋、辣椒油、香菜'],
+    stepsEn:['Place lamb in a pot of cold water. Bring to a boil, cook 5 min, then discard the water. Rinse the lamb and the pot.','Return lamb to the clean pot. Add onion, ginger, star anise, Sichuan peppercorns, Shaoxing wine and enough cold water to cover by 5cm.','Bring to a boil, skim any foam, then reduce to a steady simmer. Cook 1.5–2 hours until the meat pulls easily from the bone.','Remove lamb and let rest 10 min. Pull the meat with your hands into large chunks — this is deliberate, not lazy. Bones come out naturally.','Serve immediately with dipping sauce. The broth is for drinking alongside.'],
+    stepsZh:['羊肉冷水下锅，煮沸5分钟后倒掉水，冲洗羊肉和锅。','羊肉放回清锅，加洋葱、姜片、八角、花椒、绍兴酒和足量冷水，超过羊肉5厘米。','大火烧开，撇净浮沫，转中小火保持稳定沸腾，煮1.5-2小时至肉可轻松离骨。','取出羊肉，静置10分钟，用手将肉撕成大块——这是刻意为之，不是懒惰，骨头自然脱出。','立即上桌，配蘸料食用，汤可以随餐喝。'],
+    notesEn:"The point of hand-pulling is texture — the meat tears along its natural grain, which no knife can replicate. The broth, strained and salted, is one of the finest things you can drink.",
+    notesZh:'徒手撕肉的意义在于质感——肉沿自然纹理撕裂，这是刀切无法复制的。将汤过滤后加盐，是你能喝到的最好的东西之一。'
+  },
+  'recipe-mouthwater':{
+    emoji:'🍗', eyebrowEn:'Sichuan · Cold Dish · 3 servings', eyebrowZh:'川味 · 凉菜 · 3人份',
+    titleEn:'Mouthwatering Chicken', titleZh:'口水鸡',
+    metaEn:[['Time','45 min'],['Difficulty','Easy–Medium'],['Rating','★★★★★']],
+    metaZh:[['时间','45分钟'],['难度','简单-中等'],['评分','★★★★★']],
+    ingrEn:['<strong>1</strong> whole chicken (or 4 bone-in thighs)','<strong>3 tbsp</strong> Sichuan chili oil','<strong>1 tbsp</strong> sesame paste','<strong>1 tbsp</strong> soy sauce','<strong>1 tbsp</strong> black vinegar','<strong>1 tsp</strong> Sichuan peppercorn oil','<strong>1 tsp</strong> sugar','<strong>2 cloves</strong> garlic, minced','<strong>1 tsp</strong> ginger, minced','Toasted sesame seeds, spring onion, coriander to finish'],
+    ingrZh:['<strong>1只</strong> 整鸡（或4块带骨鸡腿）','<strong>3汤匙</strong> 四川辣椒油','<strong>1汤匙</strong> 芝麻酱','<strong>1汤匙</strong> 生抽','<strong>1汤匙</strong> 黑醋','<strong>1茶匙</strong> 花椒油','<strong>1茶匙</strong> 糖','<strong>2瓣</strong> 蒜，剁末','<strong>1茶匙</strong> 生姜末','熟芝麻、葱花、香菜收尾'],
+    stepsEn:['Bring a large pot of water to a boil with ginger and spring onion. Add chicken. When it returns to a boil, reduce to the lowest possible simmer. Poach 20–25 min — the water should barely move.','Remove chicken and immediately submerge in ice water for 10 min. This gives the skin its characteristic silky texture.','While chicken chills, whisk together chili oil, sesame paste, soy sauce, vinegar, peppercorn oil, sugar, garlic and ginger. Taste — it should be spicy, numbing, sour and slightly sweet simultaneously.','Chop chicken through the bone into bite-sized pieces. Arrange on a plate. Pour sauce generously over. Finish with sesame seeds, spring onion and coriander.'],
+    stepsZh:['大锅加水，放姜片和葱段，大火烧开。放入鸡，再次沸腾后转至最小火，保持几乎不动的水温，焖煮20-25分钟。','取出鸡，立即放入冰水中浸泡10分钟——这赋予鸡皮标志性的爽滑质感。','鸡浸冰水时，将辣椒油、芝麻酱、生抽、醋、花椒油、糖、蒜末和姜末调匀。品尝——应该同时辣、麻、酸、微甜。','鸡带骨斩成小块，摆盘，大量浇上酱汁，撒芝麻、葱花和香菜收尾。'],
+    notesEn:"The ice bath is not optional — it is what makes this dish. The contrast between the warm sauce and the cold chicken, the numbing pepper and the bright vinegar, the silk of the skin and the richness of the sesame — this dish is about contrast.",
+    notesZh:'冰水浴不可省略——这正是这道菜的精髓。温热酱汁与冰凉鸡肉的对比，花椒的麻与醋的爽的对比，鸡皮的爽滑与芝麻酱的浓郁的对比——这道菜的一切都关乎对比。'
+  },
+  'recipe-steak':{
+    emoji:'🥩', eyebrowEn:'Western · Main · 1 serving', eyebrowZh:'西式 · 主菜 · 1人份',
+    titleEn:'Pan-Seared Steak', titleZh:'干煎牛排',
+    metaEn:[['Time','20 min'],['Difficulty','Easy'],['Rating','★★★★★']],
+    metaZh:[['时间','20分钟'],['难度','简单'],['评分','★★★★★']],
+    ingrEn:['<strong>1</strong> ribeye or NY strip (2.5–3cm thick)','<strong>2 tbsp</strong> neutral oil','<strong>3 tbsp</strong> unsalted butter','<strong>3 cloves</strong> garlic, crushed','<strong>3 sprigs</strong> thyme or rosemary','Coarse salt and black pepper'],
+    ingrZh:['<strong>1块</strong> 肋眼或纽约客（2.5–3cm厚）','<strong>2汤匙</strong> 中性油','<strong>3汤匙</strong> 无盐黄油','<strong>3瓣</strong> 大蒜，拍碎','<strong>3枝</strong> 百里香或迷迭香','粗盐和黑胡椒'],
+    stepsEn:['Remove steak from fridge 45 min before cooking. Pat completely dry. Season aggressively with salt and pepper on all surfaces — more than you think is needed.','Heat a cast-iron pan over highest heat until smoking. Add oil. Place steak — it should scream when it hits the pan.','Cook 2 min without moving. Flip. Cook 2 min. Then flip every 30 seconds for a final 2 min, building the crust.','Add butter, garlic and herbs. Tilt the pan and baste the steak continuously with the foaming butter for 1 min.','Rest on a wire rack 5–8 min. This is mandatory, not optional. Cut against the grain.'],
+    stepsZh:['牛排从冰箱取出后在室温放置45分钟，完全拍干，各面大量撒盐和黑胡椒——比你以为需要的要多。','铸铁锅大火烧至冒烟，下油，放入牛排——下锅时应该发出响亮的嘶嘶声。','不移动煎2分钟，翻面，再煎2分钟，最后每隔30秒翻面共2分钟，积累焦壳。','加黄油、大蒜和香草，倾斜锅身，用起泡的黄油不停淋制牛排约1分钟。','放在烤架上静置5-8分钟，这是必须的而非可选的。逆纹切开。'],
+    notesEn:"Dry surface, ripping-hot pan, aggressive seasoning, proper rest. Every step has a reason. The resting allows the juices to redistribute — cut too early and they run out onto the board, not into your mouth.",
+    notesZh:'干燥表面、极热铸铁锅、大量调味、充分静置。每一步都有其理由。静置让肉汁重新分布——切得太早，肉汁流到砧板上，而不是流进你口中。'
+  },
+  'recipe-hunanbelly':{
+    emoji:'🍲', eyebrowEn:'Hunan · Braised · 4 servings', eyebrowZh:'湘式 · 红烧 · 4人份',
+    titleEn:'Hunan Red-Braised Pork', titleZh:'湘式红烧肉',
+    metaEn:[['Time','2.5h total'],['Difficulty','Easy (time-intensive)'],['Rating','★★★★★']],
+    metaZh:[['时间','共2.5小时'],['难度','简单（耗时）'],['评分','★★★★★']],
+    ingrEn:['<strong>800g</strong> pork belly, skin-on','<strong>4</strong> dried red chilies','<strong>1 tbsp</strong> doubanjiang (spicy bean paste)','<strong>3 tbsp</strong> dark soy sauce','<strong>1 tbsp</strong> soy sauce','<strong>2 tbsp</strong> Shaoxing wine','<strong>2 tbsp</strong> rock sugar','<strong>3 slices</strong> ginger','<strong>2</strong> star anise','<strong>1</strong> cinnamon stick'],
+    ingrZh:['<strong>800g</strong> 带皮五花肉','<strong>4根</strong> 干红辣椒','<strong>1汤匙</strong> 豆瓣酱','<strong>3汤匙</strong> 老抽','<strong>1汤匙</strong> 生抽','<strong>2汤匙</strong> 绍兴酒','<strong>2汤匙</strong> 冰糖','<strong>3片</strong> 生姜','<strong>2颗</strong> 八角','<strong>1根</strong> 肉桂'],
+    stepsEn:['Blanch pork belly 5 min. Drain and cut into 4cm cubes.','In a wok, melt rock sugar to amber caramel. Add pork and toss to coat.','Add doubanjiang and stir-fry 1 min. Add dried chilies, ginger, star anise, cinnamon, both soy sauces and Shaoxing wine.','Add boiling water to just cover. Bring to a boil, reduce to low. Braise 1.5–2 hours, checking occasionally.','Uncover and increase heat. Reduce sauce until thick and glossy. The fat should be translucent.'],
+    stepsZh:['五花肉焯水5分钟，切成4cm块。','炒锅融化冰糖至琥珀色焦糖，放入猪肉翻拌上色。','加豆瓣酱翻炒1分钟，放入干辣椒、姜片、八角、肉桂、两种酱油和绍兴酒。','加沸水刚好没过，大火烧开转小火，焖煮1.5-2小时，偶尔查看。','开盖大火收汁至浓稠发亮，肥肉应呈半透明状。'],
+    notesEn:"The difference between Hunan and Shanghai versions is doubanjiang and dried chili — the Hunan version has an edge, a heat that cuts through the fat. Chairman Mao allegedly ate this for breakfast. I believe it.",
+    notesZh:'湘式与上海版的区别在于豆瓣酱和干辣椒——湘式带着锋芒，一股穿透肥腻的辣。据说毛主席把这道菜当早餐吃，我信。'
+  },
+  'recipe-dongpo':{
+    emoji:'🍖', eyebrowEn:'Hangzhou · Braised · 4 servings', eyebrowZh:'杭帮 · 红烧 · 4人份',
+    titleEn:'Dongpo Pork', titleZh:'东坡肉',
     metaEn:[['Time','3h total'],['Difficulty','Easy (time-intensive)'],['Rating','★★★★★']],
     metaZh:[['时间','共3小时'],['难度','简单（耗时）'],['评分','★★★★★']],
-    ingrEn:['<strong>800g</strong> pork belly, skin-on','<strong>3 tbsp</strong> rock sugar','<strong>3 tbsp</strong> soy sauce','<strong>2 tbsp</strong> dark soy sauce','<strong>2 tbsp</strong> Shaoxing wine','<strong>3 cups</strong> water','<strong>3</strong> star anise','<strong>1</strong> cinnamon stick','<strong>3</strong> slices fresh ginger','<strong>2</strong> spring onions'],
-    ingrZh:['<strong>800g</strong> 带皮五花肉','<strong>3汤匙</strong> 冰糖','<strong>3汤匙</strong> 生抽','<strong>2汤匙</strong> 老抽','<strong>2汤匙</strong> 绍兴酒','<strong>3杯</strong> 水','<strong>3颗</strong> 八角','<strong>1根</strong> 肉桂','<strong>3片</strong> 生姜','<strong>2根</strong> 大葱'],
-    stepsEn:['Blanch pork belly in boiling water for 5 min. Drain and cut into 4×4cm cubes.','Heat a wok over medium heat. Add rock sugar — let it melt to an amber caramel without stirring.','Add pork and toss to coat. The caramel will seize; keep stirring.','Add Shaoxing wine, both soy sauces, spices, ginger, and spring onion.','Pour in water to barely cover the pork. Bring to a boil, then reduce to the lowest simmer. Cover.','Braise for 2.5 hours, checking occasionally. The pork should be very tender and the sauce reduced to a glossy glaze.','Remove spices. Increase heat to reduce sauce further if needed. Serve over white rice.'],
-    stepsZh:['五花肉冷水下锅，焯水5分钟，捞出切成4×4cm块。','炒锅中火放入冰糖，不要搅拌，待其融化成琥珀色焦糖。','放入五花肉翻拌上色，焦糖会凝固，继续翻炒。','加入绍兴酒、两种酱油、香料、生姜和葱。','加水至刚好没过猪肉，大火烧开，转最小火，盖上锅盖。','焖煮2.5小时，偶尔查看，猪肉应极度软烂，汤汁浓缩为晶亮的酱汁。','取出香料，如需要可大火再次收汁。搭配白米饭食用。'],
-    notesEn:"Don't rush the caramel. Don't rush the braise. This is a dish that rewards patience. The fat should be so soft it trembles on the chopstick.", notesZh:'不要急着做焦糖，不要急着焖。这道菜奖励耐心的人。肥肉应该软到在筷子上颤抖。'
+    ingrEn:['<strong>1kg</strong> pork belly, skin-on, cut into 6cm squares','<strong>150ml</strong> Shaoxing wine','<strong>3 tbsp</strong> dark soy sauce','<strong>2 tbsp</strong> soy sauce','<strong>3 tbsp</strong> rock sugar','<strong>4</strong> spring onions, tied in knots','<strong>6 slices</strong> ginger'],
+    ingrZh:['<strong>1kg</strong> 带皮五花肉，切6cm方块','<strong>150ml</strong> 绍兴酒','<strong>3汤匙</strong> 老抽','<strong>2汤匙</strong> 生抽','<strong>3汤匙</strong> 冰糖','<strong>4根</strong> 葱，打结','<strong>6片</strong> 生姜'],
+    stepsEn:['Blanch pork belly 5 min. Remove and score the skin lightly in a crosshatch.','In a clay pot or Dutch oven, lay spring onions and ginger as a bed. Place pork on top, skin-side down.','Pour Shaoxing wine, both soy sauces over the pork. Add rock sugar. Do not add water — the wine is the liquid.','Bring to a boil, cover tightly with foil then the lid. Reduce to the lowest possible simmer. Cook 1.5 hours.','Flip pork skin-side up. Continue cooking covered another 1 hour. Uncover and reduce sauce until glossy.','Serve in the clay pot. The skin should be trembling and the fat completely translucent.'],
+    stepsZh:['五花肉焯水5分钟，取出，在猪皮上轻划十字花刀。','砂锅或铸铁锅底铺葱结和姜片，猪肉皮朝下放在上面。','淋入绍兴酒和两种酱油，放入冰糖，不加水——酒就是液体。','大火烧开，用锡纸封紧再盖上锅盖，转最小火，焖1.5小时。','将猪肉翻至皮朝上，继续盖锅焖1小时，开盖大火收汁至亮泽。','连砂锅上桌。猪皮应该是颤抖的，肥肉应完全呈半透明状。'],
+    notesEn:"Shaoxing wine, not water. This is the whole secret. Su Dongpo supposedly invented this dish while exiled in Hangzhou, feeding it to the workers who helped him build a lake causeway. A dish with a story that old deserves respect.",
+    notesZh:'用绍兴酒，不用水——这是全部的秘密。据说苏东坡被贬杭州时发明了这道菜，用来犒劳帮他修建堤坝的工人。一道有着这么久远故事的菜，值得敬重。'
   },
-  'recipe-solemeu':{
-    emoji:'🐟', eyebrowEn:'French · Main · 2 servings', eyebrowZh:'法式 · 主菜 · 2人份',
-    titleEn:'Sole Meunière', titleZh:'黄油煎鳎鱼',
-    metaEn:[['Time','20 min'],['Difficulty','Easy'],['Rating','★★★★☆']],
-    metaZh:[['时间','20分钟'],['难度','简单'],['评分','★★★★☆']],
-    ingrEn:['<strong>2</strong> whole sole fillets (or flounder)','<strong>4 tbsp</strong> unsalted butter','<strong>¼ cup</strong> all-purpose flour','<strong>2 tbsp</strong> capers (optional)','<strong>1</strong> lemon, juiced','<strong>2 tbsp</strong> flat-leaf parsley, chopped','Salt and white pepper'],
-    ingrZh:['<strong>2片</strong> 鳎鱼柳（或比目鱼）','<strong>4汤匙</strong> 无盐黄油','<strong>¼杯</strong> 面粉','<strong>2汤匙</strong> 刺山柑（可选）','<strong>1颗</strong> 柠檬，取汁','<strong>2汤匙</strong> 意大利香芹，切碎','盐和白胡椒'],
-    stepsEn:['Pat fish fillets completely dry with paper towels. Season with salt and white pepper.','Dredge fish lightly in flour, shaking off excess.','Heat 2 tbsp butter in a large pan over medium-high heat until foaming. Cook fish 2–3 min per side until golden. Remove and keep warm.','In same pan, add remaining butter. Cook over medium heat, swirling, until it turns nut-brown and smells nutty (beurre noisette).','Add lemon juice — it will foam dramatically. Add capers and parsley.','Pour sauce immediately over fish. Serve at once — this waits for no one.'],
-    stepsZh:['用厨房纸将鱼柳完全拍干，两面撒盐和白胡椒调味。','轻薄地裹上面粉，抖掉多余的。','大平底锅中火融化2汤匙黄油至起泡，放入鱼柳每面煎2-3分钟至金黄。取出保温。','同一口锅加入剩余黄油，中火不停晃锅，至黄油变成坚果棕色（榛子黄油）。','加入柠檬汁——会剧烈冒泡。加入刺山柑和香芹。','立即将酱汁淋在鱼上。马上上桌——这道菜不等人。'],
-    notesEn:"The secret is the beurre noisette — brown the butter until it smells of hazelnuts, then stop immediately. Serve the instant you pour the sauce.", notesZh:'秘诀在于榛子黄油——将黄油焦化至散发榛子香气，立刻停止。淋上酱汁后即刻上桌。'
+  'recipe-brisket':{
+    emoji:'🫕', eyebrowEn:'Cantonese · Braised · 4 servings', eyebrowZh:'粤式 · 焖制 · 4人份',
+    titleEn:'HK-Style Beef Brisket Pot', titleZh:'港式牛腩煲',
+    metaEn:[['Time','3h total'],['Difficulty','Medium'],['Rating','★★★★★']],
+    metaZh:[['时间','共3小时'],['难度','中等'],['评分','★★★★★']],
+    ingrEn:['<strong>800g</strong> beef brisket, cut into large chunks','<strong>1</strong> large daikon, cut into thick rounds','<strong>3 tbsp</strong> oyster sauce','<strong>2 tbsp</strong> dark soy sauce','<strong>1 tbsp</strong> soy sauce','<strong>1 tbsp</strong> Shaoxing wine','<strong>1 tsp</strong> five-spice powder','<strong>3 slices</strong> ginger','<strong>2</strong> star anise','<strong>1</strong> piece dried tangerine peel','<strong>1 tsp</strong> whole Sichuan peppercorns','Beef stock or water to cover'],
+    ingrZh:['<strong>800g</strong> 牛腩，切大块','<strong>1根</strong> 大白萝卜，切厚片','<strong>3汤匙</strong> 蚝油','<strong>2汤匙</strong> 老抽','<strong>1汤匙</strong> 生抽','<strong>1汤匙</strong> 绍兴酒','<strong>1茶匙</strong> 五香粉','<strong>3片</strong> 生姜','<strong>2颗</strong> 八角','<strong>1块</strong> 陈皮','<strong>1茶匙</strong> 整粒花椒','牛肉高汤或清水没过'],
+    stepsEn:['Blanch beef brisket 5 min in boiling water. Drain and rinse.','Brown brisket in batches in a clay pot or Dutch oven over high heat. Remove.','Fry ginger briefly in the same pot. Return brisket. Add all sauces, wine, five-spice, star anise, tangerine peel and Sichuan peppercorns.','Add stock or water to cover. Bring to a boil, then simmer covered 1.5 hours.','Add daikon. Continue simmering covered another 45–60 min until both beef and daikon are completely tender.','Serve in the clay pot. The daikon should have absorbed all the braising liquid color and flavor.'],
+    stepsZh:['牛腩冷水焯5分钟，捞出冲洗。','砂锅或铸铁锅大火将牛腩分批煎至上色，取出。','同一口锅短暂爆香姜片，放回牛腩，加入所有酱料、酒、五香粉、八角、陈皮和花椒。','加高汤或清水没过，大火烧开转小火盖锅焖1.5小时。','放入萝卜，继续盖锅焖45-60分钟至牛腩和萝卜均完全软烂。','连砂锅上桌。萝卜应已完全吸收焖汁的色泽与味道。'],
+    notesEn:"The dried tangerine peel is the soul of the Cantonese spice palette — it adds a fragrant bitterness that cuts through the richness. The daikon is arguably better than the beef. It absorbs everything and becomes something else entirely.",
+    notesZh:'陈皮是粤式香料的灵魂——它带来一种芬芳的苦涩，穿透浓郁的肉香。萝卜可以说比牛腩更好，它吸收了一切，变成了完全不同的东西。'
   },
-  'recipe-matchacheese':{
-    emoji:'🍰', eyebrowEn:'Fusion · Dessert · 8 slices', eyebrowZh:'创意 · 甜点 · 8片',
-    titleEn:'Matcha Basque Cheesecake', titleZh:'抹茶巴斯克芝士蛋糕',
-    metaEn:[['Time','1h total'],['Difficulty','Easy'],['Rating','★★★★★']],
-    metaZh:[['时间','共1小时'],['难度','简单'],['评分','★★★★★']],
-    ingrEn:['<strong>600g</strong> cream cheese, room temp','<strong>200g</strong> caster sugar','<strong>4</strong> large eggs','<strong>250ml</strong> heavy cream','<strong>3 tbsp</strong> high-quality matcha powder','<strong>2 tbsp</strong> all-purpose flour','<strong>1 tsp</strong> vanilla extract','Pinch of salt'],
-    ingrZh:['<strong>600g</strong> 奶油奶酪，室温','<strong>200g</strong> 细砂糖','<strong>4颗</strong> 大鸡蛋','<strong>250ml</strong> 淡奶油','<strong>3汤匙</strong> 优质抹茶粉','<strong>2汤匙</strong> 面粉','<strong>1茶匙</strong> 香草精','一撮盐'],
-    stepsEn:['Preheat oven to 220°C (fan). Line a 20cm springform tin with parchment paper — let it hang over the sides.','Beat cream cheese and sugar until smooth. Add eggs one at a time.','Whisk matcha with a little cream until smooth paste, then add remaining cream. Pour into batter.','Add flour, vanilla, and salt. Mix until just combined — do not overwork.','Pour into tin. Bake 25–28 min. The center should still wobble significantly.','Cool to room temperature, then refrigerate at least 4 hours. The burnt top is the signature.'],
-    stepsZh:['烤箱预热至220°C（风扇模式）。20cm活底蛋糕模铺烘焙纸，让纸超出模具边缘。','奶油奶酪和砂糖打至顺滑，逐个加入鸡蛋搅匀。','将抹茶粉与少量淡奶油调成顺滑的抹茶糊，再倒入剩余淡奶油，混入面糊中。','加入面粉、香草精和盐，混合至刚好融合，不要过度搅拌。','倒入模具，烘烤25-28分钟，中心应仍有明显的晃动感。','冷却至室温后冷藏至少4小时。烤焦的表面是这款蛋糕的标志。'],
-    notesEn:"Use ceremonial-grade matcha if possible — it makes a visible difference in color and flavor. The wobbly center will set in the fridge to a perfect custardy texture.", notesZh:'尽量使用仪式级抹茶粉——颜色和味道会有明显提升。晃动的中心在冷藏后会凝固成完美的布丁质感。'
-  },
-  'recipe-ramen':{
-    emoji:'🫕', eyebrowEn:'Japanese · Soup · 4 servings', eyebrowZh:'日式 · 汤品 · 4人份',
-    titleEn:'Tonkotsu Ramen (from scratch)', titleZh:'豚骨拉面（从零开始）',
-    metaEn:[['Time','14h total'],['Difficulty','Advanced'],['Rating','★★★★★']],
-    metaZh:[['时间','共14小时'],['难度','高级'],['评分','★★★★★']],
-    ingrEn:['<strong>2kg</strong> pork trotters + neck bones','<strong>500g</strong> pork belly (for chashu)','<strong>4</strong> soft-boiled eggs (marinated)','<strong>200ml</strong> soy sauce (for tare)','<strong>100ml</strong> mirin','<strong>4 portions</strong> fresh ramen noodles','Nori, bamboo shoots, spring onion'],
-    ingrZh:['<strong>2kg</strong> 猪蹄 + 颈骨','<strong>500g</strong> 五花肉（做叉烧）','<strong>4颗</strong> 溏心腌蛋','<strong>200ml</strong> 酱油（做酱汁）','<strong>100ml</strong> 味醂','<strong>4份</strong> 新鲜拉面','海苔、笋干、葱花'],
-    stepsEn:['Blanch bones in boiling water 10 min. Drain and rinse thoroughly to remove impurities.','In a large pot, cover bones with cold water. Bring to a vigorous boil and keep at full boil for 3 hours — this emulsifies the collagen into a white, creamy broth. Top up water as needed.','Reduce to simmer for another 8–10 hours. Strain through a fine mesh.','Chashu: tie pork belly into a roll. Sear. Braise in soy sauce, mirin, sake, and sugar for 2 hours. Slice when cool.','Tare: reduce soy sauce and mirin to a thick concentrate.','Marinated eggs: soft boil 6.5 min, peel, marinate in tare + water overnight.','Assemble: tare in bowl, ladle hot broth, add noodles, chashu, egg, and toppings.'],
-    stepsZh:['猪骨冷水下锅，大火焯10分钟，捞出冲洗干净，去除杂质。','大锅中猪骨加冷水，大火烧开并保持剧烈沸腾3小时——这能让胶原蛋白乳化成乳白浓汤，随时补充蒸发的水分。','转小火继续煮8-10小时，过滤备用。','叉烧：五花肉卷成卷，煎至上色，加酱油、味醂、清酒和糖红焖2小时，冷却后切片。','酱汁：酱油和味醂浓缩至稠汁。','腌蛋：煮6.5分钟，剥壳，泡在酱汁兑水的溶液中隔夜。','组装：碗底倒酱汁，舀入热汤，加面条、叉烧、腌蛋和配料。'],
-    notesEn:"A 14-hour weekend project that will make you never want to order ramen at a restaurant again. The key to the milky-white broth is a vigorous boil, not a simmer.", notesZh:'一个14小时的周末项目，做完后你可能再也不想去餐厅点拉面了。乳白色汤底的关键是剧烈沸腾，而非小火慢炖。'
-  },
+
 
   // COCKTAILS
   'cocktail-negroni':{
