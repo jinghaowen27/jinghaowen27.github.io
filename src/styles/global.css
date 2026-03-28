@@ -368,6 +368,20 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
     color:#fff;
   }
 
+  #topbar .tb-profile{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+  }
+  #topbar .tb-avatar{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid rgba(255,255,255,.25);
+    flex-shrink:0;
+  }
+
   /* ── Fixed Mobile Nav Strip ── */
   #mobile-nav{
     display:flex;
