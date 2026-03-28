@@ -687,9 +687,10 @@ function closeSidebar() {
 }
 
 // ── Modal ────────────────────────────────────────────────────────────────────
-function openModal(id) {
+window.openModal = function (id) {
   const d = MODALS[id];
   if (!d) return;
+
   const isZh = document.documentElement.lang === 'zh-CN';
   const title   = isZh ? d.titleZh   : d.titleEn;
   const eyebrow = isZh ? d.eyebrowZh : d.eyebrowEn;
@@ -699,13 +700,14 @@ function openModal(id) {
   const notes   = isZh ? d.notesZh   : d.notesEn;
 
   const isTarot = id.startsWith('tarot-');
-  const isBook  = id.startsWith('book');
+  const isBook = id.startsWith('book');
   const isCocktail = id.startsWith('cocktail');
   const isProj = id.startsWith('proj');
 
   document.getElementById('modal-hero').innerHTML =
-    (d.img ? '<img src="' + d.img + '" alt="' + title + '" style="width:100%;height:100%;object-fit:cover;">'
-           : '<span style="font-size:5rem">' + d.emoji + '</span>') +
+    (d.img
+      ? '<img src="' + d.img + '" alt="' + title + '" style="width:100%;height:100%;object-fit:cover;">'
+      : '<span style="font-size:5rem">' + d.emoji + '</span>') +
     '<button class="modal-close" onclick="closeModal()">✕</button>';
 
   let metaHtml = '';
@@ -713,58 +715,55 @@ function openModal(id) {
     metaHtml += '<div class="modal-meta"><strong>' + pair[0] + ':</strong> ' + pair[1] + '</div>';
   });
 
-  let html = '<div class="modal-eyebrow">' + eyebrow + '</div>' +
+  let html =
+    '<div class="modal-eyebrow">' + eyebrow + '</div>' +
     '<h2 class="modal-title">' + title + '</h2>' +
     '<div class="modal-meta-row">' + metaHtml + '</div>';
 
-  if (ingr && ingr.length > 0) {
-    let ingrHtml = '';
-    ingr.forEach(function(i) { ingrHtml += '<li>' + i + '</li>'; });
-    html += '<div class="modal-section"><h3 class="modal-section-title">' +
-      (isZh ? '食材' : 'Ingredients') +
-      '</h3><ul class="ingr-list">' + ingrHtml + '</ul></div>';
-  }
+  if (!isTarot && !isBook && !isProj) {
+    if (ingr && ingr.length) {
+      html += '<div class="modal-section-title">' + (isZh ? '配方' : 'Ingredients') + '</div><ul class="modal-list">';
+      ingr.forEach(function(item) {
+        html += '<li>' + item + '</li>';
+      });
+      html += '</ul>';
+    }
 
-  if (steps && steps.length > 0) {
-    const lbl = isBook    ? (isZh ? '笔记'   : 'Notes')
-              : isTarot   ? (isZh ? '象征意义' : 'Symbolism')
-              : isCocktail? (isZh ? '调制步骤' : 'Method')
-              : isProj? (isZh ? '工作' : 'Work')
-              :              (isZh ? '烹饪步骤' : 'Method');
-    let stepsHtml = '';
-    steps.forEach(function(s, i) {
-      stepsHtml += '<li><span class="step-num">' + String(i + 1).padStart(2, '0') + '</span><span>' + s + '</span></li>';
-    });
-    html += '<div class="modal-section"><h3 class="modal-section-title">' + lbl +
-      '</h3><ol class="step-list">' + stepsHtml + '</ol></div>';
+    if (steps && steps.length) {
+      html += '<div class="modal-section-title">' + (isCocktail ? (isZh ? '做法' : 'Method') : (isZh ? '步骤' : 'Steps')) + '</div><ol class="modal-list">';
+      steps.forEach(function(item) {
+        html += '<li>' + item + '</li>';
+      });
+      html += '</ol>';
+    }
   }
 
   if (notes) {
-    const lbl2 = isBook  ? (isZh ? '完整笔记' : 'Full Notes')
-               : isTarot ? (isZh ? '我的笔记'  : 'My Notes')
-               :            (isZh ? '笔记'     : 'Notes');
-    let notesHtml = '';
-    notes.split('\n\n').forEach(function(p) { notesHtml += '<p>' + p + '</p>'; });
-    html += '<div class="modal-section"><h3 class="modal-section-title">' + lbl2 +
-      '</h3><div class="modal-body">' + notesHtml + '</div></div>';
+    html += '<div class="modal-section-title">' +
+      (isTarot ? (isZh ? '象征意义' : 'Symbolism / Meaning')
+      : isBook ? (isZh ? '笔记 / 摘录' : 'Notes / Excerpts')
+      : isProj ? (isZh ? '说明' : 'Description')
+      : (isZh ? '注' : 'Notes')) +
+      '</div>';
+
+    html += '<div class="modal-notes">' +
+      notes.replace(/\n/g, '<br>') +
+      '</div>';
   }
 
   document.getElementById('modal-content').innerHTML = html;
   document.getElementById('modal-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
+  document.body.classList.add('modal-open');
+};
 
-function closeModal() {
+window.closeModal = function () {
   document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
+  document.body.classList.remove('modal-open');
+};
 
-function closeModalIfBg(e) {
-  if (e.target === document.getElementById('modal-overlay')) closeModal();
-}
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeModal();
-});
-
+window.closeModalIfBg = function (event) {
+  if (event.target && event.target.id === 'modal-overlay') {
+    window.closeModal();
+  }
+};
 </script>
