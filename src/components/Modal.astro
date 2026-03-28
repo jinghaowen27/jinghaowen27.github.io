@@ -16,6 +16,7 @@ import recipes from "../data/tarotData.js";
 
 <script define:vars={{ recipes }}>
 const MODALS = {
+  ...recipes,
   // RECIPES
   'recipe-steamedfish':{
     emoji:'🐟', eyebrowEn:'Cantonese · Main · 2 servings', eyebrowZh:'粤式 · 主菜 · 2人份',
@@ -691,64 +692,69 @@ window.openModal = function (id) {
   const d = MODALS[id];
   if (!d) return;
 
-  const isZh = document.documentElement.lang === 'zh-CN';
-  const title   = isZh ? d.titleZh   : d.titleEn;
+  const isZh =
+    document.documentElement.lang === 'zh-CN' ||
+    document.body.classList.contains('lang-zh') ||
+    localStorage.getItem('lang') === 'zh';
+
+  const title = isZh ? d.titleZh : d.titleEn;
   const eyebrow = isZh ? d.eyebrowZh : d.eyebrowEn;
-  const meta    = isZh ? d.metaZh    : d.metaEn;
-  const ingr    = isZh ? d.ingrZh    : d.ingrEn;
-  const steps   = isZh ? d.stepsZh   : d.stepsEn;
-  const notes   = isZh ? d.notesZh   : d.notesEn;
+  const meta = isZh ? d.metaZh : d.metaEn;
+  const ingr = isZh ? d.ingrZh : d.ingrEn;
+  const steps = isZh ? d.stepsZh : d.stepsEn;
+  const notes = isZh ? d.notesZh : d.notesEn;
 
   const isTarot = id.startsWith('tarot-');
-  const isBook = id.startsWith('book');
-  const isCocktail = id.startsWith('cocktail');
-  const isProj = id.startsWith('proj');
+  const isBook = id.startsWith('book-');
+  const isProj = id.startsWith('proj-');
+  const isCocktail = id.startsWith('cocktail-');
 
   document.getElementById('modal-hero').innerHTML =
     (d.img
-      ? '<img src="' + d.img + '" alt="' + title + '" style="width:100%;height:100%;object-fit:cover;">'
-      : '<span style="font-size:5rem">' + d.emoji + '</span>') +
-    '<button class="modal-close" onclick="closeModal()">✕</button>';
+      ? `<img src="${d.img}" alt="${title}" style="width:100%;height:100%;object-fit:cover;">`
+      : `<span style="font-size:5rem">${d.emoji || ''}</span>`) +
+    `<button class="modal-close" onclick="closeModal()">✕</button>`;
 
   let metaHtml = '';
-  meta.forEach(function(pair) {
-    metaHtml += '<div class="modal-meta"><strong>' + pair[0] + ':</strong> ' + pair[1] + '</div>';
+  (meta || []).forEach(([k, v]) => {
+    metaHtml += `<div class="modal-meta"><strong>${k}:</strong> ${v}</div>`;
   });
 
-  let html =
-    '<div class="modal-eyebrow">' + eyebrow + '</div>' +
-    '<h2 class="modal-title">' + title + '</h2>' +
-    '<div class="modal-meta-row">' + metaHtml + '</div>';
+  let html = `
+    <div class="modal-eyebrow">${eyebrow || ''}</div>
+    <h2 class="modal-title">${title || ''}</h2>
+    <div class="modal-meta-row">${metaHtml}</div>
+  `;
 
   if (!isTarot && !isBook && !isProj) {
     if (ingr && ingr.length) {
-      html += '<div class="modal-section-title">' + (isZh ? '配方' : 'Ingredients') + '</div><ul class="modal-list">';
-      ingr.forEach(function(item) {
-        html += '<li>' + item + '</li>';
+      html += `<div class="modal-section-title">${isZh ? '配方' : 'Ingredients'}</div><ul class="modal-list">`;
+      ingr.forEach(item => {
+        html += `<li>${item}</li>`;
       });
-      html += '</ul>';
+      html += `</ul>`;
     }
 
     if (steps && steps.length) {
-      html += '<div class="modal-section-title">' + (isCocktail ? (isZh ? '做法' : 'Method') : (isZh ? '步骤' : 'Steps')) + '</div><ol class="modal-list">';
-      steps.forEach(function(item) {
-        html += '<li>' + item + '</li>';
+      html += `<div class="modal-section-title">${
+        isCocktail ? (isZh ? '做法' : 'Method') : (isZh ? '步骤' : 'Steps')
+      }</div><ol class="modal-list">`;
+      steps.forEach(item => {
+        html += `<li>${item}</li>`;
       });
-      html += '</ol>';
+      html += `</ol>`;
     }
   }
 
   if (notes) {
-    html += '<div class="modal-section-title">' +
-      (isTarot ? (isZh ? '象征意义' : 'Symbolism / Meaning')
+    html += `<div class="modal-section-title">${
+      isTarot ? (isZh ? '象征意义' : 'Symbolism / Meaning')
       : isBook ? (isZh ? '笔记 / 摘录' : 'Notes / Excerpts')
       : isProj ? (isZh ? '说明' : 'Description')
-      : (isZh ? '注' : 'Notes')) +
-      '</div>';
+      : (isZh ? '注' : 'Notes')
+    }</div>`;
 
-    html += '<div class="modal-notes">' +
-      notes.replace(/\n/g, '<br>') +
-      '</div>';
+    html += `<div class="modal-notes">${notes.replace(/\n/g, '<br>')}</div>`;
   }
 
   document.getElementById('modal-content').innerHTML = html;
