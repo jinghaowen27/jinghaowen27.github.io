@@ -5,7 +5,10 @@ const isActive = (path: string) => currentPath === path ? "active" : "";
 
 <!-- Desktop: hidden. Mobile: sticky topbar with name + lang toggle -->
 <div id="topbar">
-  <span class="tb-name">Jinghao Wen</span>
+  <div class="tb-profile">
+    <img class="tb-avatar" src="/images/avatar/DC.jpg" alt="Jinghao Wen">
+    <span class="tb-name">Jinghao Wen</span>
+  </div>
   <div class="tb-lang">
     <button id="btn-en-top" class="on" onclick="setLang('en');this.classList.add('on');document.getElementById('btn-zh-top').classList.remove('on');">EN</button>
     <button id="btn-zh-top" onclick="setLang('zh');this.classList.add('on');document.getElementById('btn-en-top').classList.remove('on');">中文</button>
