@@ -38,6 +38,54 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
     </main>
 
     <script is:inline>
+      // 切换 selected / date / topic 三种视图
+      window.showPubView = function (page, view) {
+        const prefix = page === 'home' ? 'home' : 'full';
+      
+        // 隐藏所有视图
+        ['selected', 'date', 'topic'].forEach(v => {
+          const el = document.getElementById(`${prefix}-view-${v}`);
+          if (el) el.style.display = 'none';
+        });
+      
+        // 显示目标视图
+        const target = document.getElementById(`${prefix}-view-${view}`);
+        if (target) target.style.display = '';
+      
+        // 更新 active-toggle 样式（英文和中文两套）
+        ['', '-zh'].forEach(suffix => {
+          ['selected', 'date', 'topic'].forEach(v => {
+            const btn = document.getElementById(`${prefix}-${v === 'selected' ? 'sel' : v}${suffix}`);
+            if (btn) btn.classList.toggle('active-toggle', v === view);
+          });
+        });
+      
+        // 切换到 topic 视图时，取消所有 topic 过滤高亮
+        if (view === 'topic') {
+          document.querySelectorAll(`#${prefix}-view-topic .pub-topic-group`).forEach(g => {
+            g.style.display = '';
+          });
+          document.querySelectorAll(`#${prefix}-view-topic .topic-link`).forEach(l => {
+            l.classList.remove('active-toggle');
+          });
+        }
+      };
+      
+      // 按 topic 过滤，先切到 topic 视图再筛选
+      window.filterByTopic = function (page, topic) {
+        // 先切换到 topic 视图
+        window.showPubView(page, 'topic');
+      
+        const prefix = page === 'home' ? 'home' : 'full';
+        const topicView = document.getElementById(`${prefix}-view-topic`);
+        if (!topicView) return;
+      
+        // 显示/隐藏对应的 topic 分组
+        topicView.querySelectorAll('.pub-topic-group').forEach(g => {
+          g.style.display = g.id === `${prefix}-topic-${topic}` ? '' : 'none';
+        });
+      };
+
       window.setLang = function (lang) {
         const isZh = lang === 'zh';
     
