@@ -183,14 +183,20 @@ a{color:inherit;text-decoration:none;}
 .bk-more{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2);margin-top:.7rem;}
 
 /* ── PHOTOGRAPHY ── */
-.photo-topics{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.6rem;}
+.photo-filters{display:grid;gap:.75rem;margin-bottom:1.6rem;padding:1rem 1.1rem;border:1px solid var(--border);border-radius:8px;background:var(--tag);}
+.photo-filter-row{display:grid;grid-template-columns:5.8rem minmax(0,1fr);align-items:start;gap:.8rem;}
+.photo-filter-row[hidden]{display:none;}
+.photo-filter-label{padding-top:.35rem;font-size:.67rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.photo-topics{display:flex;gap:.5rem;flex-wrap:wrap;margin:0;}
 .photo-topic-btn{background:var(--tag);border:1px solid var(--border);padding:.3rem .85rem;border-radius:20px;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--muted);transition:all .2s;font-family:var(--sans);}
 .photo-topic-btn.on,.photo-topic-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
-.photo-grid{columns:3;gap:.7rem;}
-.photo-grid .photo-cell{break-inside:avoid;margin-bottom:.7rem;border-radius:5px;overflow:hidden;cursor:pointer;position:relative;}
-.photo-cell img,.photo-cell .photo-placeholder{width:100%;display:block;border-radius:5px;height:auto;max-height:420px;object-fit:cover;}
+.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;grid-auto-flow:row dense;}
+.photo-grid .photo-cell{min-width:0;border-radius:5px;overflow:hidden;cursor:pointer;position:relative;}
+.photo-grid .photo-cell[hidden]{display:none;}
+.photo-cell img,.photo-cell .photo-placeholder{width:100%;display:block;border-radius:5px;aspect-ratio:3/2;height:auto;object-fit:cover;}
 .photo-placeholder{background:var(--tag);min-height:120px;display:flex;align-items:center;justify-content:center;font-size:2rem;border:1px solid var(--border);}
-.photo-caption{font-size:.74rem;color:var(--muted);margin-top:.3rem;line-height:1.4;}
+.photo-caption{font-size:.74rem;color:var(--muted);margin:.38rem .1rem .1rem;line-height:1.4;}
+.photo-empty{padding:2.5rem 1rem;text-align:center;color:var(--muted);font-size:.86rem;border:1px dashed var(--border);border-radius:8px;}
 
 /* ── DETAIL MODAL ── */
 @keyframes modalIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
@@ -435,7 +441,9 @@ footer{padding:1.4rem 3.5rem;border-top:1px solid var(--border);font-size:.72rem
   .card-grid,.book-grid{grid-template-columns:1fr 1fr;}
 
   /* Photo */
-  .photo-grid{columns:2;}
+  .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .photo-filter-row{grid-template-columns:1fr;gap:.35rem;}
+  .photo-filter-label{padding-top:0;}
 
   /* Guitar */
   .guitar-item{flex-direction:column;align-items:flex-start;gap:.5rem;}

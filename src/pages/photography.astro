@@ -10,16 +10,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <p class="tarot-intro en">Moments collected along the way — museums, bars, streets, food, and light. A camera is just another way of paying attention.</p>
   <p class="tarot-intro zh" style="display:none">旅途中收集的片刻——博物馆、酒吧、街道、食物与光线。</p>
  
-  <div class="photo-topics">
-    <button class="photo-topic-btn on" onclick="filterPhoto(this,'all')"><span class="en">All</span><span class="zh" style="display:none">全部</span></button>
-    <button class="photo-topic-btn" onclick="filterPhoto(this,'street')"><span class="en">Street</span><span class="zh" style="display:none">街拍</span></button>
-    <button class="photo-topic-btn" onclick="filterPhoto(this,'nature')"><span class="en">Nature</span><span class="zh" style="display:none">自然</span></button>
-    <button class="photo-topic-btn" onclick="filterPhoto(this,'food')"><span class="en">Food</span><span class="zh" style="display:none">美食</span></button>
-    <button class="photo-topic-btn" onclick="filterPhoto(this,'travel')"><span class="en">Travel</span><span class="zh" style="display:none">旅行</span></button>
-    <button class="photo-topic-btn" onclick="filterPhoto(this,'museum')"><span class="en">Museum</span><span class="zh" style="display:none">博物馆</span></button>
-    <button class="photo-topic-btn" onclick="filterPhoto(this,'portrait')"><span class="en">Portrait</span><span class="zh" style="display:none">人像</span></button>
+  <div class="photo-filters" aria-label="Photography filters">
+    <div class="photo-filter-row">
+      <span class="photo-filter-label en">Medium</span><span class="photo-filter-label zh" style="display:none">媒介</span>
+      <div class="photo-topics" role="group" aria-label="Medium">
+        <button class="photo-topic-btn on" data-filter-group="medium" data-filter-value="all" onclick="setPhotographyFilter(this)"><span class="en">All</span><span class="zh" style="display:none">全部</span></button>
+        <button class="photo-topic-btn" data-filter-group="medium" data-filter-value="digital" onclick="setPhotographyFilter(this)"><span class="en">Digital</span><span class="zh" style="display:none">数码</span></button>
+        <button class="photo-topic-btn" data-filter-group="medium" data-filter-value="film" onclick="setPhotographyFilter(this)"><span class="en">Film</span><span class="zh" style="display:none">胶卷</span></button>
+      </div>
+    </div>
+
+    <div class="photo-filter-row">
+      <span class="photo-filter-label en">Subject</span><span class="photo-filter-label zh" style="display:none">题材</span>
+      <div class="photo-topics" role="group" aria-label="Subject">
+        <button class="photo-topic-btn on" data-filter-group="topic" data-filter-value="all" onclick="setPhotographyFilter(this)"><span class="en">All</span><span class="zh" style="display:none">全部</span></button>
+        <button class="photo-topic-btn" data-filter-group="topic" data-filter-value="street" onclick="setPhotographyFilter(this)"><span class="en">Street</span><span class="zh" style="display:none">街拍</span></button>
+        <button class="photo-topic-btn" data-filter-group="topic" data-filter-value="nature" onclick="setPhotographyFilter(this)"><span class="en">Nature</span><span class="zh" style="display:none">自然</span></button>
+        <button class="photo-topic-btn" data-filter-group="topic" data-filter-value="food" onclick="setPhotographyFilter(this)"><span class="en">Food</span><span class="zh" style="display:none">美食</span></button>
+        <button class="photo-topic-btn" data-filter-group="topic" data-filter-value="travel" onclick="setPhotographyFilter(this)"><span class="en">Travel</span><span class="zh" style="display:none">旅行</span></button>
+        <button class="photo-topic-btn" data-filter-group="topic" data-filter-value="museum" onclick="setPhotographyFilter(this)"><span class="en">Museum</span><span class="zh" style="display:none">博物馆</span></button>
+        <button class="photo-topic-btn" data-filter-group="topic" data-filter-value="portrait" onclick="setPhotographyFilter(this)"><span class="en">Portrait</span><span class="zh" style="display:none">人像</span></button>
+      </div>
+    </div>
+
+    <div class="photo-filter-row" id="film-stock-filter" hidden>
+      <span class="photo-filter-label en">Film stock</span><span class="photo-filter-label zh" style="display:none">胶卷型号</span>
+      <div class="photo-topics" id="film-stock-options" role="group" aria-label="Film stock"></div>
+    </div>
   </div>
 
+  <!-- Film photos: add data-medium="film" and data-film="Kodak Portra 400" to a photo-cell. -->
   <div class="photo-grid" id="photo-grid">
 
 
@@ -607,6 +627,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     
 
   </div>
+  <p class="photo-empty" id="photo-empty" hidden>
+    <span class="en">No photographs match these filters yet.</span>
+    <span class="zh" style="display:none">暂时没有符合这些筛选条件的照片。</span>
+  </p>
 </section>
 
 <!-- ── LIGHTBOX ── -->
@@ -772,7 +796,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     if(!cell.querySelector('img')) return;
     // Build list of currently visible cells that have images
     _cells = Array.from(document.querySelectorAll('.photo-cell'))
-      .filter(function(c){ return c.style.display !== 'none' && c.querySelector('img'); });
+      .filter(function(c){ return !c.hidden && c.querySelector('img'); });
     var idx = _cells.indexOf(cell);
     if(idx === -1) idx = 0;
     showLightbox(idx);
@@ -798,23 +822,69 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     if(e.key === 'ArrowLeft')  lightboxNav(e, -1);
   });
 
- // ── Photo filter ──
-  window.filterPhoto = function(btn, topic) {
-    // Update active button state
-    var btns = document.querySelectorAll('.photo-topic-btn');
-    btns.forEach(function(b) { b.classList.remove('on'); });
-    btn.classList.add('on');
+  // ── Composable medium / subject / film-stock filters ──
+  var photoFilters = { medium: 'all', topic: 'all', film: 'all' };
 
-    // Show/hide cells
-    var cells = document.querySelectorAll('.photo-cell');
-    cells.forEach(function(cell) {
-      if (topic === 'all' || cell.dataset.topic === topic) {
-        cell.style.display = '';
-      } else {
-        cell.style.display = 'none';
-      }
+  function applyPhotographyFilters(){
+    var visibleCount = 0;
+    document.querySelectorAll('#photo-grid .photo-cell').forEach(function(cell){
+      // Existing photos are digital unless explicitly marked as film.
+      var medium = cell.dataset.medium || 'digital';
+      var film = cell.dataset.film || '';
+      var matchesMedium = photoFilters.medium === 'all' || medium === photoFilters.medium;
+      var matchesTopic = photoFilters.topic === 'all' || cell.dataset.topic === photoFilters.topic;
+      var matchesFilm = photoFilters.medium !== 'film' || photoFilters.film === 'all' || film === photoFilters.film;
+      var isVisible = matchesMedium && matchesTopic && matchesFilm;
+      cell.hidden = !isVisible;
+      if(isVisible) visibleCount++;
     });
+
+    document.getElementById('photo-empty').hidden = visibleCount !== 0;
+    document.getElementById('film-stock-filter').hidden = photoFilters.medium !== 'film';
+  }
+
+  window.setPhotographyFilter = function(btn){
+    var group = btn.dataset.filterGroup;
+    var value = btn.dataset.filterValue;
+    photoFilters[group] = value;
+
+    document.querySelectorAll('[data-filter-group="' + group + '"]').forEach(function(filterBtn){
+      var selected = filterBtn === btn;
+      filterBtn.classList.toggle('on', selected);
+      filterBtn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+    applyPhotographyFilters();
   };
+
+  function makeFilmStockFilters(){
+    var container = document.getElementById('film-stock-options');
+    var names = Array.from(document.querySelectorAll('#photo-grid .photo-cell[data-medium="film"][data-film]'))
+      .map(function(cell){ return cell.dataset.film.trim(); })
+      .filter(Boolean)
+      .filter(function(name, index, all){ return all.indexOf(name) === index; });
+    var allButton = document.createElement('button');
+    allButton.className = 'photo-topic-btn on';
+    allButton.dataset.filterGroup = 'film';
+    allButton.dataset.filterValue = 'all';
+    allButton.setAttribute('aria-pressed', 'true');
+    allButton.innerHTML = '<span class="en">All film</span><span class="zh" style="display:none">全部胶卷</span>';
+    allButton.onclick = function(){ window.setPhotographyFilter(allButton); };
+    container.appendChild(allButton);
+
+    names.forEach(function(name){
+      var button = document.createElement('button');
+      button.className = 'photo-topic-btn';
+      button.dataset.filterGroup = 'film';
+      button.dataset.filterValue = name;
+      button.textContent = name;
+      button.setAttribute('aria-pressed', 'false');
+      button.onclick = function(){ window.setPhotographyFilter(button); };
+      container.appendChild(button);
+    });
+  }
+
+  makeFilmStockFilters();
+  applyPhotographyFilters();
 
 })();
 </script>
