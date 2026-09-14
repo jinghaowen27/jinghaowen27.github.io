@@ -41,10 +41,7 @@ content:
     type: file
     path: src/data/content/publications.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{titleEn} ({year})"
+    list: true
     fields:
       - { name: id, label: ID, type: string, required: true, description: "Unique; use lowercase letters, numbers and hyphens." }
       - { name: titleEn, label: English title, type: text, required: true }
@@ -87,10 +84,7 @@ content:
     type: file
     path: src/data/content/photography.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{captionEn}"
+    list: true
     fields:
       - { name: id, label: ID, type: string, required: true }
       - name: image
@@ -129,10 +123,7 @@ content:
     type: file
     path: src/data/content/cocktails.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{titleEn}"
+    list: true
     fields:
       - { name: id, label: ID, type: string, required: true }
       - name: image
@@ -191,10 +182,7 @@ content:
     type: file
     path: src/data/content/recipes.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{titleEn}"
+    list: true
     fields:
       - { name: id, label: ID, type: string, required: true }
       - name: image
