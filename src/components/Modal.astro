@@ -1,5 +1,7 @@
 ---
 import recipes from "../data/tarotData.js";
+import editableRecipes from "../data/content/recipes.json";
+import editableCocktails from "../data/content/cocktails.json";
 ---
 
 <footer>
@@ -14,7 +16,7 @@ import recipes from "../data/tarotData.js";
   </div>
 </div>
 
-<script define:vars={{ recipes }}>
+<script define:vars={{ recipes, editableRecipes, editableCocktails }}>
 const MODALS = {
   ...recipes,
   // RECIPES
@@ -627,6 +629,19 @@ function setLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 }
 
+// Records edited through Pages CMS override the legacy recipe/cocktail data above.
+[...editableRecipes, ...editableCocktails].filter((item) => item.published).forEach((item) => {
+  MODALS[item.id] = {
+    ...item.details,
+    img: item.details?.img || item.image,
+    emoji: item.details?.emoji || item.emoji,
+    titleEn: item.details?.titleEn || item.titleEn,
+    titleZh: item.details?.titleZh || item.titleZh,
+    eyebrowEn: item.details?.eyebrowEn || item.metaEn,
+    eyebrowZh: item.details?.eyebrowZh || item.metaZh
+  };
+});
+
 // ── Publications view toggle ─────────────────────────────────────────────────
 function showPubView(ctx, view) {
   ['selected', 'date', 'topic'].forEach(v => {
@@ -707,7 +722,8 @@ window.openModal = function (id) {
     `<button class="modal-close" onclick="closeModal()">✕</button>`;
 
   let metaHtml = '';
-  (meta || []).forEach(([k, v]) => {
+  (meta || []).forEach((entry) => {
+    const [k, v] = Array.isArray(entry) ? entry : [entry.label, entry.value];
     metaHtml += `<div class="modal-meta"><strong>${k}:</strong> ${v}</div>`;
   });
 

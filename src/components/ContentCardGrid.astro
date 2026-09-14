@@ -1,0 +1,35 @@
+---
+interface Props {
+  items: any[];
+  kind: 'cocktail' | 'recipe';
+}
+
+const { items, kind } = Astro.props;
+---
+
+<div class="card-grid">
+  {items.filter((item) => item.published).map((item) => (
+    <div class="card-item" onclick={`openModal('${item.id}')`}>
+      {item.image ? (
+        <div class="card-thumb"><img src={item.image} alt={item.titleEn} /></div>
+      ) : (
+        <div class="card-thumb"><div class="card-thumb-emoji">{item.emoji}</div></div>
+      )}
+      <div class="card-body">
+        <div class="card-meta en">{item.metaEn}</div><div class="card-meta zh" style="display:none">{item.metaZh}</div>
+        <div class="card-title en">{item.titleEn}</div><div class="card-title zh" style="display:none">{item.titleZh}</div>
+        <p class="card-desc en">{item.descriptionEn}</p><p class="card-desc zh" style="display:none">{item.descriptionZh}</p>
+        <div class="card-footer">
+          {(item.time || item.amount || item.flavorEn) ? (
+            <div class="card-stats">
+              {item.time && <span class="card-stat"><strong>{item.time}</strong></span>}
+              {kind === 'recipe' && item.amount && <span class="card-stat"><strong>{item.amount}</strong> <span class="en">servings</span><span class="zh" style="display:none">人份</span></span>}
+              {kind === 'cocktail' && item.flavorEn && <><span class="card-stat en">{item.flavorEn}</span><span class="card-stat zh" style="display:none">{item.flavorZh}</span></>}
+            </div>
+          ) : <><span class="card-arrow en">Read more →</span><span class="card-arrow zh" style="display:none">查看更多 →</span></>}
+          {item.rating && <span class="card-rating">{item.rating}</span>}
+        </div>
+      </div>
+    </div>
+  ))}
+</div>

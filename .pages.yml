@@ -1,0 +1,249 @@
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: add {name}"
+      update: "content: update {name}"
+      delete: "content: remove {name}"
+      rename: "content: rename {oldFilename} to {newFilename}"
+
+media:
+  - name: publication_images
+    label: Publication images
+    input: public/images/thumbnails
+    output: /images/thumbnails
+    categories: [image]
+    rename: safe
+  - name: photography_images
+    label: Photography images
+    input: public/images/photos
+    output: /images/photos
+    categories: [image]
+    rename: safe
+  - name: cocktail_images
+    label: Bartending images
+    input: public/images/photos/cocktails
+    output: /images/photos/cocktails
+    categories: [image]
+    rename: safe
+  - name: recipe_images
+    label: Recipe images
+    input: public/images/photos/foods
+    output: /images/photos/foods
+    categories: [image]
+    rename: safe
+
+content:
+  - name: publications
+    label: Publications / 论文
+    type: file
+    path: src/data/content/publications.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{titleEn} ({year})"
+    fields:
+      - { name: id, label: ID, type: string, required: true, description: "Unique; use lowercase letters, numbers and hyphens." }
+      - { name: titleEn, label: English title, type: text, required: true }
+      - { name: titleZh, label: 中文标题, type: text, required: true }
+      - { name: authorsEn, label: Authors (English), type: text, required: true, description: "You may wrap your name in <strong>...</strong>." }
+      - { name: authorsZh, label: 作者（中文）, type: text, required: true, description: "可用 <strong>...</strong> 加粗姓名。" }
+      - { name: venue, label: Venue and year / 期刊会议与年份, type: string, required: true }
+      - { name: year, label: Year / 年份, type: number, required: true }
+      - name: topic
+        label: Topic / 研究主题
+        type: select
+        required: true
+        options:
+          values:
+            - { name: robust, label: Robust AI }
+            - { name: efficient, label: Efficient AI }
+            - { name: hdc, label: Bio-inspired Computing }
+            - { name: medical, label: Medical AI }
+      - name: thumbnail
+        label: Thumbnail / 缩略图
+        type: image
+        required: true
+        options: { media: publication_images }
+      - name: links
+        label: Links / 链接
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - { name: label, label: Button label, type: string, required: true }
+          - { name: url, label: URL, type: string, required: true }
+      - { name: featured, label: Featured in selected view / 加入精选, type: boolean, default: false }
+      - { name: showOnHome, label: Show on Home / 在首页显示, type: boolean, default: false }
+      - { name: showOnPublications, label: Show on Publications / 在论文页显示, type: boolean, default: true }
+
+  - name: photography
+    label: Photography / 摄影
+    type: file
+    path: src/data/content/photography.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{captionEn}"
+    fields:
+      - { name: id, label: ID, type: string, required: true }
+      - name: image
+        label: Photo / 照片
+        type: image
+        required: true
+        options: { media: photography_images }
+      - { name: alt, label: Image description / 图片替代文字, type: string, required: true }
+      - { name: captionEn, label: English caption, type: string, required: true }
+      - { name: captionZh, label: 中文说明, type: string, required: true }
+      - name: medium
+        label: Medium / 媒介
+        type: select
+        required: true
+        options:
+          values:
+            - { name: digital, label: Digital / 数码 }
+            - { name: film, label: Film / 胶片 }
+      - { name: filmStock, label: Film stock / 胶卷型号, type: string, description: "Required for film photos; also include it at the end of both captions." }
+      - name: topic
+        label: Subject / 题材
+        type: select
+        required: true
+        options:
+          values:
+            - { name: street, label: Street / 街拍 }
+            - { name: nature, label: Nature / 自然 }
+            - { name: food, label: Food / 美食 }
+            - { name: travel, label: Travel / 旅行 }
+            - { name: museum, label: Museum / 博物馆 }
+            - { name: portrait, label: Portrait / 人像 }
+      - { name: published, label: Published / 显示, type: boolean, default: true }
+
+  - name: cocktails
+    label: Bartending / 调酒
+    type: file
+    path: src/data/content/cocktails.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{titleEn}"
+    fields:
+      - { name: id, label: ID, type: string, required: true }
+      - name: image
+        label: Card image / 卡片图片
+        type: image
+        options: { media: cocktail_images }
+      - { name: emoji, label: Emoji fallback, type: string }
+      - { name: metaEn, label: Card category (English), type: string, required: true }
+      - { name: metaZh, label: 卡片分类（中文）, type: string, required: true }
+      - { name: titleEn, label: English title, type: string, required: true }
+      - { name: titleZh, label: 中文标题, type: string, required: true }
+      - { name: descriptionEn, label: English summary, type: text, required: true }
+      - { name: descriptionZh, label: 中文简介, type: text, required: true }
+      - { name: time, label: Time / 时间, type: string }
+      - { name: amount, label: Servings / 份数, type: string }
+      - { name: flavorEn, label: Flavor (English), type: string }
+      - { name: flavorZh, label: 风味（中文）, type: string }
+      - { name: rating, label: Rating / 评分, type: string, description: "Example: ★★★★★" }
+      - { name: published, label: Published / 显示, type: boolean, default: true }
+      - name: details
+        label: Detail popup / 详情弹窗
+        type: object
+        fields:
+          - name: img
+            label: Hero image / 详情大图
+            type: image
+            options: { media: cocktail_images }
+          - { name: emoji, label: Hero emoji, type: string }
+          - { name: eyebrowEn, label: Detail category (English), type: string }
+          - { name: eyebrowZh, label: 详情分类（中文）, type: string }
+          - { name: titleEn, label: Detail title (English), type: string }
+          - { name: titleZh, label: 详情标题（中文）, type: string }
+          - name: metaEn
+            label: Facts (English)
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: value, label: Value, type: string }
+          - name: metaZh
+            label: 信息（中文）
+            type: object
+            list: true
+            fields:
+              - { name: label, label: 名称, type: string }
+              - { name: value, label: 内容, type: string }
+          - { name: ingrEn, label: Ingredients (English), type: text, list: true }
+          - { name: ingrZh, label: 配方（中文）, type: text, list: true }
+          - { name: stepsEn, label: Method (English), type: text, list: true }
+          - { name: stepsZh, label: 做法（中文）, type: text, list: true }
+          - { name: notesEn, label: Notes (English), type: text }
+          - { name: notesZh, label: 注释（中文）, type: text }
+
+  - name: recipes
+    label: Recipes / 菜谱
+    type: file
+    path: src/data/content/recipes.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{titleEn}"
+    fields:
+      - { name: id, label: ID, type: string, required: true }
+      - name: image
+        label: Card image / 卡片图片
+        type: image
+        options: { media: recipe_images }
+      - { name: emoji, label: Emoji fallback, type: string }
+      - { name: metaEn, label: Card category (English), type: string, required: true }
+      - { name: metaZh, label: 卡片分类（中文）, type: string, required: true }
+      - { name: titleEn, label: English title, type: string, required: true }
+      - { name: titleZh, label: 中文标题, type: string, required: true }
+      - { name: descriptionEn, label: English summary, type: text, required: true }
+      - { name: descriptionZh, label: 中文简介, type: text, required: true }
+      - { name: time, label: Time / 时间, type: string }
+      - { name: amount, label: Servings / 份数, type: string }
+      - { name: flavorEn, label: Flavor (English), type: string }
+      - { name: flavorZh, label: 风味（中文）, type: string }
+      - { name: rating, label: Rating / 评分, type: string, description: "Example: ★★★★★" }
+      - { name: published, label: Published / 显示, type: boolean, default: true }
+      - name: details
+        label: Detail popup / 详情弹窗
+        type: object
+        fields:
+          - name: img
+            label: Hero image / 详情大图
+            type: image
+            options: { media: recipe_images }
+          - { name: emoji, label: Hero emoji, type: string }
+          - { name: eyebrowEn, label: Detail category (English), type: string }
+          - { name: eyebrowZh, label: 详情分类（中文）, type: string }
+          - { name: titleEn, label: Detail title (English), type: string }
+          - { name: titleZh, label: 详情标题（中文）, type: string }
+          - name: metaEn
+            label: Facts (English)
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: value, label: Value, type: string }
+          - name: metaZh
+            label: 信息（中文）
+            type: object
+            list: true
+            fields:
+              - { name: label, label: 名称, type: string }
+              - { name: value, label: 内容, type: string }
+          - { name: ingrEn, label: Ingredients (English), type: text, list: true }
+          - { name: ingrZh, label: 配方（中文）, type: text, list: true }
+          - { name: stepsEn, label: Steps (English), type: text, list: true }
+          - { name: stepsZh, label: 步骤（中文）, type: text, list: true }
+          - { name: notesEn, label: Notes (English), type: text }
+          - { name: notesZh, label: 注释（中文）, type: text }

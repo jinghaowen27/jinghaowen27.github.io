@@ -1,0 +1,63 @@
+---
+import allPublications from '../data/content/publications.json';
+import PublicationCard from './PublicationCard.astro';
+
+interface Props {
+  context: 'home' | 'full';
+}
+
+const { context } = Astro.props;
+const isHome = context === 'home';
+const publications = allPublications
+  .filter((item) => isHome ? item.showOnHome : item.showOnPublications)
+  .sort((a, b) => b.year - a.year);
+const selected = publications.filter((item) => item.featured);
+const years = [...new Set(publications.map((item) => item.year))];
+const topics = [
+  { id: 'robust', en: 'Robust AI', zh: '鲁棒人工智能' },
+  { id: 'efficient', en: 'Efficient AI', zh: '高效人工智能' },
+  { id: 'hdc', en: 'Bio-inspired Computing', zh: '生物启发计算' },
+  { id: 'medical', en: 'Medical AI', zh: '医学人工智能' }
+];
+---
+
+<div class="pub-section-header">
+  {isHome ? (
+    <>
+      <h2 class="pub-main-title en">Publications <span class="pub-view-toggles">( <a onclick={`showPubView('${context}','selected')`} class="pub-toggle-link active-toggle" id={`${context}-sel`}>show selected</a> / <a onclick={`showPubView('${context}','date')`} class="pub-toggle-link" id={`${context}-date`}>show all by date</a> / <a onclick={`showPubView('${context}','topic')`} class="pub-toggle-link" id={`${context}-topic`}>show all by topic</a> )</span></h2>
+      <h2 class="pub-main-title zh" style="display:none">论文发表 <span class="pub-view-toggles">( <a onclick={`showPubView('${context}','selected')`} class="pub-toggle-link active-toggle" id={`${context}-sel-zh`}>精选</a> / <a onclick={`showPubView('${context}','date')`} class="pub-toggle-link" id={`${context}-date-zh`}>按时间</a> / <a onclick={`showPubView('${context}','topic')`} class="pub-toggle-link" id={`${context}-topic-zh`}>按主题</a> )</span></h2>
+    </>
+  ) : (
+    <>
+      <h1 class="pub-main-title en" style="font-size:1.9rem;margin-bottom:.5rem;">Publications <span class="pub-view-toggles">( <a onclick={`showPubView('${context}','selected')`} class="pub-toggle-link active-toggle" id={`${context}-sel`}>show selected</a> / <a onclick={`showPubView('${context}','date')`} class="pub-toggle-link" id={`${context}-date`}>show all by date</a> / <a onclick={`showPubView('${context}','topic')`} class="pub-toggle-link" id={`${context}-topic`}>show all by topic</a> )</span></h1>
+      <h1 class="pub-main-title zh" style="display:none;font-size:1.9rem;margin-bottom:.5rem;">论文发表 <span class="pub-view-toggles">( <a onclick={`showPubView('${context}','selected')`} class="pub-toggle-link active-toggle" id={`${context}-sel-zh`}>精选</a> / <a onclick={`showPubView('${context}','date')`} class="pub-toggle-link" id={`${context}-date-zh`}>按时间</a> / <a onclick={`showPubView('${context}','topic')`} class="pub-toggle-link" id={`${context}-topic-zh`}>按主题</a> )</span></h1>
+    </>
+  )}
+  <div class="pub-topics-line en"><strong>Topics:</strong> {topics.map((topic, index) => <>{index > 0 && ' / '}<a onclick={`filterByTopic('${context}','${topic.id}')`} class="topic-link">{topic.en}</a></>)}<span class="contrib-note">&nbsp;(*/†: indicates equal contribution.)</span></div>
+  <div class="pub-topics-line zh" style="display:none"><strong>研究主题：</strong> {topics.map((topic, index) => <>{index > 0 && ' / '}<a onclick={`filterByTopic('${context}','${topic.id}')`} class="topic-link">{topic.zh}</a></>)}<span class="contrib-note">（*/†：同等贡献）</span></div>
+</div>
+{!isHome && <div class="sec-rule" style="margin-top:1.2rem;"></div>}
+
+<div id={`${context}-view-selected`} class="pub-view">
+  {selected.map((publication) => <PublicationCard publication={publication} />)}
+</div>
+
+<div id={`${context}-view-date`} class="pub-view" style="display:none">
+  {years.map((year) => (
+    <div class="pub-year-group">
+      <div class="pub-year-label">{year}</div>
+      {publications.filter((item) => item.year === year).map((publication) => <PublicationCard publication={publication} />)}
+    </div>
+  ))}
+</div>
+
+<div id={`${context}-view-topic`} class="pub-view" style="display:none">
+  {topics.map((topic) => (
+    <div class="pub-topic-group" id={`${context}-topic-${topic.id}`}>
+      <div class="pub-topic-label"><span class="en">{topic.en}</span><span class="zh" style="display:none">{topic.zh}</span></div>
+      {publications.filter((item) => item.topic === topic.id).map((publication) => <PublicationCard publication={publication} />)}
+    </div>
+  ))}
+</div>
+
+{isHome && <a href="/publications" style="cursor:pointer;font-size:.77rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.3rem;margin-top:.8rem;"><span class="en">View full publication list →</span><span class="zh" style="display:none">查看完整论文列表 →</span></a>}

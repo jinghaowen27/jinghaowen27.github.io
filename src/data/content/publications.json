@@ -1,0 +1,214 @@
+[
+  {
+    "id": "publication-1",
+    "titleEn": "Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding",
+    "titleZh": "Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding",
+    "authorsEn": "Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+    "authorsZh": "Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+    "venue": "The European Chapter of the ACL (EACL), 2026",
+    "year": 2026,
+    "topic": "medical",
+    "thumbnail": "/images/thumbnails/Main-Graph.jpg",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2601.15482"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-2",
+    "titleEn": "Improving Efficiency and Reliability of Computer Vision Models in Real-World Deployment with MX Quantization",
+    "titleZh": "Improving Efficiency and Reliability of Computer Vision Models in Real-World Deployment with MX Quantization",
+    "authorsEn": "<strong>Jinghao Wen</strong>, Ruixuan Wang, Shaohuang Wang, Xun Jiao",
+    "authorsZh": "<strong>Jinghao Wen</strong>, Ruixuan Wang, Shaohuang Wang, Xun Jiao",
+    "venue": "The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026",
+    "year": 2026,
+    "topic": "robust",
+    "thumbnail": "/images/thumbnails/CVFI.png",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "#"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-3",
+    "titleEn": "Learning Fingerprints for Medical Time Series with Redundancy-Constrained Information Maximization",
+    "titleZh": "Learning Fingerprints for Medical Time Series with Redundancy-Constrained Information Maximization",
+    "authorsEn": "Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+    "authorsZh": "Huayu Li, ZhengXiao He, Xiwen Chen, Jingjing Wang, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+    "venue": "International Conference on Machine Learning (ICML), 2026",
+    "year": 2026,
+    "topic": "medical",
+    "thumbnail": "/images/thumbnails/ICML.png",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2605.00130"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-4",
+    "titleEn": "MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning",
+    "titleZh": "MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning",
+    "authorsEn": "<strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao",
+    "authorsZh": "<strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao",
+    "venue": "IEEE International Symposium on Circuits and Systems (ISCAS), 2026",
+    "year": 2026,
+    "topic": "efficient",
+    "thumbnail": "/images/thumbnails/MILEAM.jpg",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "#"
+      },
+      {
+        "label": "Slides",
+        "url": "#"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-5",
+    "titleEn": "Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems",
+    "titleZh": "Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems",
+    "authorsEn": "Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao",
+    "authorsZh": "Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao",
+    "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026",
+    "year": 2026,
+    "topic": "robust",
+    "thumbnail": "/images/thumbnails/train_distribution.jpg",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2601.15482"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-6",
+    "titleEn": "Revisiting Lottery Ticket Hypothesis: Toward Efficient and Robust Deep Neural Networks",
+    "titleZh": "Revisiting Lottery Ticket Hypothesis: Toward Efficient and Robust Deep Neural Networks",
+    "authorsEn": "Ruixuan Wang, <strong>Jinghao Wen</strong>, Xun Jiao",
+    "authorsZh": "Ruixuan Wang, <strong>Jinghao Wen</strong>, Xun Jiao",
+    "venue": "Proceedings of the Great Lakes Symposium on VLSI (GLSVLSI), 2026",
+    "year": 2026,
+    "topic": "robust",
+    "thumbnail": "/images/thumbnails/GLSVLSI.png",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://dl.acm.org/doi/full/10.1145/3787109.3815282"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-7",
+    "titleEn": "HDFlow: A Multi-layer Design and Evaluation Framework for Hyperdimensional Computing",
+    "titleZh": "HDFlow: A Multi-layer Design and Evaluation Framework for Hyperdimensional Computing",
+    "authorsEn": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Xun Jiao",
+    "authorsZh": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Xun Jiao",
+    "venue": "The International Joint Conference on Neural Networks (IJCNN), 2026",
+    "year": 2026,
+    "topic": "hdc",
+    "thumbnail": "/images/thumbnails/HDflow.png",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "#"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-8",
+    "titleEn": "Neuro-Symbolic AI vs. Vector Symbolic Architectures:\r\nLearning, Architecture and Reasoning",
+    "titleZh": "Neuro-Symbolic AI vs. Vector Symbolic Architectures:\r\nLearning, Architecture and Reasoning",
+    "authorsEn": "<strong>Jinghao Wen</strong>, Zhengxiao He, Shaohuang Wang, Xun Jiao",
+    "authorsZh": "<strong>Jinghao Wen</strong>, Zhengxiao He, Shaohuang Wang, Xun Jiao",
+    "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC), 2026",
+    "year": 2026,
+    "topic": "hdc",
+    "thumbnail": "/images/thumbnails/SMC.png",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "#"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-9",
+    "titleEn": "Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing",
+    "titleZh": "Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing",
+    "authorsEn": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao",
+    "authorsZh": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao",
+    "venue": "IEEE Biomedical Circuits and Systems Conference (BioCAS), 2025",
+    "year": 2025,
+    "topic": "hdc",
+    "thumbnail": "/images/thumbnails/HDCoin.jpg",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11327514"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  },
+  {
+    "id": "publication-10",
+    "titleEn": "A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment",
+    "titleZh": "A Comparative Study of Structured and Narrative EHR Data for 30-Day Readmission Risk Assessment",
+    "authorsEn": "<strong>Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li",
+    "authorsZh": "<strong>Zhengxiao He, Huayu Li, Siyuan Tian, <strong>Jinghao Wen</strong>, Geng Yuan, Ao Li",
+    "venue": "Electronics, 2025",
+    "year": 2025,
+    "topic": "medical",
+    "thumbnail": "/images/thumbnails/EHR_Data.jpg",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://www.mdpi.com/2079-9292/14/20/4033"
+      }
+    ],
+    "featured": true,
+    "showOnHome": true,
+    "showOnPublications": true
+  }
+]

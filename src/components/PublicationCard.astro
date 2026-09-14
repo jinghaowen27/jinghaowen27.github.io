@@ -1,0 +1,15 @@
+---
+const { publication } = Astro.props;
+---
+
+<div class="pub-item" data-topic={publication.topic} data-selected={publication.featured ? '1' : undefined}>
+  <img class="pub-thumb" src={publication.thumbnail} alt={publication.titleEn} />
+  <div class="pub-body">
+    <div class="pub-title en">{publication.titleEn}</div>
+    <div class="pub-title zh" style="display:none">{publication.titleZh}</div>
+    <div class="pub-authors en" set:html={publication.authorsEn}></div>
+    <div class="pub-authors zh" style="display:none" set:html={publication.authorsZh}></div>
+    <div class="pub-venue">{publication.venue}</div>
+    <div class="pub-links">{publication.links.map((link) => <a class="pub-link" href={link.url}>{link.label}</a>)}</div>
+  </div>
+</div>
