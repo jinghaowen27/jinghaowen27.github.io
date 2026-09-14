@@ -1,0 +1,89 @@
+{
+  "order": 3,
+  "id": "recipe-roastduck",
+  "image": "/images/photos/foods/烤鸭.jpg",
+  "emoji": "🦆",
+  "metaEn": "Beijing · Main",
+  "metaZh": "京式 · 主菜",
+  "titleEn": "Roast Duck",
+  "titleZh": "烤鸭",
+  "descriptionEn": "Air-dried overnight, honey-glazed, oven-roasted. Crispy skin is the whole point.",
+  "descriptionZh": "隔夜风干、蜂蜜上色、烤箱烘制。脆皮是一切的意义所在。",
+  "time": "overnight + 2h",
+  "amount": "4",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🦆",
+    "eyebrowEn": "Beijing · Main · 4 servings",
+    "eyebrowZh": "京式 · 主菜 · 4人份",
+    "titleEn": "Roast Duck",
+    "titleZh": "烤鸭",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "Overnight + 2h"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Advanced"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "隔夜 + 2小时"
+      },
+      {
+        "label": "难度",
+        "value": "高级"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1</strong> whole duck (2–2.5kg)",
+      "<strong>3 tbsp</strong> honey",
+      "<strong>2 tbsp</strong> soy sauce",
+      "<strong>1 tbsp</strong> Shaoxing wine",
+      "<strong>1 tsp</strong> five-spice powder",
+      "<strong>1 tbsp</strong> maltose (or extra honey)",
+      "<strong>2 tbsp</strong> rice vinegar",
+      "Hoisin sauce, spring onion, cucumber, thin pancakes — for serving"
+    ],
+    "ingrZh": [
+      "<strong>1只</strong> 整鸭（2–2.5kg）",
+      "<strong>3汤匙</strong> 蜂蜜",
+      "<strong>2汤匙</strong> 生抽",
+      "<strong>1汤匙</strong> 绍兴酒",
+      "<strong>1茶匙</strong> 五香粉",
+      "<strong>1汤匙</strong> 麦芽糖（或额外蜂蜜）",
+      "<strong>2汤匙</strong> 米醋",
+      "甜面酱、葱丝、黄瓜条、薄饼——配餐用"
+    ],
+    "stepsEn": [
+      "Blanch the whole duck in boiling water 2 min. Pat completely dry. Mix honey, maltose, rice vinegar — brush all over the duck. Air-dry uncovered in the fridge overnight (minimum 12h). The skin must be completely dry.",
+      "Remove from fridge 1 hour before cooking. Preheat oven to 200°C.",
+      "Mix soy sauce, Shaoxing wine and five-spice. Brush inside the cavity. Truss the duck with the cavity sealed.",
+      "Place breast-side up on a rack over a roasting tray. Roast 30 min, then reduce to 180°C and roast another 60–75 min, basting with honey every 20 min.",
+      "Rest 15 min. Carve in thin slices — skin and meat together. Serve with pancakes, hoisin, spring onion and cucumber."
+    ],
+    "stepsZh": [
+      "整鸭放入沸水焯2分钟，完全拍干。将蜂蜜、麦芽糖、米醋混合，刷遍全鸭，不加盖放入冰箱风干隔夜（至少12小时），鸭皮必须完全干燥。",
+      "烹制前1小时从冰箱取出，预热烤箱至200°C。",
+      "生抽、绍兴酒、五香粉混合，刷在鸭腹内，将鸭腹开口封住并绑好。",
+      "鸭胸朝上放烤架，下垫烤盘，烤30分钟后降至180°C再烤60-75分钟，每20分钟刷一次蜂蜜。",
+      "静置15分钟，片成薄片——皮肉一起，配薄饼、甜面酱、葱丝和黄瓜条食用。"
+    ],
+    "notesEn": "The overnight air-dry is non-negotiable. Moisture is the enemy of crispy skin. The basting creates the lacquered finish. If you have a bicycle pump, inflate the skin from the neck before air-drying — it separates skin from fat and is worth the effort.",
+    "notesZh": "隔夜风干不可省略，水分是脆皮的敌人。反复刷蜜制造漆亮表皮。如果有打气筒，风干前从颈部给鸭皮充气——这能将皮与脂肪分离，值得那点麻烦。"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "order": 2,
+  "id": "publication-2",
+  "titleEn": "Improving Efficiency and Reliability of Computer Vision Models in Real-World Deployment with MX Quantization",
+  "titleZh": "Improving Efficiency and Reliability of Computer Vision Models in Real-World Deployment with MX Quantization",
+  "authorsEn": "<strong>Jinghao Wen</strong>, Ruixuan Wang, Shaohuang Wang, Xun Jiao",
+  "authorsZh": "<strong>Jinghao Wen</strong>, Ruixuan Wang, Shaohuang Wang, Xun Jiao",
+  "venue": "The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026",
+  "year": 2026,
+  "topic": "robust",
+  "thumbnail": "/images/thumbnails/CVFI.png",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "#"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

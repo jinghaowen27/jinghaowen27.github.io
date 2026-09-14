@@ -1,0 +1,91 @@
+{
+  "order": 6,
+  "id": "recipe-mouthwater",
+  "image": "",
+  "emoji": "🍗",
+  "metaEn": "Sichuan · Cold Dish",
+  "metaZh": "川味 · 凉菜",
+  "titleEn": "Mouthwatering Chicken",
+  "titleZh": "口水鸡",
+  "descriptionEn": "Poached chicken, Sichuan chili oil, numbing peppercorns, sesame paste. Cold and alive.",
+  "descriptionZh": "白斩鸡、四川辣椒油、花椒、芝麻酱。凉而鲜活。",
+  "time": "45min",
+  "amount": "3",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🍗",
+    "eyebrowEn": "Sichuan · Cold Dish · 3 servings",
+    "eyebrowZh": "川味 · 凉菜 · 3人份",
+    "titleEn": "Mouthwatering Chicken",
+    "titleZh": "口水鸡",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "45 min"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Easy–Medium"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "45分钟"
+      },
+      {
+        "label": "难度",
+        "value": "简单-中等"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1</strong> whole chicken (or 4 bone-in thighs)",
+      "<strong>3 tbsp</strong> Sichuan chili oil",
+      "<strong>1 tbsp</strong> sesame paste",
+      "<strong>1 tbsp</strong> soy sauce",
+      "<strong>1 tbsp</strong> black vinegar",
+      "<strong>1 tsp</strong> Sichuan peppercorn oil",
+      "<strong>1 tsp</strong> sugar",
+      "<strong>2 cloves</strong> garlic, minced",
+      "<strong>1 tsp</strong> ginger, minced",
+      "Toasted sesame seeds, spring onion, coriander to finish"
+    ],
+    "ingrZh": [
+      "<strong>1只</strong> 整鸡（或4块带骨鸡腿）",
+      "<strong>3汤匙</strong> 四川辣椒油",
+      "<strong>1汤匙</strong> 芝麻酱",
+      "<strong>1汤匙</strong> 生抽",
+      "<strong>1汤匙</strong> 黑醋",
+      "<strong>1茶匙</strong> 花椒油",
+      "<strong>1茶匙</strong> 糖",
+      "<strong>2瓣</strong> 蒜，剁末",
+      "<strong>1茶匙</strong> 生姜末",
+      "熟芝麻、葱花、香菜收尾"
+    ],
+    "stepsEn": [
+      "Bring a large pot of water to a boil with ginger and spring onion. Add chicken. When it returns to a boil, reduce to the lowest possible simmer. Poach 20–25 min — the water should barely move.",
+      "Remove chicken and immediately submerge in ice water for 10 min. This gives the skin its characteristic silky texture.",
+      "While chicken chills, whisk together chili oil, sesame paste, soy sauce, vinegar, peppercorn oil, sugar, garlic and ginger. Taste — it should be spicy, numbing, sour and slightly sweet simultaneously.",
+      "Chop chicken through the bone into bite-sized pieces. Arrange on a plate. Pour sauce generously over. Finish with sesame seeds, spring onion and coriander."
+    ],
+    "stepsZh": [
+      "大锅加水，放姜片和葱段，大火烧开。放入鸡，再次沸腾后转至最小火，保持几乎不动的水温，焖煮20-25分钟。",
+      "取出鸡，立即放入冰水中浸泡10分钟——这赋予鸡皮标志性的爽滑质感。",
+      "鸡浸冰水时，将辣椒油、芝麻酱、生抽、醋、花椒油、糖、蒜末和姜末调匀。品尝——应该同时辣、麻、酸、微甜。",
+      "鸡带骨斩成小块，摆盘，大量浇上酱汁，撒芝麻、葱花和香菜收尾。"
+    ],
+    "notesEn": "The ice bath is not optional — it is what makes this dish. The contrast between the warm sauce and the cold chicken, the numbing pepper and the bright vinegar, the silk of the skin and the richness of the sesame — this dish is about contrast.",
+    "notesZh": "冰水浴不可省略——这正是这道菜的精髓。温热酱汁与冰凉鸡肉的对比，花椒的麻与醋的爽的对比，鸡皮的爽滑与芝麻酱的浓郁的对比——这道菜的一切都关乎对比。"
+  }
+}

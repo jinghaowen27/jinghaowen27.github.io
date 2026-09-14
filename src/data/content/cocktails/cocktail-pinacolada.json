@@ -1,0 +1,89 @@
+{
+  "order": 8,
+  "id": "cocktail-pinacolada",
+  "image": "/images/photos/cocktails/Pina Colada.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Blended / Shaken",
+  "metaZh": "经典 · 搅拌/摇制",
+  "titleEn": "Piña Colada",
+  "titleZh": "椰林飘香",
+  "descriptionEn": "White rum, coconut cream, pineapple juice. Puerto Rico's national drink. Sunshine in a glass.",
+  "descriptionZh": "白朗姆、椰浆、菠萝汁。波多黎各的国民饮品。一杯阳光。",
+  "time": "5min",
+  "amount": "",
+  "flavorEn": "Tropical",
+  "flavorZh": "热带风情",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Pina Colada.jpg",
+    "eyebrowEn": "Classic · Blended / Shaken · ABV ~13%",
+    "eyebrowZh": "经典 · 搅拌/摇制 · 酒精度约13%",
+    "titleEn": "Piña Colada",
+    "titleZh": "椰林飘香",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Blended or shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Hurricane or coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Blended with ice or shaken"
+      },
+      {
+        "label": "Garnish",
+        "value": "Pineapple wedge + cherry"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "搅拌机或摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "飓风杯或碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "与冰同打或摇制"
+      },
+      {
+        "label": "装饰",
+        "value": "菠萝角+樱桃"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2 oz (60ml)</strong> White rum",
+      "<strong>1.5 oz (45ml)</strong> Coconut cream (Coco López recommended)",
+      "<strong>2 oz (60ml)</strong> Fresh pineapple juice",
+      "<strong>1 cup</strong> Ice (for blending)"
+    ],
+    "ingrZh": [
+      "<strong>2 oz (60ml)</strong> 白朗姆酒",
+      "<strong>1.5 oz (45ml)</strong> 椰浆（推荐Coco López）",
+      "<strong>2 oz (60ml)</strong> 新鲜菠萝汁",
+      "<strong>1杯</strong> 冰块（用于搅拌）"
+    ],
+    "stepsEn": [
+      "Combine rum, coconut cream, pineapple juice, and ice in a blender.",
+      "Blend until completely smooth — about 30 seconds. No chunks.",
+      "Pour into a chilled hurricane glass or coupe.",
+      "Garnish with a pineapple wedge and a cherry. A paper umbrella is not optional — it is mandatory.",
+      "Alternatively: shake all ingredients hard with ice for 15 seconds and double-strain for a lighter, less frozen version."
+    ],
+    "stepsZh": [
+      "将朗姆酒、椰浆、菠萝汁和冰块放入搅拌机。",
+      "搅拌至完全顺滑，约30秒，不能有冰块颗粒。",
+      "倒入冰镇飓风杯或碟形杯。",
+      "用菠萝角和樱桃装饰。小纸伞不是可选的——是必须的。",
+      "备选：所有材料加冰大力摇15秒，双重过滤，口感更轻盈不那么冰冻。"
+    ],
+    "notesEn": "Invented in 1954 at the Caribe Hilton in San Juan, Puerto Rico, by bartender Ramón \"Monchito\" Marrero. It took him three months to perfect the recipe. Puerto Rico declared it the national drink in 1978. The blended version is the classic; the shaken version is what you make when you don't own a blender and have no regrets about it.",
+    "notesZh": "1954年由调酒师拉蒙·\"蒙奇托\"·马雷罗在波多黎各圣胡安的加勒比希尔顿发明，历时三个月打磨配方。1978年被波多黎各定为国饮。搅拌机版本是经典做法；摇制版本是当你没有搅拌机时的选择，同样毫无遗憾。"
+  }
+}

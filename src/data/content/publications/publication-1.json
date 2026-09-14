@@ -1,0 +1,25 @@
+{
+  "order": 1,
+  "id": "publication-1",
+  "titleEn": "Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding",
+  "titleZh": "Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding",
+  "authorsEn": "Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+  "authorsZh": "Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+  "venue": "The European Chapter of the ACL (EACL), 2026",
+  "year": 2026,
+  "topic": "medical",
+  "thumbnail": "/images/thumbnails/Main-Graph.jpg",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2601.15482"
+    },
+    {
+      "label": "Code",
+      "url": "https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

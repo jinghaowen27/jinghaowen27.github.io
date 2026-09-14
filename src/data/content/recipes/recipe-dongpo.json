@@ -1,0 +1,89 @@
+{
+  "order": 9,
+  "id": "recipe-dongpo",
+  "image": "",
+  "emoji": "🍖",
+  "metaEn": "Hangzhou · Braised",
+  "metaZh": "杭帮 · 红烧",
+  "titleEn": "Dongpo Pork",
+  "titleZh": "东坡肉",
+  "descriptionEn": "Su Dongpo's recipe, unchanged for a thousand years. Three hours, Shaoxing wine, patience.",
+  "descriptionZh": "苏东坡的方子，千年未变。三小时、绍兴酒、耐心。",
+  "time": "3h",
+  "amount": "4",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🍖",
+    "eyebrowEn": "Hangzhou · Braised · 4 servings",
+    "eyebrowZh": "杭帮 · 红烧 · 4人份",
+    "titleEn": "Dongpo Pork",
+    "titleZh": "东坡肉",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "3h total"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Easy (time-intensive)"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "共3小时"
+      },
+      {
+        "label": "难度",
+        "value": "简单（耗时）"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1kg</strong> pork belly, skin-on, cut into 6cm squares",
+      "<strong>150ml</strong> Shaoxing wine",
+      "<strong>3 tbsp</strong> dark soy sauce",
+      "<strong>2 tbsp</strong> soy sauce",
+      "<strong>3 tbsp</strong> rock sugar",
+      "<strong>4</strong> spring onions, tied in knots",
+      "<strong>6 slices</strong> ginger"
+    ],
+    "ingrZh": [
+      "<strong>1kg</strong> 带皮五花肉，切6cm方块",
+      "<strong>150ml</strong> 绍兴酒",
+      "<strong>3汤匙</strong> 老抽",
+      "<strong>2汤匙</strong> 生抽",
+      "<strong>3汤匙</strong> 冰糖",
+      "<strong>4根</strong> 葱，打结",
+      "<strong>6片</strong> 生姜"
+    ],
+    "stepsEn": [
+      "Blanch pork belly 5 min. Remove and score the skin lightly in a crosshatch.",
+      "In a clay pot or Dutch oven, lay spring onions and ginger as a bed. Place pork on top, skin-side down.",
+      "Pour Shaoxing wine, both soy sauces over the pork. Add rock sugar. Do not add water — the wine is the liquid.",
+      "Bring to a boil, cover tightly with foil then the lid. Reduce to the lowest possible simmer. Cook 1.5 hours.",
+      "Flip pork skin-side up. Continue cooking covered another 1 hour. Uncover and reduce sauce until glossy.",
+      "Serve in the clay pot. The skin should be trembling and the fat completely translucent."
+    ],
+    "stepsZh": [
+      "五花肉焯水5分钟，取出，在猪皮上轻划十字花刀。",
+      "砂锅或铸铁锅底铺葱结和姜片，猪肉皮朝下放在上面。",
+      "淋入绍兴酒和两种酱油，放入冰糖，不加水——酒就是液体。",
+      "大火烧开，用锡纸封紧再盖上锅盖，转最小火，焖1.5小时。",
+      "将猪肉翻至皮朝上，继续盖锅焖1小时，开盖大火收汁至亮泽。",
+      "连砂锅上桌。猪皮应该是颤抖的，肥肉应完全呈半透明状。"
+    ],
+    "notesEn": "Shaoxing wine, not water. This is the whole secret. Su Dongpo supposedly invented this dish while exiled in Hangzhou, feeding it to the workers who helped him build a lake causeway. A dish with a story that old deserves respect.",
+    "notesZh": "用绍兴酒，不用水——这是全部的秘密。据说苏东坡被贬杭州时发明了这道菜，用来犒劳帮他修建堤坝的工人。一道有着这么久远故事的菜，值得敬重。"
+  }
+}

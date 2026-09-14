@@ -1,0 +1,95 @@
+{
+  "order": 5,
+  "id": "cocktail-hottoddy",
+  "image": "/images/photos/cocktails/Tom Toddy process.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Built · Hot",
+  "metaZh": "经典 · 直调 · 热饮",
+  "titleEn": "Hot Toddy",
+  "titleZh": "热托蒂",
+  "descriptionEn": "Whisky, honey, lemon, hot water. The only cocktail that works as medicine.",
+  "descriptionZh": "威士忌、蜂蜜、柠檬、热水。唯一能当药喝的鸡尾酒。",
+  "time": "3min",
+  "amount": "",
+  "flavorEn": "Warming",
+  "flavorZh": "暖身",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Tom Toddy.jpg",
+    "eyebrowEn": "Classic · Built · Hot · ABV ~14%",
+    "eyebrowZh": "经典 · 直调 · 热饮 · 酒精度约14%",
+    "titleEn": "Hot Toddy",
+    "titleZh": "热托蒂",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Built (hot)"
+      },
+      {
+        "label": "Glass",
+        "value": "Heat-proof mug or glass"
+      },
+      {
+        "label": "Ice",
+        "value": "None — it is a hot drink"
+      },
+      {
+        "label": "Garnish",
+        "value": "Lemon wheel + cinnamon stick"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "直调（热饮）"
+      },
+      {
+        "label": "酒杯",
+        "value": "耐热马克杯或玻璃杯"
+      },
+      {
+        "label": "冰块",
+        "value": "无——这是热饮"
+      },
+      {
+        "label": "装饰",
+        "value": "柠檬片+肉桂棒"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1.5 oz (45ml)</strong> Whisky (Scotch, Irish, or Bourbon — all work)",
+      "<strong>1 tbsp</strong> Honey (raw, if possible)",
+      "<strong>½ oz (15ml)</strong> Fresh lemon juice",
+      "<strong>4–5 oz</strong> Hot water (just off the boil)",
+      "<strong>1</strong> cinnamon stick",
+      "<strong>2</strong> whole cloves (optional)"
+    ],
+    "ingrZh": [
+      "<strong>1.5 oz (45ml)</strong> 威士忌（苏格兰、爱尔兰或波本均可）",
+      "<strong>1汤匙</strong> 蜂蜜（尽量用原蜜）",
+      "<strong>½ oz (15ml)</strong> 新鲜柠檬汁",
+      "<strong>4-5 oz</strong> 热水（刚煮沸后稍凉）",
+      "<strong>1根</strong> 肉桂棒",
+      "<strong>2颗</strong> 丁香（可选）"
+    ],
+    "stepsEn": [
+      "Warm your mug first by filling it with hot water for a minute, then discard the water.",
+      "Add honey to the warm mug and pour a small amount of hot water over it to dissolve.",
+      "Add whisky and lemon juice.",
+      "Top with hot water. Stir gently.",
+      "Add cinnamon stick and cloves. Garnish with a lemon wheel studded with cloves.",
+      "Let it steep for 1 minute before drinking — the cinnamon opens up."
+    ],
+    "stepsZh": [
+      "先用热水温杯一分钟，倒掉热水。",
+      "将蜂蜜放入温热的杯中，倒入少量热水溶解。",
+      "加入威士忌和柠檬汁。",
+      "注入热水，轻轻搅拌。",
+      "放入肉桂棒和丁香，用插了丁香的柠檬片装饰。",
+      "饮用前静置1分钟——肉桂香气会充分散发。"
+    ],
+    "notesEn": "Genuinely medicinal — the warmth opens blood vessels, honey soothes, lemon has vitamin C, and whisky makes you not care about the cold. My go-to for winter evenings or the first sign of illness. Irish whiskey is traditional; I prefer a smoky Scotch for more depth.",
+    "notesZh": "货真价实的药用效果——温热扩张血管，蜂蜜润喉，柠檬含维C，而威士忌让你不再在乎寒冷。我在冬夜或初显病兆时的首选。爱尔兰威士忌是传统选择；我更偏好烟熏苏格兰威士忌，层次更深。"
+  }
+}

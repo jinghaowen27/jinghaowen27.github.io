@@ -1,0 +1,93 @@
+{
+  "order": 8,
+  "id": "recipe-hunanbelly",
+  "image": "",
+  "emoji": "🍲",
+  "metaEn": "Hunan · Braised",
+  "metaZh": "湘式 · 红烧",
+  "titleEn": "Hunan Red-Braised Pork",
+  "titleZh": "湘式红烧肉",
+  "descriptionEn": "Doubanjiang, dried chilies, and dark soy. Spicier and more aggressive than Shanghainese.",
+  "descriptionZh": "豆瓣酱、干辣椒、老抽。比上海红烧肉更辣、更烈。",
+  "time": "2.5h",
+  "amount": "4",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🍲",
+    "eyebrowEn": "Hunan · Braised · 4 servings",
+    "eyebrowZh": "湘式 · 红烧 · 4人份",
+    "titleEn": "Hunan Red-Braised Pork",
+    "titleZh": "湘式红烧肉",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "2.5h total"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Easy (time-intensive)"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "共2.5小时"
+      },
+      {
+        "label": "难度",
+        "value": "简单（耗时）"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>800g</strong> pork belly, skin-on",
+      "<strong>4</strong> dried red chilies",
+      "<strong>1 tbsp</strong> doubanjiang (spicy bean paste)",
+      "<strong>3 tbsp</strong> dark soy sauce",
+      "<strong>1 tbsp</strong> soy sauce",
+      "<strong>2 tbsp</strong> Shaoxing wine",
+      "<strong>2 tbsp</strong> rock sugar",
+      "<strong>3 slices</strong> ginger",
+      "<strong>2</strong> star anise",
+      "<strong>1</strong> cinnamon stick"
+    ],
+    "ingrZh": [
+      "<strong>800g</strong> 带皮五花肉",
+      "<strong>4根</strong> 干红辣椒",
+      "<strong>1汤匙</strong> 豆瓣酱",
+      "<strong>3汤匙</strong> 老抽",
+      "<strong>1汤匙</strong> 生抽",
+      "<strong>2汤匙</strong> 绍兴酒",
+      "<strong>2汤匙</strong> 冰糖",
+      "<strong>3片</strong> 生姜",
+      "<strong>2颗</strong> 八角",
+      "<strong>1根</strong> 肉桂"
+    ],
+    "stepsEn": [
+      "Blanch pork belly 5 min. Drain and cut into 4cm cubes.",
+      "In a wok, melt rock sugar to amber caramel. Add pork and toss to coat.",
+      "Add doubanjiang and stir-fry 1 min. Add dried chilies, ginger, star anise, cinnamon, both soy sauces and Shaoxing wine.",
+      "Add boiling water to just cover. Bring to a boil, reduce to low. Braise 1.5–2 hours, checking occasionally.",
+      "Uncover and increase heat. Reduce sauce until thick and glossy. The fat should be translucent."
+    ],
+    "stepsZh": [
+      "五花肉焯水5分钟，切成4cm块。",
+      "炒锅融化冰糖至琥珀色焦糖，放入猪肉翻拌上色。",
+      "加豆瓣酱翻炒1分钟，放入干辣椒、姜片、八角、肉桂、两种酱油和绍兴酒。",
+      "加沸水刚好没过，大火烧开转小火，焖煮1.5-2小时，偶尔查看。",
+      "开盖大火收汁至浓稠发亮，肥肉应呈半透明状。"
+    ],
+    "notesEn": "The difference between Hunan and Shanghai versions is doubanjiang and dried chili — the Hunan version has an edge, a heat that cuts through the fat. Chairman Mao allegedly ate this for breakfast. I believe it.",
+    "notesZh": "湘式与上海版的区别在于豆瓣酱和干辣椒——湘式带着锋芒，一股穿透肥腻的辣。据说毛主席把这道菜当早餐吃，我信。"
+  }
+}

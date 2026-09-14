@@ -1,0 +1,25 @@
+{
+  "order": 5,
+  "id": "publication-5",
+  "titleEn": "Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems",
+  "titleZh": "Beyond Sampling: Classwise Loss Optimization for Imbalanced Deep Learning Recommendation Systems",
+  "authorsEn": "Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao",
+  "authorsZh": "Xulei Zhang*, <strong>Jinghao Wen*</strong>, Xun Jiao",
+  "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026",
+  "year": 2026,
+  "topic": "robust",
+  "thumbnail": "/images/thumbnails/train_distribution.jpg",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2601.15482"
+    },
+    {
+      "label": "Code",
+      "url": "https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

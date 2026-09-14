@@ -1,0 +1,97 @@
+{
+  "order": 3,
+  "id": "cocktail-ramos",
+  "image": "/images/photos/cocktails/Ramos Gin Fizz.jpg",
+  "emoji": "",
+  "metaEn": "New Orleans Classic · Shaken",
+  "metaZh": "新奥尔良经典 · 摇制",
+  "titleEn": "Ramos Gin Fizz",
+  "titleZh": "拉莫斯金菲仕",
+  "descriptionEn": "Gin, citrus, cream, egg white, orange blossom water. The 12-minute shake cocktail.",
+  "descriptionZh": "金酒、柑橘、奶油、蛋白、橙花水。需要摇12分钟的鸡尾酒。",
+  "time": "15min",
+  "amount": "",
+  "flavorEn": "Creamy",
+  "flavorZh": "奶香",
+  "rating": "★★★☆☆",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Ramos Gin Fizz.jpg",
+    "eyebrowEn": "New Orleans Classic · Shaken · ABV ~14%",
+    "eyebrowZh": "新奥尔良经典 · 摇制 · 酒精度约14%",
+    "titleEn": "Ramos Gin Fizz",
+    "titleZh": "拉莫斯金菲仕",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Long shake + soda"
+      },
+      {
+        "label": "Glass",
+        "value": "Collins glass"
+      },
+      {
+        "label": "Ice",
+        "value": "Shake with ice, serve no ice"
+      },
+      {
+        "label": "Garnish",
+        "value": "None — let the foam speak"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "长时摇制+苏打水"
+      },
+      {
+        "label": "酒杯",
+        "value": "柯林斯杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰摇制，无冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "无——让泡沫说话"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1.5 oz (45ml)</strong> London Dry Gin",
+      "<strong>½ oz (15ml)</strong> Fresh lemon juice",
+      "<strong>½ oz (15ml)</strong> Fresh lime juice",
+      "<strong>¾ oz (22ml)</strong> Simple syrup",
+      "<strong>1 oz (30ml)</strong> Heavy cream",
+      "<strong>1</strong> egg white",
+      "<strong>3 drops</strong> Orange blossom water",
+      "<strong>2 oz (60ml)</strong> Chilled soda water"
+    ],
+    "ingrZh": [
+      "<strong>1.5 oz (45ml)</strong> 伦敦干金酒",
+      "<strong>½ oz (15ml)</strong> 新鲜柠檬汁",
+      "<strong>½ oz (15ml)</strong> 新鲜青柠汁",
+      "<strong>¾ oz (22ml)</strong> 简单糖浆",
+      "<strong>1 oz (30ml)</strong> 淡奶油",
+      "<strong>1个</strong> 蛋白",
+      "<strong>3滴</strong> 橙花水",
+      "<strong>2 oz (60ml)</strong> 冷藏苏打水"
+    ],
+    "stepsEn": [
+      "Combine all ingredients except soda in a shaker without ice. Dry shake for at least 2 minutes — traditionally 12. The longer, the better the foam.",
+      "Add ice and shake another 5 minutes if you can manage it. Your arms will ache. This is the point.",
+      "Strain into a chilled Collins glass with no ice.",
+      "Slowly pour soda water down the side of the glass. The foam will rise dramatically above the rim.",
+      "Serve immediately. Do not garnish. The foam pillow above the glass rim is the presentation."
+    ],
+    "stepsZh": [
+      "将所有材料（除苏打水）放入摇壶，不加冰，干摇至少2分钟——传统要求12分钟。摇得越久，泡沫越好。",
+      "如果能坚持，加入冰块再摇5分钟。手臂会酸痛，这是意义所在。",
+      "滤入无冰的冷藏柯林斯杯中。",
+      "将苏打水缓缓沿杯壁倒入，泡沫会壮观地升出杯口。",
+      "立即上桌，无需装饰。高出杯口的泡沫枕头就是最好的呈现。"
+    ],
+    "notesEn": "Henry Ramos invented this in 1888 in New Orleans. During Mardi Gras, he employed 35 shaker boys working in relay to keep up with demand. The absurd shaking time is not theatre — it is chemistry. The cream and egg white need mechanical force to emulsify into that impossibly light foam.",
+    "notesZh": "亨利·拉莫斯于1888年在新奥尔良发明了这款鸡尾酒。狂欢节期间，他雇了35名摇酒男孩轮流接力才能满足需求。荒谬的摇制时长不是表演——而是化学反应。奶油和蛋白需要机械力才能乳化成那层难以置信的轻盈泡沫。"
+  }
+}

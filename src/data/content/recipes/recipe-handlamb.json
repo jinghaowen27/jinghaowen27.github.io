@@ -1,0 +1,89 @@
+{
+  "order": 5,
+  "id": "recipe-handlamb",
+  "image": "",
+  "emoji": "🥩",
+  "metaEn": "Mongolian · Main",
+  "metaZh": "蒙古 · 主菜",
+  "titleEn": "Hand-Pulled Lamb",
+  "titleZh": "手抓羊肉",
+  "descriptionEn": "Boiled whole, pulled by hand, dipped in garlic and vinegar. Nomadic and primal.",
+  "descriptionZh": "整块水煮，徒手撕扯，蘸蒜醋而食。游牧本味。",
+  "time": "2h",
+  "amount": "4",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★☆",
+  "published": true,
+  "details": {
+    "emoji": "🥩",
+    "eyebrowEn": "Mongolian · Main · 4 servings",
+    "eyebrowZh": "蒙古 · 主菜 · 4人份",
+    "titleEn": "Hand-Pulled Lamb",
+    "titleZh": "手抓羊肉",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "2h total"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Easy"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★☆"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "共2小时"
+      },
+      {
+        "label": "难度",
+        "value": "简单"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★☆"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1.5kg</strong> bone-in lamb (shoulder or leg)",
+      "<strong>1</strong> onion, halved",
+      "<strong>4 slices</strong> ginger",
+      "<strong>2</strong> star anise",
+      "<strong>1 tsp</strong> whole Sichuan peppercorns",
+      "<strong>2 tbsp</strong> Shaoxing wine",
+      "Salt to taste",
+      "For dipping: minced garlic, black vinegar, chili oil, fresh coriander"
+    ],
+    "ingrZh": [
+      "<strong>1.5kg</strong> 带骨羊肉（肩部或腿部）",
+      "<strong>1个</strong> 洋葱，对半切",
+      "<strong>4片</strong> 生姜",
+      "<strong>2颗</strong> 八角",
+      "<strong>1茶匙</strong> 整粒花椒",
+      "<strong>2汤匙</strong> 绍兴酒",
+      "盐适量",
+      "蘸料：蒜末、黑醋、辣椒油、香菜"
+    ],
+    "stepsEn": [
+      "Place lamb in a pot of cold water. Bring to a boil, cook 5 min, then discard the water. Rinse the lamb and the pot.",
+      "Return lamb to the clean pot. Add onion, ginger, star anise, Sichuan peppercorns, Shaoxing wine and enough cold water to cover by 5cm.",
+      "Bring to a boil, skim any foam, then reduce to a steady simmer. Cook 1.5–2 hours until the meat pulls easily from the bone.",
+      "Remove lamb and let rest 10 min. Pull the meat with your hands into large chunks — this is deliberate, not lazy. Bones come out naturally.",
+      "Serve immediately with dipping sauce. The broth is for drinking alongside."
+    ],
+    "stepsZh": [
+      "羊肉冷水下锅，煮沸5分钟后倒掉水，冲洗羊肉和锅。",
+      "羊肉放回清锅，加洋葱、姜片、八角、花椒、绍兴酒和足量冷水，超过羊肉5厘米。",
+      "大火烧开，撇净浮沫，转中小火保持稳定沸腾，煮1.5-2小时至肉可轻松离骨。",
+      "取出羊肉，静置10分钟，用手将肉撕成大块——这是刻意为之，不是懒惰，骨头自然脱出。",
+      "立即上桌，配蘸料食用，汤可以随餐喝。"
+    ],
+    "notesEn": "The point of hand-pulling is texture — the meat tears along its natural grain, which no knife can replicate. The broth, strained and salted, is one of the finest things you can drink.",
+    "notesZh": "徒手撕肉的意义在于质感——肉沿自然纹理撕裂，这是刀切无法复制的。将汤过滤后加盐，是你能喝到的最好的东西之一。"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "order": 4,
+  "id": "publication-4",
+  "titleEn": "MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning",
+  "titleZh": "MILEAM: Modeling Input-Aware Logic Errors of Approximate Multipliers using Machine Learning",
+  "authorsEn": "<strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao",
+  "authorsZh": "<strong>Jinghao Wen</strong>, Dongning Ma, Xun Jiao",
+  "venue": "IEEE International Symposium on Circuits and Systems (ISCAS), 2026",
+  "year": 2026,
+  "topic": "efficient",
+  "thumbnail": "/images/thumbnails/MILEAM.jpg",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "#"
+    },
+    {
+      "label": "Slides",
+      "url": "#"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

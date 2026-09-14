@@ -1,0 +1,87 @@
+{
+  "order": 18,
+  "id": "cocktail-lastword",
+  "image": "",
+  "emoji": "🍸",
+  "metaEn": "Prohibition Era · Shaken",
+  "metaZh": "禁酒令时代 · 摇制",
+  "titleEn": "Last Word",
+  "titleZh": "最后一语",
+  "descriptionEn": "Equal parts gin, green Chartreuse, maraschino, lime. A forgotten classic, perfectly balanced.",
+  "descriptionZh": "金酒、绿色查特酒、黑樱桃利口酒、青柠各等份。被遗忘的经典，完美平衡。",
+  "time": "4min",
+  "amount": "",
+  "flavorEn": "Herbal",
+  "flavorZh": "草本",
+  "rating": "★★★★☆",
+  "published": true,
+  "details": {
+    "emoji": "🍸",
+    "eyebrowEn": "Prohibition Era · Shaken · ABV ~24%",
+    "eyebrowZh": "禁酒令时代 · 摇制 · 酒精度约24%",
+    "titleEn": "Last Word",
+    "titleZh": "最后一语",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Chilled coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Shake with ice, serve up"
+      },
+      {
+        "label": "Garnish",
+        "value": "Lime wheel or maraschino cherry"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "冰镇碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰摇制，滤冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "青柠片或黑樱桃"
+      }
+    ],
+    "ingrEn": [
+      "<strong>¾ oz (22ml)</strong> London Dry Gin",
+      "<strong>¾ oz (22ml)</strong> Green Chartreuse",
+      "<strong>¾ oz (22ml)</strong> Maraschino liqueur (Luxardo recommended)",
+      "<strong>¾ oz (22ml)</strong> Fresh lime juice"
+    ],
+    "ingrZh": [
+      "<strong>¾ oz (22ml)</strong> 伦敦干金酒",
+      "<strong>¾ oz (22ml)</strong> 绿色查特酒",
+      "<strong>¾ oz (22ml)</strong> 黑樱桃利口酒（推荐Luxardo）",
+      "<strong>¾ oz (22ml)</strong> 新鲜青柠汁"
+    ],
+    "stepsEn": [
+      "Combine all four ingredients in equal measure in a shaker with ice.",
+      "Shake hard for 12 seconds.",
+      "Double-strain into a chilled coupe.",
+      "Garnish with a lime wheel or a single maraschino cherry."
+    ],
+    "stepsZh": [
+      "将四种材料等量放入加有冰块的摇壶。",
+      "用力摇12秒。",
+      "双重过滤至冰镇碟形杯。",
+      "用青柠片或一颗黑樱桃装饰。"
+    ],
+    "notesEn": "Invented at the Detroit Athletic Club around 1916, the Last Word disappeared during Prohibition and was largely forgotten until bartender Murray Stenson rediscovered it at Zig Zag Café in Seattle around 2004. The equal-parts format is the same elegant logic as the Paper Plane — every ingredient holds its ground. Green Chartreuse is the soul of the drink; there is no substitute. The combination of herbal, sweet, tart and spirit-forward is unlike anything else in the canon.",
+    "notesZh": "约于1916年发明于底特律运动俱乐部，禁酒令期间销声匿迹，直到2004年前后被西雅图Zig Zag Café的调酒师穆雷·斯滕森重新发现。等份配方与纸飞机一样优雅——每种材料都不退让。绿色查特酒是这杯酒的灵魂，无可替代。草本、甜润、酸爽与烈酒感的组合，是整个调酒经典中独一无二的存在。"
+  }
+}

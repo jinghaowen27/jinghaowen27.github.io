@@ -1,0 +1,91 @@
+{
+  "order": 10,
+  "id": "cocktail-margarita",
+  "image": "/images/photos/cocktails/Margarita.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Shaken",
+  "metaZh": "经典 · 摇制",
+  "titleEn": "Margarita",
+  "titleZh": "玛格丽特",
+  "descriptionEn": "Tequila, triple sec, fresh lime. Salt rim essential. The world's most ordered cocktail.",
+  "descriptionZh": "龙舌兰、橙皮力娇酒、新鲜青柠。盐边必不可少。全球点单最多的鸡尾酒。",
+  "time": "4min",
+  "amount": "",
+  "flavorEn": "Citrusy",
+  "flavorZh": "柑橘香",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Margarita.jpg",
+    "eyebrowEn": "Classic · Shaken · ABV ~20%",
+    "eyebrowZh": "经典 · 摇制 · 酒精度约20%",
+    "titleEn": "Margarita",
+    "titleZh": "玛格丽特",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Rocks glass or coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "On the rocks or up"
+      },
+      {
+        "label": "Garnish",
+        "value": "Salt rim + lime wheel"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "岩石杯或碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰或滤冰"
+      },
+      {
+        "label": "装饰",
+        "value": "盐边+青柠片"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2 oz (60ml)</strong> 100% agave Blanco tequila",
+      "<strong>¾ oz (22ml)</strong> Fresh lime juice",
+      "<strong>½ oz (15ml)</strong> Triple sec or Cointreau",
+      "<strong>¼ oz (7ml)</strong> Agave syrup",
+      "Salt for the rim (optional but traditional)"
+    ],
+    "ingrZh": [
+      "<strong>2 oz (60ml)</strong> 100%龙舌兰白色龙舌兰酒",
+      "<strong>¾ oz (22ml)</strong> 新鲜青柠汁",
+      "<strong>½ oz (15ml)</strong> 橙皮力娇酒或君度",
+      "<strong>¼ oz (7ml)</strong> 龙舌兰糖浆",
+      "盐（用于杯口，可选但是传统做法）"
+    ],
+    "stepsEn": [
+      "Prepare the salt rim: run a lime wedge around half the rim (not the full rim, so guests can choose), then dip in coarse salt.",
+      "Combine tequila, lime juice, triple sec and agave syrup in a shaker with ice.",
+      "Shake hard for 12 seconds.",
+      "Strain over fresh ice in the rocks glass, or up into a coupe.",
+      "Garnish with a lime wheel on the rim."
+    ],
+    "stepsZh": [
+      "准备盐边：用青柠角沿半边杯口擦一圈（不要整圈，让客人自行选择），然后蘸上粗盐。",
+      "将龙舌兰、青柠汁、橙皮力娇酒和龙舌兰糖浆放入加了冰的摇壶。",
+      "用力摇12秒。",
+      "滤入放了新冰块的岩石杯，或滤入碟形杯。",
+      "用青柠片搭在杯口装饰。"
+    ],
+    "notesEn": "Use 100% agave tequila — the mixto stuff (less than 100% agave) makes headaches, not margaritas. Fresh lime juice only. I use agave syrup instead of simple syrup to keep the agave thread running through the drink. Half-salted rim is the civilized approach.",
+    "notesZh": "使用100%龙舌兰蒸馏酒——混合酒（低于100%龙舌兰）只会带来头痛，不是玛格丽特。只用新鲜青柠汁。我用龙舌兰糖浆代替简单糖浆，让龙舌兰的风格贯穿整杯酒。半边盐口才是文明人的选择。"
+  }
+}

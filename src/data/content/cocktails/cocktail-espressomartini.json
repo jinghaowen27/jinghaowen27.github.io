@@ -1,0 +1,89 @@
+{
+  "order": 12,
+  "id": "cocktail-espressomartini",
+  "image": "/images/photos/cocktails/Espresso Martini.jpg",
+  "emoji": "",
+  "metaEn": "Modern Classic · Shaken",
+  "metaZh": "现代经典 · 摇制",
+  "titleEn": "Espresso Martini",
+  "titleZh": "意式浓缩马丁尼",
+  "descriptionEn": "Vodka, fresh espresso, coffee liqueur. Three coffee beans on top. The crowd-pleaser.",
+  "descriptionZh": "伏特加、新鲜浓缩咖啡、咖啡利口酒。顶部三颗咖啡豆。人见人爱。",
+  "time": "5min",
+  "amount": "",
+  "flavorEn": "Bold",
+  "flavorZh": "浓烈",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Espresso Martini.jpg",
+    "eyebrowEn": "Modern Classic · Shaken · ABV ~20%",
+    "eyebrowZh": "现代经典 · 摇制 · 酒精度约20%",
+    "titleEn": "Espresso Martini",
+    "titleZh": "意式浓缩马丁尼",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Chilled coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Shake with ice, serve up"
+      },
+      {
+        "label": "Garnish",
+        "value": "3 coffee beans"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "冰镇碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰摇制，滤冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "3颗咖啡豆"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1.5 oz (45ml)</strong> Vodka",
+      "<strong>1 oz (30ml)</strong> Fresh espresso (hot or room temp)",
+      "<strong>½ oz (15ml)</strong> Coffee liqueur (Kahlúa or Mr. Black)",
+      "<strong>¼ oz (7ml)</strong> Simple syrup (adjust to taste)"
+    ],
+    "ingrZh": [
+      "<strong>1.5 oz (45ml)</strong> 伏特加",
+      "<strong>1 oz (30ml)</strong> 新鲜意式浓缩咖啡（热或室温）",
+      "<strong>½ oz (15ml)</strong> 咖啡利口酒（卡鲁哇或Mr. Black）",
+      "<strong>¼ oz (7ml)</strong> 简单糖浆（按口味调整）"
+    ],
+    "stepsEn": [
+      "Pull a fresh espresso shot and let it cool slightly — do not refrigerate, as this kills the crema.",
+      "Combine vodka, espresso, coffee liqueur, and syrup in a shaker with plenty of ice.",
+      "Shake very hard for 15 seconds. The vigorous shaking is what creates the foam.",
+      "Double-strain into a chilled coupe to catch all the ice chips.",
+      "The foam should be thick and mahogany-colored. Place 3 coffee beans on top — tradition says they represent health, wealth, and happiness."
+    ],
+    "stepsZh": [
+      "拉一杯新鲜的意式浓缩，稍微放凉——不要冷藏，那会破坏咖啡脂。",
+      "将伏特加、浓缩咖啡、咖啡利口酒和糖浆加入装有大量冰块的摇壶。",
+      "用力摇15秒，大力摇制才能产生泡沫。",
+      "双重过滤入冰镇碟形杯，滤掉所有细小冰渣。",
+      "泡沫应该厚实且呈深棕色。顶部放3颗咖啡豆——传统寓意健康、财富和幸福。"
+    ],
+    "notesEn": "Invented by Dick Bradsell in London in the 1980s, allegedly for a model who asked for something to wake her up. The key is fresh espresso — pre-made cold brew or instant will not produce the same foam. I prefer Mr. Black over Kahlúa for its drier, more intense coffee character.",
+    "notesZh": "由迪克·布拉德塞尔于1980年代在伦敦发明，据说是应一位模特要求调制的提神饮料。关键在于新鲜浓缩咖啡——预制冷萃或速溶咖啡无法产生同样的泡沫。比起卡鲁哇，我更偏好Mr. Black，因为它的咖啡风味更干、更浓郁。"
+  }
+}

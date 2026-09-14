@@ -1,0 +1,91 @@
+{
+  "order": 2,
+  "id": "cocktail-junglebird",
+  "image": "/images/photos/cocktails/Jungle Bird.jpg",
+  "emoji": "",
+  "metaEn": "Tiki · Shaken",
+  "metaZh": "提基 · 摇制",
+  "titleEn": "Jungle Bird",
+  "titleZh": "丛林鸟",
+  "descriptionEn": "Blackstrap rum, Campari, pineapple, lime, simple syrup. Bitter tropical paradise.",
+  "descriptionZh": "黑糖朗姆、金巴利、菠萝、青柠、糖浆。苦涩的热带天堂。",
+  "time": "5min",
+  "amount": "",
+  "flavorEn": "Tropical",
+  "flavorZh": "热带风情",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Jungle Bird.jpg",
+    "eyebrowEn": "Tiki · Shaken · ABV ~16%",
+    "eyebrowZh": "提基 · 摇制 · 酒精度约16%",
+    "titleEn": "Jungle Bird",
+    "titleZh": "丛林鸟",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Rocks glass or tiki mug"
+      },
+      {
+        "label": "Ice",
+        "value": "Crushed or cubed"
+      },
+      {
+        "label": "Garnish",
+        "value": "Pineapple frond + cherry"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "岩石杯或提基杯"
+      },
+      {
+        "label": "冰块",
+        "value": "碎冰或冰块"
+      },
+      {
+        "label": "装饰",
+        "value": "菠萝叶+樱桃"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1.5 oz (45ml)</strong> Blackstrap rum (Goslings or Hamilton 151)",
+      "<strong>¾ oz (22ml)</strong> Campari",
+      "<strong>1.5 oz (45ml)</strong> Fresh pineapple juice",
+      "<strong>½ oz (15ml)</strong> Fresh lime juice",
+      "<strong>½ oz (15ml)</strong> Simple syrup"
+    ],
+    "ingrZh": [
+      "<strong>1.5 oz (45ml)</strong> 黑糖朗姆酒（Goslings或Hamilton 151）",
+      "<strong>¾ oz (22ml)</strong> 金巴利",
+      "<strong>1.5 oz (45ml)</strong> 新鲜菠萝汁",
+      "<strong>½ oz (15ml)</strong> 新鲜青柠汁",
+      "<strong>½ oz (15ml)</strong> 简单糖浆"
+    ],
+    "stepsEn": [
+      "Combine all ingredients in a shaker with ice.",
+      "Shake hard for 12 seconds.",
+      "Strain over crushed ice in a rocks glass or tiki mug.",
+      "Garnish with a pineapple frond and a cherry. If you have them, add a paper umbrella without apology.",
+      "The drink should be a deep ruby-orange color from the Campari and pineapple."
+    ],
+    "stepsZh": [
+      "将所有材料加入装有冰块的摇壶。",
+      "用力摇12秒。",
+      "过滤至装有碎冰的岩石杯或提基杯。",
+      "用菠萝叶和樱桃装饰。如果有小纸伞，坦然插上。",
+      "这杯酒应呈现深宝石橙红色，来自金巴利和菠萝汁的融合。"
+    ],
+    "notesEn": "Created in 1978 at the Kuala Lumpur Hilton. The Jungle Bird was largely forgotten until it was rediscovered around 2010 by cocktail writers. It is the only classic tiki drink that uses Campari, which creates a fascinating tension between tropical sweetness and Italian bitterness. The blackstrap rum is essential — its molasses depth cuts through everything.",
+    "notesZh": "1978年创制于吉隆坡希尔顿酒店。丛林鸟在很大程度上被遗忘，直到2010年前后被鸡尾酒作家重新发现。它是唯一使用金巴利的经典提基饮品，在热带甜美与意式苦涩之间制造了迷人的张力。黑糖朗姆酒不可替代——它的糖蜜深度能穿透一切。"
+  }
+}

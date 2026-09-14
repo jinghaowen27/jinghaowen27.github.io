@@ -1,0 +1,83 @@
+{
+  "order": 4,
+  "id": "recipe-lambchops",
+  "image": "",
+  "emoji": "🍖",
+  "metaEn": "Xinjiang · Main",
+  "metaZh": "新疆 · 主菜",
+  "titleEn": "Grilled Lamb Chops",
+  "titleZh": "烤羊排",
+  "descriptionEn": "Cumin, chili flakes, salt. Nothing more is needed.",
+  "descriptionZh": "孜然、辣椒碎、盐。不需要更多了。",
+  "time": "30min",
+  "amount": "2",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🍖",
+    "eyebrowEn": "Xinjiang · Main · 2 servings",
+    "eyebrowZh": "新疆 · 主菜 · 2人份",
+    "titleEn": "Grilled Lamb Chops",
+    "titleZh": "烤羊排",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "30 min + marinate"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Easy"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "30分钟 + 腌制"
+      },
+      {
+        "label": "难度",
+        "value": "简单"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>8</strong> lamb rib chops",
+      "<strong>2 tbsp</strong> ground cumin",
+      "<strong>1 tbsp</strong> chili flakes",
+      "<strong>1 tsp</strong> Sichuan peppercorn, ground",
+      "<strong>1 tsp</strong> coarse salt",
+      "<strong>1 tbsp</strong> neutral oil"
+    ],
+    "ingrZh": [
+      "<strong>8根</strong> 羊肋排",
+      "<strong>2汤匙</strong> 孜然粉",
+      "<strong>1汤匙</strong> 辣椒碎",
+      "<strong>1茶匙</strong> 花椒粉",
+      "<strong>1茶匙</strong> 粗盐",
+      "<strong>1汤匙</strong> 中性油"
+    ],
+    "stepsEn": [
+      "Pat lamb chops dry. Mix cumin, chili flakes, Sichuan pepper and salt. Rub generously all over the chops. Marinate at room temperature 30 min minimum.",
+      "Heat a cast-iron grill pan or outdoor grill until smoking hot.",
+      "Brush chops lightly with oil. Grill 3–4 min per side for medium (adjust for thickness). Do not move them once placed — let the crust form.",
+      "Rest 5 min. Finish with a final dusting of cumin and chili before serving."
+    ],
+    "stepsZh": [
+      "羊排拍干，将孜然、辣椒碎、花椒和盐混合，大量涂抹在羊排上，室温腌制至少30分钟。",
+      "铸铁烤盘或户外烤架烧至冒烟热。",
+      "羊排刷少量油，每面烤3-4分钟至五分熟（根据厚度调整），放上后不要移动——等待焦壳形成。",
+      "静置5分钟，上桌前再撒一层孜然和辣椒碎。"
+    ],
+    "notesEn": "The simplicity is the point. Xinjiang lamb needs nothing but heat, cumin and chili. Any further intervention is a mistake. The smoke is essential — do not attempt this on a low flame.",
+    "notesZh": "简单本身就是意义。新疆羊肉只需要高温、孜然和辣椒。任何多余的干预都是错误。烟熏气不可缺少——不要在小火上做这道菜。"
+  }
+}

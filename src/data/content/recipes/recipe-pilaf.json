@@ -1,0 +1,93 @@
+{
+  "order": 2,
+  "id": "recipe-pilaf",
+  "image": "/images/photos/foods/抓饭.jpg",
+  "emoji": "🍚",
+  "metaEn": "Uyghur · Main",
+  "metaZh": "维吾尔 · 主菜",
+  "titleEn": "Lamb Hand-Pulled Rice (Plov)",
+  "titleZh": "羊肉手抓饭",
+  "descriptionEn": "Lamb, carrot, onion and rice cooked together in one pot. Central Asian comfort food.",
+  "descriptionZh": "羊肉、胡萝卜、洋葱与米饭同锅焖制。中亚的抚慰之食。",
+  "time": "1.5h",
+  "amount": "4",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🍚",
+    "eyebrowEn": "Uyghur · Main · 4 servings",
+    "eyebrowZh": "维吾尔 · 主菜 · 4人份",
+    "titleEn": "Lamb Hand-Pulled Rice (Plov)",
+    "titleZh": "羊肉手抓饭",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "1.5h total"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Medium"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "共1.5小时"
+      },
+      {
+        "label": "难度",
+        "value": "中等"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>500g</strong> bone-in lamb (shoulder or rib)",
+      "<strong>2 cups</strong> long-grain rice, soaked 30 min",
+      "<strong>3</strong> large carrots, julienned",
+      "<strong>2</strong> onions, sliced",
+      "<strong>1 head</strong> garlic, whole",
+      "<strong>1 tsp</strong> cumin seeds",
+      "<strong>1 tsp</strong> coriander seeds",
+      "<strong>3 tbsp</strong> neutral oil",
+      "Salt to taste"
+    ],
+    "ingrZh": [
+      "<strong>500g</strong> 带骨羊肉（肩部或肋排）",
+      "<strong>2杯</strong> 长粒米，提前浸泡30分钟",
+      "<strong>3根</strong> 大胡萝卜，切粗丝",
+      "<strong>2个</strong> 洋葱，切片",
+      "<strong>1头</strong> 大蒜，整头",
+      "<strong>1茶匙</strong> 孜然籽",
+      "<strong>1茶匙</strong> 香菜籽",
+      "<strong>3汤匙</strong> 中性油",
+      "盐适量"
+    ],
+    "stepsEn": [
+      "Heat oil in a heavy pot (ideally a kazan) over high heat. Brown lamb pieces until deep golden. Remove.",
+      "In the same pot, fry onions until caramelized. Add carrots and cook until softened.",
+      "Return lamb. Add cumin, coriander, salt and enough boiling water to just cover. Simmer 40 min.",
+      "Drain rice and spread evenly over the meat and vegetables. Do not stir. Press the whole garlic head into the center.",
+      "Add boiling water to cover rice by 1cm. Cover tightly. Cook on low heat 25–30 min until rice has absorbed all liquid.",
+      "Remove garlic. Stir from the bottom to mix. Eat with your hands — that is the correct way."
+    ],
+    "stepsZh": [
+      "大火热油（最好用卡赞锅），将羊肉煎至深金黄色，取出备用。",
+      "同一口锅炒洋葱至焦糖化，加入胡萝卜翻炒至软。",
+      "放回羊肉，加孜然籽、香菜籽、盐和足量沸水刚好没过食材，小火焖煮40分钟。",
+      "沥干米，均匀铺在肉和蔬菜上方，不要翻搅，将整头大蒜插入中央。",
+      "加沸水至高出米面约1厘米，盖紧锅盖，小火焖25-30分钟至米饭吸干水分。",
+      "取出大蒜，从锅底翻拌均匀，用手抓着吃——这才是正确的方式。"
+    ],
+    "notesEn": "The layering is the technique — meat and vegetables on the bottom, rice on top, steam doing the work. The garlic becomes impossibly sweet and mild after steaming. The correct vessel is a kazan, but a Dutch oven works.",
+    "notesZh": "分层是关键技术——肉和蔬菜在下，米饭在上，靠蒸汽完成一切。大蒜经过蒸制后变得极度甘甜温和。正确的容器是卡赞锅，但铸铁锅也可以。"
+  }
+}

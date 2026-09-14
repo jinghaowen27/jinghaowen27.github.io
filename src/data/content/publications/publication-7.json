@@ -1,0 +1,21 @@
+{
+  "order": 7,
+  "id": "publication-7",
+  "titleEn": "HDFlow: A Multi-layer Design and Evaluation Framework for Hyperdimensional Computing",
+  "titleZh": "HDFlow: A Multi-layer Design and Evaluation Framework for Hyperdimensional Computing",
+  "authorsEn": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Xun Jiao",
+  "authorsZh": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Xun Jiao",
+  "venue": "The International Joint Conference on Neural Networks (IJCNN), 2026",
+  "year": 2026,
+  "topic": "hdc",
+  "thumbnail": "/images/thumbnails/HDflow.png",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "#"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

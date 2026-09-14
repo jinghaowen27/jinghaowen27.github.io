@@ -1,0 +1,91 @@
+{
+  "order": 13,
+  "id": "cocktail-mojito",
+  "image": "/images/photos/cocktails/Mojito.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Built",
+  "metaZh": "经典 · 直调",
+  "titleEn": "Mojito",
+  "titleZh": "莫吉托",
+  "descriptionEn": "White rum, fresh lime, mint, sugar, soda. Cuba's most exported cocktail.",
+  "descriptionZh": "白朗姆、新鲜青柠、薄荷、糖、苏打水。古巴出口最广的鸡尾酒。",
+  "time": "5min",
+  "amount": "",
+  "flavorEn": "Refreshing",
+  "flavorZh": "清爽",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Mojito.jpg",
+    "eyebrowEn": "Classic · Built · ABV ~12%",
+    "eyebrowZh": "经典 · 直调 · 酒精度约12%",
+    "titleEn": "Mojito",
+    "titleZh": "莫吉托",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Built / muddled"
+      },
+      {
+        "label": "Glass",
+        "value": "Collins or highball"
+      },
+      {
+        "label": "Ice",
+        "value": "Crushed or cubed"
+      },
+      {
+        "label": "Garnish",
+        "value": "Fresh mint sprig + lime wheel"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "直调/研磨"
+      },
+      {
+        "label": "酒杯",
+        "value": "柯林斯杯或海波杯"
+      },
+      {
+        "label": "冰块",
+        "value": "碎冰或冰块"
+      },
+      {
+        "label": "装饰",
+        "value": "新鲜薄荷枝+青柠片"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2 oz (60ml)</strong> White rum (Havana Club 3yr recommended)",
+      "<strong>¾ oz (22ml)</strong> Fresh lime juice",
+      "<strong>¾ oz (22ml)</strong> Simple syrup (or 2 tsp sugar)",
+      "<strong>8–10</strong> Fresh mint leaves",
+      "<strong>2 oz (60ml)</strong> Chilled soda water"
+    ],
+    "ingrZh": [
+      "<strong>2 oz (60ml)</strong> 白朗姆酒（推荐哈瓦那俱乐部3年）",
+      "<strong>¾ oz (22ml)</strong> 新鲜青柠汁",
+      "<strong>¾ oz (22ml)</strong> 简单糖浆（或2茶匙糖）",
+      "<strong>8-10片</strong> 新鲜薄荷叶",
+      "<strong>2 oz (60ml)</strong> 冷藏苏打水"
+    ],
+    "stepsEn": [
+      "Add mint leaves and simple syrup to the glass. Gently clap the mint between your palms first to release the oils — do not muddle hard or it turns bitter.",
+      "Add lime juice and rum.",
+      "Fill the glass with crushed ice.",
+      "Top with soda water. Stir gently once from the bottom.",
+      "Garnish with a generous mint sprig. Slap it against your palm before placing — the aroma is part of the drink."
+    ],
+    "stepsZh": [
+      "将薄荷叶和糖浆放入杯中。先把薄荷叶放在掌心轻拍以释放精油——不要用力研磨，否则会变苦。",
+      "加入青柠汁和朗姆酒。",
+      "装满碎冰。",
+      "加入苏打水，从底部轻轻搅拌一次。",
+      "用一大枝薄荷装饰。放入前先用手掌拍打——香气是这杯酒体验的一部分。"
+    ],
+    "notesEn": "The mojito is deceptively simple and deceptively easy to ruin. The two most common mistakes: muddling the mint too aggressively (releases chlorophyll, tastes grassy and bitter) and using too little lime. The mint should be fragrant, not macerated. Use crushed ice if you have it — it dilutes at the right rate and keeps the drink cold longer.",
+    "notesZh": "莫吉托看似简单，却很容易毁掉。最常见的两个错误：过度研磨薄荷（释放叶绿素，味道发苦发草）以及青柠汁放太少。薄荷应该香气四溢，而不是被碾碎。有碎冰用碎冰——稀释速度恰到好处，保冷时间也更长。"
+  }
+}

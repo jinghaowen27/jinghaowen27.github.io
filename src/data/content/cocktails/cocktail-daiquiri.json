@@ -1,0 +1,87 @@
+{
+  "order": 14,
+  "id": "cocktail-daiquiri",
+  "image": "/images/photos/cocktails/Daiquiri.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Shaken",
+  "metaZh": "经典 · 摇制",
+  "titleEn": "Daiquiri",
+  "titleZh": "得其利",
+  "descriptionEn": "2 oz white rum · ¾ oz lime · ¾ oz simple syrup. The holy trinity.",
+  "descriptionZh": "白朗姆2oz · 青柠汁¾oz · 糖浆¾oz。三位一体。",
+  "time": "3min",
+  "amount": "",
+  "flavorEn": "Sour",
+  "flavorZh": "酸",
+  "rating": "★★★★☆",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Daiquiri.jpg",
+    "eyebrowEn": "Classic · Shaken · ABV ~20%",
+    "eyebrowZh": "经典 · 摇制 · 酒精度约20%",
+    "titleEn": "Daiquiri",
+    "titleZh": "得其利",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Chilled coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Shake with ice, serve up"
+      },
+      {
+        "label": "Garnish",
+        "value": "None, or lime wheel"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "冰镇碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰摇制，滤冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "无，或青柠片"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2 oz (60ml)</strong> White rum (Havana Club 3yr recommended)",
+      "<strong>¾ oz (22ml)</strong> Fresh lime juice",
+      "<strong>¾ oz (22ml)</strong> Simple syrup (1:1 sugar:water)"
+    ],
+    "ingrZh": [
+      "<strong>2 oz (60ml)</strong> 白朗姆酒（推荐哈瓦那俱乐部3年）",
+      "<strong>¾ oz (22ml)</strong> 新鲜青柠汁",
+      "<strong>¾ oz (22ml)</strong> 简单糖浆（糖:水=1:1）"
+    ],
+    "stepsEn": [
+      "Chill your coupe glass in the freezer, or with ice water.",
+      "Combine all ingredients in a cocktail shaker with plenty of ice.",
+      "Shake hard for 12–15 seconds — you want the shaker to be frost-covered.",
+      "Double-strain through a Hawthorne strainer and fine mesh into the chilled coupe.",
+      "No garnish needed. The drink speaks for itself."
+    ],
+    "stepsZh": [
+      "将碟形杯放入冰箱预冷，或用冰水冰杯。",
+      "所有材料加入波士顿摇酒壶，放入大量冰块。",
+      "用力摇制12-15秒，至摇酒壶外壁结霜。",
+      "用霍桑隔冰器和细网过滤器双重过滤至冰镇的碟形杯中。",
+      "无需装饰，酒本身就是答案。"
+    ],
+    "notesEn": "A Daiquiri is a technical benchmark — if you can make a great Daiquiri, you understand balance. Fresh lime juice only; bottled juice is not acceptable.",
+    "notesZh": "得其利是调酒技术的标杆——会做好一杯得其利，就懂得了平衡。只用新鲜青柠汁，瓶装果汁不可接受。"
+  }
+}

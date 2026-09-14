@@ -1,0 +1,21 @@
+{
+  "order": 8,
+  "id": "publication-8",
+  "titleEn": "Neuro-Symbolic AI vs. Vector Symbolic Architectures:\r\nLearning, Architecture and Reasoning",
+  "titleZh": "Neuro-Symbolic AI vs. Vector Symbolic Architectures:\r\nLearning, Architecture and Reasoning",
+  "authorsEn": "<strong>Jinghao Wen</strong>, Zhengxiao He, Shaohuang Wang, Xun Jiao",
+  "authorsZh": "<strong>Jinghao Wen</strong>, Zhengxiao He, Shaohuang Wang, Xun Jiao",
+  "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC), 2026",
+  "year": 2026,
+  "topic": "hdc",
+  "thumbnail": "/images/thumbnails/SMC.png",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "#"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

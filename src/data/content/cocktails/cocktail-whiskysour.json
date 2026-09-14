@@ -1,0 +1,91 @@
+{
+  "order": 15,
+  "id": "cocktail-whiskysour",
+  "image": "/images/photos/cocktails/Whiskey Sour.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Shaken",
+  "metaZh": "经典 · 摇制",
+  "titleEn": "Whisky Sour",
+  "titleZh": "威士忌酸酒",
+  "descriptionEn": "Bourbon, lemon juice, simple syrup, egg white. Silky, frothy, perfectly balanced.",
+  "descriptionZh": "波本、柠檬汁、糖浆、蛋白。丝滑、起沫、完美平衡。",
+  "time": "5min",
+  "amount": "",
+  "flavorEn": "Sour",
+  "flavorZh": "酸",
+  "rating": "★★★★☆",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Whiskey Sour.jpg",
+    "eyebrowEn": "Classic · Shaken · ABV ~18%",
+    "eyebrowZh": "经典 · 摇制 · 酒精度约18%",
+    "titleEn": "Whisky Sour",
+    "titleZh": "威士忌酸酒",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken (dry + wet shake)"
+      },
+      {
+        "label": "Glass",
+        "value": "Rocks glass or coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Rocks or up"
+      },
+      {
+        "label": "Garnish",
+        "value": "Orange slice + cherry"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "干摇+湿摇"
+      },
+      {
+        "label": "酒杯",
+        "value": "岩石杯或碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰或滤冰"
+      },
+      {
+        "label": "装饰",
+        "value": "橙片+樱桃"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2 oz (60ml)</strong> Bourbon whiskey",
+      "<strong>¾ oz (22ml)</strong> Fresh lemon juice",
+      "<strong>½ oz (15ml)</strong> Simple syrup",
+      "<strong>1</strong> egg white (optional but recommended)",
+      "<strong>2 dashes</strong> Angostura bitters (on foam)"
+    ],
+    "ingrZh": [
+      "<strong>2 oz (60ml)</strong> 波本威士忌",
+      "<strong>¾ oz (22ml)</strong> 新鲜柠檬汁",
+      "<strong>½ oz (15ml)</strong> 简单糖浆",
+      "<strong>1个</strong> 蛋白（可选但推荐）",
+      "<strong>2滴</strong> 安格斯图拉苦精（用于泡沫）"
+    ],
+    "stepsEn": [
+      "Dry shake: combine whiskey, lemon juice, syrup and egg white in a shaker without ice. Shake hard for 15 seconds.",
+      "Add ice and wet shake for another 12–15 seconds until well chilled.",
+      "Double-strain into a rocks glass over ice, or into a chilled coupe.",
+      "Drop 2 dashes of Angostura on the foam and drag a toothpick through to create a pattern.",
+      "Garnish with an orange half-wheel and a cherry."
+    ],
+    "stepsZh": [
+      "干摇：将威士忌、柠檬汁、糖浆和蛋白放入摇壶，不加冰用力摇15秒。",
+      "加入冰块继续摇12-15秒，至充分冷却。",
+      "双重过滤倒入放有冰块的岩石杯，或冰镇碟形杯中。",
+      "在泡沫上滴2滴安格斯图拉苦精，用牙签划出图案。",
+      "用橙片和樱桃装饰。"
+    ],
+    "notesEn": "The egg white is what separates a whisky sour from a good whisky sour. It adds texture, body, and a canvas for the bitters art. Don't skip it. I use a 2:¾:½ ratio, which I find more balanced than the traditional equal-parts approach.",
+    "notesZh": "蛋白是威士忌酸酒和好的威士忌酸酒之间的区别。它增添了质感、厚度，也是苦精图案的画布。不要省略。我用2:¾:½的比例，比传统等份更为平衡。"
+  }
+}

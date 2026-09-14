@@ -1,0 +1,91 @@
+{
+  "order": 11,
+  "id": "cocktail-nycsour",
+  "image": "/images/photos/cocktails/New York Sour.jpg",
+  "emoji": "",
+  "metaEn": "Modern Classic · Shaken",
+  "metaZh": "现代经典 · 摇制",
+  "titleEn": "New York Sour",
+  "titleZh": "纽约酸酒",
+  "descriptionEn": "Whisky sour topped with a red wine float. The visual alone is worth it.",
+  "descriptionZh": "威士忌酸酒上漂浮一层红葡萄酒。光是视觉就值回票价。",
+  "time": "6min",
+  "amount": "",
+  "flavorEn": "Fruity",
+  "flavorZh": "果香",
+  "rating": "★★★★☆",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/New York Sour.jpg",
+    "eyebrowEn": "Modern Classic · Shaken · ABV ~18%",
+    "eyebrowZh": "现代经典 · 摇制 · 酒精度约18%",
+    "titleEn": "New York Sour",
+    "titleZh": "纽约酸酒",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken + float"
+      },
+      {
+        "label": "Glass",
+        "value": "Rocks glass"
+      },
+      {
+        "label": "Ice",
+        "value": "Large cube"
+      },
+      {
+        "label": "Garnish",
+        "value": "Lemon wheel"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制+漂浮"
+      },
+      {
+        "label": "酒杯",
+        "value": "岩石杯"
+      },
+      {
+        "label": "冰块",
+        "value": "大冰块"
+      },
+      {
+        "label": "装饰",
+        "value": "柠檬片"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2 oz (60ml)</strong> Rye or Bourbon whiskey",
+      "<strong>¾ oz (22ml)</strong> Fresh lemon juice",
+      "<strong>¾ oz (22ml)</strong> Simple syrup",
+      "<strong>1</strong> egg white",
+      "<strong>½ oz (15ml)</strong> Full-bodied red wine (Malbec or Shiraz)"
+    ],
+    "ingrZh": [
+      "<strong>2 oz (60ml)</strong> 黑麦或波本威士忌",
+      "<strong>¾ oz (22ml)</strong> 新鲜柠檬汁",
+      "<strong>¾ oz (22ml)</strong> 简单糖浆",
+      "<strong>1个</strong> 蛋白",
+      "<strong>½ oz (15ml)</strong> 浓郁红葡萄酒（马尔贝克或西拉）"
+    ],
+    "stepsEn": [
+      "Dry shake whiskey, lemon, syrup and egg white without ice for 15 seconds.",
+      "Add ice and shake hard for 12 seconds.",
+      "Double-strain into a rocks glass over a large ice cube.",
+      "Float the red wine: pour it slowly over the back of a bar spoon held just above the surface of the drink. It should sit in a distinct layer on top.",
+      "Garnish with a lemon wheel. The visual contrast is the whole point."
+    ],
+    "stepsZh": [
+      "将威士忌、柠檬汁、糖浆和蛋白干摇15秒，不加冰。",
+      "加入冰块大力摇12秒。",
+      "双重过滤至放有大冰块的岩石杯中。",
+      "漂浮红酒：将吧勺背面贴近酒液表面，缓缓将红酒沿勺背倒入，使其形成清晰的分层。",
+      "用柠檬片装饰。视觉对比才是这杯酒的灵魂。"
+    ],
+    "notesEn": "The New York Sour is a Whisky Sour with a red wine float — simple in concept, stunning in execution. Use a full-bodied red with some fruit character (Malbec works beautifully). The float must be poured slowly or it sinks and muddies everything.",
+    "notesZh": "纽约酸酒是加了红酒漂浮层的威士忌酸酒——概念简单，呈现惊艳。使用浓郁果香的红酒（马尔贝克效果极佳）。漂浮层必须缓慢倒入，否则会沉下去，混浊一片。"
+  }
+}

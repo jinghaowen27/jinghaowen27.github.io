@@ -1,0 +1,89 @@
+{
+  "order": 9,
+  "id": "cocktail-oldfashioned",
+  "image": "/images/photos/cocktails/Old Fashioned.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Stirred",
+  "metaZh": "经典 · 搅拌",
+  "titleEn": "Old Fashioned",
+  "titleZh": "古典鸡尾酒",
+  "descriptionEn": "2 oz bourbon · demerara sugar · Angostura · orange bitters. Express orange peel.",
+  "descriptionZh": "波本2oz · 德梅拉拉糖 · 安格斯图拉苦精 · 橙皮苦精。",
+  "time": "4min",
+  "amount": "",
+  "flavorEn": "Warming",
+  "flavorZh": "暖",
+  "rating": "★★★★☆",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Old Fashioned.jpg",
+    "eyebrowEn": "Classic · Stirred · ABV ~35%",
+    "eyebrowZh": "经典 · 搅拌 · 酒精度约35%",
+    "titleEn": "Old Fashioned",
+    "titleZh": "古典鸡尾酒",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Build in glass"
+      },
+      {
+        "label": "Glass",
+        "value": "Heavy rocks glass"
+      },
+      {
+        "label": "Ice",
+        "value": "Large single cube"
+      },
+      {
+        "label": "Garnish",
+        "value": "Orange peel + cherry"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "杯中直调"
+      },
+      {
+        "label": "酒杯",
+        "value": "厚底岩石杯"
+      },
+      {
+        "label": "冰块",
+        "value": "大单冰块"
+      },
+      {
+        "label": "装饰",
+        "value": "橙皮 + 樱桃"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2 oz (60ml)</strong> Bourbon or Rye whiskey",
+      "<strong>1 tsp</strong> Demerara sugar syrup (or 1 sugar cube)",
+      "<strong>2 dashes</strong> Angostura bitters",
+      "<strong>1 dash</strong> Orange bitters"
+    ],
+    "ingrZh": [
+      "<strong>2 oz (60ml)</strong> 波本或黑麦威士忌",
+      "<strong>1茶匙</strong> 德梅拉拉糖浆（或1块方糖）",
+      "<strong>2滴</strong> 安格斯图拉苦精",
+      "<strong>1滴</strong> 橙皮苦精"
+    ],
+    "stepsEn": [
+      "In a rocks glass, add the sugar syrup and both bitters. Stir briefly.",
+      "Add a large ice cube.",
+      "Pour whiskey over the ice.",
+      "Stir gently 15–20 seconds to chill and dilute slightly.",
+      "Express an orange peel over the glass, rub around the rim, and drop in. Add a cherry if desired."
+    ],
+    "stepsZh": [
+      "在岩石杯中加入糖浆和两种苦精，简单搅匀。",
+      "放入大冰块。",
+      "将威士忌倒在冰块上。",
+      "轻轻搅拌15-20秒，使其冷却并适度稀释。",
+      "在杯口上方扭转橙皮取油，擦杯口，放入杯中。喜欢的话可以加颗樱桃。"
+    ],
+    "notesEn": "The Old Fashioned is a spirit-forward drink. Don't muddle the orange and cherry — that's a common mistake. Let the spirit shine.",
+    "notesZh": "古典鸡尾酒是以酒为主角的饮品。不要研磨橙片和樱桃——那是常见错误。让威士忌本身发光。"
+  }
+}

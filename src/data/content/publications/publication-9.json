@@ -1,0 +1,21 @@
+{
+  "order": 9,
+  "id": "publication-9",
+  "titleEn": "Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing",
+  "titleZh": "Proof-of-Useful-Work Blockchain for Trustworthy Biomedical Hyperdimensional Computing",
+  "authorsEn": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao",
+  "authorsZh": "<strong>Jinghao Wen</strong>, Dongning Ma, Sizhe Zhang, Hasshi Sudler, Xun Jiao",
+  "venue": "IEEE Biomedical Circuits and Systems Conference (BioCAS), 2025",
+  "year": 2025,
+  "topic": "hdc",
+  "thumbnail": "/images/thumbnails/HDCoin.jpg",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11327514"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

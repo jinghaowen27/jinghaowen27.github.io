@@ -38,12 +38,22 @@ media:
 content:
   - name: publications
     label: Publications / 论文
-    type: file
-    path: src/data/content/publications.json
+    type: collection
+    path: src/data/content/publications
     format: json
-    list: true
+    filename:
+      template: "{fields.id}.json"
+      field: false
+    view:
+      fields: [titleEn, year, featured, showOnHome, showOnPublications, order]
+      primary: titleEn
+      sort: [order, year, titleEn]
+      default:
+        sort: order
+        order: asc
     fields:
       - { name: id, label: ID, type: string, required: true, description: "Unique; use lowercase letters, numbers and hyphens." }
+      - { name: order, label: Display order / 显示顺序, type: number, required: true }
       - { name: titleEn, label: English title, type: text, required: true }
       - { name: titleZh, label: 中文标题, type: text, required: true }
       - { name: authorsEn, label: Authors (English), type: text, required: true, description: "You may wrap your name in <strong>...</strong>." }
@@ -81,12 +91,22 @@ content:
 
   - name: photography
     label: Photography / 摄影
-    type: file
-    path: src/data/content/photography.json
+    type: collection
+    path: src/data/content/photography
     format: json
-    list: true
+    filename:
+      template: "{fields.id}.json"
+      field: false
+    view:
+      fields: [image, captionEn, medium, filmStock, topic, published, order]
+      primary: captionEn
+      sort: [order, captionEn, medium, topic]
+      default:
+        sort: order
+        order: asc
     fields:
       - { name: id, label: ID, type: string, required: true }
+      - { name: order, label: Display order / 显示顺序, type: number, required: true, description: "Lower numbers appear first on the website." }
       - name: image
         label: Photo / 照片
         type: image
@@ -120,12 +140,22 @@ content:
 
   - name: cocktails
     label: Bartending / 调酒
-    type: file
-    path: src/data/content/cocktails.json
+    type: collection
+    path: src/data/content/cocktails
     format: json
-    list: true
+    filename:
+      template: "{fields.id}.json"
+      field: false
+    view:
+      fields: [titleEn, metaEn, published, order]
+      primary: titleEn
+      sort: [order, titleEn]
+      default:
+        sort: order
+        order: asc
     fields:
       - { name: id, label: ID, type: string, required: true }
+      - { name: order, label: Display order / 显示顺序, type: number, required: true }
       - name: image
         label: Card image / 卡片图片
         type: image
@@ -179,12 +209,22 @@ content:
 
   - name: recipes
     label: Recipes / 菜谱
-    type: file
-    path: src/data/content/recipes.json
+    type: collection
+    path: src/data/content/recipes
     format: json
-    list: true
+    filename:
+      template: "{fields.id}.json"
+      field: false
+    view:
+      fields: [titleEn, metaEn, published, order]
+      primary: titleEn
+      sort: [order, titleEn]
+      default:
+        sort: order
+        order: asc
     fields:
       - { name: id, label: ID, type: string, required: true }
+      - { name: order, label: Display order / 显示顺序, type: number, required: true }
       - name: image
         label: Card image / 卡片图片
         type: image

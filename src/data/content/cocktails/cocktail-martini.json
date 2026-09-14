@@ -1,0 +1,87 @@
+{
+  "order": 17,
+  "id": "cocktail-martini",
+  "image": "",
+  "emoji": "🍸",
+  "metaEn": "Classic · Stirred",
+  "metaZh": "经典 · 搅拌",
+  "titleEn": "Martini",
+  "titleZh": "马丁尼",
+  "descriptionEn": "Gin and dry vermouth, stirred cold and served colder. A civilized drink.",
+  "descriptionZh": "金酒与干苦艾酒，冰镇搅拌，更冷上桌。文明人的饮品。",
+  "time": "3min",
+  "amount": "",
+  "flavorEn": "Dry",
+  "flavorZh": "干",
+  "rating": "★★★☆☆",
+  "published": true,
+  "details": {
+    "emoji": "🍸",
+    "eyebrowEn": "Classic · Stirred · ABV ~28%",
+    "eyebrowZh": "经典 · 搅拌 · 酒精度约28%",
+    "titleEn": "Martini",
+    "titleZh": "马丁尼",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Stirred"
+      },
+      {
+        "label": "Glass",
+        "value": "Chilled martini coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Stir with ice, serve up"
+      },
+      {
+        "label": "Garnish",
+        "value": "Lemon twist or olive"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "搅拌"
+      },
+      {
+        "label": "酒杯",
+        "value": "冰镇马丁尼杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰搅拌，滤冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "柠檬皮卷或橄榄"
+      }
+    ],
+    "ingrEn": [
+      "<strong>2.5 oz (75ml)</strong> London Dry Gin (or vodka for a Vodka Martini)",
+      "<strong>½ oz (15ml)</strong> Dry vermouth",
+      "<strong>1 dash</strong> Orange bitters (optional but recommended)"
+    ],
+    "ingrZh": [
+      "<strong>2.5 oz (75ml)</strong> 伦敦干金酒（或伏特加做成伏特加马丁尼）",
+      "<strong>½ oz (15ml)</strong> 干苦艾酒",
+      "<strong>1滴</strong> 橙皮苦精（可选但推荐）"
+    ],
+    "stepsEn": [
+      "Chill your martini glass in the freezer for at least 15 minutes, or fill with ice water while you prepare.",
+      "Combine gin, vermouth, and bitters in a mixing glass filled with large ice.",
+      "Stir for 40–50 seconds — longer than you think. You want maximum dilution and chill.",
+      "Strain into the chilled glass.",
+      "For a lemon twist: express the oil over the surface, rub around the rim, drop in or balance on the rim. For an olive: skewer 1–3 on a pick and drop in."
+    ],
+    "stepsZh": [
+      "将马丁尼杯放入冰箱至少冰镇15分钟，或在准备时用冰水装满杯子。",
+      "将金酒、苦艾酒和苦精倒入装有大冰块的调酒杯。",
+      "搅拌40-50秒——比你以为的要长。要最大程度冷却和稀释。",
+      "过滤入冰镇好的杯中。",
+      "柠檬皮卷：在杯面上方扭取油脂，擦杯口，放入或搭在杯沿。橄榄：用签串1-3颗放入杯中。"
+    ],
+    "notesEn": "The Martini is a canvas for your preferences. Wetter (more vermouth) is not worse — it's more nuanced. I prefer a 5:1 ratio and always use vermouth that has been stored in the fridge (it oxidizes). Never shake unless you want a cloudy, bruised drink. The Bond instruction was wrong.",
+    "notesZh": "马丁尼是展现个人偏好的画布。更湿（更多苦艾酒）并非更差——而是更有层次。我偏好5:1的比例，并且始终使用冷藏保存的苦艾酒（它会氧化变质）。除非想要混浊的酒，否则永远不要摇制。邦德的吩咐是错误的。"
+  }
+}

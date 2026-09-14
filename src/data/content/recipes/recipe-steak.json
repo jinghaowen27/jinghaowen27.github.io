@@ -1,0 +1,85 @@
+{
+  "order": 7,
+  "id": "recipe-steak",
+  "image": "",
+  "emoji": "🥩",
+  "metaEn": "Western · Main",
+  "metaZh": "西式 · 主菜",
+  "titleEn": "Pan-Seared Steak",
+  "titleZh": "干煎牛排",
+  "descriptionEn": "Cast iron, high heat, butter basting. Medium-rare or nothing.",
+  "descriptionZh": "铸铁锅、大火、黄油淋制。五分熟，别无他选。",
+  "time": "20min",
+  "amount": "1",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🥩",
+    "eyebrowEn": "Western · Main · 1 serving",
+    "eyebrowZh": "西式 · 主菜 · 1人份",
+    "titleEn": "Pan-Seared Steak",
+    "titleZh": "干煎牛排",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "20 min"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Easy"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "20分钟"
+      },
+      {
+        "label": "难度",
+        "value": "简单"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1</strong> ribeye or NY strip (2.5–3cm thick)",
+      "<strong>2 tbsp</strong> neutral oil",
+      "<strong>3 tbsp</strong> unsalted butter",
+      "<strong>3 cloves</strong> garlic, crushed",
+      "<strong>3 sprigs</strong> thyme or rosemary",
+      "Coarse salt and black pepper"
+    ],
+    "ingrZh": [
+      "<strong>1块</strong> 肋眼或纽约客（2.5–3cm厚）",
+      "<strong>2汤匙</strong> 中性油",
+      "<strong>3汤匙</strong> 无盐黄油",
+      "<strong>3瓣</strong> 大蒜，拍碎",
+      "<strong>3枝</strong> 百里香或迷迭香",
+      "粗盐和黑胡椒"
+    ],
+    "stepsEn": [
+      "Remove steak from fridge 45 min before cooking. Pat completely dry. Season aggressively with salt and pepper on all surfaces — more than you think is needed.",
+      "Heat a cast-iron pan over highest heat until smoking. Add oil. Place steak — it should scream when it hits the pan.",
+      "Cook 2 min without moving. Flip. Cook 2 min. Then flip every 30 seconds for a final 2 min, building the crust.",
+      "Add butter, garlic and herbs. Tilt the pan and baste the steak continuously with the foaming butter for 1 min.",
+      "Rest on a wire rack 5–8 min. This is mandatory, not optional. Cut against the grain."
+    ],
+    "stepsZh": [
+      "牛排从冰箱取出后在室温放置45分钟，完全拍干，各面大量撒盐和黑胡椒——比你以为需要的要多。",
+      "铸铁锅大火烧至冒烟，下油，放入牛排——下锅时应该发出响亮的嘶嘶声。",
+      "不移动煎2分钟，翻面，再煎2分钟，最后每隔30秒翻面共2分钟，积累焦壳。",
+      "加黄油、大蒜和香草，倾斜锅身，用起泡的黄油不停淋制牛排约1分钟。",
+      "放在烤架上静置5-8分钟，这是必须的而非可选的。逆纹切开。"
+    ],
+    "notesEn": "Dry surface, ripping-hot pan, aggressive seasoning, proper rest. Every step has a reason. The resting allows the juices to redistribute — cut too early and they run out onto the board, not into your mouth.",
+    "notesZh": "干燥表面、极热铸铁锅、大量调味、充分静置。每一步都有其理由。静置让肉汁重新分布——切得太早，肉汁流到砧板上，而不是流进你口中。"
+  }
+}

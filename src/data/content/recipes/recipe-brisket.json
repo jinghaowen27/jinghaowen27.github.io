@@ -1,0 +1,99 @@
+{
+  "order": 10,
+  "id": "recipe-brisket",
+  "image": "",
+  "emoji": "🫕",
+  "metaEn": "Cantonese · Braised",
+  "metaZh": "粤式 · 焖制",
+  "titleEn": "HK-Style Beef Brisket Pot",
+  "titleZh": "港式牛腩煲",
+  "descriptionEn": "Daikon, beef brisket, spiced broth. Hong Kong winter in a clay pot.",
+  "descriptionZh": "萝卜、牛腩、香料高汤。砂锅里的香港冬天。",
+  "time": "3h",
+  "amount": "4",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "emoji": "🫕",
+    "eyebrowEn": "Cantonese · Braised · 4 servings",
+    "eyebrowZh": "粤式 · 焖制 · 4人份",
+    "titleEn": "HK-Style Beef Brisket Pot",
+    "titleZh": "港式牛腩煲",
+    "metaEn": [
+      {
+        "label": "Time",
+        "value": "3h total"
+      },
+      {
+        "label": "Difficulty",
+        "value": "Medium"
+      },
+      {
+        "label": "Rating",
+        "value": "★★★★★"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "时间",
+        "value": "共3小时"
+      },
+      {
+        "label": "难度",
+        "value": "中等"
+      },
+      {
+        "label": "评分",
+        "value": "★★★★★"
+      }
+    ],
+    "ingrEn": [
+      "<strong>800g</strong> beef brisket, cut into large chunks",
+      "<strong>1</strong> large daikon, cut into thick rounds",
+      "<strong>3 tbsp</strong> oyster sauce",
+      "<strong>2 tbsp</strong> dark soy sauce",
+      "<strong>1 tbsp</strong> soy sauce",
+      "<strong>1 tbsp</strong> Shaoxing wine",
+      "<strong>1 tsp</strong> five-spice powder",
+      "<strong>3 slices</strong> ginger",
+      "<strong>2</strong> star anise",
+      "<strong>1</strong> piece dried tangerine peel",
+      "<strong>1 tsp</strong> whole Sichuan peppercorns",
+      "Beef stock or water to cover"
+    ],
+    "ingrZh": [
+      "<strong>800g</strong> 牛腩，切大块",
+      "<strong>1根</strong> 大白萝卜，切厚片",
+      "<strong>3汤匙</strong> 蚝油",
+      "<strong>2汤匙</strong> 老抽",
+      "<strong>1汤匙</strong> 生抽",
+      "<strong>1汤匙</strong> 绍兴酒",
+      "<strong>1茶匙</strong> 五香粉",
+      "<strong>3片</strong> 生姜",
+      "<strong>2颗</strong> 八角",
+      "<strong>1块</strong> 陈皮",
+      "<strong>1茶匙</strong> 整粒花椒",
+      "牛肉高汤或清水没过"
+    ],
+    "stepsEn": [
+      "Blanch beef brisket 5 min in boiling water. Drain and rinse.",
+      "Brown brisket in batches in a clay pot or Dutch oven over high heat. Remove.",
+      "Fry ginger briefly in the same pot. Return brisket. Add all sauces, wine, five-spice, star anise, tangerine peel and Sichuan peppercorns.",
+      "Add stock or water to cover. Bring to a boil, then simmer covered 1.5 hours.",
+      "Add daikon. Continue simmering covered another 45–60 min until both beef and daikon are completely tender.",
+      "Serve in the clay pot. The daikon should have absorbed all the braising liquid color and flavor."
+    ],
+    "stepsZh": [
+      "牛腩冷水焯5分钟，捞出冲洗。",
+      "砂锅或铸铁锅大火将牛腩分批煎至上色，取出。",
+      "同一口锅短暂爆香姜片，放回牛腩，加入所有酱料、酒、五香粉、八角、陈皮和花椒。",
+      "加高汤或清水没过，大火烧开转小火盖锅焖1.5小时。",
+      "放入萝卜，继续盖锅焖45-60分钟至牛腩和萝卜均完全软烂。",
+      "连砂锅上桌。萝卜应已完全吸收焖汁的色泽与味道。"
+    ],
+    "notesEn": "The dried tangerine peel is the soul of the Cantonese spice palette — it adds a fragrant bitterness that cuts through the richness. The daikon is arguably better than the beef. It absorbs everything and becomes something else entirely.",
+    "notesZh": "陈皮是粤式香料的灵魂——它带来一种芬芳的苦涩，穿透浓郁的肉香。萝卜可以说比牛腩更好，它吸收了一切，变成了完全不同的东西。"
+  }
+}

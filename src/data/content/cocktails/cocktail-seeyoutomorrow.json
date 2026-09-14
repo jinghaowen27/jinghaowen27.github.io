@@ -1,0 +1,89 @@
+{
+  "order": 19,
+  "id": "cocktail-seeyoutomorrow",
+  "image": "",
+  "emoji": "🌙",
+  "metaEn": "Original · Shaken",
+  "metaZh": "原创 · 摇制",
+  "titleEn": "See You Tomorrow",
+  "titleZh": "明日再见",
+  "descriptionEn": "My signature farewell drink. Made for the last round of the night.",
+  "descriptionZh": "我的招牌告别之饮，为今晚最后一杯而生。",
+  "time": "5min",
+  "amount": "",
+  "flavorEn": "Bittersweet",
+  "flavorZh": "苦甜",
+  "rating": "★★★☆☆",
+  "published": true,
+  "details": {
+    "emoji": "🌙",
+    "eyebrowEn": "Original · Shaken · ABV ~18%",
+    "eyebrowZh": "原创 · 摇制 · 酒精度约18%",
+    "titleEn": "See You Tomorrow",
+    "titleZh": "明日再见",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Chilled coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Shake with ice, serve up"
+      },
+      {
+        "label": "Garnish",
+        "value": "Expressed orange peel"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "冰镇碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰摇制，滤冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "橙皮卷"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1.5 oz (45ml)</strong> Aged rum (Ron Zacapa or similar)",
+      "<strong>½ oz (15ml)</strong> Amaro Nonino",
+      "<strong>½ oz (15ml)</strong> Fresh lemon juice",
+      "<strong>¼ oz (7ml)</strong> Honey syrup (2:1 honey to water)",
+      "<strong>2 dashes</strong> Peychaud's bitters"
+    ],
+    "ingrZh": [
+      "<strong>1.5 oz (45ml)</strong> 陈年朗姆酒（推荐Ron Zacapa或同类）",
+      "<strong>½ oz (15ml)</strong> 诺尼诺阿马罗",
+      "<strong>½ oz (15ml)</strong> 新鲜柠檬汁",
+      "<strong>¼ oz (7ml)</strong> 蜂蜜糖浆（蜂蜜:水=2:1）",
+      "<strong>2滴</strong> 佩乔苦精"
+    ],
+    "stepsEn": [
+      "Combine all ingredients in a shaker with ice.",
+      "Shake for 12 seconds.",
+      "Double-strain into a chilled coupe.",
+      "Express an orange peel over the surface — hold it above the glass and snap it firmly to release the oils. Run it around the rim, then rest it on the edge."
+    ],
+    "stepsZh": [
+      "将所有材料加入装有冰块的摇壶。",
+      "摇12秒。",
+      "双重过滤至冰镇碟形杯。",
+      "在杯面上方扭转橙皮取油——用力折压，让油脂喷洒在酒液表面。擦一圈杯口，搭在杯沿。"
+    ],
+    "notesEn": "This is the drink I make at the end of a long night behind the bar — for myself or for whoever is still there. The aged rum gives it warmth and depth, the Amaro Nonino adds a bittersweet complexity, and the honey softens everything without losing the edges. The name came naturally: it is the kind of drink that feels like a quiet goodbye. Not dramatic. Just — see you tomorrow.",
+    "notesZh": "这是我在吧台后漫长一夜结束时调的那杯酒——为自己，或者为还留在那里的人。陈年朗姆带来温度和深度，诺尼诺阿马罗增添苦甜的层次，蜂蜜将一切柔和而不失棱角。名字自然而然地来了：这杯酒有一种安静告别的感觉。不戏剧化。只是——明日再见。"
+  }
+}

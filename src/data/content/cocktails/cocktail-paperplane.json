@@ -1,0 +1,87 @@
+{
+  "order": 4,
+  "id": "cocktail-paperplane",
+  "image": "/images/photos/cocktails/Paper Plane.jpg",
+  "emoji": "",
+  "metaEn": "Modern Classic · Shaken",
+  "metaZh": "现代经典 · 摇制",
+  "titleEn": "Paper Plane",
+  "titleZh": "纸飞机",
+  "descriptionEn": "Equal parts bourbon, Aperol, Amaro Nonino, lemon. Perfect symmetry in a glass.",
+  "descriptionZh": "波本、艾普罗、诺尼诺阿马罗、柠檬各等份。杯中的完美对称。",
+  "time": "4min",
+  "amount": "",
+  "flavorEn": "Bittersweet",
+  "flavorZh": "苦甜",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Paper Plane.jpg",
+    "eyebrowEn": "Modern Classic · Shaken · ABV ~22%",
+    "eyebrowZh": "现代经典 · 摇制 · 酒精度约22%",
+    "titleEn": "Paper Plane",
+    "titleZh": "纸飞机",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Chilled coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Shake with ice, serve up"
+      },
+      {
+        "label": "Garnish",
+        "value": "None"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "冰镇碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰摇制，滤冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "无"
+      }
+    ],
+    "ingrEn": [
+      "<strong>¾ oz (22ml)</strong> Bourbon whiskey",
+      "<strong>¾ oz (22ml)</strong> Aperol",
+      "<strong>¾ oz (22ml)</strong> Amaro Nonino",
+      "<strong>¾ oz (22ml)</strong> Fresh lemon juice"
+    ],
+    "ingrZh": [
+      "<strong>¾ oz (22ml)</strong> 波本威士忌",
+      "<strong>¾ oz (22ml)</strong> 艾普罗",
+      "<strong>¾ oz (22ml)</strong> 诺尼诺阿马罗",
+      "<strong>¾ oz (22ml)</strong> 新鲜柠檬汁"
+    ],
+    "stepsEn": [
+      "Combine all four ingredients in equal measure in a cocktail shaker with ice. There is no flexibility in the ratio — that is the point of the drink.",
+      "Shake hard for 12 seconds.",
+      "Double-strain into a chilled coupe.",
+      "No garnish. The simplicity of presentation mirrors the purity of the recipe."
+    ],
+    "stepsZh": [
+      "将四种材料等量倒入装有冰块的摇壶。比例没有任何弹性——这正是这款酒的精髓所在。",
+      "用力摇12秒。",
+      "双重过滤至冰镇碟形杯。",
+      "无需装饰。呈现的简洁映照着配方的纯粹。"
+    ],
+    "notesEn": "Created by Sam Ross (who also invented the Penicillin) in 2007, named after the M.I.A. song. The equal-parts format is elegantly democratic — no single ingredient dominates. The Amaro Nonino is non-negotiable; other amaros change the drink entirely. It is the rare modern cocktail that deserves to be called a classic.",
+    "notesZh": "由萨姆·罗斯（同时也是青霉素鸡尾酒的发明者）于2007年创作，以M.I.A.的同名歌曲命名。等份配方优雅而民主——没有任何一种材料主导全局。诺尼诺阿马罗是不可替代的；换成其他阿马罗会彻底改变这款酒。它是极少数值得被称为经典的现代鸡尾酒。"
+  }
+}

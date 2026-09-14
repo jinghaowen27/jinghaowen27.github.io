@@ -1,0 +1,21 @@
+{
+  "order": 3,
+  "id": "publication-3",
+  "titleEn": "Learning Fingerprints for Medical Time Series with Redundancy-Constrained Information Maximization",
+  "titleZh": "Learning Fingerprints for Medical Time Series with Redundancy-Constrained Information Maximization",
+  "authorsEn": "Huayu Li, ZhengXiao He, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+  "authorsZh": "Huayu Li, ZhengXiao He, Xiwen Chen, Jingjing Wang, Siyuan Tian, <strong>Jinghao Wen</strong>, Ao Li",
+  "venue": "International Conference on Machine Learning (ICML), 2026",
+  "year": 2026,
+  "topic": "medical",
+  "thumbnail": "/images/thumbnails/ICML.png",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2605.00130"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

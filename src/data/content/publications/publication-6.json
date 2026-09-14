@@ -1,0 +1,21 @@
+{
+  "order": 6,
+  "id": "publication-6",
+  "titleEn": "Revisiting Lottery Ticket Hypothesis: Toward Efficient and Robust Deep Neural Networks",
+  "titleZh": "Revisiting Lottery Ticket Hypothesis: Toward Efficient and Robust Deep Neural Networks",
+  "authorsEn": "Ruixuan Wang, <strong>Jinghao Wen</strong>, Xun Jiao",
+  "authorsZh": "Ruixuan Wang, <strong>Jinghao Wen</strong>, Xun Jiao",
+  "venue": "Proceedings of the Great Lakes Symposium on VLSI (GLSVLSI), 2026",
+  "year": 2026,
+  "topic": "robust",
+  "thumbnail": "/images/thumbnails/GLSVLSI.png",
+  "links": [
+    {
+      "label": "Paper",
+      "url": "https://dl.acm.org/doi/full/10.1145/3787109.3815282"
+    }
+  ],
+  "featured": true,
+  "showOnHome": true,
+  "showOnPublications": true
+}

@@ -1,0 +1,59 @@
+{
+  "order": 1,
+  "id": "bar-bryan",
+  "image": "/images/photos/cocktails/intro.jpg",
+  "emoji": "",
+  "metaEn": "New York Bartending School · 2026",
+  "metaZh": "纽约调酒师学校 · 2025",
+  "titleEn": "Bryan Evans & Me",
+  "titleZh": "Bryan 与我",
+  "descriptionEn": "The funniest British old man I've ever met. My instructor, my inspiration behind the bar.",
+  "descriptionZh": "我见过的最幽默的英国小老头。我在吧台后的老师。",
+  "time": "",
+  "amount": "",
+  "flavorEn": "",
+  "flavorZh": "",
+  "rating": "",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/intro.jpg",
+    "eyebrowEn": "New York Bartending School · 2026",
+    "eyebrowZh": "纽约调酒师学校 · 2026",
+    "titleEn": "Bryan Evans & Me",
+    "titleZh": "Bryan 与我",
+    "metaEn": [
+      {
+        "label": "Location",
+        "value": "New York"
+      },
+      {
+        "label": "School",
+        "value": "New York Bartending School"
+      },
+      {
+        "label": "Instructor",
+        "value": "Bryan Evans"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "地点",
+        "value": "纽约"
+      },
+      {
+        "label": "学校",
+        "value": "纽约调酒师学校"
+      },
+      {
+        "label": "讲师",
+        "value": "Bryan Evans"
+      }
+    ],
+    "ingrEn": [],
+    "ingrZh": [],
+    "stepsEn": [],
+    "stepsZh": [],
+    "notesEn": "Bryan Evans is the funniest British old man I have ever met behind a bar. He has the kind of beard that belongs in a folk song and the kind of laugh that fills a room before the joke is even finished.\n\nI earned my New York bartending certification under his instruction. The certificate is somewhere in a drawer. The things he taught me are not.",
+    "notesZh": "Bryan Evans 是我在吧台后见过的最幽默的英国小老头。他留着一把属于民谣歌曲的胡子，笑声在笑话还没说完之前就已经把整个房间填满了。\n\n我在他的指导下取得了纽约调酒师证书。证书放在抽屉的某个角落。他教给我的东西，不在那里。"
+  }
+}

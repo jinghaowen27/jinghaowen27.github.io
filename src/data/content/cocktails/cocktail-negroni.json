@@ -1,0 +1,87 @@
+{
+  "order": 6,
+  "id": "cocktail-negroni",
+  "image": "/images/photos/cocktails/Negroni.jpg",
+  "emoji": "",
+  "metaEn": "Classic · Stirred",
+  "metaZh": "经典 · 搅拌",
+  "titleEn": "Negroni",
+  "titleZh": "内格罗尼",
+  "descriptionEn": "1 oz gin · 1 oz Campari · 1 oz sweet vermouth. Orange twist. Perfect every time.",
+  "descriptionZh": "金酒1oz · 金巴利1oz · 甜苦艾酒1oz。橙皮装饰。次次完美。",
+  "time": "3min",
+  "amount": "",
+  "flavorEn": "Bitter",
+  "flavorZh": "苦",
+  "rating": "★★★★☆",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Negroni.jpg",
+    "eyebrowEn": "Classic · Stirred · ABV ~24%",
+    "eyebrowZh": "经典 · 搅拌 · 酒精度约24%",
+    "titleEn": "Negroni",
+    "titleZh": "内格罗尼",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Stirred"
+      },
+      {
+        "label": "Glass",
+        "value": "Rocks / Coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Large cube or sphere"
+      },
+      {
+        "label": "Garnish",
+        "value": "Orange twist"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "搅拌"
+      },
+      {
+        "label": "酒杯",
+        "value": "平底岩石杯/碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "大冰块/冰球"
+      },
+      {
+        "label": "装饰",
+        "value": "橙皮卷"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1 oz (30ml)</strong> London Dry Gin",
+      "<strong>1 oz (30ml)</strong> Campari",
+      "<strong>1 oz (30ml)</strong> Sweet Vermouth (Carpano Antica recommended)"
+    ],
+    "ingrZh": [
+      "<strong>1 oz (30ml)</strong> 伦敦干金酒",
+      "<strong>1 oz (30ml)</strong> 金巴利",
+      "<strong>1 oz (30ml)</strong> 甜苦艾酒（推荐Carpano Antica）"
+    ],
+    "stepsEn": [
+      "Add all ingredients to a mixing glass filled with large ice.",
+      "Stir for 30 seconds until well-chilled and properly diluted.",
+      "Strain into a rocks glass over a single large ice cube.",
+      "Express an orange twist over the surface — hold the peel an inch above the glass and snap it.",
+      "Rub the peel around the rim and drop it in, or balance it on the rim."
+    ],
+    "stepsZh": [
+      "将所有材料倒入装有大冰块的调酒杯。",
+      "搅拌30秒，使其充分冷却并适度稀释。",
+      "用隔冰匙滤入放有大冰块的岩石杯。",
+      "将橙皮扭转表达油脂——离杯面约3厘米处用力折压橙皮。",
+      "橙皮擦杯口后放入杯中，或搭在杯沿。"
+    ],
+    "notesEn": "The equal-parts ratio is sacrosanct. Don't shake — stirring gives the Negroni its silky, clarified texture. I prefer Carpano Antica for vermouth; it adds a vanilla richness.",
+    "notesZh": "三等份的比例是神圣的。不要摇——搅拌赋予内格罗尼丝滑清澈的质感。我偏好Carpano Antica苦艾酒，它带来香草般的丰润感。"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "order": 7,
+  "id": "cocktail-coconutbaileys",
+  "image": "/images/photos/cocktails/coconut_baileys.jpg",
+  "emoji": "",
+  "metaEn": "Original · Shaken",
+  "metaZh": "原创 · 摇制",
+  "titleEn": "Coconut Baileys",
+  "titleZh": "椰子百利甜",
+  "descriptionEn": "Baileys, coconut rum, coconut cream, milk. Rich, creamy, dangerously drinkable.",
+  "descriptionZh": "百利甜、椰子朗姆、椰浆、牛奶。浓郁丝滑，危险地好喝。",
+  "time": "3min",
+  "amount": "",
+  "flavorEn": "Creamy",
+  "flavorZh": "奶香",
+  "rating": "★★★★★",
+  "published": true,
+  "details": {
+    "img": "/images/photos/cocktails/Coconut.jpg",
+    "eyebrowEn": "Original · Shaken · ABV ~11%",
+    "eyebrowZh": "原创 · 摇制 · 酒精度约11%",
+    "titleEn": "Coconut Baileys",
+    "titleZh": "椰子百利甜",
+    "metaEn": [
+      {
+        "label": "Method",
+        "value": "Shaken"
+      },
+      {
+        "label": "Glass",
+        "value": "Rocks glass or coupe"
+      },
+      {
+        "label": "Ice",
+        "value": "Shake with ice, serve over ice or up"
+      },
+      {
+        "label": "Garnish",
+        "value": "Toasted coconut flakes"
+      }
+    ],
+    "metaZh": [
+      {
+        "label": "手法",
+        "value": "摇制"
+      },
+      {
+        "label": "酒杯",
+        "value": "岩石杯或碟形杯"
+      },
+      {
+        "label": "冰块",
+        "value": "加冰摇制，加冰或滤冰上桌"
+      },
+      {
+        "label": "装饰",
+        "value": "烤椰丝"
+      }
+    ],
+    "ingrEn": [
+      "<strong>1.5 oz (45ml)</strong> Baileys Irish Cream",
+      "<strong>1 oz (30ml)</strong> Coconut rum (Malibu or similar)",
+      "<strong>1 oz (30ml)</strong> Coconut cream",
+      "<strong>1 oz (30ml)</strong> Whole milk or oat milk",
+      "<strong>Pinch</strong> of sea salt"
+    ],
+    "ingrZh": [
+      "<strong>1.5 oz (45ml)</strong> 百利甜酒",
+      "<strong>1 oz (30ml)</strong> 椰子朗姆酒（马利宝或同类）",
+      "<strong>1 oz (30ml)</strong> 椰浆",
+      "<strong>1 oz (30ml)</strong> 全脂牛奶或燕麦奶",
+      "<strong>一撮</strong> 海盐"
+    ],
+    "stepsEn": [
+      "Combine all ingredients in a shaker with plenty of ice.",
+      "Shake hard for 12 seconds — the coconut cream needs good agitation to integrate fully.",
+      "Strain over fresh ice in a rocks glass, or double-strain into a chilled coupe.",
+      "Toast a small handful of coconut flakes in a dry pan until golden. Sprinkle over the top.",
+      "The salt is subtle but essential — it cuts through the sweetness and rounds out the coconut."
+    ],
+    "stepsZh": [
+      "将所有材料加入装有大量冰块的摇壶。",
+      "用力摇12秒——椰浆需要充分摇晃才能完全融合。",
+      "过滤至放有新冰块的岩石杯，或双重过滤至冰镇碟形杯。",
+      "干锅小火将椰丝烤至金黄，撒在表面。",
+      "盐的用量极少但不可缺——它能化解甜腻，让椰子风味更圆润。"
+    ],
+    "notesEn": "This one was born out of a late-night experiment — I had Baileys, I had coconut rum, and I had no intention of drinking either straight. The sea salt is the move that makes it. Without it, it tastes like dessert; with it, it tastes like a cocktail. The toasted coconut garnish adds a nutty, slightly smoky contrast that I find impossible to skip.",
+    "notesZh": "这款酒诞生于一个深夜的实验——手边有百利甜，有椰子朗姆，但两样都不想直接喝。海盐是点睛之笔。没有它，喝起来像甜品；加了它，才像一杯鸡尾酒。烤椰丝的装饰带来坚果香和轻微烟熏感的对比，让我每次都无法省略。"
+  }
+}
