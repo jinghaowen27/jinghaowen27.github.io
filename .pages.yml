@@ -106,7 +106,7 @@ content:
         order: asc
     fields:
       - { name: id, label: ID, type: string, required: true }
-      - { name: order, label: Display order / 显示顺序, type: number, required: true, description: "Lower numbers appear first on the website." }
+      - { name: order, label: Display order / 显示顺序, type: number, required: true, description: "This is an insertion position starting at 0. If it is already used, this photo takes the position and later photos shift down automatically. / 从0开始；若位置重复，本照片插入该位置，后面的照片自动顺延。" }
       - name: image
         label: Photo / 照片
         type: image

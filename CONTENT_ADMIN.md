@@ -19,4 +19,6 @@ Only GitHub users with write access to the repository can edit its content. Do n
 
 Each entry is stored as its own JSON file. Pages CMS therefore opens each section as a compact collection list, with creation controls at the top instead of one long expanded array form. The `order` field controls website display order.
 
+Photography order uses zero-based insertion positions. If a new or edited photo uses an existing position, the most recently saved photo takes that position and all following photos are shifted down automatically by the `Normalize photography order` GitHub Action.
+
 Uploaded media is committed under `public/images/`. Saving content creates a Git commit; the existing deployment workflow publishes it.

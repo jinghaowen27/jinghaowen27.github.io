@@ -1,0 +1,41 @@
+name: Normalize photography order
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/data/content/photography/*.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalize-photography-order
+  cancel-in-progress: false
+
+jobs:
+  normalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the latest main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Normalize duplicate positions
+        run: node scripts/normalize-photography-order.mjs
+
+      - name: Commit shifted order values
+        shell: bash
+        run: |
+          if git diff --quiet -- src/data/content/photography; then
+            echo "Photography order is already normalized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/content/photography
+          git commit -m "content: normalize photography order"
+          git push origin main
