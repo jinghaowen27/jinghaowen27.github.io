@@ -23,12 +23,10 @@ const isActive = (path) => currentPath === path ? "active" : "";
       <em class="icon">in</em>
       <span class="sb-link-label en">LinkedIn</span><span class="sb-link-label zh" style="display:none">领英</span>
     </a>
-    <a href="#" onclick="toggleContact(event,'wechat-detail');return false;" class="sb-contact-expandable">
+    <a id="wechat-trigger" href="#wechat-modal" onclick="openWeChatModal(event)" aria-haspopup="dialog" aria-controls="wechat-modal" aria-expanded="false">
       <em class="icon">💬</em>
       <span class="sb-link-label en">WeChat</span><span class="sb-link-label zh" style="display:none">微信</span>
-      <span class="sb-expand-arrow" id="wechat-arrow">›</span>
     </a>
-    <div class="sb-contact-detail" id="wechat-detail">w07275100</div>
     <a href="/CV_Jinghao_Wen.pdf" target="_blank">
       <em class="icon">↓</em>
       <span class="sb-link-label en">Curriculum Vitae</span><span class="sb-link-label zh" style="display:none">简历</span>
@@ -57,3 +55,14 @@ const isActive = (path) => currentPath === path ? "active" : "";
     </div>
   </div>
 </aside>
+
+<div id="wechat-modal" class="wechat-modal" role="dialog" aria-modal="true" aria-labelledby="wechat-modal-title" onclick="closeWeChatModalIfBg(event)" hidden>
+  <div class="wechat-modal-card">
+    <button class="wechat-modal-close" type="button" onclick="closeWeChatModal()" aria-label="Close WeChat QR code">✕</button>
+    <div class="wechat-modal-eye en">Scan to connect</div>
+    <div class="wechat-modal-eye zh" style="display:none">扫码添加微信</div>
+    <h2 id="wechat-modal-title"><span class="en">WeChat</span><span class="zh" style="display:none">微信</span></h2>
+    <img src="/images/wechat-qr.jpg" alt="WeChat QR code for w07275100" />
+    <p>WeChat id: <strong>w07275100</strong></p>
+  </div>
+</div>

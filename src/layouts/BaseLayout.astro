@@ -109,6 +109,38 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
     
         localStorage.setItem('lang', lang);
       };
+
+      window.openWeChatModal = function (event) {
+        if (event) event.preventDefault();
+        const modal = document.getElementById('wechat-modal');
+        const trigger = document.getElementById('wechat-trigger');
+        if (!modal) return;
+        modal.hidden = false;
+        document.body.classList.add('wechat-modal-open');
+        if (trigger) trigger.setAttribute('aria-expanded', 'true');
+        const closeButton = modal.querySelector('.wechat-modal-close');
+        if (closeButton) closeButton.focus();
+      };
+
+      window.closeWeChatModal = function () {
+        const modal = document.getElementById('wechat-modal');
+        const trigger = document.getElementById('wechat-trigger');
+        if (!modal || modal.hidden) return;
+        modal.hidden = true;
+        document.body.classList.remove('wechat-modal-open');
+        if (trigger) {
+          trigger.setAttribute('aria-expanded', 'false');
+          trigger.focus();
+        }
+      };
+
+      window.closeWeChatModalIfBg = function (event) {
+        if (event.target === event.currentTarget) window.closeWeChatModal();
+      };
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') window.closeWeChatModal();
+      });
     
       window.addEventListener('DOMContentLoaded', () => {
         const saved = localStorage.getItem('lang') || 'en';

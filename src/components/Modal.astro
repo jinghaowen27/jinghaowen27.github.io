@@ -668,15 +668,6 @@ function filterGuitar(btn, genre) {
   });
 }
 
-// ── WeChat expand ────────────────────────────────────────────────────────────
-function toggleContact(e, id) {
-  e.preventDefault();
-  const detail = document.getElementById(id);
-  const arrow = document.getElementById(id.replace('-detail', '-arrow'));
-  if (detail) detail.classList.toggle('open');
-  if (arrow) arrow.classList.toggle('open');
-}
-
 // ── Mobile sidebar ───────────────────────────────────────────────────────────
 function openSidebar() {
   document.getElementById('sidebar').classList.add('open');
