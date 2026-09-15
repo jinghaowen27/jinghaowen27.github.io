@@ -35,3 +35,14 @@ The tool preserves the whole image and its aspect ratio; it never crops.
 `tools/photo-prep.html`，拖入原图，下载生成的 `-web.jpg`，再将它上传到
 Pages CMS。默认上限为 1.8 MB，给上传编码留出余量。工具始终保留完整画面和
 原始长宽比，不会裁切。
+
+For automatic processing inside the original Pages CMS upload control, install
+the unpacked browser extension in `tools/pagescms-auto-compress/`. It passes
+images at or below 1.8 MB through unchanged and locally compresses larger images
+before Pages CMS receives the file. Installation steps are in that folder's
+`README.md`.
+
+如果希望直接使用 Pages CMS 原来的上传按键，请安装
+`tools/pagescms-auto-compress/` 中的本地浏览器扩展。小于或等于 1.8 MB 的
+图片会直接上传；更大的图片会先在浏览器本地自动压缩。安装方法见该目录中的
+`README.md`。

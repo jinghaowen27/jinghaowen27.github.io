@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Pages CMS Auto Compress",
+  "version": "1.0.0",
+  "description": "Automatically compress large photography uploads before Pages CMS receives them.",
+  "content_scripts": [
+    {
+      "matches": ["https://app.pagescms.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
