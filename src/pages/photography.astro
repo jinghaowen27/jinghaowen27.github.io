@@ -115,7 +115,7 @@ import { photography as photos } from "../data/content/collections.js";
   <div class="photo-grid" id="photo-grid">
     {photos.filter((photo) => photo.published).map((photo) => (
       <div class="photo-cell" data-medium={photo.medium} data-film={photo.medium === 'film' ? photo.filmStock : undefined} data-topic={photo.topic} onclick="openLightbox(this)">
-        <img src={photo.image} alt={photo.alt} />
+        <img src={photo.image} alt={photo.alt} loading="lazy" decoding="async" />
         <p class="photo-caption en">{photo.captionEn}</p>
         <p class="photo-caption zh" style="display:none">{photo.captionZh}</p>
       </div>
