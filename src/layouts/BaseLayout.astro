@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Topbar from "../components/Topbar.astro";
 import Sidebar from "../components/Sidebar.astro";
 import Modal from "../components/Modal.astro";
+import CVModal from "../components/CVModal.astro";
 
 const { title = "Your Name — Personal Site" } = Astro.props;
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -32,6 +33,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
     <div id="overlay" onclick="closeSidebar()"></div>
     <Topbar />
     <Sidebar currentPath={currentPath} />
+    <CVModal />
     <main id="main">
       <slot />
       <Modal />
@@ -138,8 +140,66 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
         if (event.target === event.currentTarget) window.closeWeChatModal();
       };
 
+      let cvTrigger = null;
+
+      window.openCVModal = function (event) {
+        if (event) {
+          event.preventDefault();
+          cvTrigger = event.currentTarget;
+        }
+        const modal = document.getElementById('cv-modal');
+        if (!modal) return;
+        const preferredLanguage = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
+        window.setCVLanguage(preferredLanguage);
+        modal.hidden = false;
+        document.body.classList.add('cv-modal-open');
+        if (cvTrigger) cvTrigger.setAttribute('aria-expanded', 'true');
+        const closeButton = modal.querySelector('.cv-modal-close');
+        if (closeButton) closeButton.focus();
+      };
+
+      window.setCVLanguage = function (language) {
+        const isZh = language === 'zh';
+        const frame = document.getElementById('cv-frame');
+        const download = document.getElementById('cv-download');
+        const enButton = document.getElementById('cv-lang-en');
+        const zhButton = document.getElementById('cv-lang-zh');
+        const source = isZh ? '/CV_Jinghao_Wen_zh.pdf' : '/CV_Jinghao_Wen.pdf';
+
+        if (frame && frame.dataset.language !== language) {
+          frame.src = `${source}#view=FitH`;
+          frame.dataset.language = language;
+          frame.title = isZh ? '文靖豪中文简历' : 'Jinghao Wen curriculum vitae';
+        }
+        if (download) download.href = source;
+        if (enButton && zhButton) {
+          enButton.classList.toggle('on', !isZh);
+          zhButton.classList.toggle('on', isZh);
+          enButton.setAttribute('aria-pressed', String(!isZh));
+          zhButton.setAttribute('aria-pressed', String(isZh));
+        }
+      };
+
+      window.closeCVModal = function () {
+        const modal = document.getElementById('cv-modal');
+        if (!modal || modal.hidden) return;
+        modal.hidden = true;
+        document.body.classList.remove('cv-modal-open');
+        if (cvTrigger) {
+          cvTrigger.setAttribute('aria-expanded', 'false');
+          cvTrigger.focus();
+        }
+      };
+
+      window.closeCVModalIfBg = function (event) {
+        if (event.target === event.currentTarget) window.closeCVModal();
+      };
+
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') window.closeWeChatModal();
+        if (event.key === 'Escape') {
+          window.closeWeChatModal();
+          window.closeCVModal();
+        }
       });
     
       window.addEventListener('DOMContentLoaded', () => {

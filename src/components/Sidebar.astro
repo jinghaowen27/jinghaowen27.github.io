@@ -27,7 +27,7 @@ const isActive = (path) => currentPath === path ? "active" : "";
       <em class="icon">💬</em>
       <span class="sb-link-label en">WeChat</span><span class="sb-link-label zh" style="display:none">微信</span>
     </a>
-    <a href="/CV_Jinghao_Wen.pdf" target="_blank">
+    <a href="#cv-modal" onclick="openCVModal(event)" aria-haspopup="dialog" aria-controls="cv-modal" aria-expanded="false">
       <em class="icon">↓</em>
       <span class="sb-link-label en">Curriculum Vitae</span><span class="sb-link-label zh" style="display:none">简历</span>
     </a>

@@ -1,0 +1,33 @@
+<div id="cv-modal" class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title" onclick="closeCVModalIfBg(event)" hidden>
+  <div class="cv-modal-card">
+    <header class="cv-modal-header">
+      <div>
+        <div class="cv-modal-eye en">Curriculum Vitae</div>
+        <div class="cv-modal-eye zh" style="display:none">个人简历</div>
+        <h2 id="cv-modal-title"><span class="en">Jinghao Wen — CV</span><span class="zh" style="display:none">文靖豪 — 简历</span></h2>
+      </div>
+      <button class="cv-modal-close" type="button" onclick="closeCVModal()" aria-label="Close CV viewer">✕</button>
+    </header>
+
+    <div class="cv-modal-toolbar">
+      <div class="cv-language-switch" role="group" aria-label="CV language">
+        <button id="cv-lang-en" class="on" type="button" onclick="setCVLanguage('en')" aria-pressed="true">English</button>
+        <button id="cv-lang-zh" type="button" onclick="setCVLanguage('zh')" aria-pressed="false">中文</button>
+      </div>
+      <a id="cv-download" class="cv-download" href="/CV_Jinghao_Wen.pdf" download>
+        <span class="en">Download PDF</span><span class="zh" style="display:none">下载 PDF</span>
+      </a>
+    </div>
+
+    <iframe
+      id="cv-frame"
+      class="cv-frame"
+      src="about:blank"
+      title="Jinghao Wen curriculum vitae"
+    ></iframe>
+    <p class="cv-frame-fallback">
+      <span class="en">If the preview does not appear, use Download PDF above.</span>
+      <span class="zh" style="display:none">如果预览未显示，请使用上方的“下载 PDF”。</span>
+    </p>
+  </div>
+</div>
