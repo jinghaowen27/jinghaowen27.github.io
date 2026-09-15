@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pages CMS 图片预处理工具</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f4f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 20px;
+    }
+
+    main {
+      width: min(980px, 100%);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -.04em;
+    }
+
+    .lead {
+      margin: 0 0 28px;
+      color: #596273;
+      line-height: 1.7;
+    }
+
+    .panel {
+      padding: 22px;
+      border: 1px solid #dce1e8;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 12px 40px rgba(23, 32, 51, .07);
+    }
+
+    .settings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: grid;
+      gap: 7px;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    input[type="number"] {
+      width: 150px;
+      padding: 10px 12px;
+      border: 1px solid #cbd2dc;
+      border-radius: 9px;
+      font: inherit;
+    }
+
+    .drop-zone {
+      display: grid;
+      place-items: center;
+      min-height: 210px;
+      padding: 30px;
+      border: 2px dashed #aab4c2;
+      border-radius: 14px;
+      background: #fafbfc;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .15s, background .15s, transform .15s;
+    }
+
+    .drop-zone.dragging {
+      border-color: #1677ff;
+      background: #eef6ff;
+      transform: translateY(-2px);
+    }
+
+    .drop-zone strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .drop-zone span { color: #697386; }
+    #file-input { display: none; }
+
+    .privacy {
+      margin: 14px 0 0;
+      color: #697386;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .toolbar {
+      display: none;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin: 24px 0 12px;
+    }
+
+    .toolbar.visible { display: flex; }
+
+    button {
+      padding: 10px 15px;
+      border: 0;
+      border-radius: 9px;
+      background: #172033;
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      border: 1px solid #cbd2dc;
+      background: #fff;
+      color: #172033;
+    }
+
+    button:disabled { cursor: wait; opacity: .55; }
+
+    #results {
+      display: grid;
+      gap: 14px;
+    }
+
+    .result {
+      display: grid;
+      grid-template-columns: 150px 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid #e1e5eb;
+      border-radius: 13px;
+      background: #fff;
+    }
+
+    .result img {
+      width: 150px;
+      height: 105px;
+      border-radius: 8px;
+      background: #eef0f3;
+      object-fit: contain;
+    }
+
+    .result h2 {
+      margin: 0 0 7px;
+      overflow-wrap: anywhere;
+      font-size: 16px;
+    }
+
+    .meta {
+      margin: 0;
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .saving { color: #087443; font-weight: 700; }
+    .error { color: #b42318; }
+
+    @media (max-width: 680px) {
+      body { padding: 24px 14px; }
+      .panel { padding: 14px; }
+      .result { grid-template-columns: 92px 1fr; }
+      .result img { width: 92px; height: 80px; }
+      .result button { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>图片预处理工具</h1>
+    <p class="lead">为 Pages CMS 自动压缩照片。保持完整画面和原始长宽比，不会裁切。</p>
+
+    <section class="panel">
+      <div class="settings">
+        <label>
+          单张文件上限（MB）
+          <input id="target-size" type="number" min="0.5" max="10" step="0.1" value="1.8">
+        </label>
+        <label>
+          最低画质（%）
+          <input id="min-quality" type="number" min="40" max="95" step="1" value="68">
+        </label>
+      </div>
+
+      <label class="drop-zone" id="drop-zone" for="file-input">
+        <span>
+          <strong>把照片拖到这里</strong>
+          或点击选择 JPG、PNG、WebP；可以一次选择多张
+        </span>
+      </label>
+      <input id="file-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+      <p class="privacy">所有处理均在当前浏览器本地完成，照片不会上传到任何服务器。输出为兼容性最好的 JPG；透明 PNG 的透明区域会使用白色背景。</p>
+    </section>
+
+    <div class="toolbar" id="toolbar">
+      <strong id="summary"></strong>
+      <button class="secondary" id="clear-button" type="button">清空</button>
+    </div>
+    <section id="results" aria-live="polite"></section>
+  </main>
+
+  <script>
+    const fileInput = document.querySelector('#file-input');
+    const dropZone = document.querySelector('#drop-zone');
+    const results = document.querySelector('#results');
+    const toolbar = document.querySelector('#toolbar');
+    const summary = document.querySelector('#summary');
+    const clearButton = document.querySelector('#clear-button');
+    const targetSizeInput = document.querySelector('#target-size');
+    const minQualityInput = document.querySelector('#min-quality');
+    const objectUrls = new Set();
+    let completedCount = 0;
+
+    ['dragenter', 'dragover'].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.add('dragging');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.remove('dragging');
+      });
+    });
+
+    dropZone.addEventListener('drop', (event) => processFiles(event.dataTransfer.files));
+    fileInput.addEventListener('change', () => {
+      processFiles(fileInput.files);
+      fileInput.value = '';
+    });
+
+    clearButton.addEventListener('click', () => {
+      objectUrls.forEach((url) => URL.revokeObjectURL(url));
+      objectUrls.clear();
+      results.replaceChildren();
+      completedCount = 0;
+      toolbar.classList.remove('visible');
+    });
+
+    async function processFiles(fileList) {
+      const files = [...fileList].filter((file) => file.type.startsWith('image/'));
+      if (!files.length) return;
+
+      toolbar.classList.add('visible');
+      summary.textContent = `正在处理 ${files.length} 张照片…`;
+      dropZone.style.pointerEvents = 'none';
+      dropZone.style.opacity = '.55';
+
+      for (const file of files) {
+        const card = createPendingCard(file);
+        results.prepend(card.element);
+        try {
+          const output = await compressImage(file);
+          finishCard(card, file, output);
+          completedCount += 1;
+        } catch (error) {
+          card.meta.className = 'meta error';
+          card.meta.textContent = `处理失败：${error.message || error}`;
+        }
+        await new Promise((resolve) => setTimeout(resolve, 0));
+      }
+
+      summary.textContent = `已处理 ${completedCount} 张照片`;
+      dropZone.style.pointerEvents = '';
+      dropZone.style.opacity = '';
+    }
+
+    function createPendingCard(file) {
+      const element = document.createElement('article');
+      element.className = 'result';
+
+      const preview = document.createElement('img');
+      preview.alt = '';
+
+      const content = document.createElement('div');
+      const title = document.createElement('h2');
+      title.textContent = file.name;
+      const meta = document.createElement('p');
+      meta.className = 'meta';
+      meta.textContent = '处理中…';
+      content.append(title, meta);
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = '请稍候';
+      button.disabled = true;
+      element.append(preview, content, button);
+      return { element, preview, meta, button };
+    }
+
+    function finishCard(card, original, output) {
+      const url = URL.createObjectURL(output.blob);
+      objectUrls.add(url);
+      card.preview.src = url;
+      card.preview.alt = `${original.name} 压缩后的预览`;
+      const reduction = Math.max(0, Math.round((1 - output.blob.size / original.size) * 100));
+      const resized = output.width !== output.originalWidth || output.height !== output.originalHeight;
+      card.meta.innerHTML = [
+        `${output.originalWidth} × ${output.originalHeight} → ${output.width} × ${output.height}${resized ? '（等比例缩小）' : '（分辨率未变）'}`,
+        `${formatBytes(original.size)} → <span class="saving">${formatBytes(output.blob.size)}（减少 ${reduction}%）</span>`,
+        `JPEG 画质 ${Math.round(output.quality * 100)}% · 完整画面、无裁切`
+      ].join('<br>');
+
+      card.button.disabled = false;
+      card.button.textContent = '下载处理后的照片';
+      card.button.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = outputName(original.name);
+        link.click();
+      });
+    }
+
+    async function compressImage(file) {
+      const targetBytes = clamp(Number(targetSizeInput.value), 0.5, 10) * 1024 * 1024;
+      const minimumQuality = clamp(Number(minQualityInput.value) / 100, 0.4, 0.95);
+      const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' });
+      const originalWidth = bitmap.width;
+      const originalHeight = bitmap.height;
+      let width = originalWidth;
+      let height = originalHeight;
+      let best;
+
+      try {
+        if (file.type === 'image/jpeg' && file.size <= targetBytes) {
+          return {
+            blob: file,
+            quality: 1,
+            width,
+            height,
+            originalWidth,
+            originalHeight
+          };
+        }
+
+        // Preserve the original pixel dimensions whenever quality adjustment is enough.
+        // If it is not, reduce both dimensions proportionally; no pixels are cropped.
+        for (let scaleAttempt = 0; scaleAttempt < 10; scaleAttempt += 1) {
+          const canvas = document.createElement('canvas');
+          canvas.width = width;
+          canvas.height = height;
+          const context = canvas.getContext('2d', { alpha: false });
+          context.fillStyle = '#fff';
+          context.fillRect(0, 0, width, height);
+          context.imageSmoothingEnabled = true;
+          context.imageSmoothingQuality = 'high';
+          context.drawImage(bitmap, 0, 0, width, height);
+
+          best = await findBestQuality(canvas, targetBytes, minimumQuality);
+          if (best.blob.size <= targetBytes) break;
+
+          const ratio = Math.min(0.92, Math.sqrt(targetBytes / best.blob.size) * 0.96);
+          width = Math.max(1, Math.round(width * ratio));
+          height = Math.max(1, Math.round(height * ratio));
+        }
+      } finally {
+        bitmap.close();
+      }
+
+      if (!best) throw new Error('浏览器无法生成图片');
+      return { ...best, width, height, originalWidth, originalHeight };
+    }
+
+    async function findBestQuality(canvas, targetBytes, minimumQuality) {
+      let low = minimumQuality;
+      let high = 0.94;
+      let candidate = await canvasToBlob(canvas, low);
+
+      if (candidate.size > targetBytes) {
+        return { blob: candidate, quality: low };
+      }
+
+      let best = candidate;
+      let bestQuality = low;
+      for (let iteration = 0; iteration < 8; iteration += 1) {
+        const quality = (low + high) / 2;
+        candidate = await canvasToBlob(canvas, quality);
+        if (candidate.size <= targetBytes) {
+          best = candidate;
+          bestQuality = quality;
+          low = quality;
+        } else {
+          high = quality;
+        }
+      }
+      return { blob: best, quality: bestQuality };
+    }
+
+    function canvasToBlob(canvas, quality) {
+      return new Promise((resolve, reject) => {
+        canvas.toBlob(
+          (blob) => blob ? resolve(blob) : reject(new Error('图片编码失败')),
+          'image/jpeg',
+          quality
+        );
+      });
+    }
+
+    function outputName(name) {
+      const base = name.replace(/\.[^.]+$/, '');
+      return `${base}-web.jpg`;
+    }
+
+    function formatBytes(bytes) {
+      if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+      return `${(bytes / 1024 / 1024).toFixed(2)} MB`;
+    }
+
+    function clamp(value, minimum, maximum) {
+      if (!Number.isFinite(value)) return minimum;
+      return Math.min(maximum, Math.max(minimum, value));
+    }
+  </script>
+</body>
+</html>

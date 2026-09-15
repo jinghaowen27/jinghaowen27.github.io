@@ -22,3 +22,16 @@ Each entry is stored as its own JSON file. Pages CMS therefore opens each sectio
 Photography order uses zero-based insertion positions. If a new or edited photo uses an existing position, the most recently saved photo takes that position and all following photos are shifted down automatically by the `Normalize photography order` GitHub Action.
 
 Uploaded media is committed under `public/images/`. Saving content creates a Git commit; the existing deployment workflow publishes it.
+
+# Photo upload helper / 图片上传辅助工具
+
+If Pages CMS reports `Failed to upload file: 413`, open
+`tools/photo-prep.html` locally in Chrome or Edge. Drag the original photos into
+the page, download the processed `-web.jpg` files, and upload those files in
+Pages CMS. The default 1.8 MB target leaves room for upload encoding overhead.
+The tool preserves the whole image and its aspect ratio; it never crops.
+
+如果 Pages CMS 显示 `Failed to upload file: 413`，请用 Chrome 或 Edge 打开
+`tools/photo-prep.html`，拖入原图，下载生成的 `-web.jpg`，再将它上传到
+Pages CMS。默认上限为 1.8 MB，给上传编码留出余量。工具始终保留完整画面和
+原始长宽比，不会裁切。
