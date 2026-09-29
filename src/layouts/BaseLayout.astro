@@ -164,12 +164,28 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
         const download = document.getElementById('cv-download');
         const enButton = document.getElementById('cv-lang-en');
         const zhButton = document.getElementById('cv-lang-zh');
+        const mobilePreview = document.getElementById('cv-mobile-pages');
+        const enPages = document.getElementById('cv-pages-en');
+        const zhPages = document.getElementById('cv-pages-zh');
         const source = isZh ? '/CV_Jinghao_Wen_zh.pdf' : '/CV_Jinghao_Wen.pdf';
+        const isMobileViewer = window.matchMedia('(max-width: 768px)').matches;
 
-        if (frame && frame.dataset.language !== language) {
+        if (!isMobileViewer && frame && frame.dataset.language !== language) {
           frame.src = `${source}#view=FitH`;
           frame.dataset.language = language;
           frame.title = isZh ? '文靖豪中文简历' : 'Jinghao Wen curriculum vitae';
+        }
+        if (enPages && zhPages) {
+          enPages.hidden = isZh;
+          zhPages.hidden = !isZh;
+          if (isMobileViewer) {
+            const activePages = isZh ? zhPages : enPages;
+            activePages.querySelectorAll('img[data-src]').forEach((image) => {
+              image.src = image.dataset.src;
+              image.removeAttribute('data-src');
+            });
+            if (mobilePreview) mobilePreview.scrollTop = 0;
+          }
         }
         if (download) download.href = source;
         if (enButton && zhButton) {
