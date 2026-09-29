@@ -12,11 +12,11 @@
   "links": [
     {
       "label": "Paper",
-      "url": "https://arxiv.org/abs/2601.15482"
+      "url": "https://ieeexplore.ieee.org/abstract/document/11461837"
     },
     {
       "label": "Code",
-      "url": "https://github.com/miraclehetech/EACL2026-Martingale-Foresight-Sampling"
+      "url": "https://github.com/jinghaowen27/Class-Imbalance"
     }
   ],
   "featured": true,
