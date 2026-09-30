@@ -1,7 +1,7 @@
 {
   "order": 1,
   "id": "bar-bryan",
-  "image": "/images/photos/cocktails/intro-slim.png",
+  "image": "/images/photos/cocktails/intro.jpg",
   "emoji": "",
   "metaEn": "New York Bartending School · 2026",
   "metaZh": "纽约调酒师学校 · 2025",
@@ -16,7 +16,7 @@
   "rating": "",
   "published": true,
   "details": {
-    "img": "/images/photos/cocktails/intro-slim.png",
+    "img": "/images/photos/cocktails/intro.jpg",
     "eyebrowEn": "New York Bartending School · 2026",
     "eyebrowZh": "纽约调酒师学校 · 2026",
     "titleEn": "Bryan Evans & Me",
