@@ -327,7 +327,7 @@ import { photography as photos } from "../data/content/collections.js";
       var film = cell.dataset.film || '';
       var matchesMedium = photoFilters.medium === 'all' || medium === photoFilters.medium;
       var matchesTopic = photoFilters.topic === 'all' || cell.dataset.topic === photoFilters.topic;
-      var matchesFilm = photoFilters.medium !== 'film' || photoFilters.film === 'all' || film === photoFilters.film;
+      var matchesFilm = photoFilters.medium !== 'film' || photoFilters.film === 'all' || film.toLocaleLowerCase('en-US') === photoFilters.film.toLocaleLowerCase('en-US');
       var isVisible = matchesMedium && matchesTopic && matchesFilm;
       cell.hidden = !isVisible;
       if(isVisible) visibleCount++;
@@ -362,12 +362,16 @@ import { photography as photos } from "../data/content/collections.js";
 
   function makeFilmStockFilters(){
     var container = document.getElementById('film-stock-options');
-    var presetFilmStocks = ['Kodak Gold 400', 'Kodak UltraMax 400', 'Fujifilm Provia'];
     var discoveredFilmStocks = Array.from(document.querySelectorAll('#photo-grid .photo-cell[data-medium="film"][data-film]'))
       .map(function(cell){ return cell.dataset.film.trim(); })
       .filter(Boolean);
-    var names = presetFilmStocks.concat(discoveredFilmStocks)
-      .filter(function(name, index, all){ return all.indexOf(name) === index; });
+    var seenFilmStocks = new Set();
+    var names = discoveredFilmStocks.filter(function(name){
+      var key = name.toLocaleLowerCase('en-US');
+      if(seenFilmStocks.has(key)) return false;
+      seenFilmStocks.add(key);
+      return true;
+    });
     var allButton = document.createElement('button');
     allButton.className = 'photo-topic-btn on';
     allButton.dataset.filterGroup = 'film';

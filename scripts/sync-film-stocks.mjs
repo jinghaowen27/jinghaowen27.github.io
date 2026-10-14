@@ -70,8 +70,16 @@ for (const filename of photoFiles) {
   const data = readJson(fullPath);
   let photoChanged = false;
 
-  // Existing values seed the reusable dropdown, including legacy entries.
-  if (normalizeName(data.filmStock)) ensureStock(data.filmStock);
+  // Existing values seed the reusable dropdown, including legacy entries, and
+  // are rewritten to the registry's canonical capitalization.
+  const existingStock = normalizeName(data.filmStock);
+  if (existingStock) {
+    const canonicalStock = ensureStock(existingStock);
+    if (data.filmStock !== canonicalStock) {
+      data.filmStock = canonicalStock;
+      photoChanged = true;
+    }
+  }
 
   const newStock = normalizeName(data.newFilmStock);
   if (!newStock) {

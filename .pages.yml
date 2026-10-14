@@ -134,7 +134,7 @@ content:
             - { name: "Fujifilm Provia", label: "Fujifilm Provia" }
             - { name: "Kodak Gold 200", label: "Kodak Gold 200" }
             - { name: "Kodak Gold 400", label: "Kodak Gold 400" }
-            - { name: "Kodak ULTRAMAX 400", label: "Kodak ULTRAMAX 400" }
+            - { name: "Kodak UltraMax 400", label: "Kodak UltraMax 400" }
             # FILM_STOCK_OPTIONS_END
       - name: newFilmStock
         label: New film stock / 新胶卷型号
