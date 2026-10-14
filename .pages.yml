@@ -89,6 +89,25 @@ content:
       - { name: showOnHome, label: Show on Home / 在首页显示, type: boolean, default: false }
       - { name: showOnPublications, label: Show on Publications / 在论文页显示, type: boolean, default: true }
 
+  - name: film_stocks
+    label: Film stocks / 胶卷型号
+    type: collection
+    path: src/data/content/film-stocks
+    format: json
+    filename:
+      template: "{fields.id}.json"
+      field: false
+    view:
+      fields: [name]
+      primary: name
+      sort: [name]
+      default:
+        sort: name
+        order: asc
+    fields:
+      - { name: id, label: ID, type: string, required: true, description: "Unique slug; normally created automatically after a new stock is entered on a photo." }
+      - { name: name, label: Film stock / 胶卷型号, type: string, required: true }
+
   - name: photography
     label: Photography / 摄影
     type: collection
@@ -123,7 +142,19 @@ content:
           values:
             - { name: digital, label: Digital / 数码 }
             - { name: film, label: Film / 胶片 }
-      - { name: filmStock, label: Film stock / 胶卷型号, type: string, description: "Required for film photos; also include it at the end of both captions." }
+      - name: filmStock
+        label: Existing film stock / 已有胶卷型号
+        type: reference
+        description: "For Film, select an existing stock here. / 选择 Film 后，从这里选择已有胶卷。"
+        options:
+          collection: film_stocks
+          search: "name,id"
+          value: "{primary}"
+          label: "{primary}"
+      - name: newFilmStock
+        label: New film stock / 新胶卷型号
+        type: string
+        description: "Only fill this when the stock is missing above. Save the photo, and it will be added to the dropdown automatically. / 仅在上方没有该型号时填写；保存照片后会自动加入下拉框。"
       - name: topic
         label: Subject / 题材
         type: select

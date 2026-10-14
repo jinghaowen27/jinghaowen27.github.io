@@ -13,7 +13,7 @@ Only GitHub users with write access to the repository can edit its content. Do n
 ## Content sources
 
 - `src/data/content/publications/` powers both Home and Publications. Use `showOnHome` and `showOnPublications` independently; `featured` controls the selected view.
-- `src/data/content/photography/` powers Photography. Film entries should set `medium` to `film`, fill `filmStock`, and include the stock name in both captions.
+- `src/data/content/photography/` powers Photography. Film entries should set `medium` to `film` and choose an existing `filmStock`. If the stock is missing, fill `newFilmStock`; the photography data workflow creates it in `src/data/content/film-stocks/`, writes it back to `filmStock`, and makes it available in the dropdown after the workflow finishes.
 - `src/data/content/cocktails/` powers Bartending cards and their detail popups.
 - `src/data/content/recipes/` powers Recipe cards and their detail popups.
 

@@ -1,16 +1,17 @@
-name: Normalize photography order
+name: Normalize photography data
 
 on:
   push:
     branches: [main]
     paths:
       - "src/data/content/photography/*.json"
+      - "src/data/content/film-stocks/*.json"
 
 permissions:
   contents: write
 
 concurrency:
-  group: normalize-photography-order
+  group: normalize-photography-data
   cancel-in-progress: false
 
 jobs:
@@ -24,18 +25,21 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Save new film stocks
+        run: node scripts/sync-film-stocks.mjs
+
       - name: Normalize duplicate positions
         run: node scripts/normalize-photography-order.mjs
 
-      - name: Commit shifted order values
+      - name: Commit normalized photography data
         shell: bash
         run: |
-          if git diff --quiet -- src/data/content/photography; then
-            echo "Photography order is already normalized."
+          if [ -z "$(git status --porcelain -- src/data/content/photography src/data/content/film-stocks)" ]; then
+            echo "Photography data is already normalized."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/content/photography
-          git commit -m "content: normalize photography order"
+          git add src/data/content/photography src/data/content/film-stocks
+          git commit -m "content: normalize photography data"
           git push origin main
