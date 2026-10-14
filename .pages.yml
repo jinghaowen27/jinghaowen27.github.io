@@ -89,25 +89,6 @@ content:
       - { name: showOnHome, label: Show on Home / 在首页显示, type: boolean, default: false }
       - { name: showOnPublications, label: Show on Publications / 在论文页显示, type: boolean, default: true }
 
-  - name: film_stocks
-    label: Film stocks / 胶卷型号
-    type: collection
-    path: src/data/content/film-stocks
-    format: json
-    filename:
-      template: "{fields.id}.json"
-      field: false
-    view:
-      fields: [name]
-      primary: name
-      sort: [name]
-      default:
-        sort: name
-        order: asc
-    fields:
-      - { name: id, label: ID, type: string, required: true, description: "Unique slug; normally created automatically after a new stock is entered on a photo." }
-      - { name: name, label: Film stock / 胶卷型号, type: string, required: true }
-
   - name: photography
     label: Photography / 摄影
     type: collection
@@ -144,13 +125,17 @@ content:
             - { name: film, label: Film / 胶片 }
       - name: filmStock
         label: Existing film stock / 已有胶卷型号
-        type: reference
+        type: select
         description: "For Film, select an existing stock here. / 选择 Film 后，从这里选择已有胶卷。"
         options:
-          collection: film_stocks
-          search: "name,id"
-          value: "{primary}"
-          label: "{primary}"
+          placeholder: "Select a film stock... / 请选择胶卷型号..."
+          values:
+            # FILM_STOCK_OPTIONS_START
+            - { name: "Fujifilm Provia", label: "Fujifilm Provia" }
+            - { name: "Kodak Gold 200", label: "Kodak Gold 200" }
+            - { name: "Kodak Gold 400", label: "Kodak Gold 400" }
+            - { name: "Kodak ULTRAMAX 400", label: "Kodak ULTRAMAX 400" }
+            # FILM_STOCK_OPTIONS_END
       - name: newFilmStock
         label: New film stock / 新胶卷型号
         type: string

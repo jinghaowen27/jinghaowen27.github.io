@@ -1,9 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const [photosPath = 'src/data/content/photography', stocksPath = 'src/data/content/film-stocks'] = process.argv.slice(2);
+const [
+  photosPath = 'src/data/content/photography',
+  stocksPath = 'src/data/content/film-stocks',
+  configPath = '.pages.yml',
+] = process.argv.slice(2);
 const photosDirectory = path.resolve(photosPath);
 const stocksDirectory = path.resolve(stocksPath);
+const configFile = path.resolve(configPath);
 
 fs.mkdirSync(stocksDirectory, { recursive: true });
 
@@ -86,6 +91,31 @@ for (const filename of photoFiles) {
   }
 }
 
+const optionStartMarker = '# FILM_STOCK_OPTIONS_START';
+const optionEndMarker = '# FILM_STOCK_OPTIONS_END';
+const config = fs.readFileSync(configFile, 'utf8');
+const startIndex = config.indexOf(optionStartMarker);
+const endIndex = config.indexOf(optionEndMarker);
+
+if (startIndex < 0 || endIndex < 0 || endIndex <= startIndex) {
+  throw new Error(`Could not find film stock option markers in ${configFile}`);
+}
+
+const lineStart = config.lastIndexOf('\n', startIndex) + 1;
+const markerIndent = config.slice(lineStart, startIndex);
+const optionIndent = `${markerIndent}`;
+const sortedStocks = [...stocksByName.values()].sort((a, b) =>
+  a.name.localeCompare(b.name, 'en-US', { sensitivity: 'base' })
+);
+const generatedOptions = sortedStocks
+  .map(({ name }) => `${optionIndent}- { name: ${JSON.stringify(name)}, label: ${JSON.stringify(name)} }`)
+  .join('\n');
+const replacement = `${optionStartMarker}\n${generatedOptions}\n${markerIndent}`;
+const updatedConfig = `${config.slice(0, startIndex)}${replacement}${config.slice(endIndex)}`;
+const configChanged = updatedConfig !== config;
+
+if (configChanged) fs.writeFileSync(configFile, updatedConfig);
+
 console.log(
-  `Film stocks synchronized: ${stocksByName.size} available, ${created} created, ${updatedPhotos} photo entries updated.`
+  `Film stocks synchronized: ${stocksByName.size} available, ${created} created, ${updatedPhotos} photo entries updated, dropdown ${configChanged ? 'updated' : 'unchanged'}.`
 );
