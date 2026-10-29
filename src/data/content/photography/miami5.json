@@ -8,5 +8,5 @@
   "medium": "film",
   "topic": "travel",
   "published": true,
-  "newFilmStock": "Fujifilm 400"
+  "filmStock": "Fujifilm 400"
 }

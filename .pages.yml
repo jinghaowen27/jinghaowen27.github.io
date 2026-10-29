@@ -131,6 +131,7 @@ content:
           placeholder: "Select a film stock... / 请选择胶卷型号..."
           values:
             # FILM_STOCK_OPTIONS_START
+            - { name: "Fujifilm 400", label: "Fujifilm 400" }
             - { name: "Fujifilm Provia", label: "Fujifilm Provia" }
             - { name: "Kodak", label: "Kodak" }
             - { name: "Kodak Gold 200", label: "Kodak Gold 200" }
