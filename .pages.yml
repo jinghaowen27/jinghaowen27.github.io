@@ -132,6 +132,7 @@ content:
           values:
             # FILM_STOCK_OPTIONS_START
             - { name: "Fujifilm Provia", label: "Fujifilm Provia" }
+            - { name: "Kodak", label: "Kodak" }
             - { name: "Kodak Gold 200", label: "Kodak Gold 200" }
             - { name: "Kodak Gold 400", label: "Kodak Gold 400" }
             - { name: "Kodak UltraMax 400", label: "Kodak UltraMax 400" }
